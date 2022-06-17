@@ -9,6 +9,6 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
     MainWindow w;
     w.show();
-    cout << "this is our project" << endl;
+    cout << "Tadaaaam" << endl;
     return a.exec();
 }
