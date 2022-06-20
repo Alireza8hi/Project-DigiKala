@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/Icons">
+        <file>Icons/clipboard.png</file>
+        <file>Icons/question-mark-icon-png-1155224288245ptwi4q2v.png</file>
+        <file>Icons/clipboard-files-and-folders.png</file>
+        <file>Icons/free-phone-icon-vector-27.jpg</file>
+        <file>Icons/exit-icon-png-close-0.png</file>
+    </qresource>
+</RCC>
