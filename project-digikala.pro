@@ -9,6 +9,10 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    Comment.cpp \
+    Commodity.cpp \
+    Complaint.cpp \
+    Dgikala.cpp \
     accountwindow.cpp \
     categorywindow.cpp \
     homewindow.cpp \
@@ -16,6 +20,10 @@ SOURCES += \
     mainwindow.cpp
 
 HEADERS += \
+    Comment.h \
+    Commodity.h \
+    Complaint.h \
+    Digikala.h \
     accountwindow.h \
     categorywindow.h \
     homewindow.h \
