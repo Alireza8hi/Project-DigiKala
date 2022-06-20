@@ -17,6 +17,12 @@ public:
 
 private slots:
 
+    void on_HomeBtn_clicked();
+
+    void on_CategoryBtn_clicked();
+
+    void on_AccountBtn_clicked();
+
 private:
     Ui::MainWindow *ui;
 };

@@ -9,13 +9,22 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    accountwindow.cpp \
+    categorywindow.cpp \
+    homewindow.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
+    accountwindow.h \
+    categorywindow.h \
+    homewindow.h \
     mainwindow.h
 
 FORMS += \
+    accountwindow.ui \
+    categorywindow.ui \
+    homewindow.ui \
     mainwindow.ui
 
 # Default rules for deployment.

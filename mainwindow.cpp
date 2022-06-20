@@ -1,5 +1,11 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "homewindow.h"
+#include "ui_homewindow.h"
+#include "categorywindow.h"
+#include "ui_categorywindow.h"
+#include "accountwindow.h"
+#include "ui_accountwindow.h"
 #include <QWidget>
 #include <QPushButton>
 #include <QVBoxLayout>
@@ -15,5 +21,26 @@ MainWindow::MainWindow(QWidget *parent)
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+
+void MainWindow::on_HomeBtn_clicked()
+{
+    HomeWindow *h = new HomeWindow;
+    h->show();
+}
+
+
+void MainWindow::on_CategoryBtn_clicked()
+{
+    CategoryWindow *c = new CategoryWindow;
+    c->show();
+}
+
+
+void MainWindow::on_AccountBtn_clicked()
+{
+    AccountWindow *a = new AccountWindow;
+    a->show();
 }
 
