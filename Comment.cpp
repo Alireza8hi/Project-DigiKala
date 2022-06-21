@@ -1,10 +1,16 @@
 #include "Comment.h"
 
-Comment::Comment(tm now_time,QString sender,QString commodity)
+Comment::Comment(tm now_time,QString sender,QString commodity,QString description)
 {
     this->sender = sender;
     this->commodity = commodity;
     this->date_of_birth = now_time;
+    this->description = description;
+    return;
+}
+
+Comment::Comment()
+{
     return;
 }
 
@@ -21,7 +27,7 @@ void Comment::set_date_of_birth(tm time)
     return;
 }
 
-tm Comment::get_date_of_birth()
+tm Comment::get_date_of_birth()const
 {
     return this->date_of_birth;
 }
@@ -32,7 +38,7 @@ void Comment::set_sender(QString sender)
     return;
 }
 
-QString Comment::get_sender()
+QString Comment::get_sender()const
 {
     return this->sender;
 }
@@ -43,7 +49,18 @@ void Comment::set_commodity(QString commodity)
     return;
 }
 
-QString Comment::get_commodity()
+QString Comment::get_commodity()const
 {
     return this->commodity;
+}
+
+void Comment::set_description(QString description)
+{
+    this->description = description;
+    return;
+}
+
+QString Comment::get_description() const
+{
+    return this->description;
 }
