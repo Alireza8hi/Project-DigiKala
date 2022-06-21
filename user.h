@@ -21,6 +21,7 @@ public:
     bool set_email();
     bool set_phone();
     bool set_ncode();
+    user& operator=(const user& s);
 private:
     Ui::user *ui;
     string username;

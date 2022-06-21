@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "user.h"
 #include "ui_user.h"
 
@@ -47,14 +48,35 @@ bool user::change_password()
                         break;
                     }
     }
+    this->password=new_password;
     if(this->role=="customer")
-                fuser=fopen("usercustomer.txt","w+");
+                fuser=fopen("usercustomer.bin","w+");
     if(this->role=="admin")
-                fuser=fopen("useradmin.txt","w+");
+                fuser=fopen("useradmin.bin","w+");
     if(this->role=="sellerr")
-                fuser=fopen("userseller.txt","w+");
-    //fread(changepass,sizeof(user),1,fuser);
+                fuser=fopen("userseller.bin","w+");
+    while(fuser!=NULL)
+    {
+    fread(&changepass,sizeof(user),1,fuser);
+    if(changepass.username==this->username)
+        {
+        fseek(fuser,ftell(fuser)-sizeof(user),SEEK_CUR);
+        changepass=this;
+        fwrite(&changepass,sizeof(user),1,fuser);
+        break;
+        }
+    }
                     //ادامه دارد
     return true;
+}
+
+user& user::operator=(const user& s)
+{
+  this->~user();
+  this->password=s.password;
+  this->username=s.username;
+  this->role=s.role;
+  //ادامه دارد
+  return *this;
 }
 

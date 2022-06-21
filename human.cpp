@@ -18,5 +18,30 @@ Human::Human()
 Human::~Human()
 {
 	
-	return;
+    return;
+}
+
+string Human::getnameandfamily()
+{
+    return this->name_and_family;
+}
+
+long long Human::getncode()
+{
+    return this->national_code;
+}
+
+string Human::getemail()
+{
+    return this->email;
+}
+
+string Human::getadress()
+{
+    return this->adress;
+}
+
+long long Human::getphone()
+{
+    return this->phone;
 }

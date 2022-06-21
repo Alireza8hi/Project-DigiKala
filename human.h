@@ -14,5 +14,10 @@ private:
 public:
 	Human();
 	~Human();
+    string getnameandfamily();
+    long long int getncode();
+    string getemail();
+    string getadress();
+    long long int getphone();
 };
 #endif
