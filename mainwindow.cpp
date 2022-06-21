@@ -10,12 +10,16 @@
 #include <QPushButton>
 #include <QVBoxLayout>
 #include <QMessageBox>
+#include <QDateTime>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    QString d = QDate::currentDate().toString();
+    QLabel *label= new QLabel(d);
+    ui->statusbar->addWidget(label);
 }
 
 MainWindow::~MainWindow()

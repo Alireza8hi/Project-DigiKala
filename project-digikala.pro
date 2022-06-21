@@ -17,7 +17,8 @@ SOURCES += \
     categorywindow.cpp \
     homewindow.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    signupdialog.cpp
 
 HEADERS += \
     Comment.h \
@@ -27,13 +28,15 @@ HEADERS += \
     accountwindow.h \
     categorywindow.h \
     homewindow.h \
-    mainwindow.h
+    mainwindow.h \
+    signupdialog.h
 
 FORMS += \
     accountwindow.ui \
     categorywindow.ui \
     homewindow.ui \
-    mainwindow.ui
+    mainwindow.ui \
+    signupdialog.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

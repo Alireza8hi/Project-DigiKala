@@ -15,9 +15,6 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
-    <item row="6" column="1">
-     <widget class="QLineEdit" name="PassLe"/>
-    </item>
     <item row="6" column="2">
      <widget class="QLabel" name="PassLbl">
       <property name="text">
@@ -25,41 +22,61 @@
       </property>
      </widget>
     </item>
-    <item row="7" column="1" colspan="2">
-     <widget class="QPushButton" name="AdminBtn">
-      <property name="text">
-       <string>مدیر</string>
-      </property>
-     </widget>
-    </item>
-    <item row="5" column="1">
-     <widget class="QLineEdit" name="UserNameLe"/>
-    </item>
-    <item row="0" column="1" colspan="2">
+    <item row="0" column="0" colspan="3">
      <widget class="QPushButton" name="GuestBtn">
       <property name="text">
        <string>مهمان</string>
       </property>
      </widget>
     </item>
+    <item row="3" column="0" colspan="3">
+     <widget class="QPushButton" name="SignUpBtn">
+      <property name="text">
+       <string>ثبت نام کاربر</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="0" colspan="3">
+     <widget class="QPushButton" name="AdminBtn">
+      <property name="text">
+       <string>مدیر</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="0">
+     <widget class="QPushButton" name="UserSignInBtn">
+      <property name="text">
+       <string>ورود</string>
+      </property>
+     </widget>
+    </item>
     <item row="5" column="2">
      <widget class="QLabel" name="UserNameLbl">
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
       <property name="text">
        <string>نام کاربری</string>
       </property>
      </widget>
     </item>
-    <item row="4" column="1" colspan="2">
+    <item row="4" column="0" colspan="3">
      <widget class="QPushButton" name="LoginBtn">
       <property name="text">
        <string>ورود کاربر</string>
       </property>
      </widget>
     </item>
-    <item row="3" column="1" colspan="2">
-     <widget class="QPushButton" name="SignUpBtn">
-      <property name="text">
-       <string>ثبت نام کاربر</string>
+    <item row="5" column="1">
+     <widget class="QLineEdit" name="UserNameLe"/>
+    </item>
+    <item row="6" column="1">
+     <widget class="QLineEdit" name="PassLe">
+      <property name="echoMode">
+       <enum>QLineEdit::Password</enum>
       </property>
      </widget>
     </item>
@@ -74,9 +91,71 @@
      <height>25</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>تنظیمت</string>
+    </property>
+    <addaction name="ReturnBtn"/>
+    <addaction name="separator"/>
+    <addaction name="ExitBtn"/>
+   </widget>
+   <addaction name="menu"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="ReturnBtn">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/Icons/Icons/return_icon_154912.png</normaloff>:/Icons/Icons/return_icon_154912.png</iconset>
+   </property>
+   <property name="text">
+    <string>بازگشت</string>
+   </property>
+  </action>
+  <action name="ExitBtn">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/Icons/Icons/exit-icon-png-close-0.png</normaloff>:/Icons/Icons/exit-icon-png-close-0.png</iconset>
+   </property>
+   <property name="text">
+    <string>خروج</string>
+   </property>
+  </action>
  </widget>
- <resources/>
- <connections/>
+ <resources>
+  <include location="icons.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>ExitBtn</sender>
+   <signal>triggered()</signal>
+   <receiver>AccountWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ReturnBtn</sender>
+   <signal>triggered()</signal>
+   <receiver>AccountWindow</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

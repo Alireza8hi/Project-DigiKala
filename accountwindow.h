@@ -15,6 +15,13 @@ public:
     explicit AccountWindow(QWidget *parent = nullptr);
     ~AccountWindow();
 
+private slots:
+    void on_LoginBtn_clicked();
+
+    void on_AdminBtn_clicked();
+
+    void on_SignUpBtn_clicked();
+
 private:
     Ui::AccountWindow *ui;
 };
