@@ -9,15 +9,15 @@ Human::Human()
     this->name_and_family = "Guest";
     this->email = "Guest@gmail.com";
     this->adress = "iran";
-	this->national_code = 0;
-	this->phone = 0;
+    this->national_code = this->phone = 0;
 	return;
 }
 
 
 Human::~Human()
 {
-	
+    this->name_and_family = this->email = this->adress = nullptr;
+    this->national_code = this->phone = 0;
     return;
 }
 
