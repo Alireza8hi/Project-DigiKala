@@ -21,27 +21,57 @@ Human::~Human()
     return;
 }
 
-string Human::getnameandfamily()
+string Human::getnameandfamily()const
 {
     return this->name_and_family;
 }
 
-long long Human::getncode()
+long long Human::getncode()const
 {
     return this->national_code;
 }
 
-string Human::getemail()
+string Human::getemail()const
 {
     return this->email;
 }
 
-string Human::getadress()
+string Human::getadress()const
 {
     return this->adress;
 }
 
-long long Human::getphone()
+long long Human::getphone()const
 {
     return this->phone;
+}
+
+void Human::setnameandfamily(const string name)
+{
+    this->name_and_family=name;
+    return;
+}
+
+void Human::setncode(const long long int ncode)
+{
+    this->national_code=ncode;
+    return;
+}
+
+void Human::setemail(const string em)
+{
+    this->email=em;
+    return;
+}
+
+void Human::setadress(const string adr)
+{
+    this->adress=adr;
+    return;
+}
+
+void Human::setphone(const long long int pho)
+{
+    this->phone=pho;
+    return;
 }

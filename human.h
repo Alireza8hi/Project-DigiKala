@@ -14,10 +14,15 @@ private:
 public:
 	Human();
 	~Human();
-    string getnameandfamily();
-    long long int getncode();
-    string getemail();
-    string getadress();
-    long long int getphone();
+    string getnameandfamily()const;
+    long long int getncode()const;
+    string getemail()const;
+    string getadress()const;
+    long long int getphone()const;
+    void setnameandfamily(const string name);
+    void setncode(const long long int ncode) ;
+    void setemail(const string em);
+    void setadress(const string adr);
+    void setphone(const long long int  pho);
 };
 #endif

@@ -17,10 +17,6 @@ public:
     ~user();
     bool change_password();
     bool change_username();
-    bool set_nameandfamily();
-    bool set_email();
-    bool set_phone();
-    bool set_ncode();
     user& operator=(const user& s);
 private:
     Ui::user *ui;
