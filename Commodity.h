@@ -14,7 +14,7 @@ private:
     std::deque<Comment> comments;
     std::deque<Complaint> complaints;
     QString owner;
-    int owner_number;
+    long long int owner_phone_number;
     int numbers;
     int id;
     QString name;
@@ -23,6 +23,7 @@ private:
     QString company;
     bool is_electric;
     QString city;
+    QString address;
     int cost;
     int num_of_sell;
     int discount_percent;
@@ -36,6 +37,7 @@ private:
     int profit_percent;
 public:
     Commodity();
+    ~Commodity();
 };
 
 #endif // COMMODITY_H
