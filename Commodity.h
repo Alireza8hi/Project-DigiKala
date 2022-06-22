@@ -14,7 +14,7 @@ private:
 //    std::deque<Comment> comments;
 //    std::deque<Complaint> complaints;
     QString owner;
-    long long int owner_phone_number;
+    QString owner_phone_number;
     int number;
     int id;
     QString name;
@@ -38,14 +38,14 @@ private:
 public:
     Commodity();
     ~Commodity();
-//    void add_comment(tm now_time,QString sender,QString description);
+//    void add_comment(tm now_time,int sender_id,QString description);
 //    void delete_comment();
-//    void add_complaint(tm now_time,QString sender,QString description);
+//    void add_complaint(tm now_time,int sender_id,QString description);
 //    void delete_complaint();
     void set_owner(QString owner);
     QString get_owner()const;
-    void set_owner_phone_number(long long int phone_number);
-    long long int get_owner_phone_number()const;
+    void set_owner_phone_number(QString phone_number);
+    QString get_owner_phone_number()const;
     void set_number(int number);
     int get_number()const;
     void set_id(int id);

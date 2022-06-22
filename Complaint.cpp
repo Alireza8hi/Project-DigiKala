@@ -1,9 +1,9 @@
 #include "Complaint.h"
 
-Complaint::Complaint(tm now_time,QString sender,QString commodity,QString description)
+Complaint::Complaint(tm now_time,QString sender,int commodity_id,QString description)
 {
     this->sender = sender;
-    this->commodity = commodity;
+    this->commodity_id = commodity_id;
     this->date_of_birth = now_time;
     this->description = description;
     return;
@@ -16,7 +16,7 @@ Complaint::Complaint()
 
 Complaint::~Complaint()
 {
-    this->commodity = nullptr;
+    this->commodity_id = 0;
     this->sender = nullptr;
     return;
 }
@@ -43,15 +43,15 @@ QString Complaint::get_sender()const
     return this->sender;
 }
 
-void Complaint::set_commodity(QString commodity)
+void Complaint::set_commodity_id(int commodity_id)
 {
-    this->commodity = commodity;
+    this->commodity_id = commodity_id;
     return;
 }
 
-QString Complaint::get_commodity()const
+int Complaint::get_commodity_id()const
 {
-    return this->commodity;
+    return this->commodity_id;
 }
 
 void Complaint::set_description(QString description)

@@ -1,9 +1,9 @@
 #include "Comment.h"
 
-Comment::Comment(tm now_time,QString sender,QString commodity,QString description)
+Comment::Comment(tm now_time,QString sender,int commodity_id,QString description)
 {
     this->sender = sender;
-    this->commodity = commodity;
+    this->commodity_id = commodity_id;
     this->date_of_birth = now_time;
     this->description = description;
     return;
@@ -16,7 +16,7 @@ Comment::Comment()
 
 Comment::~Comment()
 {
-    this->commodity = nullptr;
+    this->commodity_id = 0;
     this->sender = nullptr;
     return;
 }
@@ -43,15 +43,15 @@ QString Comment::get_sender()const
     return this->sender;
 }
 
-void Comment::set_commodity(QString commodity)
+void Comment::set_commodity_id(int commodity_id)
 {
-    this->commodity = commodity;
+    this->commodity_id = commodity_id;
     return;
 }
 
-QString Comment::get_commodity()const
+int Comment::get_commodity_id()const
 {
-    return this->commodity;
+    return this->commodity_id;
 }
 
 void Comment::set_description(QString description)

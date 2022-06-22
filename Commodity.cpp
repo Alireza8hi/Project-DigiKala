@@ -2,15 +2,15 @@
 
 Commodity::Commodity()
 {
-    this->address=this->category=this->city=this->color=this->company=this->description=this->name=this->owner=this->type="Unknown";
-    this->owner_phone_number=this->number=this->cost=this->discount_percent=this->id=this->num_of_sell=this->profit_percent=this->volume=this->weight=0;
+    this->address=this->category=this->city=this->color=this->company=this->description=this->name=this->owner=this->type=this->owner_phone_number="Unknown";
+    this->number=this->cost=this->discount_percent=this->id=this->num_of_sell=this->profit_percent=this->volume=this->weight=0;
     return;
 }
 
 Commodity::~Commodity()
 {
-    this->address=this->category=this->city=this->color=this->company=this->description=this->name=this->owner=this->type=nullptr;
-    this->owner_phone_number=this->number=this->cost=this->discount_percent=this->id=this->num_of_sell=this->profit_percent=this->volume=this->weight=0;
+    this->address=this->category=this->city=this->color=this->company=this->description=this->name=this->owner=this->type=this->owner_phone_number=nullptr;
+    this->number=this->cost=this->discount_percent=this->id=this->num_of_sell=this->profit_percent=this->volume=this->weight=0;
     return;
 }
 
@@ -25,13 +25,13 @@ QString Commodity::get_owner() const
     return this->owner;
 }
 
-void Commodity::set_owner_phone_number(long long phone_number)
+void Commodity::set_owner_phone_number(QString phone_number)
 {
     this->owner_phone_number = phone_number;
     return;
 }
 
-long long Commodity::get_owner_phone_number() const
+QString Commodity::get_owner_phone_number() const
 {
     return this->owner_phone_number;
 }
