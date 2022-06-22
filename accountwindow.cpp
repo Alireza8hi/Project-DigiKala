@@ -84,10 +84,15 @@ void AccountWindow::on_AdminBtn_clicked()
 }
 
 
-
 void AccountWindow::on_SignUpBtn_clicked()
 {
-    SignUpDialog *c = new SignUpDialog;
-    c->show();
+    SignUpDialog = new class SignUpDialog;
+    SignUpDialog->show();
+}
+
+
+void AccountWindow::on_ReturnBtn_triggered()
+{
+    parentWidget()->show();
 }
 

@@ -1,6 +1,7 @@
 #ifndef ACCOUNTWINDOW_H
 #define ACCOUNTWINDOW_H
 
+#include "signupdialog.h"
 #include <QMainWindow>
 
 namespace Ui {
@@ -22,8 +23,12 @@ private slots:
 
     void on_SignUpBtn_clicked();
 
+
+    void on_ReturnBtn_triggered();
+
 private:
     Ui::AccountWindow *ui;
+    SignUpDialog *SignUpDialog;
 };
 
 #endif // ACCOUNTWINDOW_H

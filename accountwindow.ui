@@ -15,42 +15,38 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
-    <item row="6" column="2">
-     <widget class="QLabel" name="PassLbl">
-      <property name="text">
-       <string>رمز عبور</string>
-      </property>
-     </widget>
+    <item row="4" column="1">
+     <widget class="QLineEdit" name="UserNameLe"/>
     </item>
-    <item row="0" column="0" colspan="3">
-     <widget class="QPushButton" name="GuestBtn">
-      <property name="text">
-       <string>مهمان</string>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="0" colspan="3">
-     <widget class="QPushButton" name="SignUpBtn">
-      <property name="text">
-       <string>ثبت نام کاربر</string>
-      </property>
-     </widget>
-    </item>
-    <item row="7" column="0" colspan="3">
+    <item row="6" column="0" colspan="3">
      <widget class="QPushButton" name="AdminBtn">
       <property name="text">
        <string>مدیر</string>
       </property>
      </widget>
     </item>
-    <item row="6" column="0">
-     <widget class="QPushButton" name="UserSignInBtn">
+    <item row="3" column="0" colspan="3">
+     <widget class="QPushButton" name="LoginBtn">
       <property name="text">
-       <string>ورود</string>
+       <string>ورود کاربر</string>
       </property>
      </widget>
     </item>
     <item row="5" column="2">
+     <widget class="QLabel" name="PassLbl">
+      <property name="text">
+       <string>رمز عبور</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="QLineEdit" name="PassLe">
+      <property name="echoMode">
+       <enum>QLineEdit::Password</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="2">
      <widget class="QLabel" name="UserNameLbl">
       <property name="frameShadow">
        <enum>QFrame::Plain</enum>
@@ -63,20 +59,17 @@
       </property>
      </widget>
     </item>
-    <item row="4" column="0" colspan="3">
-     <widget class="QPushButton" name="LoginBtn">
+    <item row="2" column="0" colspan="3">
+     <widget class="QPushButton" name="SignUpBtn">
       <property name="text">
-       <string>ورود کاربر</string>
+       <string>ثبت نام کاربر</string>
       </property>
      </widget>
     </item>
-    <item row="5" column="1">
-     <widget class="QLineEdit" name="UserNameLe"/>
-    </item>
-    <item row="6" column="1">
-     <widget class="QLineEdit" name="PassLe">
-      <property name="echoMode">
-       <enum>QLineEdit::Password</enum>
+    <item row="5" column="0">
+     <widget class="QPushButton" name="UserSignInBtn">
+      <property name="text">
+       <string>ورود</string>
       </property>
      </widget>
     </item>

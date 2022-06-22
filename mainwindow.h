@@ -1,6 +1,9 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include "accountwindow.h"
+#include "categorywindow.h"
+#include "homewindow.h"
 #include <QMainWindow>
 
 QT_BEGIN_NAMESPACE
@@ -25,5 +28,9 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    AccountWindow *AccountWindow;
+    CategoryWindow *CategoryWindow;
+    HomeWindow *HomeWindow;
+
 };
 #endif // MAINWINDOW_H

@@ -19,6 +19,7 @@ private slots:
 
     void on_ShowPassCB_clicked();
 
+
 private:
     Ui::SignUpDialog *ui;
 };

@@ -30,21 +30,22 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_HomeBtn_clicked()
 {
-    HomeWindow *h = new HomeWindow;
-    h->show();
+    HomeWindow = new class HomeWindow(this);
+    HomeWindow->show();
 }
 
 
 void MainWindow::on_CategoryBtn_clicked()
 {
-    CategoryWindow *c = new CategoryWindow;
-    c->show();
+    CategoryWindow = new class CategoryWindow(this);
+    CategoryWindow->show();
 }
 
 
 void MainWindow::on_AccountBtn_clicked()
 {
-    AccountWindow *a = new AccountWindow;
-    a->show();
+    AccountWindow = new class AccountWindow(this);
+    AccountWindow->show();
+
 }
 
