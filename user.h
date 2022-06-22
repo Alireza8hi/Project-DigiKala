@@ -17,6 +17,9 @@ public:
     ~user();
     bool change_password();
     bool change_username();
+    QString getusername();
+    QString getpassword();
+    QString getrole();
     user& operator=(const user& s);
 private:
     Ui::user *ui;

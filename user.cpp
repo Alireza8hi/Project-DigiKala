@@ -51,12 +51,7 @@ bool user::change_password()
                     }
     }
     this->password=new_password;
-    if(this->role=="customer")
-                fuser=fopen("usercustomer.bin","w+");
-    if(this->role=="admin")
-                fuser=fopen("useradmin.bin","w+");
-    if(this->role=="sellerr")
-                fuser=fopen("userseller.bin","w+");
+    fuser=fopen("user.txt","w+");
     while(fuser!=NULL)
     {
     fread(&changepass,sizeof(user),1,fuser);
@@ -90,12 +85,7 @@ bool user::change_username()
     }
         else
         {
-         if(this->role=="customer")
-            fuser=fopen("usercustomer.bin","w+");
-         if(this->role=="admin")
-            fuser=fopen("useradmin.bin","w+");
-         if(this->role=="sellerr")
-            fuser=fopen("userseller.bin","w+");
+         fuser=fopen("user.txt","w+");
          while(fuser!=NULL)
          {
             fread(&changepass,sizeof(user),1,fuser);
@@ -112,6 +102,21 @@ bool user::change_username()
     fclose(fuser);
     return true;
 
+}
+
+QString user::getusername()
+{
+    return this->username;
+}
+
+QString user::getpassword()
+{
+    return this->password;
+}
+
+QString user::getrole()
+{
+    return this->role;
 }
 
 user& user::operator=(const user& s)
