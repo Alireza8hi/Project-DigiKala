@@ -1,3 +1,6 @@
+#include <QLabel>
+#include <QMessageBox>
+#include <QDateTime>
 #include "mainwindow.h"
 #include "qobjectdefs.h"
 #include "ui_mainwindow.h"
@@ -9,8 +12,8 @@
 #include "ui_accountwindow.h"
 #include "signupdialog.h"
 #include "ui_signupdialog.h"
-#include <QLabel>
-#include <QDateTime>
+#include "user.h"
+
 
 AccountWindow::AccountWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -94,5 +97,57 @@ void AccountWindow::on_SignUpBtn_clicked()
 void AccountWindow::on_ReturnBtn_triggered()
 {
     parentWidget()->show();
+}
+
+
+void AccountWindow::on_UserSignInBtn_clicked()
+{
+    FILE *fuser;
+    user checkpassword;
+    int login=0;
+    fuser=fopen("user.txt","r+");
+    if(fuser==NULL)
+    {
+        QMessageBox * msg_error = new QMessageBox(QMessageBox::Critical,"Error"," you entered the wrong password or username ",QMessageBox::Ok|QMessageBox::Cancel);
+        msg_error->show();
+        connect(msg_error,&QMessageBox::buttonClicked,msg_error,&QMessageBox::deleteLater,Qt::QueuedConnection);
+        fclose(fuser);
+    }
+    else
+    {
+        while(fuser!=NULL)
+        {
+        fread(&checkpassword,sizeof(user),1,fuser);
+        if(checkpassword.getusername()==ui->UserNameLe->text() && checkpassword.getpassword()==ui->PassLe->text())
+            {
+            // برابر قرار دادن اطلاعات با user
+            login=1;
+            fclose(fuser);
+            break;
+            }
+        }
+        if(login)
+        {
+            QMessageBox * msg_error = new QMessageBox(QMessageBox::Critical,"Error"," you entered the wrong password or username ",QMessageBox::Ok|QMessageBox::Cancel);
+            msg_error->show();
+            connect(msg_error,&QMessageBox::buttonClicked,msg_error,&QMessageBox::deleteLater,Qt::QueuedConnection);
+        }
+        else
+        {
+            if(checkpassword.getrole()=="customer")
+            {
+                // بخش مشتری باز شود
+            }
+            else
+                if(checkpassword.getrole()=="sellerr")
+                {
+                    //بخش فروشنده باز شود
+                }
+                else
+                {
+                    //بخش ادمین باز شود
+                }
+        }
+    }
 }
 

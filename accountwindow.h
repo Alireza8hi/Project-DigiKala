@@ -26,6 +26,8 @@ private slots:
 
     void on_ReturnBtn_triggered();
 
+    void on_UserSignInBtn_clicked();
+
 private:
     Ui::AccountWindow *ui;
     SignUpDialog *SignUpDialog;
