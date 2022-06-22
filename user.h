@@ -20,9 +20,9 @@ public:
     user& operator=(const user& s);
 private:
     Ui::user *ui;
-    string username;
-    string password;
-    string role;
+    QString username;
+    QString password;
+    QString role;
     //Comment* comments;
     //Commodity* favorites;
 };

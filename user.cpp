@@ -19,19 +19,19 @@ user::~user()
 
 bool user::change_password()
 {
-    string current_password, new_password,renew_password;
+    QString current_password, new_password,renew_password;
     FILE *fuser;
     user changepass;
     while(true)
     {
     cout<< "enter the current password :"<<'\n';
-    cin>>current_password;
+    //cin>>current_password;
     cout<<'\n';
     cout<< "enter the new password :"<<'\n';
-    cin>>new_password;
+    //cin>>new_password;
     cout<<'\n';
     cout<< "re-enter the new password :"<<'\n';
-    cin>>renew_password;
+    //cin>>renew_password;
     cout<<'\n';
     if(current_password != this->password)
         {
@@ -76,12 +76,12 @@ bool user::change_username()
 {
     FILE *fuser;
     user changepass;
-    string passwordtest,usernametest;
+    QString passwordtest,usernametest;
     cout<< "enter the new username :"<<'\n';
-    cin>>usernametest;
+    //cin>>usernametest;
     cout<<'\n';
     cout<< "Enter the password :"<<'\n';
-    cin>>passwordtest;
+    //cin>>passwordtest;
     cout<<'\n';
     if(this->password!=passwordtest)
     {
@@ -120,7 +120,8 @@ user& user::operator=(const user& s)
   this->password=s.password;
   this->username=s.username;
   this->role=s.role;
-  this->setnameandfamily(s.getnameandfamily());
+  this->setname(s.getname());
+  this->setfamily(s.getfamily());
   this->setemail(s.getemail());
   this->setadress(s.getadress());
   this->setncode(s.getncode());

@@ -6,7 +6,7 @@ using namespace std;
 
 Human::Human()
 {
-    this->name_and_family = "Guest";
+    this->name=this->family = "Guest";
     this->email = "Guest@gmail.com";
     this->adress = "iran";
     this->national_code = this->phone = 0;
@@ -16,14 +16,19 @@ Human::Human()
 
 Human::~Human()
 {
-    this->name_and_family = this->email = this->adress = nullptr;
+    this->name = this->email = this->adress = nullptr;
     this->national_code = this->phone = 0;
     return;
 }
 
-string Human::getnameandfamily()const
+QString Human::getname()const
 {
-    return this->name_and_family;
+    return this->name;
+}
+
+QString Human::getfamily() const
+{
+    return this->family;
 }
 
 long long Human::getncode()const
@@ -31,12 +36,12 @@ long long Human::getncode()const
     return this->national_code;
 }
 
-string Human::getemail()const
+QString Human::getemail()const
 {
     return this->email;
 }
 
-string Human::getadress()const
+QString Human::getadress()const
 {
     return this->adress;
 }
@@ -46,9 +51,15 @@ long long Human::getphone()const
     return this->phone;
 }
 
-void Human::setnameandfamily(const string name)
+void Human::setname(const QString namef)
 {
-    this->name_and_family=name;
+    this->name=namef;
+    return;
+}
+
+void Human::setfamily(const QString familyf)
+{
+    this->family=familyf;
     return;
 }
 
@@ -58,13 +69,13 @@ void Human::setncode(const long long int ncode)
     return;
 }
 
-void Human::setemail(const string em)
+void Human::setemail(const QString em)
 {
     this->email=em;
     return;
 }
 
-void Human::setadress(const string adr)
+void Human::setadress(const QString adr)
 {
     this->adress=adr;
     return;
