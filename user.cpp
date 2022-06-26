@@ -104,17 +104,17 @@ bool user::change_username()
 
 }
 
-QString user::getusername()
+QString user::get_username()
 {
     return this->username;
 }
 
-QString user::getpassword()
+QString user::get_password()
 {
     return this->password;
 }
 
-QString user::getrole()
+QString user::get_role()
 {
     return this->role;
 }
@@ -125,12 +125,12 @@ user& user::operator=(const user& s)
   this->password=s.password;
   this->username=s.username;
   this->role=s.role;
-  this->setname(s.getname());
-  this->setfamily(s.getfamily());
-  this->setemail(s.getemail());
-  this->setadress(s.getadress());
-  this->setncode(s.getncode());
-  this->setphone(s.getphone());
+  this->set_name(s.get_name());
+  this->set_family(s.get_family());
+  this->set_email(s.get_email());
+  this->set_adress(s.get_adress());
+  this->set_ncode(s.get_ncode());
+  this->set_phone_number(s.get_phone_number());
   return *this;
 }
 

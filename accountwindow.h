@@ -23,7 +23,6 @@ private slots:
 
     void on_SignUpBtn_clicked();
 
-
     void on_ReturnBtn_triggered();
 
     void on_UserSignInBtn_clicked();

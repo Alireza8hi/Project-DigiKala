@@ -9,80 +9,81 @@ Human::Human()
     this->name=this->family = "Guest";
     this->email = "Guest@gmail.com";
     this->adress = "iran";
-    this->national_code = this->phone = 0;
+    this->national_code =0;
+    this->phone_number = "0";
 	return;
 }
 
 
 Human::~Human()
 {
-    this->name = this->email = this->adress = nullptr;
-    this->national_code = this->phone = 0;
+    this->name = this->email = this->adress = this->phone_number = nullptr;
+    this->national_code = 0;
     return;
 }
 
-QString Human::getname()const
+QString Human::get_name()const
 {
     return this->name;
 }
 
-QString Human::getfamily() const
+QString Human::get_family() const
 {
     return this->family;
 }
 
-long long Human::getncode()const
+long long Human::get_ncode()const
 {
     return this->national_code;
 }
 
-QString Human::getemail()const
+QString Human::get_email()const
 {
     return this->email;
 }
 
-QString Human::getadress()const
+QString Human::get_adress()const
 {
     return this->adress;
 }
 
-long long Human::getphone()const
+QString Human::get_phone_number()const
 {
-    return this->phone;
+    return this->phone_number;
 }
 
-void Human::setname(const QString namef)
+void Human::set_name(const QString namef)
 {
     this->name=namef;
     return;
 }
 
-void Human::setfamily(const QString familyf)
+void Human::set_family(const QString familyf)
 {
     this->family=familyf;
     return;
 }
 
-void Human::setncode(const long long int ncode)
+void Human::set_ncode(const long long int ncode)
 {
     this->national_code=ncode;
     return;
 }
 
-void Human::setemail(const QString em)
+void Human::set_email(const QString em)
 {
     this->email=em;
     return;
 }
 
-void Human::setadress(const QString adr)
+void Human::set_adress(const QString adr)
 {
     this->adress=adr;
     return;
 }
 
-void Human::setphone(const long long int pho)
+void Human::set_phone_number(const QString pho)
 {
-    this->phone=pho;
+    this->phone_number=pho;
     return;
 }

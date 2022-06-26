@@ -43,8 +43,7 @@ FORMS += \
     homewindow.ui \
     mainwindow.ui \
     signupdialog.ui \
-    signuprules.ui \
-    user.ui
+    signuprules.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

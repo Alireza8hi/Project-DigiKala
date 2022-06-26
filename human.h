@@ -11,21 +11,21 @@ private:
 	long long int national_code;
     QString email ;
     QString adress;
-    long long int phone;
+    QString phone_number;
 public:
 	Human();
 	~Human();
-    QString getname()const;
-    QString getfamily()const;
-    long long int getncode()const;
-    QString getemail()const;
-    QString getadress()const;
-    long long int getphone()const;
-    void setname(const QString namef);
-    void setfamily(const QString familyf);
-    void setncode(const long long int ncode) ;
-    void setemail(const QString em);
-    void setadress(const QString adr);
-    void setphone(const long long int  pho);
+    QString get_name()const;
+    QString get_family()const;
+    long long int get_ncode()const;
+    QString get_email()const;
+    QString get_adress()const;
+    QString get_phone_number()const;
+    void set_name(const QString namef);
+    void set_family(const QString familyf);
+    void set_ncode(const long long int ncode) ;
+    void set_email(const QString em);
+    void set_adress(const QString adr);
+    void set_phone_number(const QString  pho);
 };
 #endif

@@ -108,7 +108,7 @@ void AccountWindow::on_UserSignInBtn_clicked()
         while(fuser!=NULL)
         {
         fread(&checkpassword,sizeof(user),1,fuser);
-        if(checkpassword.getusername()==ui->UserNameLe->text() && checkpassword.getpassword()==ui->PassLe->text())
+        if(checkpassword.get_username()==ui->UserNameLe->text() && checkpassword.get_password()==ui->PassLe->text())
             {
             // برابر قرار دادن اطلاعات با user
             login=1;
@@ -124,12 +124,12 @@ void AccountWindow::on_UserSignInBtn_clicked()
         }
         else
         {
-            if(checkpassword.getrole()=="customer")
+            if(checkpassword.get_role()=="customer")
             {
                 // بخش مشتری باز شود
             }
             else
-                if(checkpassword.getrole()=="sellerr")
+                if(checkpassword.get_role()=="sellerr")
                 {
                     //بخش فروشنده باز شود
                 }
