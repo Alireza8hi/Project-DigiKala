@@ -20,6 +20,7 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     signupdialog.cpp \
+    signuprules.cpp \
     user.cpp
 
 HEADERS += \
@@ -33,6 +34,7 @@ HEADERS += \
     human.h \
     mainwindow.h \
     signupdialog.h \
+    signuprules.h \
     user.h
 
 FORMS += \
@@ -41,6 +43,7 @@ FORMS += \
     homewindow.ui \
     mainwindow.ui \
     signupdialog.ui \
+    signuprules.ui \
     user.ui
 
 # Default rules for deployment.

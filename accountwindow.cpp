@@ -26,11 +26,10 @@ AccountWindow::AccountWindow(QWidget *parent) :
     QLabel *label= new QLabel(d);
     ui->statusbar->addWidget(label);
 
-    ui->UserNameLbl->setHidden(true);
-    ui->PassLbl->setHidden(true);
     ui->UserNameLe->setHidden(true);
     ui->PassLe->setHidden(true);
     ui->UserSignInBtn->setHidden(true);
+
 }
 
 AccountWindow::~AccountWindow()
@@ -40,10 +39,8 @@ AccountWindow::~AccountWindow()
 
 void AccountWindow::on_LoginBtn_clicked()
 {
-    if (ui->UserNameLbl->isHidden() == true)
+    if (ui->UserNameLe->isHidden() == true)
     {
-        ui->UserNameLbl->setHidden(false);
-        ui->PassLbl->setHidden(false);
         ui->UserNameLe->setHidden(false);
         ui->PassLe->setHidden(false);
         ui->UserSignInBtn->setHidden(false);
@@ -53,9 +50,7 @@ void AccountWindow::on_LoginBtn_clicked()
         ui->UserNameLe->clear();
         ui->PassLe->clear();
     }
-    ui->UserNameLbl->setGeometry(ui->UserNameLbl->x() , 299 , ui->UserNameLbl->width() , ui->UserNameLbl->height());
     ui->UserNameLe->setGeometry(ui->UserNameLe->x() , 299 , ui->UserNameLe->width() , ui->UserNameLe->height());
-    ui->PassLbl->setGeometry(ui->PassLbl->x() , 379 , ui->PassLbl->width() , ui->PassLbl->height());
     ui->PassLe->setGeometry(ui->PassLe->x() , 379 , ui->PassLe->width() , ui->PassLe->height());
     ui->UserSignInBtn->setGeometry(ui->UserSignInBtn->x() , 379 , ui->UserSignInBtn->width() , ui->UserSignInBtn->height());
     ui->AdminBtn->setGeometry(ui->AdminBtn->x() , 460 , ui->AdminBtn->width() , ui->AdminBtn->height());
@@ -64,10 +59,8 @@ void AccountWindow::on_LoginBtn_clicked()
 
 void AccountWindow::on_AdminBtn_clicked()
 {
-    if (ui->UserNameLbl->isHidden() == true)
+    if (ui->UserNameLe->isHidden() == true)
     {
-        ui->UserNameLbl->setHidden(false);
-        ui->PassLbl->setHidden(false);
         ui->UserNameLe->setHidden(false);
         ui->PassLe->setHidden(false);
         ui->UserSignInBtn->setHidden(false);
@@ -77,13 +70,10 @@ void AccountWindow::on_AdminBtn_clicked()
         ui->UserNameLe->clear();
         ui->PassLe->clear();
     }
-    ui->UserNameLbl->setGeometry(ui->UserNameLbl->x() , 380 , ui->UserNameLbl->width() , ui->UserNameLbl->height());
     ui->UserNameLe->setGeometry(ui->UserNameLe->x() , 380 , ui->UserNameLe->width() , ui->UserNameLe->height());
-    ui->PassLbl->setGeometry(ui->PassLbl->x() , 460 , ui->PassLbl->width() , ui->PassLbl->height());
     ui->PassLe->setGeometry(ui->PassLe->x() , 460 , ui->PassLe->width() , ui->PassLe->height());
     ui->UserSignInBtn->setGeometry(ui->UserSignInBtn->x() , 460 , ui->UserSignInBtn->width() , ui->UserSignInBtn->height());
     ui->AdminBtn->setGeometry(ui->AdminBtn->x() , 300 , ui->AdminBtn->width() , ui->AdminBtn->height());
-
 }
 
 
@@ -150,4 +140,3 @@ void AccountWindow::on_UserSignInBtn_clicked()
         }
     }
 }
-

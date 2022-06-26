@@ -12,6 +12,7 @@ int main(int argc, char *argv[])
 {
     ltm->tm_year+=1900;
     ltm->tm_mon+=1;
+
     QApplication a(argc, argv);
     MainWindow w;
     w.show();
