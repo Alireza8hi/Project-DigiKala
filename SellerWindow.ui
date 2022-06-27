@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Customer</class>
- <widget class="QMainWindow" name="Customer">
+ <class>SellerWindow</class>
+ <widget class="QMainWindow" name="SellerWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -14,56 +14,56 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="pushButton_categories">
     <property name="geometry">
      <rect>
       <x>250</x>
-      <y>88</y>
+      <y>100</y>
       <width>161</width>
-      <height>31</height>
+      <height>29</height>
      </rect>
     </property>
     <property name="text">
      <string>دسته بندی کالا ها</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="pushButton_all_of_commodities">
     <property name="geometry">
      <rect>
       <x>250</x>
-      <y>130</y>
+      <y>150</y>
       <width>161</width>
-      <height>31</height>
+      <height>29</height>
      </rect>
     </property>
     <property name="text">
      <string>کل کالا ها</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="pushButton_search_speciefic_commodity">
     <property name="geometry">
      <rect>
       <x>250</x>
-      <y>178</y>
+      <y>200</y>
       <width>161</width>
-      <height>31</height>
+      <height>29</height>
      </rect>
     </property>
     <property name="text">
      <string>جست و جوی کالای خاص</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_4">
+   <widget class="QPushButton" name="pushButton_sell_commodity">
     <property name="geometry">
      <rect>
       <x>250</x>
-      <y>250</y>
+      <y>280</y>
       <width>161</width>
-      <height>31</height>
+      <height>29</height>
      </rect>
     </property>
     <property name="text">
-     <string>فروش کالا به سایت</string>
+     <string>فروش کالا</string>
     </property>
    </widget>
   </widget>
@@ -88,6 +88,11 @@
    <addaction name="menu"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="open_profile">
+   <property name="text">
+    <string>مشاهده پروفایل</string>
+   </property>
+  </action>
   <action name="sign_out">
    <property name="text">
     <string>خروج از حساب کاربری</string>
@@ -96,11 +101,6 @@
   <action name="delete_account">
    <property name="text">
     <string>حذف حساب کاربری</string>
-   </property>
-  </action>
-  <action name="open_profile">
-   <property name="text">
-    <string>مشاهده پروفایل</string>
    </property>
   </action>
  </widget>

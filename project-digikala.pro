@@ -14,7 +14,12 @@ SOURCES += \
     Commodity.cpp \
     Complaint.cpp \
     Customer.cpp \
+    CustomerWindow.cpp \
     Dgikala.cpp \
+    MainAdmin.cpp \
+    MainAdminWindow.cpp \
+    Seller.cpp \
+    SellerWindow.cpp \
     User.cpp \
     accountwindow.cpp \
     categorywindow.cpp \
@@ -30,7 +35,12 @@ HEADERS += \
     Commodity.h \
     Complaint.h \
     Customer.h \
+    CustomerWindow.h \
     Digikala.h \
+    MainAdmin.h \
+    MainAdminWindow.h \
+    Seller.h \
+    SellerWindow.h \
     User.h \
     accountwindow.h \
     categorywindow.h \
@@ -41,7 +51,9 @@ HEADERS += \
     signuprules.h
 
 FORMS += \
-    Customer.ui \
+    CustomerWindow.ui \
+    MainAdminWindow.ui \
+    SellerWindow.ui \
     accountwindow.ui \
     categorywindow.ui \
     homewindow.ui \

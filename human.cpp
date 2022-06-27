@@ -1,8 +1,7 @@
-
 #include <iostream>
-using namespace std;
 #include "human.h"
 
+using namespace std;
 
 Human::Human()
 {

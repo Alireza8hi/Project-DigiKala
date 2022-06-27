@@ -1,25 +1,24 @@
 #include "Customer.h"
-#include "ui_Customer.h"
 
-Customer::Customer(QWidget *parent) :
-    QMainWindow(parent),
-    ui(new Ui::Customer)
+Customer::Customer()
 {
-    ui->setupUi(this);
+    this->sales_revenue=0;
+    return;
 }
 
 Customer::~Customer()
 {
-    delete ui;
-}
-
-void Customer::set_income(int income)
-{
-    this->income = income;
+    this->sales_revenue=0;
     return;
 }
 
-int Customer::get_income() const
+void Customer::set_sales_revenue(int sales_revenue)
 {
-    return this->income;
+    this->sales_revenue = sales_revenue;
+    return;
+}
+
+int Customer::get_sales_revenue() const
+{
+    return this->sales_revenue;
 }

@@ -13,7 +13,7 @@
 #include "signupdialog.h"
 #include "ui_signupdialog.h"
 #include "User.h"
-#include "Customer.h"
+#include "CustomerWindow.h"
 
 
 AccountWindow::AccountWindow(QWidget *parent) :
@@ -83,8 +83,8 @@ void AccountWindow::on_UserSignInBtn_clicked()
             if(checkpassword.get_role()=="customer")
             {
                 // بخش مشتری باز شود
-                Customer* a = new class Customer(this);
-                a->show();
+                CustomerWindow* customer_window = new class CustomerWindow(this);
+                customer_window->show();
             }
             else
                 if(checkpassword.get_role()=="sellerr")

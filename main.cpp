@@ -2,11 +2,14 @@
 #include <iostream>
 #include <QApplication>
 #include <ctime>
+#include "Digikala.h"
 
 using namespace std;
 
    time_t now = time(0);
    tm *ltm = localtime(&now);
+
+   DigiKala* site = &DigiKala::make_object();
 
 int main(int argc, char *argv[])
 {
