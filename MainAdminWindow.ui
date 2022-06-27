@@ -13,7 +13,167 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
+  <property name="toolTip">
+   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/Pics/Pics/NoBack.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="pushButton_change_admin">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>50</y>
+      <width>151</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>اخراج و تغییر مدیر</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_add_admin">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>90</y>
+      <width>151</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>افزودن مدیر</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_change_admin_income">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>130</y>
+      <width>151</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>تغییر حقوق مدیر ها</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_successful_sellers">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>80</y>
+      <width>161</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>موفق ترین فروشنده ها</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_best_customers">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>120</y>
+      <width>161</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>بهترین مشتری ها</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_sold_commodities">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>160</y>
+      <width>161</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>کالاهای فروخته شده</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_commodities_profit">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>200</y>
+      <width>161</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>میزان سود از فروش کالا</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_open_other_admins">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>0</y>
+      <width>201</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ورود به عنوان سایر مدیر ها</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_read_user_information">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>190</y>
+      <width>151</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>اطلاعات اعضای سایت</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_all_of_commodities">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>130</y>
+      <width>161</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>کل کالا ها</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_search_speciefic_commodity">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>170</y>
+      <width>161</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>جست و جوی کالای خاص</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_categories">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>90</y>
+      <width>161</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>دسته بندی کالا ها</string>
+    </property>
+   </widget>
+  </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
@@ -28,6 +188,7 @@
      <string>تنظیمات</string>
     </property>
     <addaction name="open_profile"/>
+    <addaction name="Bankruptcy"/>
     <addaction name="sign_out"/>
    </widget>
    <addaction name="menu"/>
@@ -41,6 +202,11 @@
   <action name="sign_out">
    <property name="text">
     <string>خروج از حساب کاربری</string>
+   </property>
+  </action>
+  <action name="Bankruptcy">
+   <property name="text">
+    <string>اعلام برشکستگی</string>
    </property>
   </action>
  </widget>

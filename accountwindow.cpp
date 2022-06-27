@@ -14,6 +14,8 @@
 #include "ui_signupdialog.h"
 #include "User.h"
 #include "CustomerWindow.h"
+#include "SellerWindow.h"
+#include "MainAdminWindow.h"
 
 
 AccountWindow::AccountWindow(QWidget *parent) :
@@ -82,19 +84,23 @@ void AccountWindow::on_UserSignInBtn_clicked()
         {
             if(checkpassword.get_role()=="customer")
             {
-                // بخش مشتری باز شود
                 CustomerWindow* customer_window = new class CustomerWindow(this);
                 customer_window->show();
             }
-            else
-                if(checkpassword.get_role()=="sellerr")
-                {
-                    //بخش فروشنده باز شود
-                }
-                else
-                {
-                    //بخش ادمین باز شود
-                }
+            else if(checkpassword.get_role()=="seller")
+            {
+                    SellerWindow* seller_window = new class SellerWindow(this);
+                    seller_window->show();
+            }
+            else if(checkpassword.get_role()=="mainadmin")
+            {
+                    MainAdminWindow* main_admin_window = new class MainAdminWindow(this);
+                    main_admin_window->show();
+            }
+            else if(checkpassword.get_role()=="selladmin")
+            {
+                //
+            }
         }
     }
 }

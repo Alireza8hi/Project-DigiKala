@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="pushButton_categories">
     <property name="geometry">
      <rect>
       <x>250</x>
@@ -27,7 +27,7 @@
      <string>دسته بندی کالا ها</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="pushButton_all_of_commodities">
     <property name="geometry">
      <rect>
       <x>250</x>
@@ -40,7 +40,7 @@
      <string>کل کالا ها</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="pushButton_search_speciefic_commodity">
     <property name="geometry">
      <rect>
       <x>250</x>
@@ -53,7 +53,7 @@
      <string>جست و جوی کالای خاص</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_4">
+   <widget class="QPushButton" name="pushButton_sell_commodity_to_the_site">
     <property name="geometry">
      <rect>
       <x>250</x>
