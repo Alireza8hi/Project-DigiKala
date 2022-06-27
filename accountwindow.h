@@ -17,10 +17,6 @@ public:
     ~AccountWindow();
 
 private slots:
-    void on_LoginBtn_clicked();
-
-    void on_AdminBtn_clicked();
-
     void on_SignUpBtn_clicked();
 
     void on_ReturnBtn_triggered();

@@ -37,7 +37,16 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">background-color: qradialgradient(spread:repeat, cx:0.11, cy:0.0965909, radius:0.5, fx:0.336643, fy:0.325, stop:0.309859 rgba(0, 0, 127, 255), stop:0.943662 rgba(44, 245, 217, 255), stop:1 rgba(255, 255, 255, 255));</string>
+   </property>
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
      <spacer name="verticalSpacer_2">
@@ -64,6 +73,10 @@
         <italic>false</italic>
         <bold>true</bold>
        </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(85, 170, 255);</string>
       </property>
       <property name="frameShape">
        <enum>QFrame::Box</enum>
@@ -112,6 +125,10 @@
       </item>
       <item>
        <widget class="QPushButton" name="AccountBtn">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(85, 170, 255);</string>
+        </property>
         <property name="text">
          <string>حساب کاربری</string>
         </property>
@@ -119,6 +136,10 @@
       </item>
       <item>
        <widget class="QPushButton" name="CategoryBtn">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(85, 170, 255);</string>
+        </property>
         <property name="text">
          <string>دسته بندی ها</string>
         </property>
@@ -126,6 +147,10 @@
       </item>
       <item>
        <widget class="QPushButton" name="HomeBtn">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(85, 170, 255);</string>
+        </property>
         <property name="text">
          <string>خانه</string>
         </property>

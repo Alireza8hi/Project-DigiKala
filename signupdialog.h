@@ -2,7 +2,7 @@
 #define SIGNUPDIALOG_H
 
 #include <QDialog>
-
+#include <QValidator>
 namespace Ui {
 class SignUpDialog;
 }
@@ -35,6 +35,10 @@ private slots:
     void on_SeeRulesBtn_clicked();
 
     void on_OkBtn_clicked();
+
+    void on_CancelBtn_clicked();
+
+    void on_BackToLogIn_clicked();
 
 private:
     Ui::SignUpDialog *ui;

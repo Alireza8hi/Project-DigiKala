@@ -6,7 +6,7 @@
 #include <deque>
 #include <user.h>
 
-user userglobal;
+//user userglobal;
 class DigiKala : public QObject
 {
     Q_OBJECT

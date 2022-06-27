@@ -2,6 +2,7 @@
 #include "signupdialog.h"
 #include "signuprules.h"
 #include "ui_signupdialog.h"
+#include <QValidator>
 #include "user.h"
 
 SignUpDialog::SignUpDialog(QWidget *parent) :
@@ -13,6 +14,8 @@ SignUpDialog::SignUpDialog(QWidget *parent) :
 
     ui->NationalCodeLe->setInputMask("0000000000");
     ui->PhoneLe->setInputMask("00000000000");
+
+    ui->NameLbl->setStyleSheet("color: rgb(0, 0, 0)");
 
 }
 
@@ -156,5 +159,17 @@ void SignUpDialog::on_OkBtn_clicked()
     }
     }
     return;
+}
+
+
+void SignUpDialog::on_CancelBtn_clicked()
+{
+    parentWidget()->show();
+}
+
+
+void SignUpDialog::on_BackToLogIn_clicked()
+{
+    parentWidget()->show();
 }
 

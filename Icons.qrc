@@ -6,5 +6,12 @@
         <file>Icons/free-phone-icon-vector-27.jpg</file>
         <file>Icons/exit-icon-png-close-0.png</file>
         <file>Icons/return_icon_154912.png</file>
+        <file>Icons/user.png</file>
+    </qresource>
+    <qresource prefix="/Pics">
+        <file>Pics/empty-shopping-cart-pink-background-with-large-copy-space-online-shopping-concept_492182-38.jpg</file>
+        <file>Pics/modern-gold-background-free-vector.jpg</file>
+        <file>Pics/NoBack.png</file>
+        <file>Pics/hand-painted-background-violet-orange-colours_23-2148427578.webp</file>
     </qresource>
 </RCC>
