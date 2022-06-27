@@ -4,7 +4,9 @@
 #include<QObject>
 #include"Commodity.h"
 #include <deque>
+#include <user.h>
 
+user userglobal;
 class DigiKala : public QObject
 {
     Q_OBJECT

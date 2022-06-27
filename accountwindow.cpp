@@ -116,7 +116,7 @@ void AccountWindow::on_UserSignInBtn_clicked()
             break;
             }
         }
-        if(login)
+        if(login==0)
         {
             QMessageBox * msg_error = new QMessageBox(QMessageBox::Critical,"Error"," you entered the wrong password or username ",QMessageBox::Ok|QMessageBox::Cancel);
             msg_error->show();

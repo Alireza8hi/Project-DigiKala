@@ -104,19 +104,37 @@ bool user::change_username()
 
 }
 
-QString user::get_username()
+QString user::get_username() const
 {
     return this->username;
 }
 
-QString user::get_password()
+QString user::get_password() const
 {
     return this->password;
 }
 
-QString user::get_role()
+QString user::get_role() const
 {
     return this->role;
+}
+
+void user::set_username(const QString uname)
+{
+    this->username=uname;
+    return;
+}
+
+void user::set_password(const QString upassword)
+{
+    this->password=upassword;
+    return;
+}
+
+void user::set_role(const QString urole)
+{
+    this->role=urole;
+    return;
 }
 
 user& user::operator=(const user& s)

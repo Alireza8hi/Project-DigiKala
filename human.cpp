@@ -9,8 +9,9 @@ Human::Human()
     this->name=this->family = "Guest";
     this->email = "Guest@gmail.com";
     this->adress = "iran";
-    this->national_code =0;
+    this->national_code ="0";
     this->phone_number = "0";
+    this->sex=1;
 	return;
 }
 
@@ -32,7 +33,7 @@ QString Human::get_family() const
     return this->family;
 }
 
-long long Human::get_ncode()const
+QString Human::get_ncode()const
 {
     return this->national_code;
 }
@@ -52,6 +53,11 @@ QString Human::get_phone_number()const
     return this->phone_number;
 }
 
+int Human::get_sex() const
+{
+    return this->sex;
+}
+
 void Human::set_name(const QString namef)
 {
     this->name=namef;
@@ -64,7 +70,7 @@ void Human::set_family(const QString familyf)
     return;
 }
 
-void Human::set_ncode(const long long int ncode)
+void Human::set_ncode(const QString ncode)
 {
     this->national_code=ncode;
     return;
@@ -85,5 +91,11 @@ void Human::set_adress(const QString adr)
 void Human::set_phone_number(const QString pho)
 {
     this->phone_number=pho;
+    return;
+}
+
+void Human::set_sex(const int se)
+{
+    this->sex=se;
     return;
 }

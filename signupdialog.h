@@ -34,6 +34,8 @@ private slots:
 
     void on_SeeRulesBtn_clicked();
 
+    void on_OkBtn_clicked();
+
 private:
     Ui::SignUpDialog *ui;
 };
