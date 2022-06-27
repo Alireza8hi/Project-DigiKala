@@ -90,7 +90,7 @@ bool User::change_username()
             {
             this->username=Usernametest;
             fseek(fuser,ftell(fuser)-sizeof(User),SEEK_CUR);
-            //changepass=this;
+            changepass=*this;
             fwrite(&changepass,sizeof(User),1,fuser);
             break;
             }

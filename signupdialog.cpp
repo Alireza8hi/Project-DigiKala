@@ -1,8 +1,9 @@
 #include <QMessageBox>
+#include <QValidator>
 #include "signupdialog.h"
 #include "signuprules.h"
 #include "ui_signupdialog.h"
-#include <QValidator>
+#include "Digikala.h"
 #include "User.h"
 
 SignUpDialog::SignUpDialog(QWidget *parent) :
@@ -152,7 +153,7 @@ void SignUpDialog::on_OkBtn_clicked()
         writeuser.set_email(ui->EmailLe->text());
         fwrite(&writeuser,sizeof(User),1,fuser);
         fclose(fuser);
-        //userglobal=writeuser;
+        userglobal=writeuser;
         QMessageBox * msg_error = new QMessageBox(QMessageBox::Information,"Success"," Your registration was successful ",QMessageBox::Ok|QMessageBox::Cancel);
         msg_error->show();
         connect(msg_error,&QMessageBox::buttonClicked,msg_error,&QMessageBox::deleteLater,Qt::QueuedConnection);
