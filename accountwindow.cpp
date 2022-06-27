@@ -16,7 +16,7 @@
 #include "CustomerWindow.h"
 #include "SellerWindow.h"
 #include "MainAdminWindow.h"
-
+#include "Digikala.h"
 
 AccountWindow::AccountWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -68,7 +68,7 @@ void AccountWindow::on_UserSignInBtn_clicked()
         fread(&checkpassword,sizeof(User),1,fuser);
         if(checkpassword.get_username()==ui->UserNameLe->text() && checkpassword.get_password()==ui->PassLe->text())
             {
-            // برابر قرار دادن اطلاعات با User
+            userglobal=checkpassword;
             login=1;
             fclose(fuser);
             break;
