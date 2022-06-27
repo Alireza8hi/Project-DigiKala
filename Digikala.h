@@ -4,7 +4,7 @@
 #include<QObject>
 #include"Commodity.h"
 #include <deque>
-#include <user.h>
+#include <User.h>
 
 //user userglobal;
 class DigiKala : public QObject
@@ -19,9 +19,10 @@ private:
     int num_of_admins;
     int income;
     int money;
+    DigiKala();
 
 public:
-    DigiKala();
+    static DigiKala& make_object();
     ~DigiKala();
     void set_num_of_commodities(int num_of_commodities);
     int get_num_of_commodities()const;

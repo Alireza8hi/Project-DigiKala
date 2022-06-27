@@ -7,6 +7,12 @@ DigiKala::DigiKala()
     return;
 }
 
+DigiKala& DigiKala::make_object()
+{
+    static DigiKala digi_kala;
+    return digi_kala;
+}
+
 DigiKala::~DigiKala()
 {
     this->income = this->num_of_commodities = this->num_of_admins = this->num_of_sell_sold_commonities = this->money = 0;
