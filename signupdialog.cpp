@@ -3,7 +3,7 @@
 #include "signuprules.h"
 #include "ui_signupdialog.h"
 #include <QValidator>
-#include "user.h"
+#include "User.h"
 
 SignUpDialog::SignUpDialog(QWidget *parent) :
     QDialog(parent),
@@ -109,7 +109,7 @@ void SignUpDialog::on_OkBtn_clicked()
 {
     int login =1,pos,count,i;
     FILE *fuser;
-    user checkuser,writeuser;
+    User checkuser,writeuser;
     if(ui->PassConLe->text()!=ui->PassLe->text())
     {
         login=0;
@@ -124,10 +124,10 @@ void SignUpDialog::on_OkBtn_clicked()
         fuser=fopen("user.txt","w+");
     fseek(fuser,0,SEEK_END);
     pos=ftell(fuser);
-    count=pos/sizeof(user);
+    count=pos/sizeof(User);
     for(i=0;i<count ;i++)
     {
-        fread(&checkuser,sizeof(user),1,fuser);
+        fread(&checkuser,sizeof(User),1,fuser);
         if (checkuser.get_username()==ui->UsernameLe->text())
         {
         QMessageBox * msg_error = new QMessageBox(QMessageBox::Critical,"Error"," The username entered in the system is available. Please enter another username ",QMessageBox::Ok|QMessageBox::Cancel);
@@ -150,7 +150,7 @@ void SignUpDialog::on_OkBtn_clicked()
         writeuser.set_adress(ui->AddressLe->text());
         writeuser.set_phone_number(ui->PhoneLe->text());
         writeuser.set_email(ui->EmailLe->text());
-        fwrite(&writeuser,sizeof(user),1,fuser);
+        fwrite(&writeuser,sizeof(User),1,fuser);
         fclose(fuser);
         //userglobal=writeuser;
         QMessageBox * msg_error = new QMessageBox(QMessageBox::Information,"Success"," Your registration was successful ",QMessageBox::Ok|QMessageBox::Cancel);

@@ -13,7 +13,9 @@ SOURCES += \
     Comment.cpp \
     Commodity.cpp \
     Complaint.cpp \
+    Customer.cpp \
     Dgikala.cpp \
+    User.cpp \
     accountwindow.cpp \
     categorywindow.cpp \
     homewindow.cpp \
@@ -21,24 +23,25 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     signupdialog.cpp \
-    signuprules.cpp \
-    user.cpp
+    signuprules.cpp
 
 HEADERS += \
     Comment.h \
     Commodity.h \
     Complaint.h \
+    Customer.h \
     Digikala.h \
+    User.h \
     accountwindow.h \
     categorywindow.h \
     homewindow.h \
     human.h \
     mainwindow.h \
     signupdialog.h \
-    signuprules.h \
-    user.h
+    signuprules.h
 
 FORMS += \
+    Customer.ui \
     accountwindow.ui \
     categorywindow.ui \
     homewindow.ui \

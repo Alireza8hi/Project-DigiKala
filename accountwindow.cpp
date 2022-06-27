@@ -12,7 +12,7 @@
 #include "ui_accountwindow.h"
 #include "signupdialog.h"
 #include "ui_signupdialog.h"
-#include "user.h"
+#include "User.h"
 
 
 AccountWindow::AccountWindow(QWidget *parent) :
@@ -48,9 +48,9 @@ void AccountWindow::on_ReturnBtn_triggered()
 void AccountWindow::on_UserSignInBtn_clicked()
 {
     FILE *fuser;
-    user checkpassword;
+    User checkpassword;
     int login=0;
-    fuser=fopen("user.txt","r+");
+    fuser=fopen("User.txt","r+");
     if(fuser==NULL)
     {
         QMessageBox * msg_error = new QMessageBox(QMessageBox::Critical,"Error"," you entered the wrong password or username ",QMessageBox::Ok|QMessageBox::Cancel);
@@ -62,10 +62,10 @@ void AccountWindow::on_UserSignInBtn_clicked()
     {
         while(fuser!=NULL)
         {
-        fread(&checkpassword,sizeof(user),1,fuser);
+        fread(&checkpassword,sizeof(User),1,fuser);
         if(checkpassword.get_username()==ui->UserNameLe->text() && checkpassword.get_password()==ui->PassLe->text())
             {
-            // برابر قرار دادن اطلاعات با user
+            // برابر قرار دادن اطلاعات با User
             login=1;
             fclose(fuser);
             break;

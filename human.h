@@ -2,7 +2,9 @@
 #define HumanSDFGHJ
 #include <iostream>
 #include <QString>
+
 using namespace std;
+
 class Human
 {
 private:

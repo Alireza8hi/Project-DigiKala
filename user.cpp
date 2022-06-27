@@ -1,27 +1,24 @@
 #include <stdlib.h>
-#include "user.h"
-#include "ui_user.h"
+#include "User.h"
 
-user::user(QWidget *parent)
-    : QDialog(parent)
-    , ui(new Ui::user)
+User::User()
 {
-    ui->setupUi(this);
     this->password="";
     this->username="";
     this->role="customer";
 }
 
-user::~user()
+User::~User()
 {
-    delete ui;
+
+    return;
 }
 
-bool user::change_password()
+bool User::change_password()
 {
     QString current_password, new_password,renew_password;
     FILE *fuser;
-    user changepass;
+    User changepass;
     while(true)
     {
     cout<< "enter the current password :"<<'\n';
@@ -51,15 +48,15 @@ bool user::change_password()
                     }
     }
     this->password=new_password;
-    fuser=fopen("user.txt","w+");
+    fuser=fopen("User.txt","w+");
     while(fuser!=NULL)
     {
-    fread(&changepass,sizeof(user),1,fuser);
+    fread(&changepass,sizeof(User),1,fuser);
     if(changepass.username==this->username)
         {
-        fseek(fuser,ftell(fuser)-sizeof(user),SEEK_CUR);
-        changepass=this;
-        fwrite(&changepass,sizeof(user),1,fuser);
+        fseek(fuser,ftell(fuser)-sizeof(User),SEEK_CUR);
+        //changepass=this;
+        fwrite(&changepass,sizeof(User),1,fuser);
         break;
         }
     }
@@ -67,11 +64,11 @@ bool user::change_password()
     return true;
 }
 
-bool user::change_username()
+bool User::change_username()
 {
     FILE *fuser;
-    user changepass;
-    QString passwordtest,usernametest;
+    User changepass;
+    QString passwordtest,Usernametest;
     cout<< "enter the new username :"<<'\n';
     //cin>>usernametest;
     cout<<'\n';
@@ -85,16 +82,16 @@ bool user::change_username()
     }
         else
         {
-         fuser=fopen("user.txt","w+");
+         fuser=fopen("User.txt","w+");
          while(fuser!=NULL)
          {
-            fread(&changepass,sizeof(user),1,fuser);
+            fread(&changepass,sizeof(User),1,fuser);
             if(changepass.username==this->username)
             {
-            this->username=usernametest;
-            fseek(fuser,ftell(fuser)-sizeof(user),SEEK_CUR);
-            changepass=this;
-            fwrite(&changepass,sizeof(user),1,fuser);
+            this->username=Usernametest;
+            fseek(fuser,ftell(fuser)-sizeof(User),SEEK_CUR);
+            //changepass=this;
+            fwrite(&changepass,sizeof(User),1,fuser);
             break;
             }
           }
@@ -104,42 +101,42 @@ bool user::change_username()
 
 }
 
-QString user::get_username() const
+QString User::get_username() const
 {
     return this->username;
 }
 
-QString user::get_password() const
+QString User::get_password() const
 {
     return this->password;
 }
 
-QString user::get_role() const
+QString User::get_role() const
 {
     return this->role;
 }
 
-void user::set_username(const QString uname)
+void User::set_username(const QString uname)
 {
     this->username=uname;
     return;
 }
 
-void user::set_password(const QString upassword)
+void User::set_password(const QString upassword)
 {
     this->password=upassword;
     return;
 }
 
-void user::set_role(const QString urole)
+void User::set_role(const QString urole)
 {
     this->role=urole;
     return;
 }
 
-user& user::operator=(const user& s)
+User& User::operator=(const User& s)
 {
-  this->~user();
+  this->~User();
   this->password=s.password;
   this->username=s.username;
   this->role=s.role;
@@ -151,4 +148,3 @@ user& user::operator=(const user& s)
   this->set_phone_number(s.get_phone_number());
   return *this;
 }
-

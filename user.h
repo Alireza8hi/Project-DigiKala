@@ -1,20 +1,16 @@
-#ifndef USER_H
-#define USER_H
+#ifndef User_H
+#define User_H
 
-#include <QDialog>
+#include <QObject>
 #include "human.h"
 
-QT_BEGIN_NAMESPACE
-namespace Ui { class user; }
-QT_END_NAMESPACE
-
-class user : public QDialog , public Human
+class User : public QObject , public Human
 {
     Q_OBJECT
 
 public:
-    user(QWidget *parent = nullptr);
-    ~user();
+    User();
+    ~User();
     bool change_password();
     bool change_username();
     QString get_username() const;
@@ -23,13 +19,16 @@ public:
     void set_username(const QString uname);
     void set_password(const QString upassword);
     void set_role(const QString urole);
-    user& operator=(const user& s);
+    User& operator=(const User& s);
 private:
-    Ui::user *ui;
     QString username;
     QString password;
     QString role;
     //Comment* comments;
     //Commodity* favorites;
+
+
+
 };
-#endif // USER_H
+
+#endif // User_H
