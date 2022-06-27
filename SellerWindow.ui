@@ -66,6 +66,32 @@
      <string>فروش کالا</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButton_commodities_near_expiration">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>390</y>
+      <width>171</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>کالا های نزدیک به انقضا</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_delete_commodities">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>360</y>
+      <width>191</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>کالا های حذف شده از سایت</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -81,6 +107,7 @@
      <string>تنظیمات</string>
     </property>
     <addaction name="open_profile"/>
+    <addaction name="messages"/>
     <addaction name="sign_out"/>
     <addaction name="separator"/>
     <addaction name="delete_account"/>
@@ -101,6 +128,11 @@
   <action name="delete_account">
    <property name="text">
     <string>حذف حساب کاربری</string>
+   </property>
+  </action>
+  <action name="messages">
+   <property name="text">
+    <string>پیغام ها</string>
    </property>
   </action>
  </widget>

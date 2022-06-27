@@ -18,6 +18,8 @@ SOURCES += \
     Dgikala.cpp \
     MainAdmin.cpp \
     MainAdminWindow.cpp \
+    ReviewAdmin.cpp \
+    ReviewAdminWindow.cpp \
     Seller.cpp \
     SellerWindow.cpp \
     User.cpp \
@@ -39,6 +41,8 @@ HEADERS += \
     Digikala.h \
     MainAdmin.h \
     MainAdminWindow.h \
+    ReviewAdmin.h \
+    ReviewAdminWindow.h \
     Seller.h \
     SellerWindow.h \
     User.h \
@@ -53,6 +57,7 @@ HEADERS += \
 FORMS += \
     CustomerWindow.ui \
     MainAdminWindow.ui \
+    ReviewAdminWindow.ui \
     SellerWindow.ui \
     accountwindow.ui \
     categorywindow.ui \

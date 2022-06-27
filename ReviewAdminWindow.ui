@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>CustomerWindow</class>
- <widget class="QMainWindow" name="CustomerWindow">
+ <class>ReviewAdminWindow</class>
+ <widget class="QMainWindow" name="ReviewAdminWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -17,10 +17,10 @@
    <widget class="QPushButton" name="pushButton_categories">
     <property name="geometry">
      <rect>
-      <x>250</x>
-      <y>88</y>
+      <x>240</x>
+      <y>100</y>
       <width>161</width>
-      <height>31</height>
+      <height>29</height>
      </rect>
     </property>
     <property name="text">
@@ -30,10 +30,10 @@
    <widget class="QPushButton" name="pushButton_all_of_commodities">
     <property name="geometry">
      <rect>
-      <x>250</x>
-      <y>130</y>
+      <x>240</x>
+      <y>150</y>
       <width>161</width>
-      <height>31</height>
+      <height>29</height>
      </rect>
     </property>
     <property name="text">
@@ -43,14 +43,27 @@
    <widget class="QPushButton" name="pushButton_search_speciefic_commodity">
     <property name="geometry">
      <rect>
-      <x>250</x>
-      <y>178</y>
+      <x>240</x>
+      <y>200</y>
       <width>161</width>
-      <height>31</height>
+      <height>29</height>
      </rect>
     </property>
     <property name="text">
      <string>جست و جوی کالای خاص</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_commodities_awaiting_approval">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>310</y>
+      <width>241</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>کالا های در انتظار تایید</string>
     </property>
    </widget>
   </widget>
@@ -76,6 +89,11 @@
    <addaction name="menu"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="open_profile">
+   <property name="text">
+    <string>مشاهده پروفایل</string>
+   </property>
+  </action>
   <action name="sign_out">
    <property name="text">
     <string>خروج از حساب کاربری</string>
@@ -84,11 +102,6 @@
   <action name="delete_account">
    <property name="text">
     <string>حذف حساب کاربری</string>
-   </property>
-  </action>
-  <action name="open_profile">
-   <property name="text">
-    <string>مشاهده پروفایل</string>
    </property>
   </action>
   <action name="messages">

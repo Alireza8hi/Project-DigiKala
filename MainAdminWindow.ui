@@ -188,6 +188,7 @@
      <string>تنظیمات</string>
     </property>
     <addaction name="open_profile"/>
+    <addaction name="messages"/>
     <addaction name="Bankruptcy"/>
     <addaction name="sign_out"/>
    </widget>
@@ -207,6 +208,11 @@
   <action name="Bankruptcy">
    <property name="text">
     <string>اعلام برشکستگی</string>
+   </property>
+  </action>
+  <action name="messages">
+   <property name="text">
+    <string>پیغام ها</string>
    </property>
   </action>
  </widget>

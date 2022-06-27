@@ -68,7 +68,7 @@ void AccountWindow::on_UserSignInBtn_clicked()
         fread(&checkpassword,sizeof(User),1,fuser);
         if(checkpassword.get_username()==ui->UserNameLe->text() && checkpassword.get_password()==ui->PassLe->text())
             {
-            userglobal=checkpassword;
+            //userglobal=checkpassword;
             login=1;
             fclose(fuser);
             break;
