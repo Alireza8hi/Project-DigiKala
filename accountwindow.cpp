@@ -12,7 +12,7 @@
 #include "MainAdminWindow.h"
 #include "Digikala.h"
 #include "ui_accountwindow.h"
-
+User userglobal;
 AccountWindow::AccountWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::AccountWindow)
@@ -45,7 +45,8 @@ void AccountWindow::on_ReturnBtn_triggered()
 
 void AccountWindow::on_UserSignInBtn_clicked()
 {
-    FILE *fuser;
+    FILE *fuser=nullptr;
+    int pos1=1,pos2=2;
     User checkpassword;
     int login=0;
     fuser=fopen("User.txt","r+");
@@ -58,12 +59,16 @@ void AccountWindow::on_UserSignInBtn_clicked()
     }
     else
     {
-        while(fuser!=NULL)
+        fseek(fuser,0,SEEK_END);
+        pos1=ftell(fuser);
+        fseek(fuser,0,SEEK_SET);
+        while(pos2<pos1)
         {
         fread(&checkpassword,sizeof(User),1,fuser);
+        pos2=ftell(fuser);
         if(checkpassword.get_username()==ui->UserNameLe->text() && checkpassword.get_password()==ui->PassLe->text())
             {
-            //userglobal=checkpassword;
+            userglobal=checkpassword;
             login=1;
             fclose(fuser);
             break;
@@ -74,6 +79,7 @@ void AccountWindow::on_UserSignInBtn_clicked()
             QMessageBox * msg_error = new QMessageBox(QMessageBox::Critical,"Error"," you entered the wrong password or username ",QMessageBox::Ok|QMessageBox::Cancel);
             msg_error->show();
             connect(msg_error,&QMessageBox::buttonClicked,msg_error,&QMessageBox::deleteLater,Qt::QueuedConnection);
+            fclose(fuser);
         }
         else
         {

@@ -5,7 +5,7 @@
 #include "ui_signupdialog.h"
 #include "Digikala.h"
 #include "User.h"
-
+extern User userglobal;
 SignUpDialog::SignUpDialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::SignUpDialog)
@@ -109,7 +109,7 @@ void SignUpDialog::on_SeeRulesBtn_clicked()
 void SignUpDialog::on_OkBtn_clicked()
 {
     int login =1,pos,count,i;
-    FILE *fuser;
+    FILE *fuser=nullptr;
     User checkuser,writeuser;
     if(ui->PassConLe->text()!=ui->PassLe->text())
     {
@@ -153,7 +153,7 @@ void SignUpDialog::on_OkBtn_clicked()
         writeuser.set_email(ui->EmailLe->text());
         fwrite(&writeuser,sizeof(User),1,fuser);
         fclose(fuser);
-        //userglobal=writeuser;
+        userglobal=writeuser;
         QMessageBox * msg_error = new QMessageBox(QMessageBox::Information,"Success"," Your registration was successful ",QMessageBox::Ok|QMessageBox::Cancel);
         msg_error->show();
         connect(msg_error,&QMessageBox::buttonClicked,msg_error,&QMessageBox::deleteLater,Qt::QueuedConnection);
