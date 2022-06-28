@@ -106,31 +106,31 @@
     <property name="title">
      <string>تنظیمات</string>
     </property>
-    <addaction name="open_profile"/>
-    <addaction name="messages"/>
-    <addaction name="sign_out"/>
+    <addaction name="OpenProfileBtn"/>
+    <addaction name="MessagesBtn"/>
+    <addaction name="SignOutBtn"/>
     <addaction name="separator"/>
-    <addaction name="delete_account"/>
+    <addaction name="DeleteAccountBtn"/>
    </widget>
    <addaction name="menu"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="open_profile">
+  <action name="OpenProfileBtn">
    <property name="text">
     <string>مشاهده پروفایل</string>
    </property>
   </action>
-  <action name="sign_out">
+  <action name="SignOutBtn">
    <property name="text">
     <string>خروج از حساب کاربری</string>
    </property>
   </action>
-  <action name="delete_account">
+  <action name="DeleteAccountBtn">
    <property name="text">
     <string>حذف حساب کاربری</string>
    </property>
   </action>
-  <action name="messages">
+  <action name="MessagesBtn">
    <property name="text">
     <string>پیغام ها</string>
    </property>
