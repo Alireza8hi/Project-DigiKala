@@ -3,20 +3,15 @@
 #include <QDateTime>
 #include "mainwindow.h"
 #include "qobjectdefs.h"
-#include "ui_mainwindow.h"
-#include "homewindow.h"
-#include "ui_homewindow.h"
+#include "allcommoditywindow.h"
 #include "categorywindow.h"
-#include "ui_categorywindow.h"
 #include "accountwindow.h"
-#include "ui_accountwindow.h"
-#include "signupdialog.h"
-#include "ui_signupdialog.h"
 #include "User.h"
 #include "CustomerWindow.h"
 #include "SellerWindow.h"
 #include "MainAdminWindow.h"
 #include "Digikala.h"
+#include "ui_accountwindow.h"
 
 AccountWindow::AccountWindow(QWidget *parent) :
     QMainWindow(parent),

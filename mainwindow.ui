@@ -43,12 +43,63 @@
   <property name="styleSheet">
    <string notr="true"/>
   </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Rounded</enum>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
-    <string notr="true">background-color: qradialgradient(spread:repeat, cx:0.11, cy:0.0965909, radius:0.5, fx:0.336643, fy:0.325, stop:0.309859 rgba(0, 0, 127, 255), stop:0.943662 rgba(44, 245, 217, 255), stop:1 rgba(255, 255, 255, 255));</string>
+    <string notr="true">background-image: url(:/Pics/Pics/empty-shopping-cart-pink-background-with-large-copy-space-online-shopping-concept_492182-38.jpg);</string>
    </property>
-   <layout class="QVBoxLayout" name="verticalLayout">
-    <item>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="4" column="1">
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeType">
+       <enum>QSizePolicy::Preferred</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>110</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="3" column="0">
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeType">
+       <enum>QSizePolicy::Preferred</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="2" column="1">
+     <spacer name="verticalSpacer_3">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeType">
+       <enum>QSizePolicy::Preferred</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>100</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="0" column="1">
      <spacer name="verticalSpacer_2">
       <property name="orientation">
        <enum>Qt::Vertical</enum>
@@ -64,7 +115,135 @@
       </property>
      </spacer>
     </item>
-    <item>
+    <item row="3" column="1">
+     <layout class="QVBoxLayout" name="verticalLayout_4">
+      <item>
+       <widget class="QPushButton" name="SearchBtn">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>60</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>60</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>B Nazanin</family>
+          <pointsize>15</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(85, 170, 255);</string>
+        </property>
+        <property name="text">
+         <string>جست و جوی کالای خاص</string>
+        </property>
+        <property name="icon">
+         <iconset resource="icons.qrc">
+          <normaloff>:/Icons/Icons/search-icon-png-5.png</normaloff>:/Icons/Icons/search-icon-png-5.png</iconset>
+        </property>
+        <property name="autoDefault">
+         <bool>false</bool>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="AllCommodityBtn">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>60</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>60</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>B Nazanin</family>
+          <pointsize>15</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(85, 170, 255);</string>
+        </property>
+        <property name="text">
+         <string>کل کالاها</string>
+        </property>
+        <property name="icon">
+         <iconset resource="icons.qrc">
+          <normaloff>:/Icons/Icons/5110770.png</normaloff>:/Icons/Icons/5110770.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="CategoryBtn">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>60</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>60</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>B Nazanin</family>
+          <pointsize>15</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(85, 170, 255);</string>
+        </property>
+        <property name="text">
+         <string>دسته بندی کالاها</string>
+        </property>
+        <property name="icon">
+         <iconset resource="icons.qrc">
+          <normaloff>:/Icons/Icons/categories-icon-1.jpg</normaloff>:/Icons/Icons/categories-icon-1.jpg</iconset>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="3" column="2">
+     <spacer name="horizontalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeType">
+       <enum>QSizePolicy::Preferred</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="1" column="0" colspan="3">
      <widget class="QLabel" name="label">
       <property name="font">
        <font>
@@ -92,88 +271,6 @@ background-color: rgb(85, 170, 255);</string>
       </property>
      </widget>
     </item>
-    <item>
-     <spacer name="verticalSpacer">
-      <property name="orientation">
-       <enum>Qt::Vertical</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>20</width>
-        <height>40</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
-    <item>
-     <layout class="QHBoxLayout" name="horizontalLayout">
-      <item>
-       <spacer name="horizontalSpacer">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeType">
-         <enum>QSizePolicy::Preferred</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>10</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item>
-       <widget class="QPushButton" name="AccountBtn">
-        <property name="styleSheet">
-         <string notr="true">color: rgb(0, 0, 0);
-background-color: rgb(85, 170, 255);</string>
-        </property>
-        <property name="text">
-         <string>حساب کاربری</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="CategoryBtn">
-        <property name="styleSheet">
-         <string notr="true">color: rgb(0, 0, 0);
-background-color: rgb(85, 170, 255);</string>
-        </property>
-        <property name="text">
-         <string>دسته بندی ها</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="HomeBtn">
-        <property name="styleSheet">
-         <string notr="true">color: rgb(0, 0, 0);
-background-color: rgb(85, 170, 255);</string>
-        </property>
-        <property name="text">
-         <string>خانه</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <spacer name="horizontalSpacer_2">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeType">
-         <enum>QSizePolicy::Preferred</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>5</width>
-          <height>5</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-     </layout>
-    </item>
    </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -182,7 +279,7 @@ background-color: rgb(85, 170, 255);</string>
      <x>0</x>
      <y>0</y>
      <width>900</width>
-     <height>26</height>
+     <height>25</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">
@@ -193,36 +290,49 @@ background-color: rgb(85, 170, 255);</string>
      <property name="title">
       <string>پرسش های متداول</string>
      </property>
-     <addaction name="action_3"/>
+     <property name="icon">
+      <iconset resource="icons.qrc">
+       <normaloff>:/Icons/Icons/question-mark-icon-png-1155224288245ptwi4q2v.png</normaloff>:/Icons/Icons/question-mark-icon-png-1155224288245ptwi4q2v.png</iconset>
+     </property>
+     <addaction name="VoroodVaSabteNam"/>
      <addaction name="separator"/>
-     <addaction name="action_7"/>
+     <addaction name="BazgardandanKalaAct"/>
      <addaction name="separator"/>
-     <addaction name="action_8"/>
+     <addaction name="RavanSabtSefareshAct"/>
     </widget>
     <widget class="QMenu" name="menu_3">
      <property name="title">
       <string>تماس با ما</string>
      </property>
-     <addaction name="action_11"/>
+     <property name="icon">
+      <iconset resource="icons.qrc">
+       <normaloff>:/Icons/Icons/free-phone-icon-vector-27.jpg</normaloff>:/Icons/Icons/free-phone-icon-vector-27.jpg</iconset>
+     </property>
+     <addaction name="EmailAct"/>
      <addaction name="separator"/>
-     <addaction name="action_12"/>
+     <addaction name="FaxAct"/>
     </widget>
-    <addaction name="separator"/>
-    <addaction name="separator"/>
     <addaction name="menu_2"/>
     <addaction name="separator"/>
-    <addaction name="Privacy"/>
+    <addaction name="PrivacyAct"/>
     <addaction name="separator"/>
-    <addaction name="TermOfUse"/>
+    <addaction name="TermOfUseAct"/>
     <addaction name="separator"/>
     <addaction name="menu_3"/>
     <addaction name="separator"/>
-    <addaction name="Exit"/>
+    <addaction name="ExitAct"/>
+   </widget>
+   <widget class="QMenu" name="menu_4">
+    <property name="title">
+     <string>حساب کاربری</string>
+    </property>
+    <addaction name="AccountAct"/>
    </widget>
    <addaction name="menu"/>
+   <addaction name="menu_4"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="Privacy">
+  <action name="PrivacyAct">
    <property name="icon">
     <iconset resource="icons.qrc">
      <normaloff>:/Icons/Icons/clipboard-files-and-folders.png</normaloff>:/Icons/Icons/clipboard-files-and-folders.png</iconset>
@@ -231,7 +341,7 @@ background-color: rgb(85, 170, 255);</string>
     <string>حریم خصوصی</string>
    </property>
   </action>
-  <action name="TermOfUse">
+  <action name="TermOfUseAct">
    <property name="icon">
     <iconset resource="icons.qrc">
      <normaloff>:/Icons/Icons/clipboard.png</normaloff>:/Icons/Icons/clipboard.png</iconset>
@@ -240,7 +350,7 @@ background-color: rgb(85, 170, 255);</string>
     <string>شرایط استفاده</string>
    </property>
   </action>
-  <action name="Exit">
+  <action name="ExitAct">
    <property name="icon">
     <iconset resource="icons.qrc">
      <normaloff>:/Icons/Icons/exit-icon-png-close-0.png</normaloff>:/Icons/Icons/exit-icon-png-close-0.png</iconset>
@@ -249,29 +359,46 @@ background-color: rgb(85, 170, 255);</string>
     <string>خروج</string>
    </property>
   </action>
-  <action name="action_3">
+  <action name="VoroodVaSabteNam">
    <property name="text">
     <string>ورود و ثبت نام</string>
    </property>
   </action>
-  <action name="action_7">
+  <action name="BazgardandanKalaAct">
    <property name="text">
     <string>بازگرداندن کالا</string>
    </property>
   </action>
-  <action name="action_8">
+  <action name="RavanSabtSefareshAct">
    <property name="text">
     <string>روند ثبت سفارش</string>
    </property>
   </action>
-  <action name="action_11">
+  <action name="EmailAct">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/Icons/Icons/email-icon-transparent-background-11549825133qbltljgp1w.png</normaloff>:/Icons/Icons/email-icon-transparent-background-11549825133qbltljgp1w.png</iconset>
+   </property>
    <property name="text">
     <string>ایمیل</string>
    </property>
   </action>
-  <action name="action_12">
+  <action name="FaxAct">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/Icons/Icons/fax-png-icon-5.png</normaloff>:/Icons/Icons/fax-png-icon-5.png</iconset>
+   </property>
    <property name="text">
     <string>فکس</string>
+   </property>
+  </action>
+  <action name="AccountAct">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/Icons/Icons/Sample_User_Icon.png</normaloff>:/Icons/Icons/Sample_User_Icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>حساب کاربری</string>
    </property>
   </action>
  </widget>
@@ -280,7 +407,7 @@ background-color: rgb(85, 170, 255);</string>
  </resources>
  <connections>
   <connection>
-   <sender>Exit</sender>
+   <sender>ExitAct</sender>
    <signal>triggered()</signal>
    <receiver>MainWindow</receiver>
    <slot>close()</slot>
@@ -296,7 +423,7 @@ background-color: rgb(85, 170, 255);</string>
    </hints>
   </connection>
   <connection>
-   <sender>HomeBtn</sender>
+   <sender>AllCommodityBtn</sender>
    <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
    <slot>hide()</slot>
@@ -328,8 +455,8 @@ background-color: rgb(85, 170, 255);</string>
    </hints>
   </connection>
   <connection>
-   <sender>AccountBtn</sender>
-   <signal>clicked()</signal>
+   <sender>AccountAct</sender>
+   <signal>triggered()</signal>
    <receiver>MainWindow</receiver>
    <slot>hide()</slot>
    <hints>

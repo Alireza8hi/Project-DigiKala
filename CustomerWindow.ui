@@ -6,97 +6,157 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>640</width>
-    <height>480</height>
+    <width>308</width>
+    <height>257</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton_categories">
-    <property name="geometry">
-     <rect>
-      <x>250</x>
-      <y>88</y>
-      <width>161</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>دسته بندی کالا ها</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_all_of_commodities">
-    <property name="geometry">
-     <rect>
-      <x>250</x>
-      <y>130</y>
-      <width>161</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>کل کالا ها</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_search_speciefic_commodity">
-    <property name="geometry">
-     <rect>
-      <x>250</x>
-      <y>178</y>
-      <width>161</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>جست و جوی کالای خاص</string>
-    </property>
-   </widget>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/Pics/Pics/spectrum-gradient-color-wheel-background.jpg);</string>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="2" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QPushButton" name="CategoryBtn">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 0);</string>
+        </property>
+        <property name="text">
+         <string>دسته بندی کالا ها</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="SearchBtn">
+        <property name="styleSheet">
+         <string notr="true">
+color: rgb(0, 0, 0);</string>
+        </property>
+        <property name="text">
+         <string>جست و جوی کالای خاص</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="AllCommodityBtn">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 0);</string>
+        </property>
+        <property name="text">
+         <string>کل کالا ها</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>640</width>
-     <height>26</height>
+     <width>308</width>
+     <height>25</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">
     <property name="title">
      <string>تنظیمات</string>
     </property>
-    <addaction name="open_profile"/>
-    <addaction name="messages"/>
-    <addaction name="sign_out"/>
+    <addaction name="OpenProfileBtn"/>
     <addaction name="separator"/>
-    <addaction name="delete_account"/>
+    <addaction name="MessagesBtn"/>
+    <addaction name="separator"/>
+    <addaction name="SignOutBtn"/>
+    <addaction name="separator"/>
+    <addaction name="DeleteAccountBtn"/>
+    <addaction name="separator"/>
+    <addaction name="ReturnBtn"/>
+    <addaction name="separator"/>
+    <addaction name="ExitBtn"/>
    </widget>
    <addaction name="menu"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="sign_out">
+  <action name="SignOutBtn">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/Icons/Icons/logout-icon-png-transparent-login-logout-icon-11562923416nzkie6fbka.png</normaloff>:/Icons/Icons/logout-icon-png-transparent-login-logout-icon-11562923416nzkie6fbka.png</iconset>
+   </property>
    <property name="text">
     <string>خروج از حساب کاربری</string>
    </property>
   </action>
-  <action name="delete_account">
+  <action name="DeleteAccountBtn">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/Icons/Icons/pngtree-delete-icon-image_1129289.jpg</normaloff>:/Icons/Icons/pngtree-delete-icon-image_1129289.jpg</iconset>
+   </property>
    <property name="text">
     <string>حذف حساب کاربری</string>
    </property>
   </action>
-  <action name="open_profile">
+  <action name="OpenProfileBtn">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/Icons/Icons/Sample_User_Icon.png</normaloff>:/Icons/Icons/Sample_User_Icon.png</iconset>
+   </property>
    <property name="text">
     <string>مشاهده پروفایل</string>
    </property>
   </action>
-  <action name="messages">
+  <action name="MessagesBtn">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/Icons/Icons/email-icon-transparent-background-11549825133qbltljgp1w.png</normaloff>:/Icons/Icons/email-icon-transparent-background-11549825133qbltljgp1w.png</iconset>
+   </property>
    <property name="text">
     <string>پیغام ها</string>
    </property>
   </action>
+  <action name="ReturnBtn">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/Icons/Icons/return_icon_154912.png</normaloff>:/Icons/Icons/return_icon_154912.png</iconset>
+   </property>
+   <property name="text">
+    <string>بازگشت</string>
+   </property>
+  </action>
+  <action name="ExitBtn">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/Icons/Icons/exit-icon-png-close-0.png</normaloff>:/Icons/Icons/exit-icon-png-close-0.png</iconset>
+   </property>
+   <property name="text">
+    <string>خروج</string>
+   </property>
+  </action>
  </widget>
- <resources/>
- <connections/>
+ <resources>
+  <include location="icons.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>ExitBtn</sender>
+   <signal>triggered()</signal>
+   <receiver>CustomerWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

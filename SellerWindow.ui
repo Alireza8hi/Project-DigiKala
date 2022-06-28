@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton_categories">
+   <widget class="QPushButton" name="CategoriesBtn">
     <property name="geometry">
      <rect>
       <x>250</x>
@@ -27,7 +27,7 @@
      <string>دسته بندی کالا ها</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_all_of_commodities">
+   <widget class="QPushButton" name="AllCommoditiesBtn">
     <property name="geometry">
      <rect>
       <x>250</x>
@@ -40,7 +40,7 @@
      <string>کل کالا ها</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_search_speciefic_commodity">
+   <widget class="QPushButton" name="Searchbtn">
     <property name="geometry">
      <rect>
       <x>250</x>
@@ -53,7 +53,7 @@
      <string>جست و جوی کالای خاص</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_sell_commodity">
+   <widget class="QPushButton" name="SellCommodityBtn">
     <property name="geometry">
      <rect>
       <x>250</x>
@@ -66,7 +66,7 @@
      <string>فروش کالا</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_commodities_near_expiration">
+   <widget class="QPushButton" name="CommoditiesExpireBtn">
     <property name="geometry">
      <rect>
       <x>240</x>
@@ -79,7 +79,7 @@
      <string>کالا های نزدیک به انقضا</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_delete_commodities">
+   <widget class="QPushButton" name="DeleteCommoditieBtn">
     <property name="geometry">
      <rect>
       <x>230</x>
@@ -99,7 +99,7 @@
      <x>0</x>
      <y>0</y>
      <width>640</width>
-     <height>26</height>
+     <height>25</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">

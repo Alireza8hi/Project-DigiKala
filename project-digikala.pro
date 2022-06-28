@@ -24,8 +24,8 @@ SOURCES += \
     SellerWindow.cpp \
     User.cpp \
     accountwindow.cpp \
+    allcommoditywindow.cpp \
     categorywindow.cpp \
-    homewindow.cpp \
     human.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -47,8 +47,8 @@ HEADERS += \
     SellerWindow.h \
     User.h \
     accountwindow.h \
+    allcommoditywindow.h \
     categorywindow.h \
-    homewindow.h \
     human.h \
     mainwindow.h \
     signupdialog.h \
@@ -60,8 +60,8 @@ FORMS += \
     ReviewAdminWindow.ui \
     SellerWindow.ui \
     accountwindow.ui \
+    allcommoditywindow.ui \
     categorywindow.ui \
-    homewindow.ui \
     mainwindow.ui \
     signupdialog.ui \
     signuprules.ui

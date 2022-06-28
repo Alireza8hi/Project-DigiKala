@@ -6,12 +6,23 @@
         <file>Icons/free-phone-icon-vector-27.jpg</file>
         <file>Icons/exit-icon-png-close-0.png</file>
         <file>Icons/return_icon_154912.png</file>
-        <file>Icons/user.png</file>
+        <file>Icons/5110770.png</file>
+        <file>Icons/Sample_User_Icon.png</file>
+        <file>Icons/search-icon-png-5.png</file>
+        <file>Icons/categories-icon-1.jpg</file>
+        <file>Icons/email-icon-transparent-background-11549825133qbltljgp1w.png</file>
+        <file>Icons/fax-png-icon-5.png</file>
+        <file>Icons/logout-icon-png-transparent-login-logout-icon-11562923416nzkie6fbka.png</file>
+        <file>Icons/pngtree-delete-icon-image_1129289.jpg</file>
+        <file>Icons/1580989.png</file>
     </qresource>
     <qresource prefix="/Pics">
         <file>Pics/empty-shopping-cart-pink-background-with-large-copy-space-online-shopping-concept_492182-38.jpg</file>
         <file>Pics/modern-gold-background-free-vector.jpg</file>
         <file>Pics/NoBack.png</file>
         <file>Pics/hand-painted-background-violet-orange-colours_23-2148427578.webp</file>
+        <file>Pics/modern-white-background-free-vector.webp</file>
+        <file>Pics/pngtree-blue-carbon-background-with-sport-style-and-golden-light-image_371487.jpg</file>
+        <file>Pics/spectrum-gradient-color-wheel-background.jpg</file>
     </qresource>
 </RCC>

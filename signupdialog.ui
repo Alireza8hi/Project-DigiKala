@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>483</width>
-    <height>436</height>
+    <height>439</height>
    </rect>
   </property>
   <property name="palette">
@@ -134,6 +134,9 @@
    </item>
    <item row="8" column="4">
     <widget class="QLabel" name="PassLbl">
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
      <property name="text">
       <string>رمز عبور*</string>
      </property>

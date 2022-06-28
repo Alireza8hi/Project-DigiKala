@@ -1,11 +1,8 @@
 #include "mainwindow.h"
-#include "ui_mainwindow.h"
-#include "homewindow.h"
-#include "ui_homewindow.h"
+#include "allcommoditywindow.h"
 #include "categorywindow.h"
-#include "ui_categorywindow.h"
 #include "accountwindow.h"
-#include "ui_accountwindow.h"
+#include "ui_mainwindow.h"
 #include <QWidget>
 #include <QPushButton>
 #include <QVBoxLayout>
@@ -20,6 +17,7 @@ MainWindow::MainWindow(QWidget *parent)
     QString d = QDate::currentDate().toString();
     QLabel *label= new QLabel(d);
     ui->statusbar->addWidget(label);
+
 }
 
 MainWindow::~MainWindow()
@@ -28,10 +26,10 @@ MainWindow::~MainWindow()
 }
 
 
-void MainWindow::on_HomeBtn_clicked()
+void MainWindow::on_AllCommodityBtn_clicked()
 {
-    HomeWindow = new class HomeWindow(this);
-    HomeWindow->show();
+    AllCommodityWindow = new class AllCommodityWindow(this);
+    AllCommodityWindow->show();
 }
 
 
@@ -41,11 +39,10 @@ void MainWindow::on_CategoryBtn_clicked()
     CategoryWindow->show();
 }
 
-
-void MainWindow::on_AccountBtn_clicked()
+void MainWindow::on_AccountAct_triggered()
 {
     AccountWindow = new class AccountWindow(this);
     AccountWindow->show();
-
 }
+
 

@@ -3,7 +3,7 @@
 
 #include "accountwindow.h"
 #include "categorywindow.h"
-#include "homewindow.h"
+#include "allcommoditywindow.h"
 #include <QMainWindow>
 
 QT_BEGIN_NAMESPACE
@@ -20,17 +20,17 @@ public:
 
 private slots:
 
-    void on_HomeBtn_clicked();
+    void on_AllCommodityBtn_clicked();
 
     void on_CategoryBtn_clicked();
 
-    void on_AccountBtn_clicked();
+    void on_AccountAct_triggered();
 
 private:
     Ui::MainWindow *ui;
     AccountWindow *AccountWindow;
     CategoryWindow *CategoryWindow;
-    HomeWindow *HomeWindow;
+    AllCommodityWindow *AllCommodityWindow;
 
 };
 #endif // MAINWINDOW_H

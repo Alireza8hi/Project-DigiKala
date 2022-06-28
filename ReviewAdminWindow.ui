@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton_categories">
+   <widget class="QPushButton" name="CategoriesBtn">
     <property name="geometry">
      <rect>
       <x>240</x>
@@ -27,7 +27,7 @@
      <string>دسته بندی کالا ها</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_all_of_commodities">
+   <widget class="QPushButton" name="AllCommoditiesBtn">
     <property name="geometry">
      <rect>
       <x>240</x>
@@ -40,7 +40,7 @@
      <string>کل کالا ها</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_search_speciefic_commodity">
+   <widget class="QPushButton" name="SearchBtn">
     <property name="geometry">
      <rect>
       <x>240</x>
@@ -53,7 +53,7 @@
      <string>جست و جوی کالای خاص</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_commodities_awaiting_approval">
+   <widget class="QPushButton" name="CommoditiesAwaitingApprovalBtn">
     <property name="geometry">
      <rect>
       <x>200</x>
@@ -73,43 +73,84 @@
      <x>0</x>
      <y>0</y>
      <width>640</width>
-     <height>26</height>
+     <height>25</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">
     <property name="title">
      <string>تنظیمات</string>
     </property>
-    <addaction name="open_profile"/>
-    <addaction name="messages"/>
-    <addaction name="sign_out"/>
+    <addaction name="OpenProfileBtn"/>
     <addaction name="separator"/>
-    <addaction name="delete_account"/>
+    <addaction name="MessagesBtn"/>
+    <addaction name="separator"/>
+    <addaction name="SignOutBtn"/>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
+    <addaction name="DeleteAccountBtn"/>
+    <addaction name="ReturnBtn"/>
+    <addaction name="ExitBtn"/>
    </widget>
    <addaction name="menu"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="open_profile">
+  <action name="OpenProfileBtn">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/Icons/Icons/Sample_User_Icon.png</normaloff>:/Icons/Icons/Sample_User_Icon.png</iconset>
+   </property>
    <property name="text">
     <string>مشاهده پروفایل</string>
    </property>
   </action>
-  <action name="sign_out">
+  <action name="SignOutBtn">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/Icons/Icons/logout-icon-png-transparent-login-logout-icon-11562923416nzkie6fbka.png</normaloff>:/Icons/Icons/logout-icon-png-transparent-login-logout-icon-11562923416nzkie6fbka.png</iconset>
+   </property>
    <property name="text">
     <string>خروج از حساب کاربری</string>
    </property>
   </action>
-  <action name="delete_account">
+  <action name="DeleteAccountBtn">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/Icons/Icons/pngtree-delete-icon-image_1129289.jpg</normaloff>:/Icons/Icons/pngtree-delete-icon-image_1129289.jpg</iconset>
+   </property>
    <property name="text">
     <string>حذف حساب کاربری</string>
    </property>
   </action>
-  <action name="messages">
+  <action name="MessagesBtn">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/Icons/Icons/email-icon-transparent-background-11549825133qbltljgp1w.png</normaloff>:/Icons/Icons/email-icon-transparent-background-11549825133qbltljgp1w.png</iconset>
+   </property>
    <property name="text">
     <string>پیغام ها</string>
    </property>
   </action>
+  <action name="ReturnBtn">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/Icons/Icons/return_icon_154912.png</normaloff>:/Icons/Icons/return_icon_154912.png</iconset>
+   </property>
+   <property name="text">
+    <string>بازگشت</string>
+   </property>
+  </action>
+  <action name="ExitBtn">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/Icons/Icons/exit-icon-png-close-0.png</normaloff>:/Icons/Icons/exit-icon-png-close-0.png</iconset>
+   </property>
+   <property name="text">
+    <string>خروج</string>
+   </property>
+  </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="icons.qrc"/>
+ </resources>
  <connections/>
 </ui>

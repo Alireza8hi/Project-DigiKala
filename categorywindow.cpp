@@ -1,11 +1,8 @@
 #include "mainwindow.h"
-#include "ui_mainwindow.h"
-#include "homewindow.h"
-#include "ui_homewindow.h"
+#include "allcommoditywindow.h"
 #include "categorywindow.h"
-#include "ui_categorywindow.h"
 #include "accountwindow.h"
-#include "ui_accountwindow.h"
+#include "ui_categorywindow.h"
 #include <QLineEdit>
 #include <QDateTime>
 #include <QWidget>
