@@ -8,6 +8,22 @@ User::User()
     this->role="customer";
 }
 
+User::User(User &other)
+{
+    this->username=other.username;
+    this->password=other.password;
+    this->role=other.role;
+    this->set_name(other.get_name());
+    this->set_family(other.get_family());
+    this->set_email(other.get_email());
+    this->set_adress(other.get_adress());
+    this->set_ncode(other.get_ncode());
+    this->set_phone_number(other.get_phone_number());
+    //this->comments=s.comments;
+    //this->favorites=s.favorites;
+    return;
+}
+
 User::~User()
 {
 

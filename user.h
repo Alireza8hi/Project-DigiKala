@@ -14,6 +14,7 @@ class User : public QObject , public Human
 
 public:
     User();
+    User(User& other);
     ~User();
     bool change_password();
     bool change_username();
