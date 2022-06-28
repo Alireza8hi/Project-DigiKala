@@ -14,11 +14,30 @@ Comment::Comment()
     return;
 }
 
+Comment::Comment(Comment &other)
+{
+    this->sender=other.sender;
+    this->commodity_id=other.commodity_id;
+    this->date_of_birth=other.date_of_birth;
+    this->description=other.description;
+    return;
+}
+
 Comment::~Comment()
 {
     this->commodity_id = 0;
     this->sender = nullptr;
     return;
+}
+
+Comment &Comment::operator=(const Comment &s)
+{
+    this->~Comment();
+    this->sender=s.sender;
+    this->commodity_id=s.commodity_id;
+    this->date_of_birth=s.date_of_birth;
+    this->description=s.description;
+    return *this;
 }
 
 void Comment::set_date_of_birth(tm time)

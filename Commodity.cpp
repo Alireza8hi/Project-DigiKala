@@ -7,6 +7,29 @@ Commodity::Commodity()
     return;
 }
 
+Commodity::Commodity(Commodity &other)
+{
+    this->address=other.address;
+    this->category=other.category;
+    this->city=other.city;
+    this->color=other.color;
+    this->company=other.company;
+    this->description=other.description;
+    this->name=other.name;
+    this->owner=other.owner;
+    this->type=other.type;
+    this->owner_phone_number=other.owner_phone_number;
+    this->number=other.number;
+    this->cost=other.cost;
+    this->discount_percent=other.discount_percent;
+    this->id=other.id;
+    this->num_of_sell=other.num_of_sell;
+    this->profit_percent=other.profit_percent;
+    this->volume=other.volume;
+    this->weight=other.weight;
+    return;
+}
+
 Commodity::~Commodity()
 {
     this->address=this->category=this->city=this->color=this->company=this->description=this->name=this->owner=this->type=this->owner_phone_number=nullptr;

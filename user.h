@@ -2,7 +2,11 @@
 #define User_H
 
 #include <QObject>
+#include <deque>
 #include "human.h"
+#include "Comment.h"
+#include "Commodity.h"
+
 
 class User : public QObject , public Human
 {
@@ -20,12 +24,18 @@ public:
     void set_password(const QString upassword);
     void set_role(const QString urole);
     User& operator=(const User& s);
+    void push_front_comments(const Comment& comment);
+    void push_front_favorites(const Commodity commodit);
+    Comment get_comment(int index);
+    Commodity get_commodity(int index);
+    //حدف کالا فیوریت
+    // حذف کامنت
 private:
     QString username;
     QString password;
     QString role;
-    //Comment* comments;
-    //Commodity* favorites;
+    deque<Comment> comments;
+    deque<Commodity> favorites;
 
 
 

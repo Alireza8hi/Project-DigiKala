@@ -146,5 +146,29 @@ User& User::operator=(const User& s)
   this->set_adress(s.get_adress());
   this->set_ncode(s.get_ncode());
   this->set_phone_number(s.get_phone_number());
-  return *this;
+  //this->comments=s.comments;
+  //this->favorites=s.favorites;
+    return *this;
+}
+
+void User::push_front_comments(const Comment& comment)
+{
+    //this->comments.push_front(comment);
+    return;
+}
+
+void User::push_front_favorites(const Commodity commodity)
+{
+    //this->favorites.push_front(commodity);
+    return;
+}
+
+Comment User::get_comment(int index)
+{
+    return this->comments.at(index);
+}
+
+Commodity User::get_commodity(int index)
+{
+    return this->favorites.at(index);
 }

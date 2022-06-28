@@ -15,7 +15,9 @@ private:
 public:
     Comment(tm now_time,QString sender,int commodity_id,QString description);
     Comment();
+    Comment(Comment& other);
     ~Comment();
+    Comment &operator=(const Comment& s);
     void set_date_of_birth(tm  time);
     tm get_date_of_birth()const;
     void set_sender(QString sender);
