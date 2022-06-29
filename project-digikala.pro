@@ -18,10 +18,16 @@ SOURCES += \
     Dgikala.cpp \
     MainAdmin.cpp \
     MainAdminWindow.cpp \
+    PostAdmin.cpp \
+    PostAdminWindow.cpp \
     ReviewAdmin.cpp \
     ReviewAdminWindow.cpp \
     Seller.cpp \
     SellerWindow.cpp \
+    StoreAdmin.cpp \
+    StoreAdminWindow.cpp \
+    SupportAdmin.cpp \
+    SupportAdminWindow.cpp \
     User.cpp \
     accountwindow.cpp \
     allcommoditywindow.cpp \
@@ -41,10 +47,16 @@ HEADERS += \
     Digikala.h \
     MainAdmin.h \
     MainAdminWindow.h \
+    PostAdmin.h \
+    PostAdminWindow.h \
     ReviewAdmin.h \
     ReviewAdminWindow.h \
     Seller.h \
     SellerWindow.h \
+    StoreAdmin.h \
+    StoreAdminWindow.h \
+    SupportAdmin.h \
+    SupportAdminWindow.h \
     User.h \
     accountwindow.h \
     allcommoditywindow.h \
@@ -57,8 +69,11 @@ HEADERS += \
 FORMS += \
     CustomerWindow.ui \
     MainAdminWindow.ui \
+    PostAdminWindow.ui \
     ReviewAdminWindow.ui \
     SellerWindow.ui \
+    StoreAdminWindow.ui \
+    SupportAdminWindow.ui \
     accountwindow.ui \
     allcommoditywindow.ui \
     categorywindow.ui \
