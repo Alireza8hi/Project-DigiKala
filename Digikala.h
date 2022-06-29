@@ -5,15 +5,28 @@
 #include"Commodity.h"
 #include <deque>
 #include <User.h>
+#include "ReviewAdmin.h"
+#include "SupportAdmin.h"
+#include "StoreAdmin.h"
+#include "Seller.h"
+#include "PostAdmin.h"
+#include "MainAdmin.h"
+#include "Customer.h"
+#include "Commodity.h"
 
-extern User userglobal;
 class DigiKala : public QObject
 {
     Q_OBJECT
 private:
-//    std::deque<int> commodities_id;
-//    std::deque<int> sold_commodities_id;
-//    std::deque<int> admins_id;
+    MainAdmin main_admin;
+    ReviewAdmin review_admin;
+    PostAdmin *post_admin;
+    std::deque<StoreAdmin> store_admins;
+    std::deque<SupportAdmin> support_admins;
+    std::deque<Customer> customers;
+    std::deque<Seller> sellers;
+    std::deque<Commodity> commodities;
+    std::deque<int> sold_commodities_id;
     int num_of_commodities;
     int num_of_sell_sold_commonities;
     int num_of_admins;
@@ -34,7 +47,12 @@ public:
     int get_income()const;
     void set_money(int money);
     int get_money()const;
+    MainAdmin get_main_admin();
+    ReviewAdmin get_review_admin();
 
 };
+
+static DigiKala* site = &DigiKala::make_object();
+extern User userglobal;
 
 #endif // DIGIKALA_H

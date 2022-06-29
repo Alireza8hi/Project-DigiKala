@@ -22,3 +22,14 @@ int PostAdmin::get_income() const
 {
     return this->income;
 }
+
+void PostAdmin::set_province(string province)
+{
+    this->province = province;
+    return;
+}
+
+string PostAdmin::get_province() const
+{
+    return this->province;
+}

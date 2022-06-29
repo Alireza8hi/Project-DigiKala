@@ -9,8 +9,6 @@ using namespace std;
    time_t now = time(0);
    tm *ltm = localtime(&now);
 
-   DigiKala* site = &DigiKala::make_object();
-
 int main(int argc, char *argv[])
 {
     ltm->tm_year+=1900;

@@ -12,7 +12,13 @@
 #include "MainAdminWindow.h"
 #include "Digikala.h"
 #include "ui_accountwindow.h"
+#include "PostAdminWindow.h"
+#include "SupportAdminWindow.h"
+#include "StoreAdminWindow.h"
+#include "ReviewAdminWindow.h"
+
 User userglobal;
+
 AccountWindow::AccountWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::AccountWindow)
@@ -93,14 +99,30 @@ void AccountWindow::on_UserSignInBtn_clicked()
                     SellerWindow* seller_window = new class SellerWindow(this);
                     seller_window->show();
             }
-            else if(checkpassword.get_role()=="mainadmin")
+            else if(checkpassword.get_role()=="main_admin")
             {
                     MainAdminWindow* main_admin_window = new class MainAdminWindow(this);
                     main_admin_window->show();
             }
-            else if(checkpassword.get_role()=="selladmin")
+            else if(checkpassword.get_role()=="post_admin")
             {
-                //
+                PostAdminWindow* post_admin_window = new class PostAdminWindow(this);
+                post_admin_window->show();
+            }
+            else if(checkpassword.get_role()=="support_admin")
+            {
+                SupportAdminWindow* support_admin_window = new class SupportAdminWindow(this);
+                support_admin_window->show();
+            }
+            else if(checkpassword.get_role()=="store_admin")
+            {
+                StoreAdminWindow* store_admin_window = new class StoreAdminWindow(this);
+                store_admin_window->show();
+            }
+            else if(checkpassword.get_role()=="review_admin")
+            {
+                ReviewAdminWindow* review_admin_window = new class ReviewAdminWindow(this);
+                review_admin_window->show();
             }
         }
     }
