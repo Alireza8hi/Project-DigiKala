@@ -52,7 +52,7 @@ void AccountWindow::on_UserSignInBtn_clicked()
     fuser=fopen("User.txt","r+");
     if(fuser==NULL)
     {
-        QMessageBox * msg_error = new QMessageBox(QMessageBox::Critical,"Error"," you entered the wrong password or username ",QMessageBox::Ok|QMessageBox::Cancel);
+        QMessageBox * msg_error = new QMessageBox(QMessageBox::Critical,"Error"," you entered the wrong password or username ",QMessageBox::Ok|QMessageBox::Cancel , this);
         msg_error->show();
         connect(msg_error,&QMessageBox::buttonClicked,msg_error,&QMessageBox::deleteLater,Qt::QueuedConnection);
         fclose(fuser);
@@ -76,7 +76,7 @@ void AccountWindow::on_UserSignInBtn_clicked()
         }
         if(login==0)
         {
-            QMessageBox * msg_error = new QMessageBox(QMessageBox::Critical,"Error"," you entered the wrong password or username ",QMessageBox::Ok|QMessageBox::Cancel);
+            QMessageBox * msg_error = new QMessageBox(QMessageBox::Critical,"Error"," you entered the wrong password or username ",QMessageBox::Ok|QMessageBox::Cancel, this);
             msg_error->show();
             connect(msg_error,&QMessageBox::buttonClicked,msg_error,&QMessageBox::deleteLater,Qt::QueuedConnection);
             fclose(fuser);

@@ -21,9 +21,9 @@
     <string notr="true">background-image: url(:/Pics/Pics/pngtree-blue-carbon-background-with-sport-style-and-golden-light-image_371487.jpg);</string>
    </property>
    <layout class="QGridLayout" name="gridLayout_2">
-    <item row="1" column="1">
-     <layout class="QGridLayout" name="gridLayout">
-      <item row="2" column="0">
+    <item row="0" column="0">
+     <layout class="QGridLayout" name="gridLayout_3">
+      <item row="3" column="1">
        <widget class="QPushButton" name="ChangeAdminBtn">
         <property name="styleSheet">
          <string notr="true">color: rgb(255, 255, 255);</string>
@@ -33,23 +33,72 @@
         </property>
        </widget>
       </item>
-      <item row="9" column="0">
-       <widget class="QPushButton" name="BestCustomersBtn">
+      <item row="3" column="0">
+       <widget class="QPushButton" name="CategoriesBtn">
         <property name="styleSheet">
          <string notr="true">color: rgb(255, 255, 255);</string>
         </property>
         <property name="text">
-         <string>بهترین مشتری ها</string>
+         <string>دسته بندی کالا ها</string>
         </property>
        </widget>
       </item>
-      <item row="4" column="0">
-       <widget class="QPushButton" name="OpenOtherAdminsBtn">
+      <item row="4" column="1">
+       <widget class="QPushButton" name="ChangeAdminIncomeBtn">
         <property name="styleSheet">
          <string notr="true">color: rgb(255, 255, 255);</string>
         </property>
         <property name="text">
-         <string>ورود به عنوان سایر مدیر ها</string>
+         <string>تغییر حقوق مدیر ها</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QPushButton" name="AllCommoditysBtn">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>کل کالا ها</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>B Titr</family>
+          <pointsize>20</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);
+background-image: url(:/Pics/Pics/NoBack.png);
+background-color: rgb(22, 31, 48);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <property name="text">
+         <string>گزینه های کلی</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
         </property>
        </widget>
       </item>
@@ -63,77 +112,56 @@
         </property>
        </widget>
       </item>
-      <item row="5" column="0">
-       <widget class="QPushButton" name="CategoriesBtn">
+      <item row="1" column="1">
+       <widget class="QLabel" name="label_2">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>50</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>B Titr</family>
+          <pointsize>20</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);
+background-image: url(:/Pics/Pics/NoBack.png);
+background-color: rgb(22, 31, 48);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <property name="text">
+         <string>مدیرها</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="1">
+       <widget class="QPushButton" name="BestCustomersBtn">
         <property name="styleSheet">
          <string notr="true">color: rgb(255, 255, 255);</string>
         </property>
         <property name="text">
-         <string>دسته بندی کالا ها</string>
+         <string>بهترین مشتری ها</string>
         </property>
        </widget>
       </item>
-      <item row="11" column="0">
-       <widget class="QPushButton" name="SearchBtn">
-        <property name="styleSheet">
-         <string notr="true">color: rgb(255, 255, 255);</string>
-        </property>
-        <property name="text">
-         <string>جست و جوی کالای خاص</string>
-        </property>
-       </widget>
-      </item>
-      <item row="6" column="0">
-       <widget class="QPushButton" name="SoldCommoditiesBtn">
-        <property name="styleSheet">
-         <string notr="true">color: rgb(255, 255, 255);</string>
-        </property>
-        <property name="text">
-         <string>کالاهای فروخته شده</string>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="0">
-       <widget class="QPushButton" name="ChangeAdminIncomeBtn">
-        <property name="styleSheet">
-         <string notr="true">color: rgb(255, 255, 255);</string>
-        </property>
-        <property name="text">
-         <string>تغییر حقوق مدیر ها</string>
-        </property>
-       </widget>
-      </item>
-      <item row="7" column="0">
-       <widget class="QPushButton" name="SuccessfulSellersBtn">
-        <property name="styleSheet">
-         <string notr="true">color: rgb(255, 255, 255);</string>
-        </property>
-        <property name="text">
-         <string>موفق ترین فروشنده ها</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="0">
-       <widget class="QPushButton" name="ReadUserInfoBtn">
-        <property name="styleSheet">
-         <string notr="true">color: rgb(255, 255, 255);</string>
-        </property>
-        <property name="text">
-         <string>اطلاعات اعضای سایت</string>
-        </property>
-       </widget>
-      </item>
-      <item row="10" column="0">
-       <widget class="QPushButton" name="AllCommoditysBtn">
-        <property name="styleSheet">
-         <string notr="true">color: rgb(255, 255, 255);</string>
-        </property>
-        <property name="text">
-         <string>کل کالا ها</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="0">
+      <item row="2" column="1">
        <widget class="QPushButton" name="AddAdminBtn">
         <property name="styleSheet">
          <string notr="true">color: rgb(255, 255, 255);</string>
@@ -143,59 +171,90 @@
         </property>
        </widget>
       </item>
+      <item row="10" column="1">
+       <widget class="QPushButton" name="ReadUserInfoBtn">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>اطلاعات اعضای سایت</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="1">
+       <widget class="QPushButton" name="OpenOtherAdminsBtn">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>ورود به عنوان سایر مدیر ها</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QPushButton" name="SearchBtn">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>جست و جوی کالای خاص</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="0" colspan="2">
+       <widget class="QLabel" name="label_3">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>B Titr</family>
+          <pointsize>20</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);
+background-image: url(:/Pics/Pics/NoBack.png);
+background-color: rgb(22, 31, 48);</string>
+        </property>
+        <property name="text">
+         <string>سایر</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0">
+       <widget class="QPushButton" name="SuccessfulSellersBtn">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>موفق ترین فروشنده ها</string>
+        </property>
+       </widget>
+      </item>
+      <item row="10" column="0">
+       <widget class="QPushButton" name="SoldCommoditiesBtn">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>کالاهای فروخته شده</string>
+        </property>
+       </widget>
+      </item>
      </layout>
-    </item>
-    <item row="1" column="2">
-     <spacer name="horizontalSpacer_2">
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>40</width>
-        <height>20</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
-    <item row="2" column="1">
-     <spacer name="verticalSpacer">
-      <property name="orientation">
-       <enum>Qt::Vertical</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>20</width>
-        <height>40</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
-    <item row="1" column="0">
-     <spacer name="horizontalSpacer">
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>40</width>
-        <height>20</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
-    <item row="0" column="1">
-     <spacer name="verticalSpacer_2">
-      <property name="orientation">
-       <enum>Qt::Vertical</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>20</width>
-        <height>40</height>
-       </size>
-      </property>
-     </spacer>
     </item>
    </layout>
   </widget>
@@ -212,20 +271,20 @@
     <property name="title">
      <string>تنظیمات</string>
     </property>
-    <addaction name="OpenProfileBtn"/>
+    <addaction name="OpenProfileAct"/>
     <addaction name="separator"/>
-    <addaction name="MessagesBtn"/>
+    <addaction name="MessagesAct"/>
     <addaction name="separator"/>
-    <addaction name="BankruptcyBtn"/>
+    <addaction name="BankruptcyAct"/>
     <addaction name="separator"/>
     <addaction name="SignOutBtn"/>
-    <addaction name="ReturnBtn"/>
-    <addaction name="ExitBtn"/>
+    <addaction name="ReturnAct"/>
+    <addaction name="ExitAct"/>
    </widget>
    <addaction name="menu"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="OpenProfileBtn">
+  <action name="OpenProfileAct">
    <property name="icon">
     <iconset resource="icons.qrc">
      <normaloff>:/Icons/Icons/Sample_User_Icon.png</normaloff>:/Icons/Icons/Sample_User_Icon.png</iconset>
@@ -243,7 +302,7 @@
     <string>خروج از حساب کاربری</string>
    </property>
   </action>
-  <action name="BankruptcyBtn">
+  <action name="BankruptcyAct">
    <property name="icon">
     <iconset resource="icons.qrc">
      <normaloff>:/Icons/Icons/1580989.png</normaloff>:/Icons/Icons/1580989.png</iconset>
@@ -252,7 +311,7 @@
     <string>اعلام برشکستگی</string>
    </property>
   </action>
-  <action name="MessagesBtn">
+  <action name="MessagesAct">
    <property name="icon">
     <iconset resource="icons.qrc">
      <normaloff>:/Icons/Icons/email-icon-transparent-background-11549825133qbltljgp1w.png</normaloff>:/Icons/Icons/email-icon-transparent-background-11549825133qbltljgp1w.png</iconset>
@@ -261,7 +320,7 @@
     <string>پیغام ها</string>
    </property>
   </action>
-  <action name="ReturnBtn">
+  <action name="ReturnAct">
    <property name="icon">
     <iconset resource="icons.qrc">
      <normaloff>:/Icons/Icons/return_icon_154912.png</normaloff>:/Icons/Icons/return_icon_154912.png</iconset>
@@ -270,7 +329,7 @@
     <string>بازگشت</string>
    </property>
   </action>
-  <action name="ExitBtn">
+  <action name="ExitAct">
    <property name="icon">
     <iconset resource="icons.qrc">
      <normaloff>:/Icons/Icons/exit-icon-png-close-0.png</normaloff>:/Icons/Icons/exit-icon-png-close-0.png</iconset>

@@ -14,58 +14,199 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="CategoriesBtn">
-    <property name="geometry">
-     <rect>
-      <x>240</x>
-      <y>100</y>
-      <width>161</width>
-      <height>29</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>دسته بندی کالا ها</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="AllCommoditiesBtn">
-    <property name="geometry">
-     <rect>
-      <x>240</x>
-      <y>150</y>
-      <width>161</width>
-      <height>29</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>کل کالا ها</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="SearchBtn">
-    <property name="geometry">
-     <rect>
-      <x>240</x>
-      <y>200</y>
-      <width>161</width>
-      <height>29</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>جست و جوی کالای خاص</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="CommoditiesAwaitingApprovalBtn">
-    <property name="geometry">
-     <rect>
-      <x>200</x>
-      <y>310</y>
-      <width>241</width>
-      <height>29</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>کالا های در انتظار تایید</string>
-    </property>
-   </widget>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/Pics/Pics/pngtree-taobao-vector-cartoon-review-resume-business-technology-document-poster-background-image_132424.jpg);</string>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="1">
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="3" column="1">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QPushButton" name="AllCommoditiesBtn">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>50</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-image: url(:/Pics/Pics/NoBack.png);
+background-color: rgb(255, 240, 214);
+color: rgb(0, 0, 0);</string>
+        </property>
+        <property name="text">
+         <string>کل کالا ها</string>
+        </property>
+        <property name="icon">
+         <iconset resource="icons.qrc">
+          <normaloff>:/Icons/Icons/5110770.png</normaloff>:/Icons/Icons/5110770.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="verticalSpacer_4">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Preferred</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>2</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="CategoriesBtn">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>50</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-image: url(:/Pics/Pics/NoBack.png);
+background-color: rgb(255, 240, 214);
+color: rgb(0, 0, 0);</string>
+        </property>
+        <property name="text">
+         <string>دسته بندی کالا ها</string>
+        </property>
+        <property name="icon">
+         <iconset resource="icons.qrc">
+          <normaloff>:/Icons/Icons/categories-icon-1.jpg</normaloff>:/Icons/Icons/categories-icon-1.jpg</iconset>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="verticalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Preferred</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>2</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="SearchBtn">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>50</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-image: url(:/Pics/Pics/NoBack.png);
+background-color: rgb(255, 240, 214);
+color: rgb(0, 0, 0);</string>
+        </property>
+        <property name="text">
+         <string>جست و جوی کالای خاص</string>
+        </property>
+        <property name="icon">
+         <iconset resource="icons.qrc">
+          <normaloff>:/Icons/Icons/search-icon-png-5.png</normaloff>:/Icons/Icons/search-icon-png-5.png</iconset>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="2">
+     <widget class="QPushButton" name="CommoditiesAwaitingApprovalBtn">
+      <property name="styleSheet">
+       <string notr="true">background-image: url(:/Pics/Pics/NoBack.png);
+background-color: rgb(255, 240, 214);
+color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>کالا های در انتظار تایید</string>
+      </property>
+      <property name="icon">
+       <iconset resource="icons.qrc">
+        <normaloff>:/Icons/Icons/timer-icon-14.jpg</normaloff>:/Icons/Icons/timer-icon-14.jpg</iconset>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="2">
+     <spacer name="horizontalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="3" column="0">
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="4" column="1">
+     <spacer name="verticalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -73,27 +214,27 @@
      <x>0</x>
      <y>0</y>
      <width>640</width>
-     <height>26</height>
+     <height>25</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">
     <property name="title">
      <string>تنظیمات</string>
     </property>
-    <addaction name="OpenProfileBtn"/>
+    <addaction name="OpenProfileAct"/>
     <addaction name="separator"/>
-    <addaction name="MessagesBtn"/>
+    <addaction name="MessagesAct"/>
     <addaction name="separator"/>
     <addaction name="SignOutBtn"/>
     <addaction name="separator"/>
     <addaction name="separator"/>
-    <addaction name="DeleteAccountBtn"/>
-    <addaction name="ExitBtn"/>
+    <addaction name="DeleteAccountAct"/>
+    <addaction name="ExitAct"/>
    </widget>
    <addaction name="menu"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="OpenProfileBtn">
+  <action name="OpenProfileAct">
    <property name="icon">
     <iconset resource="icons.qrc">
      <normaloff>:/Icons/Icons/Sample_User_Icon.png</normaloff>:/Icons/Icons/Sample_User_Icon.png</iconset>
@@ -111,7 +252,7 @@
     <string>خروج از حساب کاربری</string>
    </property>
   </action>
-  <action name="DeleteAccountBtn">
+  <action name="DeleteAccountAct">
    <property name="icon">
     <iconset resource="icons.qrc">
      <normaloff>:/Icons/Icons/pngtree-delete-icon-image_1129289.jpg</normaloff>:/Icons/Icons/pngtree-delete-icon-image_1129289.jpg</iconset>
@@ -120,7 +261,7 @@
     <string>حذف حساب کاربری</string>
    </property>
   </action>
-  <action name="MessagesBtn">
+  <action name="MessagesAct">
    <property name="icon">
     <iconset resource="icons.qrc">
      <normaloff>:/Icons/Icons/email-icon-transparent-background-11549825133qbltljgp1w.png</normaloff>:/Icons/Icons/email-icon-transparent-background-11549825133qbltljgp1w.png</iconset>
@@ -138,7 +279,7 @@
     <string>بازگشت</string>
    </property>
   </action>
-  <action name="ExitBtn">
+  <action name="ExitAct">
    <property name="icon">
     <iconset resource="icons.qrc">
      <normaloff>:/Icons/Icons/exit-icon-png-close-0.png</normaloff>:/Icons/Icons/exit-icon-png-close-0.png</iconset>
