@@ -15,6 +15,15 @@
         <file>Icons/logout-icon-png-transparent-login-logout-icon-11562923416nzkie6fbka.png</file>
         <file>Icons/pngtree-delete-icon-image_1129289.jpg</file>
         <file>Icons/1580989.png</file>
+        <file>Icons/timer-icon-14.jpg</file>
+        <file>Icons/75519.png</file>
+        <file>Icons/expiration-icon-3.jpg</file>
+        <file>Icons/sell-icon-png-5.jpg</file>
+        <file>Icons/deleted-icon-9.jpg</file>
+        <file>Icons/edit-icon-png-24.png</file>
+        <file>Icons/Icon-push-object-3194184.svg.png</file>
+        <file>Icons/2334516-200.png</file>
+        <file>Icons/icon-comments-19.jpg</file>
     </qresource>
     <qresource prefix="/Pics">
         <file>Pics/empty-shopping-cart-pink-background-with-large-copy-space-online-shopping-concept_492182-38.jpg</file>
@@ -24,5 +33,11 @@
         <file>Pics/modern-white-background-free-vector.webp</file>
         <file>Pics/pngtree-blue-carbon-background-with-sport-style-and-golden-light-image_371487.jpg</file>
         <file>Pics/spectrum-gradient-color-wheel-background.jpg</file>
+        <file>Pics/2912283.jpg</file>
+        <file>Pics/213-2133077_get-google-reviews.png</file>
+        <file>Pics/pngtree-taobao-vector-cartoon-review-resume-business-technology-document-poster-background-image_132424.jpg</file>
+        <file>Pics/modern-abstract-background_200180-165.jpg</file>
+        <file>Pics/HD-wallpaper-dark-blue-background-navy-blue.jpg</file>
+        <file>Pics/2374143.jpg</file>
     </qresource>
 </RCC>

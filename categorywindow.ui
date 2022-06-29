@@ -37,7 +37,7 @@
     <addaction name="separator"/>
     <addaction name="ReturnBtn"/>
     <addaction name="separator"/>
-    <addaction name="ExitBtn"/>
+    <addaction name="ExitAct"/>
    </widget>
    <addaction name="menu"/>
   </widget>
@@ -51,7 +51,7 @@
     <string>بازگشت</string>
    </property>
   </action>
-  <action name="ExitBtn">
+  <action name="ExitAct">
    <property name="icon">
     <iconset resource="icons.qrc">
      <normaloff>:/Icons/Icons/exit-icon-png-close-0.png</normaloff>:/Icons/Icons/exit-icon-png-close-0.png</iconset>
@@ -66,7 +66,7 @@
  </resources>
  <connections>
   <connection>
-   <sender>ExitBtn</sender>
+   <sender>ExitAct</sender>
    <signal>triggered()</signal>
    <receiver>CategoryWindow</receiver>
    <slot>close()</slot>
