@@ -188,3 +188,15 @@ Commodity User::get_commodity(int index)
 {
     return this->favorites.at(index);
 }
+
+void User::readuser(FILE *fuser)
+{
+    fread(this,sizeof(User),1,fuser);
+    return;
+}
+
+void User::writeuser(FILE *fuser)
+{
+    fwrite(this,sizeof(User),1,fuser);
+    return;
+}

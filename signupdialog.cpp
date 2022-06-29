@@ -151,7 +151,8 @@ void SignUpDialog::on_OkBtn_clicked()
         writeuser.set_adress(ui->AddressLe->text());
         writeuser.set_phone_number(ui->PhoneLe->text());
         writeuser.set_email(ui->EmailLe->text());
-        fwrite(&writeuser,sizeof(User),1,fuser);
+        //fwrite(&writeuser,sizeof(User),1,fuser);
+        writeuser.writeuser(fuser);
         fclose(fuser);
         userglobal=writeuser;
         QMessageBox * msg_error = new QMessageBox(QMessageBox::Information,"Success"," Your registration was successful ",QMessageBox::Ok|QMessageBox::Cancel);

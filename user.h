@@ -29,6 +29,8 @@ public:
     void push_front_favorites(const Commodity commodit);
     Comment get_comment(int index);
     Commodity get_commodity(int index);
+    void readuser(FILE* fuser);
+    void writeuser(FILE* fuser);
     //حدف کالا فیوریت
     // حذف کامنت
 private:

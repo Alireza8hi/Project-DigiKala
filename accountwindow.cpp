@@ -70,7 +70,8 @@ void AccountWindow::on_UserSignInBtn_clicked()
         fseek(fuser,0,SEEK_SET);
         while(pos2<pos1)
         {
-        fread(&checkpassword,sizeof(User),1,fuser);
+        //fread(&checkpassword,sizeof(User),1,fuser);
+        checkpassword.readuser(fuser);
         pos2=ftell(fuser);
         if(checkpassword.get_username()==ui->UserNameLe->text() && checkpassword.get_password()==ui->PassLe->text())
             {
