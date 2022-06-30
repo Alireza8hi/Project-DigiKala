@@ -32,6 +32,7 @@ private:
     int num_of_admins;
     int income;
     int money;
+    int sales_revenue;
     DigiKala();
 
 public:
@@ -47,8 +48,11 @@ public:
     int get_income()const;
     void set_money(int money);
     int get_money()const;
+    void set_sales_revenue(int sales_revenue);
+    int get_sales_revenue()const;
     MainAdmin get_main_admin();
     ReviewAdmin get_review_admin();
+    PostAdmin get_post_admin(int number);
 
 };
 

@@ -10,15 +10,15 @@ Human::Human()
     this->adress = "iran";
     this->national_code ="0";
     this->phone_number = "0";
-    this->sex=1;
+    this->sex=0;
 	return;
 }
 
 
 Human::~Human()
 {
-    this->name = this->email = this->adress = this->phone_number = nullptr;
-    this->national_code = 0;
+    this->name = this->email = this->adress = this->phone_number = this->national_code = nullptr;
+    this->sex=0;
     return;
 }
 
