@@ -154,6 +154,8 @@ color: rgb(0, 0, 0);</string>
     <addaction name="separator"/>
     <addaction name="DeleteAccountAct"/>
     <addaction name="separator"/>
+    <addaction name="ReturnAct"/>
+    <addaction name="separator"/>
     <addaction name="ExitAct"/>
    </widget>
    <addaction name="menu"/>
@@ -165,7 +167,7 @@ color: rgb(0, 0, 0);</string>
      <normaloff>:/Icons/Icons/logout-icon-png-transparent-login-logout-icon-11562923416nzkie6fbka.png</normaloff>:/Icons/Icons/logout-icon-png-transparent-login-logout-icon-11562923416nzkie6fbka.png</iconset>
    </property>
    <property name="text">
-    <string>خروج از حساب کاربری</string>
+    <string>خروج از حساب کاربری!!</string>
    </property>
   </action>
   <action name="DeleteAccountAct">
@@ -174,7 +176,7 @@ color: rgb(0, 0, 0);</string>
      <normaloff>:/Icons/Icons/pngtree-delete-icon-image_1129289.jpg</normaloff>:/Icons/Icons/pngtree-delete-icon-image_1129289.jpg</iconset>
    </property>
    <property name="text">
-    <string>حذف حساب کاربری</string>
+    <string>حذف حساب کاربری!!</string>
    </property>
   </action>
   <action name="OpenProfileAct">
@@ -213,6 +215,15 @@ color: rgb(0, 0, 0);</string>
     <string>خروج</string>
    </property>
   </action>
+  <action name="ReturnAct">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/Icons/Icons/return_icon_154912.png</normaloff>:/Icons/Icons/return_icon_154912.png</iconset>
+   </property>
+   <property name="text">
+    <string>بازگشت</string>
+   </property>
+  </action>
  </widget>
  <resources>
   <include location="icons.qrc"/>
@@ -231,6 +242,70 @@ color: rgb(0, 0, 0);</string>
     <hint type="destinationlabel">
      <x>319</x>
      <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>AllCommodityBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>CustomerWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>159</x>
+     <y>85</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>159</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CategoryBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>CustomerWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>159</x>
+     <y>149</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>159</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ReturnAct</sender>
+   <signal>triggered()</signal>
+   <receiver>CustomerWindow</receiver>
+   <slot>deleteLater()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>159</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>SearchBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>CustomerWindow</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>159</x>
+     <y>212</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>159</x>
+     <y>149</y>
     </hint>
    </hints>
   </connection>

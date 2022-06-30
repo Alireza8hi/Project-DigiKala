@@ -288,7 +288,7 @@ background-color: rgb(85, 170, 255);</string>
     </property>
     <widget class="QMenu" name="menu_2">
      <property name="title">
-      <string>پرسش های متداول</string>
+      <string>پرسش های متداول!!</string>
      </property>
      <property name="icon">
       <iconset resource="icons.qrc">
@@ -302,7 +302,7 @@ background-color: rgb(85, 170, 255);</string>
     </widget>
     <widget class="QMenu" name="menu_3">
      <property name="title">
-      <string>تماس با ما</string>
+      <string>تماس با ما!!</string>
      </property>
      <property name="icon">
       <iconset resource="icons.qrc">
@@ -338,7 +338,7 @@ background-color: rgb(85, 170, 255);</string>
      <normaloff>:/Icons/Icons/clipboard-files-and-folders.png</normaloff>:/Icons/Icons/clipboard-files-and-folders.png</iconset>
    </property>
    <property name="text">
-    <string>حریم خصوصی</string>
+    <string>حریم خصوصی!!</string>
    </property>
   </action>
   <action name="TermOfUseAct">
@@ -347,7 +347,7 @@ background-color: rgb(85, 170, 255);</string>
      <normaloff>:/Icons/Icons/clipboard.png</normaloff>:/Icons/Icons/clipboard.png</iconset>
    </property>
    <property name="text">
-    <string>شرایط استفاده</string>
+    <string>شرایط استفاده!!</string>
    </property>
   </action>
   <action name="ExitAct">
@@ -426,7 +426,7 @@ background-color: rgb(85, 170, 255);</string>
    <sender>AllCommodityBtn</sender>
    <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
-   <slot>hide()</slot>
+   <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
      <x>768</x>
@@ -442,7 +442,7 @@ background-color: rgb(85, 170, 255);</string>
    <sender>CategoryBtn</sender>
    <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
-   <slot>hide()</slot>
+   <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
      <x>449</x>
@@ -458,11 +458,27 @@ background-color: rgb(85, 170, 255);</string>
    <sender>AccountAct</sender>
    <signal>triggered()</signal>
    <receiver>MainWindow</receiver>
-   <slot>hide()</slot>
+   <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
      <x>-1</x>
      <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>449</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>SearchBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>449</x>
+     <y>421</y>
     </hint>
     <hint type="destinationlabel">
      <x>449</x>

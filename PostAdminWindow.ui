@@ -110,6 +110,32 @@
        </spacer>
       </item>
       <item>
+       <widget class="QPushButton" name="CategoriesBtn">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>50</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 0);</string>
+        </property>
+        <property name="text">
+         <string>دسته بندی کالا ها</string>
+        </property>
+        <property name="icon">
+         <iconset resource="icons.qrc">
+          <normaloff>:/Icons/Icons/categories-icon-1.jpg</normaloff>:/Icons/Icons/categories-icon-1.jpg</iconset>
+        </property>
+       </widget>
+      </item>
+      <item>
        <widget class="QPushButton" name="SearchBtn">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
@@ -151,32 +177,6 @@
         </property>
        </spacer>
       </item>
-      <item>
-       <widget class="QPushButton" name="CategoriesBtn">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>50</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="minimumSize">
-         <size>
-          <width>0</width>
-          <height>50</height>
-         </size>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">color: rgb(0, 0, 0);</string>
-        </property>
-        <property name="text">
-         <string>دسته بندی کالا ها</string>
-        </property>
-        <property name="icon">
-         <iconset resource="icons.qrc">
-          <normaloff>:/Icons/Icons/categories-icon-1.jpg</normaloff>:/Icons/Icons/categories-icon-1.jpg</iconset>
-        </property>
-       </widget>
-      </item>
      </layout>
     </item>
     <item row="2" column="2">
@@ -211,7 +211,7 @@
        <string notr="true">color: rgb(0, 0, 0);</string>
       </property>
       <property name="text">
-       <string>کالا های در انتظار پست</string>
+       <string>کالا های در انتظار پست!!</string>
       </property>
       <property name="icon">
        <iconset resource="icons.qrc">
@@ -237,9 +237,13 @@
     <addaction name="OpenProfileAct"/>
     <addaction name="separator"/>
     <addaction name="MessagesAct"/>
+    <addaction name="separator"/>
     <addaction name="SignOutBtn"/>
     <addaction name="separator"/>
     <addaction name="DeleteAccountAct"/>
+    <addaction name="separator"/>
+    <addaction name="ReturnAct"/>
+    <addaction name="separator"/>
     <addaction name="ExitAct"/>
    </widget>
    <addaction name="menu"/>
@@ -268,7 +272,7 @@
      <normaloff>:/Icons/Icons/logout-icon-png-transparent-login-logout-icon-11562923416nzkie6fbka.png</normaloff>:/Icons/Icons/logout-icon-png-transparent-login-logout-icon-11562923416nzkie6fbka.png</iconset>
    </property>
    <property name="text">
-    <string>خزوج از حساب کاربری</string>
+    <string>خروج از حساب کاربری!!</string>
    </property>
   </action>
   <action name="DeleteAccountAct">
@@ -277,7 +281,7 @@
      <normaloff>:/Icons/Icons/pngtree-delete-icon-image_1129289.jpg</normaloff>:/Icons/Icons/pngtree-delete-icon-image_1129289.jpg</iconset>
    </property>
    <property name="text">
-    <string>حذف حساب کاربری</string>
+    <string>حذف حساب کاربری!!</string>
    </property>
   </action>
   <action name="ExitAct">
@@ -289,9 +293,99 @@
     <string>خروج</string>
    </property>
   </action>
+  <action name="ReturnAct">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/Icons/Icons/return_icon_154912.png</normaloff>:/Icons/Icons/return_icon_154912.png</iconset>
+   </property>
+   <property name="text">
+    <string>بازگشت</string>
+   </property>
+  </action>
  </widget>
  <resources>
   <include location="icons.qrc"/>
  </resources>
- <connections/>
+ <connections>
+  <connection>
+   <sender>AllCommoditiesBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>PostAdminWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>457</x>
+     <y>261</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>457</x>
+     <y>310</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CategoriesBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>PostAdminWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>457</x>
+     <y>327</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>457</x>
+     <y>310</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ExitAct</sender>
+   <signal>triggered()</signal>
+   <receiver>PostAdminWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>457</x>
+     <y>310</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ReturnAct</sender>
+   <signal>triggered()</signal>
+   <receiver>PostAdminWindow</receiver>
+   <slot>deleteLater()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>457</x>
+     <y>310</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>SearchBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>PostAdminWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>457</x>
+     <y>384</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>457</x>
+     <y>310</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

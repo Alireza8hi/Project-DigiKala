@@ -23,3 +23,9 @@ CategoryWindow::~CategoryWindow()
 {
     delete ui;
 }
+
+void CategoryWindow::on_ReturnBtn_triggered()
+{
+    parentWidget()->show();
+}
+

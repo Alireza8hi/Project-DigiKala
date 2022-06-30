@@ -15,6 +15,9 @@ public:
     explicit CategoryWindow(QWidget *parent = nullptr);
     ~CategoryWindow();
 
+private slots:
+    void on_ReturnBtn_triggered();
+
 private:
     Ui::CategoryWindow *ui;
 };

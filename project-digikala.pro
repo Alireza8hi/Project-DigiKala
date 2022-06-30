@@ -35,6 +35,9 @@ SOURCES += \
     human.cpp \
     main.cpp \
     mainwindow.cpp \
+    messagesdialog.cpp \
+    profiledialog.cpp \
+    searchdialog.cpp \
     signupdialog.cpp \
     signuprules.cpp
 
@@ -63,6 +66,9 @@ HEADERS += \
     categorywindow.h \
     human.h \
     mainwindow.h \
+    messagesdialog.h \
+    profiledialog.h \
+    searchdialog.h \
     signupdialog.h \
     signuprules.h
 
@@ -78,6 +84,9 @@ FORMS += \
     allcommoditywindow.ui \
     categorywindow.ui \
     mainwindow.ui \
+    messagesdialog.ui \
+    profiledialog.ui \
+    searchdialog.ui \
     signupdialog.ui \
     signuprules.ui
 

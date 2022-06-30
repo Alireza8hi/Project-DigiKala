@@ -26,7 +26,7 @@
          <string notr="true">color: rgb(0, 0, 0);</string>
         </property>
         <property name="text">
-         <string>کالا هایی که حذف کردم </string>
+         <string>کالا هایی که حذف کردم !!</string>
         </property>
         <property name="icon">
          <iconset resource="icons.qrc">
@@ -95,7 +95,7 @@ background-color: rgb(0, 0, 127);</string>
          <string notr="true">color: rgb(0, 0, 0);</string>
         </property>
         <property name="text">
-         <string>تغییر در کالا</string>
+         <string>تغییر در کالا!!</string>
         </property>
         <property name="icon">
          <iconset resource="icons.qrc">
@@ -148,7 +148,7 @@ background-color: rgb(0, 0, 127);</string>
          <string notr="true">color: rgb(0, 0, 0);</string>
         </property>
         <property name="text">
-         <string>گذاشتن کالا روی سایت</string>
+         <string>گذاشتن کالا روی سایت!!</string>
         </property>
         <property name="icon">
          <iconset resource="icons.qrc">
@@ -162,7 +162,7 @@ background-color: rgb(0, 0, 127);</string>
          <string notr="true">color: rgb(0, 0, 0);</string>
         </property>
         <property name="text">
-         <string>کالا های حذف شده من</string>
+         <string>کالا های حذف شده من!!</string>
         </property>
         <property name="icon">
          <iconset resource="icons.qrc">
@@ -176,7 +176,7 @@ background-color: rgb(0, 0, 127);</string>
          <string notr="true">color: rgb(0, 0, 0);</string>
         </property>
         <property name="text">
-         <string>کالا های نزدیک به انقضا</string>
+         <string>کالا های نزدیک به انقضا!!</string>
         </property>
         <property name="icon">
          <iconset resource="icons.qrc">
@@ -190,7 +190,7 @@ background-color: rgb(0, 0, 127);</string>
          <string notr="true">color: rgb(0, 0, 0);</string>
         </property>
         <property name="text">
-         <string>حذف کالا</string>
+         <string>حذف کالا!!</string>
         </property>
         <property name="icon">
          <iconset resource="icons.qrc">
@@ -258,10 +258,14 @@ background-color: rgb(0, 0, 127);</string>
      <string>تنظیمات</string>
     </property>
     <addaction name="OpenProfileAct"/>
+    <addaction name="separator"/>
     <addaction name="MessagesAct"/>
     <addaction name="SignOutAct"/>
     <addaction name="separator"/>
     <addaction name="DeleteAccountAct"/>
+    <addaction name="separator"/>
+    <addaction name="ReturnAct"/>
+    <addaction name="separator"/>
     <addaction name="ExitAct"/>
    </widget>
    <addaction name="menu"/>
@@ -291,7 +295,7 @@ background-color: rgb(0, 0, 127);</string>
      <normaloff>:/Icons/Icons/logout-icon-png-transparent-login-logout-icon-11562923416nzkie6fbka.png</normaloff>:/Icons/Icons/logout-icon-png-transparent-login-logout-icon-11562923416nzkie6fbka.png</iconset>
    </property>
    <property name="text">
-    <string>خروج از حساب کاربری</string>
+    <string>خروج از حساب کاربری!!</string>
    </property>
   </action>
   <action name="DeleteAccountAct">
@@ -300,7 +304,7 @@ background-color: rgb(0, 0, 127);</string>
      <normaloff>:/Icons/Icons/pngtree-delete-icon-image_1129289.jpg</normaloff>:/Icons/Icons/pngtree-delete-icon-image_1129289.jpg</iconset>
    </property>
    <property name="text">
-    <string>حذف حساب کاربری</string>
+    <string>حذف حساب کاربری!!</string>
    </property>
   </action>
   <action name="ExitAct">
@@ -312,9 +316,99 @@ background-color: rgb(0, 0, 127);</string>
     <string>خروج</string>
    </property>
   </action>
+  <action name="ReturnAct">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/Icons/Icons/return_icon_154912.png</normaloff>:/Icons/Icons/return_icon_154912.png</iconset>
+   </property>
+   <property name="text">
+    <string>بازگشت</string>
+   </property>
+  </action>
  </widget>
  <resources>
   <include location="icons.qrc"/>
  </resources>
- <connections/>
+ <connections>
+  <connection>
+   <sender>AllCommoditiesBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>StoreAdminWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>137</x>
+     <y>142</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CategoriesBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>StoreAdminWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>137</x>
+     <y>195</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ExitAct</sender>
+   <signal>triggered()</signal>
+   <receiver>StoreAdminWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Searchbtn</sender>
+   <signal>clicked()</signal>
+   <receiver>StoreAdminWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>137</x>
+     <y>248</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ReturnAct</sender>
+   <signal>triggered()</signal>
+   <receiver>StoreAdminWindow</receiver>
+   <slot>deleteLater()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
