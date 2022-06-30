@@ -2,6 +2,7 @@
 #include "allcommoditywindow.h"
 #include "categorywindow.h"
 #include "accountwindow.h"
+#include "searchdialog.h"
 #include "ui_mainwindow.h"
 #include <QWidget>
 #include <QPushButton>
@@ -45,4 +46,11 @@ void MainWindow::on_AccountAct_triggered()
     AccountWindow->show();
 }
 
+
+
+void MainWindow::on_SearchBtn_clicked()
+{
+    SearchDialog *a = new SearchDialog(this);
+    a->show();
+}
 

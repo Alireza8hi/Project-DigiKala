@@ -15,6 +15,19 @@ public:
     explicit MainAdminWindow(QWidget *parent = nullptr);
     ~MainAdminWindow();
 
+private slots:
+    void on_OpenProfileAct_triggered();
+
+    void on_MessagesAct_triggered();
+
+    void on_AllCommoditysBtn_clicked();
+
+    void on_ReturnAct_triggered();
+
+    void on_CategoriesBtn_clicked();
+
+    void on_SearchBtn_clicked();
+
 private:
     Ui::MainAdminWindow *ui;
 };

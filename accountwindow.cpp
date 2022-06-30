@@ -240,4 +240,5 @@ void AccountWindow::on_UserSignInBtn_clicked()
             }
         }
     }
+<<<<<<< HEAD
 }*/

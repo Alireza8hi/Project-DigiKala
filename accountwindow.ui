@@ -272,7 +272,7 @@ background-image: url(:/Pics/Pics/NoBack.png);</string>
    <sender>ReturnBtn</sender>
    <signal>triggered()</signal>
    <receiver>AccountWindow</receiver>
-   <slot>hide()</slot>
+   <slot>deleteLater()</slot>
    <hints>
     <hint type="sourcelabel">
      <x>-1</x>

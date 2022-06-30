@@ -26,6 +26,8 @@ private slots:
 
     void on_AccountAct_triggered();
 
+    void on_SearchBtn_clicked();
+
 private:
     Ui::MainWindow *ui;
     AccountWindow *AccountWindow;

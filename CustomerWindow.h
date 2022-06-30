@@ -16,6 +16,19 @@ public:
     ~CustomerWindow();
 
 
+private slots:
+    void on_AllCommodityBtn_clicked();
+
+    void on_CategoryBtn_clicked();
+
+    void on_SearchBtn_clicked();
+
+    void on_ReturnAct_triggered();
+
+    void on_OpenProfileAct_triggered();
+
+    void on_MessagesAct_triggered();
+
 private:
     Ui::CustomerWindow *ui;
 };

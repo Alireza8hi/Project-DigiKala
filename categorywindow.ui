@@ -81,5 +81,21 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>ReturnBtn</sender>
+   <signal>triggered()</signal>
+   <receiver>CategoryWindow</receiver>
+   <slot>deleteLater()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>465</x>
+     <y>331</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
 </ui>

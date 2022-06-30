@@ -96,7 +96,7 @@
          <string notr="true">color: rgb(0, 0, 0);</string>
         </property>
         <property name="text">
-         <string>کالا های حذف شده</string>
+         <string>کالا های حذف شده!!!</string>
         </property>
         <property name="icon">
          <iconset resource="icons.qrc">
@@ -220,7 +220,7 @@ background-color: qlineargradient(spread:reflect, x1:0.826291, y1:0.887, x2:1, y
          <string notr="true">color: rgb(0, 0, 0);</string>
         </property>
         <property name="text">
-         <string>لیست شکایت ها</string>
+         <string>لیست شکایت ها!!</string>
         </property>
         <property name="icon">
          <iconset resource="icons.qrc">
@@ -285,7 +285,7 @@ background-color: qlineargradient(spread:reflect, x1:0.826291, y1:0.887, x2:1, y
          <string notr="true">color: rgb(0, 0, 0);</string>
         </property>
         <property name="text">
-         <string>بررسی نظر ها</string>
+         <string>بررسی نظر ها!!</string>
         </property>
         <property name="icon">
          <iconset resource="icons.qrc">
@@ -379,10 +379,14 @@ background-color: qlineargradient(spread:reflect, x1:0.826291, y1:0.887, x2:1, y
      <string>تنظیمات</string>
     </property>
     <addaction name="OpenProfileAct"/>
+    <addaction name="separator"/>
     <addaction name="MessagesAct"/>
     <addaction name="SignOutBtn"/>
     <addaction name="separator"/>
     <addaction name="DeleteAccountAct"/>
+    <addaction name="separator"/>
+    <addaction name="ReturnAct"/>
+    <addaction name="separator"/>
     <addaction name="ExitAct"/>
    </widget>
    <addaction name="menu"/>
@@ -433,6 +437,15 @@ background-color: qlineargradient(spread:reflect, x1:0.826291, y1:0.887, x2:1, y
     <string>خروج</string>
    </property>
   </action>
+  <action name="ReturnAct">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/Icons/Icons/return_icon_154912.png</normaloff>:/Icons/Icons/return_icon_154912.png</iconset>
+   </property>
+   <property name="text">
+    <string>بازگشت</string>
+   </property>
+  </action>
  </widget>
  <resources>
   <include location="icons.qrc"/>
@@ -451,6 +464,70 @@ background-color: qlineargradient(spread:reflect, x1:0.826291, y1:0.887, x2:1, y
     <hint type="destinationlabel">
      <x>319</x>
      <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>AllCommoditiesBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>SupportAdminWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>271</x>
+     <y>334</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>453</x>
+     <y>334</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CategoriesBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>SupportAdminWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>271</x>
+     <y>371</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>453</x>
+     <y>334</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ReturnAct</sender>
+   <signal>triggered()</signal>
+   <receiver>SupportAdminWindow</receiver>
+   <slot>deleteLater()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>453</x>
+     <y>334</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Searchbtn</sender>
+   <signal>clicked()</signal>
+   <receiver>SupportAdminWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>271</x>
+     <y>408</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>453</x>
+     <y>334</y>
     </hint>
    </hints>
   </connection>
