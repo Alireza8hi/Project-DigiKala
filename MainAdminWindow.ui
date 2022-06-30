@@ -350,11 +350,6 @@ background-color: rgb(22, 31, 48);</string>
    <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
-<<<<<<< HEAD
-     <x>277</x>
-     <y>272</y>
-    </hint>
-=======
      <x>-1</x>
      <y>-1</y>
     </hint>
@@ -422,7 +417,6 @@ background-color: rgb(22, 31, 48);</string>
      <x>142</x>
      <y>244</y>
     </hint>
->>>>>>> c075b02dbb85ac183a6a80eee54acd8f4f8ac616
     <hint type="destinationlabel">
      <x>277</x>
      <y>272</y>
