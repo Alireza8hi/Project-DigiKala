@@ -18,21 +18,20 @@ class DigiKala : public QObject
 {
     Q_OBJECT
 private:
-    MainAdmin main_admin;
-    ReviewAdmin review_admin;
-    PostAdmin *post_admin;
-    std::deque<StoreAdmin> store_admins;
-    std::deque<SupportAdmin> support_admins;
-    std::deque<Customer> customers;
-    std::deque<Seller> sellers;
-    std::deque<Commodity> commodities;
+    User* main_admin;
+    User* review_admin;
+    User* post_admin;
+    std::deque<User*> store_admins;
+    std::deque<User*> support_admins;
+    std::deque<User*> customers;
+    std::deque<User*> sellers;
+    std::deque<Commodity*> commodities;
     std::deque<int> sold_commodities_id;
     int num_of_commodities;
     int num_of_sell_sold_commonities;
     int num_of_admins;
     int income;
     int money;
-    int sales_revenue;
     DigiKala();
 
 public:
@@ -48,11 +47,9 @@ public:
     int get_income()const;
     void set_money(int money);
     int get_money()const;
-    void set_sales_revenue(int sales_revenue);
-    int get_sales_revenue()const;
-    MainAdmin get_main_admin();
-    ReviewAdmin get_review_admin();
-    PostAdmin get_post_admin(int number);
+    User* get_main_admin();
+    User* get_review_admin();
+    User get_post_admin(int number);
 
 };
 

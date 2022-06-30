@@ -5,7 +5,6 @@
 class MainAdmin : public User
 {
 private:
-
 public:
     MainAdmin();
     ~MainAdmin();

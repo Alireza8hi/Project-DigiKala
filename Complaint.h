@@ -3,6 +3,8 @@
 
 #include <QObject>
 
+using namespace std;
+
 class Complaint : public QObject
 {
     Q_OBJECT

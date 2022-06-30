@@ -3,9 +3,8 @@
 
 User::User()
 {
-    this->password="";
-    this->username="";
-    this->role="customer";
+    this->password=this->username=this->role="";
+    this->income=0;
 }
 
 User::User(User &other)
@@ -26,8 +25,20 @@ User::User(User &other)
 
 User::~User()
 {
-
+    this->password=this->username=this->role=nullptr;
+    this->income=0;
     return;
+}
+
+void User::set_income(int income)
+{
+    this->income = income;
+    return;
+}
+
+int User::get_income() const
+{
+    return this->income;
 }
 
 bool User::change_password()

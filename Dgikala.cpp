@@ -2,30 +2,32 @@
 
 DigiKala::DigiKala()
 {
-    this->income = this->num_of_commodities = this->num_of_sell_sold_commonities = this->sales_revenue = 0;
+    this->income = this->num_of_commodities = this->num_of_sell_sold_commonities = 0;
     this->num_of_admins = 38;
     this->money = 10000000;
-    main_admin.set_name("main_admin");
-    main_admin.set_family("main_admin");
-    main_admin.set_username("main_admin");
-    main_admin.set_adress("-");
-    main_admin.set_email("-");
-    main_admin.set_sex(0);
-    main_admin.set_ncode("-");
-    main_admin.set_role("main_admin");
-    main_admin.set_phone_number("-");
-    main_admin.set_password("main_admin");
-    review_admin.set_name("review_admin");
-    review_admin.set_family("review_admin");
-    review_admin.set_username("review_admin");
-    review_admin.set_adress("-");
-    review_admin.set_email("-");
-    review_admin.set_sex(0);
-    review_admin.set_ncode("-");
-    review_admin.set_role("review_admin");
-    review_admin.set_phone_number("-");
-    review_admin.set_password("review_admin");
-    review_admin.set_income(1000);
+    main_admin = new MainAdmin;
+    main_admin->set_name("main_admin");
+    main_admin->set_family("main_admin");
+    main_admin->set_username("main_admin");
+    main_admin->set_adress("-");
+    main_admin->set_email("-");
+    main_admin->set_sex(0);
+    main_admin->set_ncode("-");
+    main_admin->set_role("main_admin");
+    main_admin->set_phone_number("-");
+    main_admin->set_password("main_admin");
+    review_admin = new ReviewAdmin;
+    review_admin->set_name("review_admin");
+    review_admin->set_family("review_admin");
+    review_admin->set_username("review_admin");
+    review_admin->set_adress("-");
+    review_admin->set_email("-");
+    review_admin->set_sex(0);
+    review_admin->set_ncode("-");
+    review_admin->set_role("review_admin");
+    review_admin->set_phone_number("-");
+    review_admin->set_password("review_admin");
+    review_admin->set_income(1000);
     post_admin = new PostAdmin[31];
     for(int counter = 0;counter<31;counter++)
     {
@@ -223,62 +225,58 @@ DigiKala::DigiKala()
     post_admin[30].set_password("post_admin31");
     post_admin[30].set_province("Sistan and Baluchestan");
     store_admins.resize(3);
-    store_admins[0].set_name("store_admin1");
-    store_admins[0].set_family("store_admin1");
-    store_admins[0].set_username("store_admin1");
-    store_admins[0].set_role("store_admin1");
-    store_admins[0].set_password("store_admin1");
-    store_admins[0].set_adress("-");
-    store_admins[0].set_email("-");
-    store_admins[0].set_sex(0);
-    store_admins[0].set_ncode("-");
-    store_admins[0].set_phone_number("-");
-    store_admins[0].set_income(1500);
-    store_admins[1].set_name("store_admin2");
-    store_admins[1].set_family("store_admin2");
-    store_admins[1].set_username("store_admin2");
-    store_admins[1].set_role("store_admin2");
-    store_admins[1].set_password("store_admin2");
-    store_admins[1].set_adress("-");
-    store_admins[1].set_email("-");
-    store_admins[1].set_sex(0);
-    store_admins[1].set_ncode("-");
-    store_admins[1].set_phone_number("-");
-    store_admins[1].set_income(1500);
-    store_admins[2].set_name("store_admin3");
-    store_admins[2].set_family("store_admin3");
-    store_admins[2].set_username("store_admin3");
-    store_admins[2].set_role("store_admin3");
-    store_admins[2].set_password("store_admin3");
-    store_admins[2].set_adress("-");
-    store_admins[2].set_email("-");
-    store_admins[2].set_sex(0);
-    store_admins[2].set_ncode("-");
-    store_admins[2].set_phone_number("-");
-    store_admins[2].set_income(1500);
+    for(size_t counter = 0;counter<store_admins.size();counter++)
+    {
+        store_admins[counter] = new StoreAdmin;
+    }
+    for(size_t counter = 0;counter<store_admins.size();counter++)
+    {
+        store_admins[counter]->set_adress("-");
+        store_admins[counter]->set_email("-");
+        store_admins[counter]->set_sex(0);
+        store_admins[counter]->set_ncode("-");
+        store_admins[counter]->set_phone_number("-");
+        store_admins[counter]->set_income(1500);
+    }
+    store_admins[0]->set_name("store_admin1");
+    store_admins[0]->set_family("store_admin1");
+    store_admins[0]->set_username("store_admin1");
+    store_admins[0]->set_role("store_admin1");
+    store_admins[0]->set_password("store_admin1");
+    store_admins[1]->set_name("store_admin2");
+    store_admins[1]->set_family("store_admin2");
+    store_admins[1]->set_username("store_admin2");
+    store_admins[1]->set_role("store_admin2");
+    store_admins[1]->set_password("store_admin2");
+    store_admins[2]->set_name("store_admin3");
+    store_admins[2]->set_family("store_admin3");
+    store_admins[2]->set_username("store_admin3");
+    store_admins[2]->set_role("store_admin3");
+    store_admins[2]->set_password("store_admin3");
     support_admins.resize(2);
-    support_admins[0].set_name("store_admin1");
-    support_admins[0].set_family("store_admin1");
-    support_admins[0].set_username("store_admin1");
-    support_admins[0].set_role("store_admin1");
-    support_admins[0].set_password("store_admin1");
-    support_admins[0].set_adress("-");
-    support_admins[0].set_email("-");
-    support_admins[0].set_sex(0);
-    support_admins[0].set_ncode("-");
-    support_admins[0].set_phone_number("-");
-    support_admins[0].set_income(1200);
-    support_admins[1].set_name("store_admin2");
-    support_admins[1].set_family("store_admin2");
-    support_admins[1].set_username("store_admin2");
-    support_admins[1].set_role("store_admin2");
-    support_admins[1].set_password("store_admin2");
-    support_admins[1].set_adress("-");
-    support_admins[1].set_email("-");
-    support_admins[1].set_sex(0);
-    support_admins[1].set_ncode("-");
-    support_admins[1].set_phone_number("-");
-    support_admins[1].set_income(1200);
+    for(size_t counter = 0;counter<support_admins.size();counter++)
+    {
+        support_admins[counter] = new SupportAdmin;
+    }
+    for(size_t counter = 0;counter<support_admins.size();counter++)
+    {
+        support_admins[counter]->set_adress("-");
+        support_admins[counter]->set_email("-");
+        support_admins[counter]->set_sex(0);
+        support_admins[counter]->set_ncode("-");
+        support_admins[counter]->set_phone_number("-");
+        support_admins[counter]->set_income(1200);
+    }
+    support_admins[0]->set_name("store_admin1");
+    support_admins[0]->set_family("store_admin1");
+    support_admins[0]->set_username("store_admin1");
+    support_admins[0]->set_role("store_admin1");
+    support_admins[0]->set_password("store_admin1");
+    support_admins[1]->set_name("store_admin2");
+    support_admins[1]->set_family("store_admin2");
+    support_admins[1]->set_username("store_admin2");
+    support_admins[1]->set_role("store_admin2");
+    support_admins[1]->set_password("store_admin2");
     return;
 }
 
@@ -290,7 +288,7 @@ DigiKala& DigiKala::make_object()
 
 DigiKala::~DigiKala()
 {
-    this->income = this->num_of_commodities = this->num_of_admins = this->num_of_sell_sold_commonities = this->money = this->sales_revenue = 0;
+    this->income = this->num_of_commodities = this->num_of_admins = this->num_of_sell_sold_commonities = this->money = 0;
     return;
 }
 
@@ -349,28 +347,17 @@ int DigiKala::get_money() const
     return this->money;
 }
 
-MainAdmin DigiKala::get_main_admin()
+User* DigiKala::get_main_admin()
 {
     return this->main_admin;
 }
 
-ReviewAdmin DigiKala::get_review_admin()
+User* DigiKala::get_review_admin()
 {
     return this->review_admin;
 }
 
-PostAdmin DigiKala::get_post_admin(int number)
+User DigiKala::get_post_admin(int number)
 {
     return this->post_admin[number-1];
-}
-
-void DigiKala::set_sales_revenue(int sales_revenue)
-{
-    this->sales_revenue = sales_revenue;
-    return;
-}
-
-int DigiKala::get_sales_revenue() const
-{
-    return this->sales_revenue;
 }

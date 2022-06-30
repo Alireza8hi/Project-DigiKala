@@ -1,5 +1,7 @@
 #include "Complaint.h"
 
+using namespace std;
+
 Complaint::Complaint(tm now_time,QString sender,int commodity_id,QString description)
 {
     this->sender = sender;

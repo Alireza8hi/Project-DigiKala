@@ -1,5 +1,7 @@
 #include "Commodity.h"
 
+using namespace std;
+
 Commodity::Commodity()
 {
     this->address=this->category=this->city=this->color=this->company=this->description=this->name=this->owner=this->type=this->owner_phone_number="Unknown";

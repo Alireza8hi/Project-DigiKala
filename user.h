@@ -12,10 +12,19 @@ class User : public QObject , public Human
 {
     Q_OBJECT
 
+private:
+    QString username;
+    QString password;
+    QString role;
+    int income;
+    deque<Comment> comments;
+    deque<Commodity> favorites;
 public:
     User();
     User(User& other);
-    ~User();
+    virtual ~User();
+    void set_income(int income);
+    int get_income()const;
     bool change_password();
     bool change_username();
     QString get_username() const;
@@ -33,14 +42,6 @@ public:
     void writeuser(FILE* fuser);
     //حدف کالا فیوریت
     // حذف کامنت
-private:
-    QString username;
-    QString password;
-    QString role;
-    deque<Comment> comments;
-    deque<Commodity> favorites;
-
-
 
 };
 

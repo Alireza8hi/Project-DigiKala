@@ -10,6 +10,7 @@ Human::Human()
     this->adress = "iran";
     this->national_code ="0";
     this->phone_number = "0";
+    this->province = "province";
     this->sex=0;
 	return;
 }
@@ -17,7 +18,7 @@ Human::Human()
 
 Human::~Human()
 {
-    this->name = this->email = this->adress = this->phone_number = this->national_code = nullptr;
+    this->name = this->email = this->adress = this->phone_number = this->national_code = this->province = nullptr;
     this->sex=0;
     return;
 }
@@ -50,6 +51,11 @@ QString Human::get_adress()const
 QString Human::get_phone_number()const
 {
     return this->phone_number;
+}
+
+QString Human::get_province() const
+{
+    return this->province;
 }
 
 int Human::get_sex() const
@@ -90,6 +96,12 @@ void Human::set_adress(const QString adr)
 void Human::set_phone_number(const QString pho)
 {
     this->phone_number=pho;
+    return;
+}
+
+void Human::set_province(QString province)
+{
+    this->province=province;
     return;
 }
 

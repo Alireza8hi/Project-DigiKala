@@ -17,6 +17,8 @@
 #include "StoreAdminWindow.h"
 #include "ReviewAdminWindow.h"
 
+using namespace std;
+
 User userglobal;
 
 AccountWindow::AccountWindow(QWidget *parent) :

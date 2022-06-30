@@ -4,6 +4,8 @@
 #include <QObject>
 #include <ctime>
 
+using namespace std;
+
 class Comment : public QObject
 {
     Q_OBJECT

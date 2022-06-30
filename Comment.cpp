@@ -1,5 +1,7 @@
 #include "Comment.h"
 
+using namespace std;
+
 Comment::Comment(tm now_time,QString sender,int commodity_id,QString description)
 {
     this->sender = sender;

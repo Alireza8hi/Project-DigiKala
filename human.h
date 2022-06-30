@@ -14,6 +14,7 @@ private:
     QString email ;
     QString adress;
     QString phone_number;
+    QString province;
     int sex;
 public:
 	Human();
@@ -24,6 +25,7 @@ public:
     QString get_email()const;
     QString get_adress()const;
     QString get_phone_number()const;
+    QString get_province()const;
     int get_sex()const;
     void set_name(const QString namef);
     void set_family(const QString familyf);
@@ -31,6 +33,7 @@ public:
     void set_email(const QString em);
     void set_adress(const QString adr);
     void set_phone_number(const QString  pho);
+    void set_province(QString province);
     void set_sex(const int se );
 };
 #endif

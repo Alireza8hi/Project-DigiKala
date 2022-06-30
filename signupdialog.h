@@ -3,6 +3,9 @@
 
 #include <QDialog>
 #include <QValidator>
+
+using namespace std;
+
 namespace Ui {
 class SignUpDialog;
 }
