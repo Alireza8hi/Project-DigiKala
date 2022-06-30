@@ -264,7 +264,7 @@ background-color: rgb(22, 31, 48);</string>
      <x>0</x>
      <y>0</y>
      <width>555</width>
-     <height>25</height>
+     <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">
@@ -342,5 +342,22 @@ background-color: rgb(22, 31, 48);</string>
  <resources>
   <include location="icons.qrc"/>
  </resources>
- <connections/>
+ <connections>
+  <connection>
+   <sender>ExitAct</sender>
+   <signal>triggered()</signal>
+   <receiver>MainAdminWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>277</x>
+     <y>272</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>277</x>
+     <y>272</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
