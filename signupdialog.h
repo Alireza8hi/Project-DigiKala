@@ -43,6 +43,8 @@ private slots:
 
     void on_BackToLogIn_clicked();
 
+    void on_RuleCombo_currentIndexChanged(int index);
+
 private:
     Ui::SignUpDialog *ui;
 };
