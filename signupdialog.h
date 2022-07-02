@@ -34,6 +34,8 @@ private slots:
     void on_PassLe_textChanged(const QString &arg1);
     void on_PassConLe_textChanged(const QString &arg1);
     void on_RulesCB_clicked();
+    void on_CityLe_textChanged(const QString &arg1);
+    void on_StateLe_textChanged(const QString &arg1);
 
     void on_SeeRulesBtn_clicked();
 

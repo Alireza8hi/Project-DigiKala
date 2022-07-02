@@ -42,7 +42,7 @@ void SignUpDialog::on_ShowPassCB_clicked()
 
 void SignUpDialog::CheckForOk()
 {
-    if (ui->RulesCB->isChecked() && ui->NameLe->text().size()>0 && ui->FNameLe->text().size()>0 && ui->NationalCodeLe->text().size()>0 && ui->AddressLe->text().size()>0 && ui->PhoneLe->text().size()>0 && ui->EmailLe->text().size()>0 && ui->UsernameLe->text().size()>0 && ui->PassLe->text().size()>0 && ui->PassConLe->text().size()>0 && ui->PassLe->text()==ui->PassConLe->text() && ui->SexCombo->currentIndex()>0 && ui->RuleCombo->currentIndex()>0)
+    if (ui->RulesCB->isChecked() && ui->NameLe->text().size()>0 && ui->FNameLe->text().size()>0 && ui->NationalCodeLe->text().size()>0 && ui->AddressLe->text().size()>0 && ui->PhoneLe->text().size()>0 && ui->EmailLe->text().size()>0 && ui->UsernameLe->text().size()>0 && ui->PassLe->text().size()>0 && ui->PassConLe->text().size()>0 && ui->PassLe->text()==ui->PassConLe->text() && ui->SexCombo->currentIndex()>0 && ui->RuleCombo->currentIndex()>0 && ui->StateLe->text().size()>0 && ui->CityLe->text().size()>0)
     {
         ui->OkBtn->setEnabled(true);
     }
@@ -98,6 +98,14 @@ void SignUpDialog::on_RulesCB_clicked()
     CheckForOk();
 }
 void SignUpDialog::on_RuleCombo_currentIndexChanged(int index)
+{
+    CheckForOk();
+}
+void SignUpDialog::on_StateLe_textChanged(const QString &arg1)
+{
+    CheckForOk();
+}
+void SignUpDialog::on_CityLe_textChanged(const QString &arg1)
 {
     CheckForOk();
 }
