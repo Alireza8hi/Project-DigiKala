@@ -19,6 +19,10 @@ private slots:
 
     void on_ReturnBtn_clicked();
 
+    void on_ShowOptionsBtn_clicked();
+
+    void on_ExitBtn_clicked();
+
 private:
     Ui::SearchDialog *ui;
 };

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>483</width>
-    <height>439</height>
+    <height>474</height>
    </rect>
   </property>
   <property name="palette">
@@ -21,48 +21,74 @@
    <string>Dialog</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
+   <item row="8" column="0" colspan="4">
+    <widget class="QLineEdit" name="EmailLe"/>
+   </item>
+   <item row="12" column="0" colspan="4">
+    <widget class="QLineEdit" name="PassConLe">
+     <property name="echoMode">
+      <enum>QLineEdit::Password</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0" colspan="4">
+    <widget class="QLineEdit" name="NameLe">
+     <property name="palette">
+      <palette>
+       <active/>
+       <inactive/>
+       <disabled/>
+      </palette>
+     </property>
+     <property name="locale">
+      <locale language="Persian" country="Iran"/>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="0" colspan="4">
+    <widget class="QComboBox" name="RuleCombo">
+     <item>
+      <property name="text">
+       <string>انتخاب</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>مشتری</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>فروشنده</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="3" column="4">
+    <widget class="QLabel" name="StateLbl">
+     <property name="text">
+      <string>استان*</string>
+     </property>
+    </widget>
+   </item>
+   <item row="14" column="4">
+    <widget class="QPushButton" name="CancelBtn">
+     <property name="text">
+      <string>انصراف</string>
+     </property>
+    </widget>
+   </item>
+   <item row="11" column="0" colspan="4">
+    <widget class="QLineEdit" name="PassLe">
+     <property name="echoMode">
+      <enum>QLineEdit::Password</enum>
+     </property>
+    </widget>
+   </item>
    <item row="0" column="4">
     <widget class="QLabel" name="NameLbl">
      <property name="text">
-      <string>نام</string>
-     </property>
-    </widget>
-   </item>
-   <item row="3" column="0" colspan="4">
-    <widget class="QLineEdit" name="NationalCodeLe">
-     <property name="inputMethodHints">
-      <set>Qt::ImhNone</set>
-     </property>
-     <property name="maxLength">
-      <number>10</number>
-     </property>
-    </widget>
-   </item>
-   <item row="10" column="4">
-    <widget class="QLabel" name="PassConLbl">
-     <property name="text">
-      <string>تکرار رمز عبور*</string>
-     </property>
-    </widget>
-   </item>
-   <item row="8" column="4">
-    <widget class="QLabel" name="UsernameLbl">
-     <property name="text">
-      <string>نام کاربری*</string>
-     </property>
-    </widget>
-   </item>
-   <item row="4" column="4">
-    <widget class="QLabel" name="AdressLbl">
-     <property name="text">
-      <string>آدرس*</string>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="4">
-    <widget class="QLabel" name="FNameLbl">
-     <property name="text">
-      <string>نام خانوادگی</string>
+      <string>نام*</string>
      </property>
     </widget>
    </item>
@@ -90,31 +116,65 @@
      </item>
     </widget>
    </item>
-   <item row="10" column="0" colspan="4">
-    <widget class="QLineEdit" name="PassConLe">
-     <property name="echoMode">
-      <enum>QLineEdit::Password</enum>
+   <item row="1" column="0" colspan="4">
+    <widget class="QLineEdit" name="FNameLe"/>
+   </item>
+   <item row="6" column="4">
+    <widget class="QLabel" name="AdressLbl">
+     <property name="text">
+      <string>آدرس*</string>
      </property>
     </widget>
    </item>
-   <item row="0" column="0" colspan="4">
-    <widget class="QLineEdit" name="NameLe">
-     <property name="palette">
-      <palette>
-       <active/>
-       <inactive/>
-       <disabled/>
-      </palette>
-     </property>
-     <property name="locale">
-      <locale language="Persian" country="Iran"/>
+   <item row="7" column="0" colspan="4">
+    <widget class="QLineEdit" name="PhoneLe"/>
+   </item>
+   <item row="9" column="4">
+    <widget class="QLabel" name="RuleLbl">
+     <property name="text">
+      <string>ثبت نام به عنوان*</string>
      </property>
     </widget>
    </item>
    <item row="5" column="0" colspan="4">
-    <widget class="QLineEdit" name="PhoneLe"/>
+    <widget class="QLineEdit" name="NationalCodeLe">
+     <property name="inputMethodHints">
+      <set>Qt::ImhNone</set>
+     </property>
+     <property name="maxLength">
+      <number>10</number>
+     </property>
+    </widget>
    </item>
-   <item row="13" column="0">
+   <item row="7" column="4">
+    <widget class="QLabel" name="PhoneLbl">
+     <property name="text">
+      <string>تلفن*</string>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="4">
+    <widget class="QLabel" name="UsernameLbl">
+     <property name="text">
+      <string>نام کاربری*</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="4">
+    <widget class="QLabel" name="EmailLbl">
+     <property name="text">
+      <string>ایمیل*</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="4">
+    <widget class="QLabel" name="FNameLbl">
+     <property name="text">
+      <string>نام خانوادگی*</string>
+     </property>
+    </widget>
+   </item>
+   <item row="15" column="0">
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
       <widget class="QCheckBox" name="RulesCB">
@@ -163,7 +223,7 @@
      </item>
     </layout>
    </item>
-   <item row="13" column="3" colspan="2">
+   <item row="15" column="3" colspan="2">
     <widget class="QPushButton" name="BackToLogIn">
      <property name="styleSheet">
       <string notr="true">color: rgb(0, 255, 0);</string>
@@ -176,10 +236,37 @@
      </property>
     </widget>
    </item>
+   <item row="10" column="0" colspan="4">
+    <widget class="QLineEdit" name="UsernameLe"/>
+   </item>
    <item row="12" column="4">
-    <widget class="QPushButton" name="CancelBtn">
+    <widget class="QLabel" name="PassConLbl">
      <property name="text">
-      <string>انصراف</string>
+      <string>تکرار رمز عبور*</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="4">
+    <widget class="QLabel" name="NationalCodeLbl">
+     <property name="text">
+      <string>کد ملی*</string>
+     </property>
+    </widget>
+   </item>
+   <item row="14" column="3">
+    <widget class="QPushButton" name="OkBtn">
+     <property name="text">
+      <string>ثبت نام</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0" colspan="4">
+    <widget class="QLineEdit" name="AddressLe"/>
+   </item>
+   <item row="14" column="0">
+    <widget class="QCheckBox" name="ShowPassCB">
+     <property name="text">
+      <string>نمایش رمز عبور</string>
      </property>
     </widget>
    </item>
@@ -190,41 +277,7 @@
      </property>
     </widget>
    </item>
-   <item row="6" column="4">
-    <widget class="QLabel" name="EmailLbl">
-     <property name="text">
-      <string>ایمیل*</string>
-     </property>
-    </widget>
-   </item>
-   <item row="5" column="4">
-    <widget class="QLabel" name="PhoneLbl">
-     <property name="text">
-      <string>تلفن*</string>
-     </property>
-    </widget>
-   </item>
-   <item row="12" column="0">
-    <widget class="QCheckBox" name="ShowPassCB">
-     <property name="text">
-      <string>نمایش رمز عبور</string>
-     </property>
-    </widget>
-   </item>
-   <item row="4" column="0" colspan="4">
-    <widget class="QLineEdit" name="AddressLe"/>
-   </item>
-   <item row="8" column="0" colspan="4">
-    <widget class="QLineEdit" name="UsernameLe"/>
-   </item>
-   <item row="3" column="4">
-    <widget class="QLabel" name="NationalCodeLbl">
-     <property name="text">
-      <string>کد ملی*</string>
-     </property>
-    </widget>
-   </item>
-   <item row="9" column="4">
+   <item row="11" column="4">
     <widget class="QLabel" name="PassLbl">
      <property name="frameShadow">
       <enum>QFrame::Plain</enum>
@@ -234,50 +287,43 @@
      </property>
     </widget>
    </item>
-   <item row="1" column="0" colspan="4">
-    <widget class="QLineEdit" name="FNameLe"/>
-   </item>
-   <item row="9" column="0" colspan="4">
-    <widget class="QLineEdit" name="PassLe">
-     <property name="echoMode">
-      <enum>QLineEdit::Password</enum>
-     </property>
-    </widget>
-   </item>
-   <item row="6" column="0" colspan="4">
-    <widget class="QLineEdit" name="EmailLe"/>
-   </item>
-   <item row="12" column="3">
-    <widget class="QPushButton" name="OkBtn">
+   <item row="4" column="4">
+    <widget class="QLabel" name="CityLbl">
      <property name="text">
-      <string>ثبت نام</string>
+      <string>شهر*</string>
      </property>
     </widget>
    </item>
-   <item row="7" column="4">
-    <widget class="QLabel" name="label">
-     <property name="text">
-      <string>ثبت نام به عنوان*</string>
+   <item row="3" column="0" colspan="2">
+    <widget class="QLineEdit" name="StateLe">
+     <property name="minimumSize">
+      <size>
+       <width>345</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>345</width>
+       <height>16777215</height>
+      </size>
      </property>
     </widget>
    </item>
-   <item row="7" column="0" colspan="4">
-    <widget class="QComboBox" name="RuleCombo">
-     <item>
-      <property name="text">
-       <string>انتخاب</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>مشتری</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>فروشنده</string>
-      </property>
-     </item>
+   <item row="4" column="0" colspan="2">
+    <widget class="QLineEdit" name="CityLe">
+     <property name="minimumSize">
+      <size>
+       <width>345</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>345</width>
+       <height>16777215</height>
+      </size>
+     </property>
     </widget>
    </item>
   </layout>
