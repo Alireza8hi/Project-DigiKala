@@ -3,6 +3,7 @@
 #include <QApplication>
 #include <ctime>
 #include "Digikala.h"
+#include "profiledialog.h"
 
 using namespace std;
 

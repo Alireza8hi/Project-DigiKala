@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>483</width>
-    <height>474</height>
+    <width>581</width>
+    <height>544</height>
    </rect>
   </property>
   <property name="palette">
@@ -33,6 +33,9 @@
    </item>
    <item row="0" column="0" colspan="4">
     <widget class="QLineEdit" name="NameLe">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
      <property name="palette">
       <palette>
        <active/>
@@ -42,6 +45,12 @@
      </property>
      <property name="locale">
       <locale language="Persian" country="Iran"/>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="readOnly">
+      <bool>false</bool>
      </property>
     </widget>
    </item>
@@ -298,13 +307,13 @@
     <widget class="QLineEdit" name="StateLe">
      <property name="minimumSize">
       <size>
-       <width>345</width>
+       <width>443</width>
        <height>0</height>
       </size>
      </property>
      <property name="maximumSize">
       <size>
-       <width>345</width>
+       <width>443</width>
        <height>16777215</height>
       </size>
      </property>
@@ -314,13 +323,13 @@
     <widget class="QLineEdit" name="CityLe">
      <property name="minimumSize">
       <size>
-       <width>345</width>
+       <width>443</width>
        <height>0</height>
       </size>
      </property>
      <property name="maximumSize">
       <size>
-       <width>345</width>
+       <width>443</width>
        <height>16777215</height>
       </size>
      </property>

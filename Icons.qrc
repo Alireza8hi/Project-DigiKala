@@ -25,6 +25,7 @@
         <file>Icons/2334516-200.png</file>
         <file>Icons/icon-comments-19.jpg</file>
         <file>Icons/icon-gears-14.jpg</file>
+        <file>Icons/basket-cart-icon-27.png</file>
     </qresource>
     <qresource prefix="/Pics">
         <file>Pics/empty-shopping-cart-pink-background-with-large-copy-space-online-shopping-concept_492182-38.jpg</file>
@@ -40,5 +41,6 @@
         <file>Pics/modern-abstract-background_200180-165.jpg</file>
         <file>Pics/HD-wallpaper-dark-blue-background-navy-blue.jpg</file>
         <file>Pics/2374143.jpg</file>
+        <file>Pics/Untitled-1.jpg</file>
     </qresource>
 </RCC>
