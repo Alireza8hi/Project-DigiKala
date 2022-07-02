@@ -45,6 +45,8 @@ private slots:
 
     void on_RuleCombo_currentIndexChanged(int index);
 
+    void on_RuleCombo_textActivated(const QString &arg1);
+
 private:
     Ui::SignUpDialog *ui;
 };

@@ -5,7 +5,13 @@
 #include "ui_signupdialog.h"
 #include "Digikala.h"
 #include "User.h"
+#include <iostream>
+
+using namespace std;
+
 extern User userglobal;
+QString rule;
+
 SignUpDialog::SignUpDialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::SignUpDialog)
@@ -111,6 +117,19 @@ void SignUpDialog::on_SeeRulesBtn_clicked()
 
 void SignUpDialog::on_OkBtn_clicked()
 {
+    if(rule=="customer")
+    {
+        //site->add_customer(ui->NameLe->text(),ui->FNameLe->text(),ui->UsernameLe->text(),ui->PassLe->text(),ui->AddressLe->text(),);
+    }
+    else
+    {
+        //site->add_seller(......)
+    }
+    return;
+}
+
+/*void SignUpDialog::on_OkBtn_clicked()
+{
     int login =1,pos,count,i;
     FILE *fuser=nullptr;
     User checkuser,writeuser;
@@ -164,7 +183,7 @@ void SignUpDialog::on_OkBtn_clicked()
     }
     }
     return;
-}
+}*/
 
 
 void SignUpDialog::on_CancelBtn_clicked()
@@ -178,5 +197,16 @@ void SignUpDialog::on_BackToLogIn_clicked()
     parentWidget()->show();
 }
 
-
+void SignUpDialog::on_RuleCombo_textActivated(const QString &arg1)
+{
+    if(arg1=="مشتری")
+    {
+        rule = "customer";
+    }
+    else if(arg1=="فروشنده")
+    {
+        rule = "seller";
+    }
+    return;
+}
 

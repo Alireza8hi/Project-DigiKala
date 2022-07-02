@@ -15,6 +15,9 @@ DigiKala::DigiKala()
     main_admin->set_email("-");
     main_admin->set_sex(0);
     main_admin->set_ncode("-");
+    main_admin->set_income(2000);
+    main_admin->set_city("-");
+    main_admin->set_province("-");
     main_admin->set_role("main_admin");
     main_admin->set_phone_number("-");
     main_admin->set_password("main_admin");
@@ -30,6 +33,8 @@ DigiKala::DigiKala()
     review_admin->set_phone_number("-");
     review_admin->set_password("review_admin");
     review_admin->set_income(1000);
+    review_admin->set_city("-");
+    review_admin->set_province("-");
     post_admins = new PostAdmin[31];
     for(int counter = 0;counter<31;counter++)
     {
@@ -39,6 +44,7 @@ DigiKala::DigiKala()
         post_admins[counter].set_ncode("-");
         post_admins[counter].set_phone_number("-");
         post_admins[counter].set_income(800);
+        post_admins[counter].set_city("-");
     }
     post_admins[0].set_name("post_admin1");
     post_admins[0].set_family("post_admin1");
@@ -239,6 +245,8 @@ DigiKala::DigiKala()
         store_admins[counter]->set_ncode("-");
         store_admins[counter]->set_phone_number("-");
         store_admins[counter]->set_income(1500);
+        store_admins[counter]->set_city("-");
+        store_admins[counter]->set_province("-");
     }
     store_admins[0]->set_name("store_admin1");
     store_admins[0]->set_family("store_admin1");
@@ -268,6 +276,8 @@ DigiKala::DigiKala()
         support_admins[counter]->set_ncode("-");
         support_admins[counter]->set_phone_number("-");
         support_admins[counter]->set_income(1200);
+        support_admins[counter]->set_city("-");
+        support_admins[counter]->set_province("-");
     }
     support_admins[0]->set_name("support_admin1");
     support_admins[0]->set_family("support_admin1");
@@ -426,4 +436,46 @@ User *DigiKala::get_customer(int number)
 User *DigiKala::get_seller(int number)
 {
     return this->sellers[number-1];
+}
+
+void DigiKala::add_customer(QString name, QString family, QString username, QString password, QString address, QString city, QString province, QString national_code, QString phone_number, QString email, int sex)
+{
+    int numberc = this->num_of_customer;
+    this->customers.resize(numberc+1);
+    this->customers[this->num_of_customer]->set_role("customer");
+    this->customers[this->num_of_customer]->set_income(0);
+    this->customers[this->num_of_customer]->set_name(name);
+    this->customers[this->num_of_customer]->set_family(family);
+    this->customers[this->num_of_customer]->set_username(username);
+    this->customers[this->num_of_customer]->set_password(password);
+    this->customers[this->num_of_customer]->set_adress(address);
+    this->customers[this->num_of_customer]->set_city(city);
+    this->customers[this->num_of_customer]->set_province(province);
+    this->customers[this->num_of_customer]->set_ncode(national_code);
+    this->customers[this->num_of_customer]->set_phone_number(phone_number);
+    this->customers[this->num_of_customer]->set_email(email);
+    this->customers[this->num_of_customer]->set_sex(sex);
+    this->set_num_of_customer(numberc+1);
+    return;
+}
+
+void DigiKala::add_seller(QString name, QString family, QString username, QString password, QString address, QString city, QString province, QString national_code, QString phone_number, QString email, int sex)
+{
+    int numbers = this->num_of_seller;
+    this->sellers.resize(numbers+1);
+    this->sellers[this->num_of_seller]->set_role("seller");
+    this->sellers[this->num_of_seller]->set_income(0);
+    this->sellers[this->num_of_seller]->set_name(name);
+    this->sellers[this->num_of_seller]->set_family(family);
+    this->sellers[this->num_of_seller]->set_username(username);
+    this->sellers[this->num_of_seller]->set_password(password);
+    this->sellers[this->num_of_seller]->set_adress(address);
+    this->sellers[this->num_of_seller]->set_city(city);
+    this->sellers[this->num_of_seller]->set_province(province);
+    this->sellers[this->num_of_seller]->set_ncode(national_code);
+    this->sellers[this->num_of_seller]->set_phone_number(phone_number);
+    this->sellers[this->num_of_seller]->set_email(email);
+    this->sellers[this->num_of_seller]->set_sex(sex);
+    this->set_num_of_seller(numbers+1);
+    return;
 }
