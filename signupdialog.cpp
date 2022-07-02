@@ -6,11 +6,15 @@
 #include "Digikala.h"
 #include "User.h"
 #include <iostream>
+#include <QThread>
+#include "CustomerWindow.h"
+#include "SellerWindow.h"
 
 using namespace std;
 
 extern User userglobal;
 QString rule;
+int sex;
 
 SignUpDialog::SignUpDialog(QWidget *parent) :
     QDialog(parent),
@@ -125,13 +129,81 @@ void SignUpDialog::on_SeeRulesBtn_clicked()
 
 void SignUpDialog::on_OkBtn_clicked()
 {
-    if(rule=="customer")
+    bool repeat;
+    if(ui->UsernameLe->text()==site->get_main_admin()->get_username() || ui->UsernameLe->text()==site->get_review_admin()->get_username())
     {
-        //site->add_customer(ui->NameLe->text(),ui->FNameLe->text(),ui->UsernameLe->text(),ui->PassLe->text(),ui->AddressLe->text(),);
+        repeat = true;
+    }
+    for(int counter = 0;counter<31;counter++)
+    {
+        if(ui->UsernameLe->text()==site->get_post_admin(counter).get_username())
+        {
+            repeat = true;
+        }
+    }
+    for(int counter = 0;counter<site->get_num_of_support_admin();counter++)
+    {
+        if(ui->UsernameLe->text()==site->get_support_admin(counter)->get_username())
+        {
+            repeat = true;
+        }
+    }
+    for(int counter = 0;counter<site->get_num_of_store_admin();counter++)
+    {
+        if(ui->UsernameLe->text()==site->get_store_admin(counter)->get_username())
+        {
+            repeat = true;
+        }
+    }
+    for(int counter = 0;counter<site->get_num_of_customer();counter++)
+    {
+        if(ui->UsernameLe->text()==site->get_customer(counter)->get_username())
+        {
+            repeat = true;
+        }
+    }
+    for(int counter = 0;counter<site->get_num_of_seller();counter++)
+    {
+        if(ui->UsernameLe->text()==site->get_seller(counter)->get_username())
+        {
+            repeat = true;
+        }
+    }
+    if(repeat==false)
+    {
+        if(rule=="customer")
+        {
+            site->add_customer(ui->NameLe->text(),ui->FNameLe->text(),ui->UsernameLe->text(),ui->PassLe->text(),ui->AddressLe->text(),ui->CityLe->text(),ui->StateLe->text(),ui->NationalCodeLe->text(),ui->PhoneLe->text(),ui->EmailLe->text(), sex);
+            CustomerWindow* customer_window = new class CustomerWindow(this);
+            QThread* th1 = new QThread();
+            customer_window->moveToThread(th1);
+            connect(th1,&QThread::started,customer_window,&CustomerWindow::show);
+            connect(customer_window,&CustomerWindow::destroyed,th1,&QThread::quit);
+            connect(customer_window,&CustomerWindow::destroyed,customer_window,&CustomerWindow::deleteLater);
+            connect(th1,&QThread::finished,th1,&QThread::deleteLater);
+            th1->start();
+        }
+        else
+        {
+            site->add_seller(ui->NameLe->text(),ui->FNameLe->text(),ui->UsernameLe->text(),ui->PassLe->text(),ui->AddressLe->text(),ui->CityLe->text(),ui->StateLe->text(),ui->NationalCodeLe->text(),ui->PhoneLe->text(),ui->EmailLe->text(), sex);
+            SellerWindow* seller_window = new class SellerWindow(this);
+            QThread* th1 = new QThread();
+            seller_window->moveToThread(th1);
+            connect(th1,&QThread::started,seller_window,&SellerWindow::show);
+            connect(seller_window,&SellerWindow::destroyed,th1,&QThread::quit);
+            connect(seller_window,&SellerWindow::destroyed,seller_window,&SellerWindow::deleteLater);
+            connect(th1,&QThread::finished,th1,&QThread::deleteLater);
+            th1->start();
+        }
+        QMessageBox * msg_error = new QMessageBox(QMessageBox::Information,"Success"," Your registration was successful ",QMessageBox::Ok,this);
+        msg_error->show();
+        connect(msg_error,&QMessageBox::buttonClicked,msg_error,&QMessageBox::deleteLater,Qt::QueuedConnection);
     }
     else
     {
-        //site->add_seller(......)
+        QMessageBox * msg_error = new QMessageBox(QMessageBox::Critical,"error"," Your username is repeated ",QMessageBox::Ok,this);
+        msg_error->show();
+        connect(msg_error,&QMessageBox::buttonClicked,msg_error,&QMessageBox::deleteLater,Qt::QueuedConnection);
     }
     return;
 }
@@ -214,6 +286,24 @@ void SignUpDialog::on_RuleCombo_textActivated(const QString &arg1)
     else if(arg1=="فروشنده")
     {
         rule = "seller";
+    }
+    return;
+}
+
+
+void SignUpDialog::on_SexCombo_textActivated(const QString &arg1)
+{
+    if (arg1=="مرد")
+    {
+        sex = 1;
+    }
+    else if(arg1=="زن")
+    {
+        sex = 2;
+    }
+    else
+    {
+        sex = 0;
     }
     return;
 }

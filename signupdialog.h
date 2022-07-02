@@ -49,6 +49,8 @@ private slots:
 
     void on_RuleCombo_textActivated(const QString &arg1);
 
+    void on_SexCombo_textActivated(const QString &arg1);
+
 private:
     Ui::SignUpDialog *ui;
 };

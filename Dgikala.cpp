@@ -430,18 +430,19 @@ User *DigiKala::get_store_admin(int number)
 
 User *DigiKala::get_customer(int number)
 {
-    return this->customers[number-1];
+    return this->customers[number];
 }
 
 User *DigiKala::get_seller(int number)
 {
-    return this->sellers[number-1];
+    return this->sellers[number];
 }
 
 void DigiKala::add_customer(QString name, QString family, QString username, QString password, QString address, QString city, QString province, QString national_code, QString phone_number, QString email, int sex)
 {
     int numberc = this->num_of_customer;
     this->customers.resize(numberc+1);
+    this->customers[this->num_of_customer] = new Customer;
     this->customers[this->num_of_customer]->set_role("customer");
     this->customers[this->num_of_customer]->set_income(0);
     this->customers[this->num_of_customer]->set_name(name);
@@ -463,6 +464,7 @@ void DigiKala::add_seller(QString name, QString family, QString username, QStrin
 {
     int numbers = this->num_of_seller;
     this->sellers.resize(numbers+1);
+    this->sellers[this->num_of_seller] = new Seller;
     this->sellers[this->num_of_seller]->set_role("seller");
     this->sellers[this->num_of_seller]->set_income(0);
     this->sellers[this->num_of_seller]->set_name(name);
