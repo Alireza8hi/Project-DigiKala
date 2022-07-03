@@ -54,7 +54,7 @@ void AccountWindow::on_ReturnBtn_triggered()
 void AccountWindow::on_UserSignInBtn_clicked()
 {
     bool isTrue = false;
-    if(ui->UserNameLe->text()==site->get_main_admin()->get_username() && ui->PassLe->text()==site->get_main_admin()->get_password())
+    if(ui->UserNameLe->text().toStdString()==site->get_main_admin()->get_username() && ui->PassLe->text().toStdString()==site->get_main_admin()->get_password())
     {
         this_user = site->get_main_admin();
         isTrue = true;
@@ -67,7 +67,7 @@ void AccountWindow::on_UserSignInBtn_clicked()
         connect(th1,&QThread::finished,th1,&QThread::deleteLater);
         th1->start();
     }
-    if(ui->UserNameLe->text()==site->get_review_admin()->get_username() && ui->PassLe->text()==site->get_review_admin()->get_password())
+    if(ui->UserNameLe->text().toStdString()==site->get_review_admin()->get_username() && ui->PassLe->text().toStdString()==site->get_review_admin()->get_password())
     {
         this_user = site->get_review_admin();
         isTrue = true;
@@ -82,7 +82,7 @@ void AccountWindow::on_UserSignInBtn_clicked()
     }
     for(int counter=0;counter<31;counter++)
     {
-        if(ui->UserNameLe->text()==site->get_post_admin(counter)->get_username() && ui->PassLe->text()==site->get_post_admin(counter)->get_password())
+        if(ui->UserNameLe->text().toStdString()==site->get_post_admin(counter)->get_username() && ui->PassLe->text().toStdString()==site->get_post_admin(counter)->get_password())
         {
             this_user = site->get_post_admin(counter);
             isTrue = true;
@@ -98,7 +98,7 @@ void AccountWindow::on_UserSignInBtn_clicked()
     }
     for(int counter=0;counter<site->get_num_of_support_admin();counter++)
     {
-        if(ui->UserNameLe->text()==site->get_support_admin(counter)->get_username() && ui->PassLe->text()==site->get_support_admin(counter)->get_password())
+        if(ui->UserNameLe->text().toStdString()==site->get_support_admin(counter)->get_username() && ui->PassLe->text().toStdString()==site->get_support_admin(counter)->get_password())
         {
             this_user = site->get_support_admin(counter);
             isTrue = true;
@@ -114,7 +114,7 @@ void AccountWindow::on_UserSignInBtn_clicked()
     }
     for(int counter=0;counter<site->get_num_of_store_admin();counter++)
     {
-        if(ui->UserNameLe->text()==site->get_store_admin(counter)->get_username() && ui->PassLe->text()==site->get_store_admin(counter)->get_password())
+        if(ui->UserNameLe->text().toStdString()==site->get_store_admin(counter)->get_username() && ui->PassLe->text().toStdString()==site->get_store_admin(counter)->get_password())
         {
             this_user = site->get_store_admin(counter);
             isTrue = true;
@@ -130,7 +130,7 @@ void AccountWindow::on_UserSignInBtn_clicked()
     }
     for(int counter=0;counter<site->get_num_of_seller();counter++)
     {
-        if(ui->UserNameLe->text()==site->get_seller(counter)->get_username() && ui->PassLe->text()==site->get_seller(counter)->get_password())
+        if(ui->UserNameLe->text().toStdString()==site->get_seller(counter)->get_username() && ui->PassLe->text().toStdString()==site->get_seller(counter)->get_password())
         {
             this_user = site->get_seller(counter);
             isTrue = true;
@@ -146,7 +146,7 @@ void AccountWindow::on_UserSignInBtn_clicked()
     }
     for(int counter=0;counter<site->get_num_of_customer();counter++)
     {
-        if(ui->UserNameLe->text()==site->get_customer(counter)->get_username() && ui->PassLe->text()==site->get_customer(counter)->get_password())
+        if(ui->UserNameLe->text().toStdString()==site->get_customer(counter)->get_username() && ui->PassLe->text().toStdString()==site->get_customer(counter)->get_password())
         {
             this_user = site->get_customer(counter);
             isTrue = true;
@@ -168,3 +168,4 @@ void AccountWindow::on_UserSignInBtn_clicked()
     }
     return;
 }
+

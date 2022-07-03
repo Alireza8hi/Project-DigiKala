@@ -132,34 +132,26 @@ void SignUpDialog::on_OkBtn_clicked()
     if(rule=="customer")
     {
         site->add_customer(ui->NameLe->text(),ui->FNameLe->text(),ui->UsernameLe->text(),ui->PassLe->text(),ui->AddressLe->text(),ui->CityLe->text(),ui->StateLe->text(),ui->NationalCodeLe->text(),ui->PhoneLe->text(),ui->EmailLe->text(), sex);
-        if(open_account==false)
-        {
-            CustomerWindow* customer_window = new class CustomerWindow(this);
-            QThread* th1 = new QThread();
-            customer_window->moveToThread(th1);
-            connect(th1,&QThread::started,customer_window,&CustomerWindow::show);
-            connect(customer_window,&CustomerWindow::destroyed,th1,&QThread::quit);
-            connect(customer_window,&CustomerWindow::destroyed,customer_window,&CustomerWindow::deleteLater);
-            connect(th1,&QThread::finished,th1,&QThread::deleteLater);
-            th1->start();
-            open_account = true;
-        }
+        CustomerWindow* customer_window = new class CustomerWindow(this);
+        QThread* th1 = new QThread();
+        customer_window->moveToThread(th1);
+        connect(th1,&QThread::started,customer_window,&CustomerWindow::show);
+        connect(customer_window,&CustomerWindow::destroyed,th1,&QThread::quit);
+        connect(customer_window,&CustomerWindow::destroyed,customer_window,&CustomerWindow::deleteLater);
+        connect(th1,&QThread::finished,th1,&QThread::deleteLater);
+        th1->start();
     }
     else
     {
         site->add_seller(ui->NameLe->text(),ui->FNameLe->text(),ui->UsernameLe->text(),ui->PassLe->text(),ui->AddressLe->text(),ui->CityLe->text(),ui->StateLe->text(),ui->NationalCodeLe->text(),ui->PhoneLe->text(),ui->EmailLe->text(), sex);
-        if(open_account==false)
-        {
-            SellerWindow* seller_window = new class SellerWindow(this);
-            QThread* th1 = new QThread();
-            seller_window->moveToThread(th1);
-            connect(th1,&QThread::started,seller_window,&SellerWindow::show);
-            connect(seller_window,&SellerWindow::destroyed,th1,&QThread::quit);
-            connect(seller_window,&SellerWindow::destroyed,seller_window,&SellerWindow::deleteLater);
-            connect(th1,&QThread::finished,th1,&QThread::deleteLater);
-            th1->start();
-            open_account = true;
-        }
+        SellerWindow* seller_window = new class SellerWindow(this);
+        QThread* th1 = new QThread();
+        seller_window->moveToThread(th1);
+        connect(th1,&QThread::started,seller_window,&SellerWindow::show);
+        connect(seller_window,&SellerWindow::destroyed,th1,&QThread::quit);
+        connect(seller_window,&SellerWindow::destroyed,seller_window,&SellerWindow::deleteLater);
+        connect(th1,&QThread::finished,th1,&QThread::deleteLater);
+        th1->start();
     }
     QMessageBox * msg_error = new QMessageBox(QMessageBox::Information,"Success"," Your registration was successful ",QMessageBox::Ok,this);
     msg_error->show();

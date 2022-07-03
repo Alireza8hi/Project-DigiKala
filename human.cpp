@@ -9,7 +9,7 @@ Human::Human()
     this->email = "Guest@gmail.com";
     this->adress = "iran";
     this->national_code ="0";
-    this->phone_number = "0";\
+    this->phone_number = "0";
     this->city = "city";
     this->province = "province";
     this->sex=0;
@@ -24,42 +24,42 @@ Human::~Human()
     return;
 }
 
-QString Human::get_name()const
+string Human::get_name()const
 {
     return this->name;
 }
 
-QString Human::get_family() const
+string Human::get_family() const
 {
     return this->family;
 }
 
-QString Human::get_ncode()const
+string Human::get_ncode()const
 {
     return this->national_code;
 }
 
-QString Human::get_email()const
+string Human::get_email()const
 {
     return this->email;
 }
 
-QString Human::get_adress()const
+string Human::get_adress()const
 {
     return this->adress;
 }
 
-QString Human::get_phone_number()const
+string Human::get_phone_number()const
 {
     return this->phone_number;
 }
 
-QString Human::get_city() const
+string Human::get_city() const
 {
     return this->city;
 }
 
-QString Human::get_province() const
+string Human::get_province() const
 {
     return this->province;
 }
@@ -69,49 +69,49 @@ int Human::get_sex() const
     return this->sex;
 }
 
-void Human::set_name(const QString namef)
+void Human::set_name(const string namef)
 {
     this->name=namef;
     return;
 }
 
-void Human::set_family(const QString familyf)
+void Human::set_family(const string familyf)
 {
     this->family=familyf;
     return;
 }
 
-void Human::set_ncode(const QString ncode)
+void Human::set_ncode(const string ncode)
 {
     this->national_code=ncode;
     return;
 }
 
-void Human::set_email(const QString em)
+void Human::set_email(const string em)
 {
     this->email=em;
     return;
 }
 
-void Human::set_adress(const QString adr)
+void Human::set_adress(const string adr)
 {
     this->adress=adr;
     return;
 }
 
-void Human::set_phone_number(const QString pho)
+void Human::set_phone_number(const string pho)
 {
     this->phone_number=pho;
     return;
 }
 
-void Human::set_city(const QString city)
+void Human::set_city(const string city)
 {
     this->city = city;
     return;
 }
 
-void Human::set_province(const QString province)
+void Human::set_province(const string province)
 {
     this->province=province;
     return;

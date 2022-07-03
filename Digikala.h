@@ -71,7 +71,6 @@ public:
 };
 
 static DigiKala* site = &DigiKala::make_object();
-static bool open_account = false;
 static User* this_user;
 extern User userglobal;
 
