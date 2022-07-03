@@ -1,4 +1,5 @@
 #include "mainwindow.h"
+#include "Digikala.h"
 #include "allcommoditywindow.h"
 #include "categorywindow.h"
 #include "accountwindow.h"
@@ -52,5 +53,11 @@ void MainWindow::on_SearchBtn_clicked()
 {
     SearchDialog *a = new SearchDialog(this);
     a->show();
+}
+
+void MainWindow::closed_account()
+{
+    open_account = false;
+    return;
 }
 

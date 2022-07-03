@@ -28,6 +28,8 @@ private slots:
 
     void on_SearchBtn_clicked();
 
+    void closed_account();
+
 private:
     Ui::MainWindow *ui;
     AccountWindow *AccountWindow;

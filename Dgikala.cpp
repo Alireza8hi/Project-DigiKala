@@ -413,9 +413,9 @@ User* DigiKala::get_review_admin()
     return this->review_admin;
 }
 
-User DigiKala::get_post_admin(int number)
+User *DigiKala::get_post_admin(int number)
 {
-    return this->post_admins[number];
+    return &this->post_admins[number];
 }
 
 User* DigiKala::get_support_admin(int number)
@@ -456,6 +456,7 @@ void DigiKala::add_customer(QString name, QString family, QString username, QStr
     this->customers[this->num_of_customer]->set_phone_number(phone_number);
     this->customers[this->num_of_customer]->set_email(email);
     this->customers[this->num_of_customer]->set_sex(sex);
+    this_user = site->get_customer(this->num_of_customer);
     this->set_num_of_customer(numberc+1);
     return;
 }
@@ -478,6 +479,7 @@ void DigiKala::add_seller(QString name, QString family, QString username, QStrin
     this->sellers[this->num_of_seller]->set_phone_number(phone_number);
     this->sellers[this->num_of_seller]->set_email(email);
     this->sellers[this->num_of_seller]->set_sex(sex);
+    this_user = site->get_seller(this->num_of_seller);
     this->set_num_of_seller(numbers+1);
     return;
 }

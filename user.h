@@ -42,7 +42,6 @@ public:
     void writeuser(FILE* fuser);
     //حدف کالا فیوریت
     // حذف کامنت
-
 };
 
 #endif // User_H

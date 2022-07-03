@@ -61,7 +61,7 @@ public:
     int get_money()const;
     User* get_main_admin();
     User* get_review_admin();
-    User get_post_admin(int number);
+    User* get_post_admin(int number);
     User* get_support_admin(int number);
     User* get_store_admin(int number);
     User* get_customer(int number);
@@ -71,6 +71,8 @@ public:
 };
 
 static DigiKala* site = &DigiKala::make_object();
+static bool open_account = false;
+static User* this_user;
 extern User userglobal;
 
 #endif // DIGIKALA_H
