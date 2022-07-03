@@ -438,46 +438,46 @@ User *DigiKala::get_seller(int number)
     return this->sellers[number];
 }
 
-void DigiKala::add_customer(QString name, QString family, QString username, QString password, QString address, QString city, QString province, QString national_code, QString phone_number, QString email, int sex)
+void DigiKala::add_customer(string name, string family, string username, string password, string address, string city, string province, string national_code, string phone_number, string email, int sex)
 {
     int numberc = this->num_of_customer;
     this->customers.resize(numberc+1);
     this->customers[this->num_of_customer] = new Customer;
     this->customers[this->num_of_customer]->set_role("customer");
     this->customers[this->num_of_customer]->set_income(0);
-    this->customers[this->num_of_customer]->set_name(name.toStdString());
-    this->customers[this->num_of_customer]->set_family(family.toStdString());
-    this->customers[this->num_of_customer]->set_username(username.toStdString());
-    this->customers[this->num_of_customer]->set_password(password.toStdString());
-    this->customers[this->num_of_customer]->set_adress(address.toStdString());
-    this->customers[this->num_of_customer]->set_city(city.toStdString());
-    this->customers[this->num_of_customer]->set_province(province.toStdString());
-    this->customers[this->num_of_customer]->set_ncode(national_code.toStdString());
-    this->customers[this->num_of_customer]->set_phone_number(phone_number.toStdString());
-    this->customers[this->num_of_customer]->set_email(email.toStdString());
+    this->customers[this->num_of_customer]->set_name(name);
+    this->customers[this->num_of_customer]->set_family(family);
+    this->customers[this->num_of_customer]->set_username(username);
+    this->customers[this->num_of_customer]->set_password(password);
+    this->customers[this->num_of_customer]->set_adress(address);
+    this->customers[this->num_of_customer]->set_city(city);
+    this->customers[this->num_of_customer]->set_province(province);
+    this->customers[this->num_of_customer]->set_ncode(national_code);
+    this->customers[this->num_of_customer]->set_phone_number(phone_number);
+    this->customers[this->num_of_customer]->set_email(email);
     this->customers[this->num_of_customer]->set_sex(sex);
     this_user = site->get_customer(this->num_of_customer);
     this->set_num_of_customer(numberc+1);
     return;
 }
 
-void DigiKala::add_seller(QString name, QString family, QString username, QString password, QString address, QString city, QString province, QString national_code, QString phone_number, QString email, int sex)
+void DigiKala::add_seller(string name, string family, string username, string password, string address, string city, string province, string national_code, string phone_number, string email, int sex)
 {
     int numbers = this->num_of_seller;
     this->sellers.resize(numbers+1);
     this->sellers[this->num_of_seller] = new Seller;
     this->sellers[this->num_of_seller]->set_role("seller");
     this->sellers[this->num_of_seller]->set_income(0);
-    this->sellers[this->num_of_seller]->set_name(name.toStdString());
-    this->sellers[this->num_of_seller]->set_family(family.toStdString());
-    this->sellers[this->num_of_seller]->set_username(username.toStdString());
-    this->sellers[this->num_of_seller]->set_password(password.toStdString());
-    this->sellers[this->num_of_seller]->set_adress(address.toStdString());
-    this->sellers[this->num_of_seller]->set_city(city.toStdString());
-    this->sellers[this->num_of_seller]->set_province(province.toStdString());
-    this->sellers[this->num_of_seller]->set_ncode(national_code.toStdString());
-    this->sellers[this->num_of_seller]->set_phone_number(phone_number.toStdString());
-    this->sellers[this->num_of_seller]->set_email(email.toStdString());
+    this->sellers[this->num_of_seller]->set_name(name);
+    this->sellers[this->num_of_seller]->set_family(family);
+    this->sellers[this->num_of_seller]->set_username(username);
+    this->sellers[this->num_of_seller]->set_password(password);
+    this->sellers[this->num_of_seller]->set_adress(address);
+    this->sellers[this->num_of_seller]->set_city(city);
+    this->sellers[this->num_of_seller]->set_province(province);
+    this->sellers[this->num_of_seller]->set_ncode(national_code);
+    this->sellers[this->num_of_seller]->set_phone_number(phone_number);
+    this->sellers[this->num_of_seller]->set_email(email);
     this->sellers[this->num_of_seller]->set_sex(sex);
     this_user = site->get_seller(this->num_of_seller);
     this->set_num_of_seller(numbers+1);

@@ -66,8 +66,8 @@ public:
     User* get_store_admin(int number);
     User* get_customer(int number);
     User* get_seller(int number);
-    void add_customer(QString name, QString family, QString username, QString password, QString address, QString city, QString province, QString national_code, QString phone_number, QString email, int sex);
-    void add_seller(QString name, QString family, QString username, QString password, QString address, QString city, QString province, QString national_code, QString phone_number, QString email, int sex);
+    void add_customer(string name, string family, string username, string password, string address, string city, string province, string national_code, string phone_number, string email, int sex);
+    void add_seller(string name, string family, string username, string password, string address, string city, string province, string national_code, string phone_number, string email, int sex);
 };
 
 static DigiKala* site = &DigiKala::make_object();

@@ -55,9 +55,3 @@ void MainWindow::on_SearchBtn_clicked()
     a->show();
 }
 
-void MainWindow::closed_account()
-{
-    open_account = false;
-    return;
-}
-

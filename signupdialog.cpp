@@ -131,7 +131,7 @@ void SignUpDialog::on_OkBtn_clicked()
 {
     if(rule=="customer")
     {
-        site->add_customer(ui->NameLe->text(),ui->FNameLe->text(),ui->UsernameLe->text(),ui->PassLe->text(),ui->AddressLe->text(),ui->CityLe->text(),ui->StateLe->text(),ui->NationalCodeLe->text(),ui->PhoneLe->text(),ui->EmailLe->text(), sex);
+        site->add_customer(ui->NameLe->text().toStdString(),ui->FNameLe->text().toStdString(),ui->UsernameLe->text().toStdString(),ui->PassLe->text().toStdString(),ui->AddressLe->text().toStdString(),ui->CityLe->text().toStdString(),ui->StateLe->text().toStdString(),ui->NationalCodeLe->text().toStdString(),ui->PhoneLe->text().toStdString(),ui->EmailLe->text().toStdString(), sex);
         CustomerWindow* customer_window = new class CustomerWindow(this);
         QThread* th1 = new QThread();
         customer_window->moveToThread(th1);
@@ -143,7 +143,7 @@ void SignUpDialog::on_OkBtn_clicked()
     }
     else
     {
-        site->add_seller(ui->NameLe->text(),ui->FNameLe->text(),ui->UsernameLe->text(),ui->PassLe->text(),ui->AddressLe->text(),ui->CityLe->text(),ui->StateLe->text(),ui->NationalCodeLe->text(),ui->PhoneLe->text(),ui->EmailLe->text(), sex);
+        site->add_seller(ui->NameLe->text().toStdString(),ui->FNameLe->text().toStdString(),ui->UsernameLe->text().toStdString(),ui->PassLe->text().toStdString(),ui->AddressLe->text().toStdString(),ui->CityLe->text().toStdString(),ui->StateLe->text().toStdString(),ui->NationalCodeLe->text().toStdString(),ui->PhoneLe->text().toStdString(),ui->EmailLe->text().toStdString(), sex);
         SellerWindow* seller_window = new class SellerWindow(this);
         QThread* th1 = new QThread();
         seller_window->moveToThread(th1);

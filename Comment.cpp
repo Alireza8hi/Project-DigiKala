@@ -2,7 +2,7 @@
 
 using namespace std;
 
-Comment::Comment(tm now_time,QString sender,int commodity_id,QString description)
+Comment::Comment(tm now_time,string sender,int commodity_id,string description)
 {
     this->sender = sender;
     this->commodity_id = commodity_id;
@@ -53,13 +53,13 @@ tm Comment::get_date_of_birth()const
     return this->date_of_birth;
 }
 
-void Comment::set_sender(QString sender)
+void Comment::set_sender(string sender)
 {
     this->sender = sender;
     return;
 }
 
-QString Comment::get_sender()const
+string Comment::get_sender()const
 {
     return this->sender;
 }
@@ -75,13 +75,13 @@ int Comment::get_commodity_id()const
     return this->commodity_id;
 }
 
-void Comment::set_description(QString description)
+void Comment::set_description(string description)
 {
     this->description = description;
     return;
 }
 
-QString Comment::get_description() const
+string Comment::get_description() const
 {
     return this->description;
 }
