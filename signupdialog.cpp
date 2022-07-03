@@ -127,7 +127,7 @@ void SignUpDialog::on_SeeRulesBtn_clicked()
     SUR->show();
 }
 
-void SignUpDialog::on_OkBtn_clicked()
+/*void SignUpDialog::on_OkBtn_clicked()
 {
     bool repeat;
     if(ui->UsernameLe->text()==site->get_main_admin()->get_username() || ui->UsernameLe->text()==site->get_review_admin()->get_username())
@@ -206,12 +206,12 @@ void SignUpDialog::on_OkBtn_clicked()
         connect(msg_error,&QMessageBox::buttonClicked,msg_error,&QMessageBox::deleteLater,Qt::QueuedConnection);
     }
     return;
-}
+}*/
 
-/*void SignUpDialog::on_OkBtn_clicked()
+void SignUpDialog::on_OkBtn_clicked()
 {
-    int login =1,pos,count,i;
-    FILE *fuser=nullptr;
+    int login =1,pos=0,pos2=0,count=0,i=0;
+    //FILE *fuser=nullptr;
     User checkuser,writeuser;
     if(ui->PassConLe->text()!=ui->PassLe->text())
     {
@@ -222,40 +222,44 @@ void SignUpDialog::on_OkBtn_clicked()
     }
     else
     {
-    fuser=fopen("user.txt","r+");
-    if(fuser==NULL)
-        fuser=fopen("user.txt","w+");
-    fseek(fuser,0,SEEK_END);
-    pos=ftell(fuser);
+    //fuser=fopen("user.txt","r+");
+    //if(fuser==NULL)
+        //fuser=fopen("user.txt","w+");
+    //fseek(fuser,0,SEEK_END);
+    //pos=ftell(fuser);
+    ofstream output_file("user.data",ios::binary);
+    output_file.seekp(0,output_file.end);
+    pos=output_file.tellp();
+    output_file.close();
     count=pos/sizeof(User);
     for(i=0;i<count ;i++)
     {
-        fread(&checkuser,sizeof(User),1,fuser);
-        if (checkuser.get_username()==ui->UsernameLe->text())
+        //fread(&checkuser,sizeof(User),1,fuser);
+        pos2=checkuser.readuser("user.data",pos2);
+        if (checkuser.get_username()==ui->UsernameLe->text().toStdString())
         {
         QMessageBox * msg_error = new QMessageBox(QMessageBox::Critical,"Error"," The username entered in the system is available. Please enter another username ",QMessageBox::Ok|QMessageBox::Cancel);
         msg_error->show();
         connect(msg_error,&QMessageBox::buttonClicked,msg_error,&QMessageBox::deleteLater,Qt::QueuedConnection);
         login=0;
-        fclose(fuser);
         break;
         }
     }
     if(login)
     {
-        writeuser.set_username(ui->UsernameLe->text());
-        writeuser.set_password(ui->PassLe->text());
+        writeuser.set_username(ui->UsernameLe->text().toStdString());
+        writeuser.set_password(ui->PassLe->text().toStdString());
         // نقش
-        writeuser.set_name(ui->NameLe->text());
-        writeuser.set_family(ui->FNameLe->text());
+        writeuser.set_name(ui->NameLe->text().toStdString());
+        writeuser.set_family(ui->FNameLe->text().toStdString());
         writeuser.set_sex(ui->SexCombo->currentIndex());
-        writeuser.set_ncode(ui->NationalCodeLe->text());
-        writeuser.set_adress(ui->AddressLe->text());
-        writeuser.set_phone_number(ui->PhoneLe->text());
-        writeuser.set_email(ui->EmailLe->text());
-        //fwrite(&writeuser,sizeof(User),1,fuser);
-        writeuser.writeuser(fuser);
-        fclose(fuser);
+        writeuser.set_ncode(ui->NationalCodeLe->text().toStdString());
+        writeuser.set_adress(ui->AddressLe->text().toStdString());
+        writeuser.set_phone_number(ui->PhoneLe->text().toStdString());
+        writeuser.set_email(ui->EmailLe->text().toStdString());
+        writeuser.set_city(ui->CityLe->text().toStdString());
+        writeuser.set_province(ui->StateLe->text().toStdString());
+        writeuser.writeuser("user.data",pos2);
         userglobal=writeuser;
         QMessageBox * msg_error = new QMessageBox(QMessageBox::Information,"Success"," Your registration was successful ",QMessageBox::Ok|QMessageBox::Cancel);
         msg_error->show();
@@ -263,7 +267,7 @@ void SignUpDialog::on_OkBtn_clicked()
     }
     }
     return;
-}*/
+}
 
 
 void SignUpDialog::on_CancelBtn_clicked()

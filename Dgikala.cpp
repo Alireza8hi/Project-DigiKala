@@ -440,12 +440,12 @@ User *DigiKala::get_seller(int number)
 
 void DigiKala::add_customer(QString name, QString family, QString username, QString password, QString address, QString city, QString province, QString national_code, QString phone_number, QString email, int sex)
 {
-    int numberc = this->num_of_customer;
+    /*int numberc = this->num_of_customer;
     this->customers.resize(numberc+1);
     this->customers[this->num_of_customer] = new Customer;
     this->customers[this->num_of_customer]->set_role("customer");
     this->customers[this->num_of_customer]->set_income(0);
-    this->customers[this->num_of_customer]->set_name(name);
+    this->customers[this->num_of_customer]->set_name(name.toStdString());
     this->customers[this->num_of_customer]->set_family(family);
     this->customers[this->num_of_customer]->set_username(username);
     this->customers[this->num_of_customer]->set_password(password);
@@ -456,18 +456,18 @@ void DigiKala::add_customer(QString name, QString family, QString username, QStr
     this->customers[this->num_of_customer]->set_phone_number(phone_number);
     this->customers[this->num_of_customer]->set_email(email);
     this->customers[this->num_of_customer]->set_sex(sex);
-    this->set_num_of_customer(numberc+1);
+    this->set_num_of_customer(numberc+1);*/
     return;
 }
 
 void DigiKala::add_seller(QString name, QString family, QString username, QString password, QString address, QString city, QString province, QString national_code, QString phone_number, QString email, int sex)
 {
-    int numbers = this->num_of_seller;
+    /*int numbers = this->num_of_seller;
     this->sellers.resize(numbers+1);
     this->sellers[this->num_of_seller] = new Seller;
     this->sellers[this->num_of_seller]->set_role("seller");
     this->sellers[this->num_of_seller]->set_income(0);
-    this->sellers[this->num_of_seller]->set_name(name);
+    this->sellers[this->num_of_seller]->set_name(name.toStdString());
     this->sellers[this->num_of_seller]->set_family(family);
     this->sellers[this->num_of_seller]->set_username(username);
     this->sellers[this->num_of_seller]->set_password(password);
@@ -478,6 +478,6 @@ void DigiKala::add_seller(QString name, QString family, QString username, QStrin
     this->sellers[this->num_of_seller]->set_phone_number(phone_number);
     this->sellers[this->num_of_seller]->set_email(email);
     this->sellers[this->num_of_seller]->set_sex(sex);
-    this->set_num_of_seller(numbers+1);
+    this->set_num_of_seller(numbers+1);*/
     return;
 }

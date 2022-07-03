@@ -51,7 +51,7 @@ void AccountWindow::on_ReturnBtn_triggered()
     parentWidget()->show();
 }
 
-void AccountWindow::on_UserSignInBtn_clicked()
+/*void AccountWindow::on_UserSignInBtn_clicked()
 {
     bool isTrue = false;
     if(ui->UserNameLe->text()==site->get_main_admin()->get_username() && ui->PassLe->text()==site->get_main_admin()->get_password())
@@ -160,37 +160,33 @@ void AccountWindow::on_UserSignInBtn_clicked()
         connect(msg_error,&QMessageBox::buttonClicked,msg_error,&QMessageBox::deleteLater,Qt::QueuedConnection);
     }
     return;
-}
+}*/
 
-/*void AccountWindow::on_UserSignInBtn_clicked()
+void AccountWindow::on_UserSignInBtn_clicked()
 {
-    FILE *fuser=nullptr;
-    int pos1=1,pos2=2;
+    int pos1=1,pos2=0;
     User checkpassword;
     int login=0;
-    fuser=fopen("User.txt","r+");
-    if(fuser==NULL)
+    ifstream input_file ("user.data",ios::binary);
+    if(!(input_file.is_open()))
     {
         QMessageBox * msg_error = new QMessageBox(QMessageBox::Critical,"Error"," you entered the wrong password or username ",QMessageBox::Ok|QMessageBox::Cancel , this);
         msg_error->show();
         connect(msg_error,&QMessageBox::buttonClicked,msg_error,&QMessageBox::deleteLater,Qt::QueuedConnection);
-        fclose(fuser);
+        input_file.close();
     }
     else
     {
-        fseek(fuser,0,SEEK_END);
-        pos1=ftell(fuser);
-        fseek(fuser,0,SEEK_SET);
+        input_file.seekg(0,input_file.end);
+        pos1=input_file.tellg();
+        input_file.close();
         while(pos2<pos1)
         {
-        //fread(&checkpassword,sizeof(User),1,fuser);
-        checkpassword.readuser(fuser);
-        pos2=ftell(fuser);
-        if(checkpassword.get_username()==ui->UserNameLe->text() && checkpassword.get_password()==ui->PassLe->text())
+        pos2=checkpassword.readuser("user.data" , pos2);
+        if(checkpassword.get_username()==ui->UserNameLe->text().toStdString() && checkpassword.get_password()==ui->PassLe->text().toStdString())
             {
             userglobal=checkpassword;
             login=1;
-            fclose(fuser);
             break;
             }
         }
@@ -199,7 +195,6 @@ void AccountWindow::on_UserSignInBtn_clicked()
             QMessageBox * msg_error = new QMessageBox(QMessageBox::Critical,"Error"," you entered the wrong password or username ",QMessageBox::Ok|QMessageBox::Cancel, this);
             msg_error->show();
             connect(msg_error,&QMessageBox::buttonClicked,msg_error,&QMessageBox::deleteLater,Qt::QueuedConnection);
-            fclose(fuser);
         }
         else
         {
@@ -239,5 +234,7 @@ void AccountWindow::on_UserSignInBtn_clicked()
                 review_admin_window->show();
             }
         }
+
     }
-}*/
+    return;
+}
