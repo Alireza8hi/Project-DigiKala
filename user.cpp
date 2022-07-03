@@ -219,8 +219,8 @@ int User::readuser(const char * file , int seekbeg)
 
 void User::writeuser(const char * file,int seekbeg)
 {
-    ofstream output_file(file,ios::binary);
-    output_file.seekp(seekbeg,output_file.beg);
+    ofstream output_file(file,ios::binary |ios::out |ios::app );
+    output_file.seekp(seekbeg);
     output_file.write((char*)this,sizeof(User));
     output_file.close();
     return;
