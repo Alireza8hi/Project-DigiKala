@@ -33,6 +33,33 @@ private slots:
 
     void on_NewPassConLe_textChanged(const QString &arg1);
 
+    void on_EditNameBtn_clicked();
+
+    void on_EditFNameBtn_clicked();
+
+    void on_EditSexBtn_clicked();
+
+    void on_EditNationalCodeBtn_clicked();
+
+    void on_ReturnBtn_clicked();
+
+    void on_PhoneLe_textChanged(const QString &arg1);
+
+    void on_NationalCodeLe_textChanged(const QString &arg1);
+
+    void on_EmailLe_textChanged(const QString &arg1);
+
+    void on_NameLe_textChanged(const QString &arg1);
+
+    void on_FNameLe_textChanged(const QString &arg1);
+
+    void on_StateLe_textChanged(const QString &arg1);
+
+    void on_CityLe_textChanged(const QString &arg1);
+
+
+    void on_AddressLe_textChanged();
+
 private:
     Ui::ProfileDialog *ui;
 };

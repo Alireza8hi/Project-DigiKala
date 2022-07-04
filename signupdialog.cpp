@@ -89,10 +89,10 @@ void SignUpDialog::on_ShowPassCB_clicked()
 
 void SignUpDialog::CheckForOk()
 {
-    if (ui->RulesCB->isChecked() && ui->NameLe->text().size()>2 && ui->FNameLe->text().size()>2 && ui->NationalCodeLe->text().size() == 10
-         && ui->AddressLe->text().size()>3 && ui->PhoneLe->text().size() == 11 && ui->PassLe->text().size()>8 && ui->PassConLe->text().size()>8
+    if (ui->RulesCB->isChecked() && ui->NameLe->text().size()>0 && ui->FNameLe->text().size()>0 && ui->NationalCodeLe->text().size() == 10
+         && ui->AddressLe->text().size()>3 && ui->PhoneLe->text().size() == 11 && ui->PassLe->text().size()>7 && ui->PassConLe->text().size()>7
          && ui->PassLe->text()==ui->PassConLe->text() && ui->SexCombo->currentIndex()>0 && ui->RuleCombo->currentIndex()>0
-         && ui->StateLe->text().size()>2 && ui->CityLe->text().size()>2 && IsEmailValid(ui->EmailLe->text().toStdString()) == true
+         && ui->StateLe->text().size()>0 && ui->CityLe->text().size()>0 && IsEmailValid(ui->EmailLe->text().toStdString()) == true
          && IsUsernameValid(ui->UsernameLe->text().toStdString()) == true)
     {
         ui->OkBtn->setEnabled(true);

@@ -18,8 +18,6 @@ public:
     explicit SignUpDialog(QWidget *parent = nullptr);
     ~SignUpDialog();
     void CheckForOk();
-    friend bool IsEmailValid(const std::string& email);
-    friend bool IsUsernameValid(string username);
 
 private slots:
 
@@ -56,5 +54,7 @@ private slots:
 private:
     Ui::SignUpDialog *ui;
 };
+bool IsEmailValid(const std::string& email);
+bool IsUsernameValid(string username);
 
 #endif // SIGNUPDIALOG_H
