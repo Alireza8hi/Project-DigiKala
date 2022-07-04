@@ -10,7 +10,7 @@ ProfileDialog::ProfileDialog(QWidget *parent) :
     ui->setupUi(this);
     ui->NationalCodeLe->setInputMask("0000000000");
     ui->PhoneLe->setInputMask("00000000000");
-    //ui->FNameLbl->setText(this_user->get_family());
+    //ui->FNameLe->setText(QString::fromStdString(this_user->get_family()));
 }
 
 ProfileDialog::~ProfileDialog()
