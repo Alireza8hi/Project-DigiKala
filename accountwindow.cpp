@@ -54,8 +54,9 @@ void AccountWindow::on_ReturnBtn_triggered()
 void AccountWindow::on_UserSignInBtn_clicked()
 {
     bool isTrue = false;
-    if(ui->UserNameLe->text()==site->get_main_admin()->get_username() && ui->PassLe->text()==site->get_main_admin()->get_password())
+    if(ui->UserNameLe->text().toStdString()==site->get_main_admin()->get_username() && ui->PassLe->text().toStdString()==site->get_main_admin()->get_password())
     {
+        this_user = site->get_main_admin();
         isTrue = true;
         MainAdminWindow* main_admin_window = new class MainAdminWindow(this);
         QThread* th1 = new QThread();
@@ -66,8 +67,9 @@ void AccountWindow::on_UserSignInBtn_clicked()
         connect(th1,&QThread::finished,th1,&QThread::deleteLater);
         th1->start();
     }
-    if(ui->UserNameLe->text()==site->get_review_admin()->get_username() && ui->PassLe->text()==site->get_review_admin()->get_password())
+    if(ui->UserNameLe->text().toStdString()==site->get_review_admin()->get_username() && ui->PassLe->text().toStdString()==site->get_review_admin()->get_password())
     {
+        this_user = site->get_review_admin();
         isTrue = true;
         ReviewAdminWindow* review_admin_window = new class ReviewAdminWindow(this);
         QThread* th1 = new QThread();
@@ -80,8 +82,9 @@ void AccountWindow::on_UserSignInBtn_clicked()
     }
     for(int counter=0;counter<31;counter++)
     {
-        if(ui->UserNameLe->text()==site->get_post_admin(counter).get_username() && ui->PassLe->text()==site->get_post_admin(counter).get_password())
+        if(ui->UserNameLe->text().toStdString()==site->get_post_admin(counter)->get_username() && ui->PassLe->text().toStdString()==site->get_post_admin(counter)->get_password())
         {
+            this_user = site->get_post_admin(counter);
             isTrue = true;
             PostAdminWindow* post_admin_window = new class PostAdminWindow(this);
             QThread* th1 = new QThread();
@@ -95,8 +98,9 @@ void AccountWindow::on_UserSignInBtn_clicked()
     }
     for(int counter=0;counter<site->get_num_of_support_admin();counter++)
     {
-        if(ui->UserNameLe->text()==site->get_support_admin(counter)->get_username() && ui->PassLe->text()==site->get_support_admin(counter)->get_password())
+        if(ui->UserNameLe->text().toStdString()==site->get_support_admin(counter)->get_username() && ui->PassLe->text().toStdString()==site->get_support_admin(counter)->get_password())
         {
+            this_user = site->get_support_admin(counter);
             isTrue = true;
             SupportAdminWindow* support_admin_window = new class SupportAdminWindow(this);
             QThread* th1 = new QThread();
@@ -110,8 +114,9 @@ void AccountWindow::on_UserSignInBtn_clicked()
     }
     for(int counter=0;counter<site->get_num_of_store_admin();counter++)
     {
-        if(ui->UserNameLe->text()==site->get_store_admin(counter)->get_username() && ui->PassLe->text()==site->get_store_admin(counter)->get_password())
+        if(ui->UserNameLe->text().toStdString()==site->get_store_admin(counter)->get_username() && ui->PassLe->text().toStdString()==site->get_store_admin(counter)->get_password())
         {
+            this_user = site->get_store_admin(counter);
             isTrue = true;
             StoreAdminWindow* store_admin_window = new class StoreAdminWindow(this);
             QThread* th1 = new QThread();
@@ -125,8 +130,9 @@ void AccountWindow::on_UserSignInBtn_clicked()
     }
     for(int counter=0;counter<site->get_num_of_seller();counter++)
     {
-        if(ui->UserNameLe->text()==site->get_seller(counter)->get_username() && ui->PassLe->text()==site->get_seller(counter)->get_password())
+        if(ui->UserNameLe->text().toStdString()==site->get_seller(counter)->get_username() && ui->PassLe->text().toStdString()==site->get_seller(counter)->get_password())
         {
+            this_user = site->get_seller(counter);
             isTrue = true;
             SellerWindow* seller_window = new class SellerWindow(this);
             QThread* th1 = new QThread();
@@ -140,8 +146,9 @@ void AccountWindow::on_UserSignInBtn_clicked()
     }
     for(int counter=0;counter<site->get_num_of_customer();counter++)
     {
-        if(ui->UserNameLe->text()==site->get_customer(counter)->get_username() && ui->PassLe->text()==site->get_customer(counter)->get_password())
+        if(ui->UserNameLe->text().toStdString()==site->get_customer(counter)->get_username() && ui->PassLe->text().toStdString()==site->get_customer(counter)->get_password())
         {
+            this_user = site->get_customer(counter);
             isTrue = true;
             CustomerWindow* customer_window = new class CustomerWindow(this);
             QThread* th1 = new QThread();
@@ -155,89 +162,10 @@ void AccountWindow::on_UserSignInBtn_clicked()
     }
     if (isTrue!=true)
     {
-        QMessageBox * msg_error = new QMessageBox(QMessageBox::Critical,"Error"," you entered the wrong password or username ",QMessageBox::Ok, this);
+        QMessageBox * msg_error = new QMessageBox(QMessageBox::Critical,"Error"," you entered the wrong password or username",QMessageBox::Ok, this);
         msg_error->show();
         connect(msg_error,&QMessageBox::buttonClicked,msg_error,&QMessageBox::deleteLater,Qt::QueuedConnection);
     }
     return;
 }
 
-/*void AccountWindow::on_UserSignInBtn_clicked()
-{
-    FILE *fuser=nullptr;
-    int pos1=1,pos2=2;
-    User checkpassword;
-    int login=0;
-    fuser=fopen("User.txt","r+");
-    if(fuser==NULL)
-    {
-        QMessageBox * msg_error = new QMessageBox(QMessageBox::Critical,"Error"," you entered the wrong password or username ",QMessageBox::Ok|QMessageBox::Cancel , this);
-        msg_error->show();
-        connect(msg_error,&QMessageBox::buttonClicked,msg_error,&QMessageBox::deleteLater,Qt::QueuedConnection);
-        fclose(fuser);
-    }
-    else
-    {
-        fseek(fuser,0,SEEK_END);
-        pos1=ftell(fuser);
-        fseek(fuser,0,SEEK_SET);
-        while(pos2<pos1)
-        {
-        //fread(&checkpassword,sizeof(User),1,fuser);
-        checkpassword.readuser(fuser);
-        pos2=ftell(fuser);
-        if(checkpassword.get_username()==ui->UserNameLe->text() && checkpassword.get_password()==ui->PassLe->text())
-            {
-            userglobal=checkpassword;
-            login=1;
-            fclose(fuser);
-            break;
-            }
-        }
-        if(login==0)
-        {
-            QMessageBox * msg_error = new QMessageBox(QMessageBox::Critical,"Error"," you entered the wrong password or username ",QMessageBox::Ok|QMessageBox::Cancel, this);
-            msg_error->show();
-            connect(msg_error,&QMessageBox::buttonClicked,msg_error,&QMessageBox::deleteLater,Qt::QueuedConnection);
-            fclose(fuser);
-        }
-        else
-        {
-            if(checkpassword.get_role()=="customer")
-            {
-                CustomerWindow* customer_window = new class CustomerWindow(this);
-                customer_window->show();
-            }
-            else if(checkpassword.get_role()=="seller")
-            {
-                    SellerWindow* seller_window = new class SellerWindow(this);
-                    seller_window->show();
-            }
-            else if(checkpassword.get_role()=="main_admin")
-            {
-                    MainAdminWindow* main_admin_window = new class MainAdminWindow(this);
-                    main_admin_window->show();
-            }
-            else if(checkpassword.get_role()=="post_admin")
-            {
-                PostAdminWindow* post_admin_window = new class PostAdminWindow(this);
-                post_admin_window->show();
-            }
-            else if(checkpassword.get_role()=="support_admin")
-            {
-                SupportAdminWindow* support_admin_window = new class SupportAdminWindow(this);
-                support_admin_window->show();
-            }
-            else if(checkpassword.get_role()=="store_admin")
-            {
-                StoreAdminWindow* store_admin_window = new class StoreAdminWindow(this);
-                store_admin_window->show();
-            }
-            else if(checkpassword.get_role()=="review_admin")
-            {
-                ReviewAdminWindow* review_admin_window = new class ReviewAdminWindow(this);
-                review_admin_window->show();
-            }
-        }
-    }
-}*/

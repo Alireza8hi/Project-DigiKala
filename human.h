@@ -1,42 +1,42 @@
 #ifndef HumanSDFGHJ
 #define HumanSDFGHJ
 #include <iostream>
-#include <QString>
+#include <string>
 
 using namespace std;
 
 class Human
 {
 private:
-    QString name ;
-    QString family;
-    QString national_code;
-    QString email ;
-    QString adress;
-    QString phone_number;
-    QString city;
-    QString province;
+    string name ;
+    string family;
+    string national_code;
+    string email ;
+    string adress;
+    string phone_number;
+    string city;
+    string province;
     int sex;
 public:
 	Human();
 	~Human();
-    QString get_name()const;
-    QString get_family()const;
-    QString get_ncode()const;
-    QString get_email()const;
-    QString get_adress()const;
-    QString get_phone_number()const;
-    QString get_city()const;
-    QString get_province()const;
+    string get_name()const;
+    string get_family()const;
+    string get_ncode()const;
+    string get_email()const;
+    string get_adress()const;
+    string get_phone_number()const;
+    string get_city()const;
+    string get_province()const;
     int get_sex()const;
-    void set_name(const QString namef);
-    void set_family(const QString familyf);
-    void set_ncode(const QString ncode) ;
-    void set_email(const QString em);
-    void set_adress(const QString adr);
-    void set_phone_number(const QString  pho);
-    void set_city(const QString city);
-    void set_province(const QString province);
+    void set_name(const string namef);
+    void set_family(const string familyf);
+    void set_ncode(const string ncode) ;
+    void set_email(const string em);
+    void set_adress(const string adr);
+    void set_phone_number(const string  pho);
+    void set_city(const string city);
+    void set_province(const string province);
     void set_sex(const int se );
 };
 #endif

@@ -39,24 +39,24 @@ Commodity::~Commodity()
     return;
 }
 
-void Commodity::set_owner(QString owner)
+void Commodity::set_owner(string owner)
 {
     this->owner = owner;
     return;
 }
 
-QString Commodity::get_owner() const
+string Commodity::get_owner() const
 {
     return this->owner;
 }
 
-void Commodity::set_owner_phone_number(QString phone_number)
+void Commodity::set_owner_phone_number(string phone_number)
 {
     this->owner_phone_number = phone_number;
     return;
 }
 
-QString Commodity::get_owner_phone_number() const
+string Commodity::get_owner_phone_number() const
 {
     return this->owner_phone_number;
 }
@@ -83,46 +83,46 @@ int Commodity::get_id() const
     return this->id;
 }
 
-void Commodity::set_name(QString name)
+void Commodity::set_name(string name)
 {
     this->name = name;
     return;
 }
 
-QString Commodity::get_name() const
+string Commodity::get_name() const
 {
     return this->name;
 }
 
-void Commodity::set_category(QString category)
+void Commodity::set_category(string category)
 {
     this->category = category;
     return;
 }
 
-QString Commodity::get_category() const
+string Commodity::get_category() const
 {
     return this->category;
 }
 
-void Commodity::set_type(QString type)
+void Commodity::set_type(string type)
 {
     this->type = type;
     return;
 }
 
-QString Commodity::get_type() const
+string Commodity::get_type() const
 {
     return  this->type;
 }
 
-void Commodity::set_company(QString company)
+void Commodity::set_company(string company)
 {
     this->company = company;
     return;
 }
 
-QString Commodity::get_company() const
+string Commodity::get_company() const
 {
     return this->company;
 }
@@ -138,24 +138,24 @@ bool Commodity::get_is_electric() const
     return this->is_electric;
 }
 
-void Commodity::set_city(QString city)
+void Commodity::set_city(string city)
 {
     this->city = city;
     return;
 }
 
-QString Commodity::get_city() const
+string Commodity::get_city() const
 {
     return this->city;
 }
 
-void Commodity::set_address(QString address)
+void Commodity::set_address(string address)
 {
     this->address = address;
     return;
 }
 
-QString Commodity::get_address() const
+string Commodity::get_address() const
 {
     return this->address;
 }
@@ -193,13 +193,13 @@ int Commodity::get_discount_percent() const
     return  this->discount_percent;
 }
 
-void Commodity::set_color(QString color)
+void Commodity::set_color(string color)
 {
     this->color = color;
     return;
 }
 
-QString Commodity::get_color() const
+string Commodity::get_color() const
 {
     return this->color;
 }
@@ -226,13 +226,13 @@ tm Commodity::get_expiration_date() const
     return this->expiration_date;
 }
 
-void Commodity::set_description(QString description)
+void Commodity::set_description(string description)
 {
     this->description = description;
     return;
 }
 
-QString Commodity::get_description() const
+string Commodity::get_description() const
 {
     return this->description;
 }

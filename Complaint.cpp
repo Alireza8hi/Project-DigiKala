@@ -2,7 +2,7 @@
 
 using namespace std;
 
-Complaint::Complaint(tm now_time,QString sender,int commodity_id,QString description)
+Complaint::Complaint(tm now_time,string sender,int commodity_id,string description)
 {
     this->sender = sender;
     this->commodity_id = commodity_id;
@@ -34,13 +34,13 @@ tm Complaint::get_date_of_birth()const
     return this->date_of_birth;
 }
 
-void Complaint::set_sender(QString sender)
+void Complaint::set_sender(string sender)
 {
     this->sender = sender;
     return;
 }
 
-QString Complaint::get_sender()const
+string Complaint::get_sender()const
 {
     return this->sender;
 }
@@ -56,13 +56,13 @@ int Complaint::get_commodity_id()const
     return this->commodity_id;
 }
 
-void Complaint::set_description(QString description)
+void Complaint::set_description(string description)
 {
     this->description = description;
     return;
 }
 
-QString Complaint::get_description() const
+string Complaint::get_description() const
 {
     return this->description;
 }

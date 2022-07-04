@@ -1,4 +1,5 @@
 #include "profiledialog.h"
+#include "Digikala.h"
 #include "ui_profiledialog.h"
 
 ProfileDialog::ProfileDialog(QWidget *parent) :
@@ -6,6 +7,7 @@ ProfileDialog::ProfileDialog(QWidget *parent) :
     ui(new Ui::ProfileDialog)
 {
     ui->setupUi(this);
+    //ui->FNameLbl->setText(this_user->get_family());
 }
 
 ProfileDialog::~ProfileDialog()

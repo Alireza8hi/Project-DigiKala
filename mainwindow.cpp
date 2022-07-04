@@ -1,4 +1,5 @@
 #include "mainwindow.h"
+#include "Digikala.h"
 #include "allcommoditywindow.h"
 #include "categorywindow.h"
 #include "accountwindow.h"

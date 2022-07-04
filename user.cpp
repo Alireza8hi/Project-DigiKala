@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include "Digikala.h"
 #include "User.h"
 
 User::User()
@@ -12,14 +13,18 @@ User::User(User &other)
     this->username=other.username;
     this->password=other.password;
     this->role=other.role;
+    this->income=other.income;
     this->set_name(other.get_name());
     this->set_family(other.get_family());
     this->set_email(other.get_email());
     this->set_adress(other.get_adress());
     this->set_ncode(other.get_ncode());
     this->set_phone_number(other.get_phone_number());
-    //this->comments=s.comments;
-    //this->favorites=s.favorites;
+    this->set_city(other.get_city());
+    this->set_province(other.get_province());
+    this->set_sex(other.get_sex());
+    //this->comments=other.comments;
+    //this->favorites=other.favorites;
     return;
 }
 
@@ -43,8 +48,8 @@ int User::get_income() const
 
 bool User::change_password()
 {
-    QString current_password, new_password,renew_password;
-    FILE *fuser;
+    string current_password, new_password,renew_password;
+    int pos1=1,pos2=0;
     User changepass;
     while(true)
     {
@@ -75,27 +80,27 @@ bool User::change_password()
                     }
     }
     this->password=new_password;
-    fuser=fopen("User.txt","w+");
-    while(fuser!=NULL)
+    ifstream input_file ("user.data",ios::binary);
+    pos1=input_file.tellg();
+    input_file.close();
+    while(pos2<pos1)
     {
-    fread(&changepass,sizeof(User),1,fuser);
+    pos2=changepass.readuser("user.data" , pos2);
     if(changepass.username==this->username)
         {
-        fseek(fuser,ftell(fuser)-sizeof(User),SEEK_CUR);
-        //changepass=this;
-        fwrite(&changepass,sizeof(User),1,fuser);
+        changepass=*this;
+        changepass.writeuser("user.data",(pos2-sizeof(User)));
         break;
         }
     }
-    fclose(fuser);
     return true;
 }
 
 bool User::change_username()
 {
-    FILE *fuser;
+    int pos1=1 , pos2=0;
     User changepass;
-    QString passwordtest,Usernametest;
+    string passwordtest,Usernametest;
     cout<< "enter the new username :"<<'\n';
     //cin>>usernametest;
     cout<<'\n';
@@ -109,53 +114,54 @@ bool User::change_username()
     }
         else
         {
-         fuser=fopen("User.txt","w+");
-         while(fuser!=NULL)
+         ifstream input_file ("user.data",ios::binary);
+         pos1=input_file.tellg();
+         input_file.close();
+         while(pos2<pos1)
          {
-            fread(&changepass,sizeof(User),1,fuser);
+             pos2=changepass.readuser("user.data",pos2);
             if(changepass.username==this->username)
             {
             this->username=Usernametest;
-            fseek(fuser,ftell(fuser)-sizeof(User),SEEK_CUR);
             changepass=*this;
-            fwrite(&changepass,sizeof(User),1,fuser);
+            changepass.writeuser("user.data",(pos2-sizeof(User)));
             break;
             }
           }
          }
-    fclose(fuser);
+    //cout
     return true;
 
 }
 
-QString User::get_username() const
+string User::get_username() const
 {
     return this->username;
 }
 
-QString User::get_password() const
+string User::get_password() const
 {
     return this->password;
 }
 
-QString User::get_role() const
+string User::get_role() const
 {
     return this->role;
 }
 
-void User::set_username(const QString uname)
+void User::set_username(const string uname)
 {
     this->username=uname;
     return;
 }
 
-void User::set_password(const QString upassword)
+void User::set_password(const string upassword)
 {
     this->password=upassword;
     return;
 }
 
-void User::set_role(const QString urole)
+void User::set_role(const string urole)
 {
     this->role=urole;
     return;
@@ -173,6 +179,9 @@ User& User::operator=(const User& s)
   this->set_adress(s.get_adress());
   this->set_ncode(s.get_ncode());
   this->set_phone_number(s.get_phone_number());
+    this->set_city(s.get_city());
+    this->set_province(s.get_province());
+    this->set_sex(s.get_sex());
   //this->comments=s.comments;
   //this->favorites=s.favorites;
     return *this;
@@ -200,14 +209,21 @@ Commodity User::get_commodity(int index)
     return this->favorites.at(index);
 }
 
-void User::readuser(FILE *fuser)
+int User::readuser(const char * file , int seekbeg)
 {
-    fread(this,sizeof(User),1,fuser);
-    return;
+    ifstream input_file(file,ios::binary);
+    input_file.seekg(seekbeg , input_file.beg);
+    input_file.read((char*)this,sizeof(User));
+    int seekend=input_file.tellg();
+    input_file.close();
+    return seekend;
 }
 
-void User::writeuser(FILE *fuser)
+void User::writeuser(const char * file,int seekbeg)
 {
-    fwrite(this,sizeof(User),1,fuser);
+    ofstream output_file(file,ios::binary |ios::out |ios::app );
+    output_file.seekp(seekbeg);
+    output_file.write((char*)this,sizeof(User));
+    output_file.close();
     return;
 }

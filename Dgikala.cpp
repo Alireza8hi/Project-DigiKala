@@ -413,9 +413,9 @@ User* DigiKala::get_review_admin()
     return this->review_admin;
 }
 
-User DigiKala::get_post_admin(int number)
+User *DigiKala::get_post_admin(int number)
 {
-    return this->post_admins[number];
+    return &this->post_admins[number];
 }
 
 User* DigiKala::get_support_admin(int number)
@@ -438,7 +438,7 @@ User *DigiKala::get_seller(int number)
     return this->sellers[number];
 }
 
-void DigiKala::add_customer(QString name, QString family, QString username, QString password, QString address, QString city, QString province, QString national_code, QString phone_number, QString email, int sex)
+void DigiKala::add_customer(string name, string family, string username, string password, string address, string city, string province, string national_code, string phone_number, string email, int sex)
 {
     int numberc = this->num_of_customer;
     this->customers.resize(numberc+1);
@@ -456,11 +456,12 @@ void DigiKala::add_customer(QString name, QString family, QString username, QStr
     this->customers[this->num_of_customer]->set_phone_number(phone_number);
     this->customers[this->num_of_customer]->set_email(email);
     this->customers[this->num_of_customer]->set_sex(sex);
+    this_user = site->get_customer(this->num_of_customer);
     this->set_num_of_customer(numberc+1);
     return;
 }
 
-void DigiKala::add_seller(QString name, QString family, QString username, QString password, QString address, QString city, QString province, QString national_code, QString phone_number, QString email, int sex)
+void DigiKala::add_seller(string name, string family, string username, string password, string address, string city, string province, string national_code, string phone_number, string email, int sex)
 {
     int numbers = this->num_of_seller;
     this->sellers.resize(numbers+1);
@@ -478,6 +479,7 @@ void DigiKala::add_seller(QString name, QString family, QString username, QStrin
     this->sellers[this->num_of_seller]->set_phone_number(phone_number);
     this->sellers[this->num_of_seller]->set_email(email);
     this->sellers[this->num_of_seller]->set_sex(sex);
+    this_user = site->get_seller(this->num_of_seller);
     this->set_num_of_seller(numbers+1);
     return;
 }
