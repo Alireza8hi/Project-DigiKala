@@ -18,7 +18,7 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
-    <string notr="true">background-image: url(:/Pics/Pics/hand-painted-background-violet-orange-colours_23-2148427578.webp);</string>
+    <string notr="true">border-image: url(:/Pics/Pics/hand-painted-background-violet-orange-colours_23-2148427578.webp);</string>
    </property>
   </widget>
   <widget class="QMenuBar" name="menubar">

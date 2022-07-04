@@ -15,6 +15,9 @@ public:
     explicit AllCommodityWindow(QWidget *parent = nullptr);
     ~AllCommodityWindow();
 
+private slots:
+    void on_ReturnAct_triggered();
+
 private:
     Ui::AllCommodityWindow *ui;
 };

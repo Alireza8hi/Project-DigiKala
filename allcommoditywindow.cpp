@@ -12,3 +12,9 @@ AllCommodityWindow::~AllCommodityWindow()
 {
     delete ui;
 }
+
+void AllCommodityWindow::on_ReturnAct_triggered()
+{
+    parentWidget()->show();
+}
+

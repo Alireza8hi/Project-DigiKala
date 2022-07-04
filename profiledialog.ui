@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>719</width>
-    <height>603</height>
+    <width>760</width>
+    <height>601</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -507,6 +507,16 @@ p, li { white-space: pre-wrap; }
 &lt;p dir='rtl' style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;لطفا بعد از هر تغییر روی دکمه قلم کلیک کنید&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;right&quot; dir='rtl' style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;در غیر این صورت،تغییرات شما ثبت نمیشود&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;right&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; color:#aa0000;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+   </item>
+   <item row="12" column="1">
+    <widget class="QLabel" name="WrongPassLbl">
+     <property name="styleSheet">
+      <string notr="true">color: rgb(170, 0, 0);</string>
+     </property>
+     <property name="text">
+      <string/>
      </property>
     </widget>
    </item>

@@ -1,7 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <author/>
- <comment/>
- <exportmacro/>
  <class>AllCommodityWindow</class>
  <widget class="QMainWindow" name="AllCommodityWindow">
   <property name="geometry">
@@ -15,10 +13,71 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QMenuBar" name="menubar"/>
   <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>تنظیمات</string>
+    </property>
+    <addaction name="ReturnAct"/>
+    <addaction name="separator"/>
+    <addaction name="ExitAct"/>
+   </widget>
+   <addaction name="menu"/>
+  </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="ReturnAct">
+   <property name="text">
+    <string>بازگشت</string>
+   </property>
+  </action>
+  <action name="ExitAct">
+   <property name="text">
+    <string>خروج</string>
+   </property>
+  </action>
  </widget>
- <pixmapfunction/>
- <connections/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>ExitAct</sender>
+   <signal>triggered()</signal>
+   <receiver>AllCommodityWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ReturnAct</sender>
+   <signal>triggered()</signal>
+   <receiver>AllCommodityWindow</receiver>
+   <slot>deleteLater()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

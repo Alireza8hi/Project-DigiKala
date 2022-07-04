@@ -14,6 +14,7 @@ class ProfileDialog : public QDialog
 public:
     explicit ProfileDialog(QWidget *parent = nullptr);
     ~ProfileDialog();
+    void CheckForPass();
 
 private slots:
     void on_EditPhoneBtn_clicked();
@@ -27,6 +28,10 @@ private slots:
     void on_EditEmailBtn_clicked();
 
     void on_EditPassBtn_clicked();
+
+    void on_NewPassLe_textChanged(const QString &arg1);
+
+    void on_NewPassConLe_textChanged(const QString &arg1);
 
 private:
     Ui::ProfileDialog *ui;

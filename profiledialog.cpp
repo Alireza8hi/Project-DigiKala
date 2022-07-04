@@ -13,6 +13,7 @@ ProfileDialog::~ProfileDialog()
     delete ui;
 }
 
+
 void ProfileDialog::on_EditPhoneBtn_clicked()
 {
     if(ui->PhoneLe->isReadOnly() == false)
@@ -95,5 +96,30 @@ void ProfileDialog::on_EditPassBtn_clicked()
         ui->NewPassLe->setEnabled(true);
         ui->NewPassConLe->setEnabled(true);
     }
+}
+
+void ProfileDialog::CheckForPass()
+{
+    if (ui->NewPassLe->text() == ui->NewPassConLe->text())
+    {
+        ui->WrongPassLbl->clear();
+        ui->EditPassBtn->setDisabled(false);
+    }
+    else
+    {
+        ui->WrongPassLbl->setText("رمز عبور جدید با تکرارش مطاقبت ندارد");
+        ui->EditPassBtn->setDisabled(true);
+    }
+}
+
+void ProfileDialog::on_NewPassLe_textChanged(const QString &arg1)
+{
+    CheckForPass();
+}
+
+
+void ProfileDialog::on_NewPassConLe_textChanged(const QString &arg1)
+{
+    CheckForPass();
 }
 

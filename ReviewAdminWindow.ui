@@ -15,7 +15,7 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
-    <string notr="true">background-image: url(:/Pics/Pics/pngtree-taobao-vector-cartoon-review-resume-business-technology-document-poster-background-image_132424.jpg);</string>
+    <string notr="true">border-image: url(:/Pics/Pics/pngtree-taobao-vector-cartoon-review-resume-business-technology-document-poster-background-image_132424.jpg);</string>
    </property>
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="1">
@@ -48,9 +48,9 @@
          </size>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-image: url(:/Pics/Pics/NoBack.png);
-background-color: rgb(255, 240, 214);
-color: rgb(0, 0, 0);</string>
+         <string notr="true">color: rgb(0, 0, 0);
+border-image: url(:/Pics/Pics/NoBack.png);
+background-color: rgb(255, 240, 214);</string>
         </property>
         <property name="text">
          <string>کل کالا ها</string>
@@ -92,9 +92,9 @@ color: rgb(0, 0, 0);</string>
          </size>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-image: url(:/Pics/Pics/NoBack.png);
-background-color: rgb(255, 240, 214);
-color: rgb(0, 0, 0);</string>
+         <string notr="true">color: rgb(0, 0, 0);
+border-image: url(:/Pics/Pics/NoBack.png);
+background-color: rgb(255, 240, 214);</string>
         </property>
         <property name="text">
          <string>دسته بندی کالا ها</string>
@@ -136,9 +136,9 @@ color: rgb(0, 0, 0);</string>
          </size>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-image: url(:/Pics/Pics/NoBack.png);
-background-color: rgb(255, 240, 214);
-color: rgb(0, 0, 0);</string>
+         <string notr="true">color: rgb(0, 0, 0);
+border-image: url(:/Pics/Pics/NoBack.png);
+background-color: rgb(255, 240, 214);</string>
         </property>
         <property name="text">
          <string>جست و جوی کالای خاص</string>
@@ -154,9 +154,9 @@ color: rgb(0, 0, 0);</string>
     <item row="0" column="2">
      <widget class="QPushButton" name="CommoditiesAwaitingApprovalBtn">
       <property name="styleSheet">
-       <string notr="true">background-image: url(:/Pics/Pics/NoBack.png);
-background-color: rgb(255, 240, 214);
-color: rgb(0, 0, 0);</string>
+       <string notr="true">color: rgb(0, 0, 0);
+border-image: url(:/Pics/Pics/NoBack.png);
+background-color: rgb(255, 240, 214);</string>
       </property>
       <property name="text">
        <string>کالا های در انتظار تایید!!</string>

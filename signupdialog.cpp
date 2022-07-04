@@ -9,6 +9,9 @@
 #include <QThread>
 #include "CustomerWindow.h"
 #include "SellerWindow.h"
+#include <regex>
+#include <string>
+
 
 using namespace std;
 
@@ -35,6 +38,40 @@ SignUpDialog::~SignUpDialog()
     delete ui;
 }
 
+bool IsEmailValid(const std::string& email)
+{
+   const std::regex pattern
+      ("(\\w+)(\\.|_)?(\\w*)@(\\w+)(\\.(\\w+))+");
+   return std::regex_match(email, pattern);
+}
+
+bool IsUsernameValid(string username)
+{
+    int special = 0, l = username.length();
+    if (l == 0 || l > 30)
+        return false;
+
+    for (int i = 0; i < l; i++)
+    {
+        char s = username.at(i);
+        if (s == ' ')
+            return false;
+        if (isalnum(s))
+            continue;
+        else
+        {
+            if (s == '_' || s == '.')
+            {
+                special++;
+                if (special > 1)
+                    return false;
+            }
+            else
+                return false;
+        }
+    }
+    return true;
+}
 
 void SignUpDialog::on_ShowPassCB_clicked()
 {
@@ -52,7 +89,11 @@ void SignUpDialog::on_ShowPassCB_clicked()
 
 void SignUpDialog::CheckForOk()
 {
-    if (ui->RulesCB->isChecked() && ui->NameLe->text().size()>0 && ui->FNameLe->text().size()>0 && ui->NationalCodeLe->text().size()>0 && ui->AddressLe->text().size()>0 && ui->PhoneLe->text().size()>0 && ui->EmailLe->text().size()>0 && ui->UsernameLe->text().size()>0 && ui->PassLe->text().size()>0 && ui->PassConLe->text().size()>0 && ui->PassLe->text()==ui->PassConLe->text() && ui->SexCombo->currentIndex()>0 && ui->RuleCombo->currentIndex()>0 && ui->StateLe->text().size()>0 && ui->CityLe->text().size()>0)
+    if (ui->RulesCB->isChecked() && ui->NameLe->text().size()>2 && ui->FNameLe->text().size()>2 && ui->NationalCodeLe->text().size() == 10
+         && ui->AddressLe->text().size()>3 && ui->PhoneLe->text().size() == 11 && ui->PassLe->text().size()>8 && ui->PassConLe->text().size()>8
+         && ui->PassLe->text()==ui->PassConLe->text() && ui->SexCombo->currentIndex()>0 && ui->RuleCombo->currentIndex()>0
+         && ui->StateLe->text().size()>2 && ui->CityLe->text().size()>2 && IsEmailValid(ui->EmailLe->text().toStdString()) == true
+         && IsUsernameValid(ui->UsernameLe->text().toStdString()) == true)
     {
         ui->OkBtn->setEnabled(true);
     }
