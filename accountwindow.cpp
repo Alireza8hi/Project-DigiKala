@@ -21,6 +21,7 @@
 using namespace std;
 
 User userglobal;
+User* this_user;
 
 AccountWindow::AccountWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -65,6 +66,7 @@ void AccountWindow::on_UserSignInBtn_clicked()
         connect(main_admin_window,&MainAdminWindow::destroyed,th1,&QThread::quit);
         connect(main_admin_window,&MainAdminWindow::destroyed,main_admin_window,&MainAdminWindow::deleteLater);
         connect(th1,&QThread::finished,th1,&QThread::deleteLater);
+        connect(th1,&QThread::started,this,&AccountWindow::hide);
         th1->start();
     }
     if(ui->UserNameLe->text().toStdString()==site->get_review_admin()->get_username() && ui->PassLe->text().toStdString()==site->get_review_admin()->get_password())
@@ -78,6 +80,7 @@ void AccountWindow::on_UserSignInBtn_clicked()
         connect(review_admin_window,&ReviewAdminWindow::destroyed,th1,&QThread::quit);
         connect(review_admin_window,&ReviewAdminWindow::destroyed,review_admin_window,&ReviewAdminWindow::deleteLater);
         connect(th1,&QThread::finished,th1,&QThread::deleteLater);
+        connect(th1,&QThread::started,this,&AccountWindow::hide);
         th1->start();
     }
     for(int counter=0;counter<31;counter++)
@@ -93,6 +96,7 @@ void AccountWindow::on_UserSignInBtn_clicked()
             connect(post_admin_window,&PostAdminWindow::destroyed,th1,&QThread::quit);
             connect(post_admin_window,&PostAdminWindow::destroyed,post_admin_window,&PostAdminWindow::deleteLater);
             connect(th1,&QThread::finished,th1,&QThread::deleteLater);
+            connect(th1,&QThread::started,this,&AccountWindow::hide);
             th1->start();
         }
     }
@@ -109,6 +113,7 @@ void AccountWindow::on_UserSignInBtn_clicked()
             connect(support_admin_window,&SupportAdminWindow::destroyed,th1,&QThread::quit);
             connect(support_admin_window,&SupportAdminWindow::destroyed,support_admin_window,&SupportAdminWindow::deleteLater);
             connect(th1,&QThread::finished,th1,&QThread::deleteLater);
+            connect(th1,&QThread::started,this,&AccountWindow::hide);
             th1->start();
         }
     }
@@ -125,6 +130,7 @@ void AccountWindow::on_UserSignInBtn_clicked()
             connect(store_admin_window,&StoreAdminWindow::destroyed,th1,&QThread::quit);
             connect(store_admin_window,&StoreAdminWindow::destroyed,store_admin_window,&StoreAdminWindow::deleteLater);
             connect(th1,&QThread::finished,th1,&QThread::deleteLater);
+            connect(th1,&QThread::started,this,&AccountWindow::hide);
             th1->start();
         }
     }
@@ -141,6 +147,7 @@ void AccountWindow::on_UserSignInBtn_clicked()
             connect(seller_window,&SellerWindow::destroyed,th1,&QThread::quit);
             connect(seller_window,&SellerWindow::destroyed,seller_window,&SellerWindow::deleteLater);
             connect(th1,&QThread::finished,th1,&QThread::deleteLater);
+            connect(th1,&QThread::started,this,&AccountWindow::hide);
             th1->start();
         }
     }
@@ -157,6 +164,7 @@ void AccountWindow::on_UserSignInBtn_clicked()
             connect(customer_window,&CustomerWindow::destroyed,th1,&QThread::quit);
             connect(customer_window,&CustomerWindow::destroyed,customer_window,&CustomerWindow::deleteLater);
             connect(th1,&QThread::finished,th1,&QThread::deleteLater);
+            connect(th1,&QThread::started,this,&AccountWindow::hide);
             th1->start();
         }
     }

@@ -1,6 +1,7 @@
 #ifndef SIGNUPDIALOG_H
 #define SIGNUPDIALOG_H
 
+#include "User.h"
 #include <QDialog>
 #include <QValidator>
 

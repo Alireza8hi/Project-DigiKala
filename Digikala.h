@@ -13,6 +13,7 @@
 #include "MainAdmin.h"
 #include "Customer.h"
 #include "Commodity.h"
+#include "accountwindow.h"
 
 class DigiKala : public QObject
 {
@@ -71,7 +72,7 @@ public:
 };
 
 static DigiKala* site = &DigiKala::make_object();
-static User* this_user;
+extern User* this_user;
 extern User userglobal;
 
 #endif // DIGIKALA_H

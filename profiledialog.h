@@ -1,6 +1,7 @@
 #ifndef PROFILEDIALOG_H
 #define PROFILEDIALOG_H
 
+#include "User.h"
 #include <QDialog>
 
 namespace Ui {

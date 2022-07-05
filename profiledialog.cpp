@@ -2,6 +2,7 @@
 #include "Digikala.h"
 #include "ui_profiledialog.h"
 #include "signupdialog.h"
+#include "accountwindow.h"
 
 ProfileDialog::ProfileDialog(QWidget *parent) :
     QDialog(parent),
@@ -10,7 +11,26 @@ ProfileDialog::ProfileDialog(QWidget *parent) :
     ui->setupUi(this);
     ui->NationalCodeLe->setInputMask("0000000000");
     ui->PhoneLe->setInputMask("00000000000");
-    //ui->FNameLe->setText(QString::fromStdString(this_user->get_family()));
+    ui->NameLe->setText(QString::fromStdString(this_user->get_name()));
+    ui->FNameLe->setText(QString::fromStdString(this_user->get_family()));
+    ui->AddressLe->setText(QString::fromStdString(this_user->get_adress()));
+    ui->CityLe->setText(QString::fromStdString(this_user->get_city()));
+    ui->EmailLe->setText(QString::fromStdString(this_user->get_email()));
+    ui->NationalCodeLe->setText(QString::fromStdString(this_user->get_ncode()));
+    ui->PhoneLe->setText(QString::fromStdString(this_user->get_phone_number()));
+    ui->StateLe->setText(QString::fromStdString(this_user->get_province()));
+    if(this_user->get_sex()==1)
+    {
+        ui->SexCombo->setCurrentText("مرد");
+    }
+    else if(this_user->get_sex()==2)
+    {
+        ui->SexCombo->setCurrentText("زن");
+    }
+    else
+    {
+        ui->SexCombo->setCurrentText("مایل به گفتن نیستم");
+    }
 }
 
 ProfileDialog::~ProfileDialog()

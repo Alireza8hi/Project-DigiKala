@@ -1,4 +1,5 @@
 #include "MainAdminWindow.h"
+#include "Digikala.h"
 #include "allcommoditywindow.h"
 #include "categorywindow.h"
 #include "messagesdialog.h"
