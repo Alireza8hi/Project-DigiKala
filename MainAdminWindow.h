@@ -28,6 +28,8 @@ private slots:
 
     void on_SearchBtn_clicked();
 
+    void on_CartBtn_clicked();
+
 private:
     Ui::MainAdminWindow *ui;
 };

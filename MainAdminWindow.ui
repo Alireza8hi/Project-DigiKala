@@ -21,7 +21,7 @@
     <string notr="true">background-image: url(:/Pics/Pics/pngtree-blue-carbon-background-with-sport-style-and-golden-light-image_371487.jpg);</string>
    </property>
    <layout class="QGridLayout" name="gridLayout_2">
-    <item row="0" column="0">
+    <item row="2" column="0">
      <layout class="QGridLayout" name="gridLayout_3">
       <item row="3" column="1">
        <widget class="QPushButton" name="ChangeAdminBtn">
@@ -256,6 +256,41 @@ background-color: rgb(22, 31, 48);</string>
       </item>
      </layout>
     </item>
+    <item row="1" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="CartBtn">
+        <property name="styleSheet">
+         <string notr="true">background-image: url(:/Pics/Pics/NoBack.png);
+background-color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="icons.qrc">
+          <normaloff>:/Icons/Icons/basket-cart-icon-27.png</normaloff>:/Icons/Icons/basket-cart-icon-27.png</iconset>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
    </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -264,7 +299,7 @@ background-color: rgb(22, 31, 48);</string>
      <x>0</x>
      <y>0</y>
      <width>555</width>
-     <height>26</height>
+     <height>25</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">
@@ -416,6 +451,22 @@ background-color: rgb(22, 31, 48);</string>
     <hint type="sourcelabel">
      <x>142</x>
      <y>244</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>277</x>
+     <y>272</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CartBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainAdminWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>526</x>
+     <y>51</y>
     </hint>
     <hint type="destinationlabel">
      <x>277</x>

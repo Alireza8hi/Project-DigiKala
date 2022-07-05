@@ -1,4 +1,5 @@
 #include "SupportAdminWindow.h"
+#include "CartDialog.h"
 #include "allcommoditywindow.h"
 #include "categorywindow.h"
 #include "messagesdialog.h"
@@ -57,3 +58,10 @@ void SupportAdminWindow::on_ReturnAct_triggered()
 {
     parentWidget()->show();
 }
+
+void SupportAdminWindow::on_CartBtn_clicked()
+{
+    CartDialog *a = new CartDialog(this);
+    a->show();
+}
+

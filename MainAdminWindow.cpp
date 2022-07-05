@@ -1,4 +1,5 @@
 #include "MainAdminWindow.h"
+#include "CartDialog.h"
 #include "Digikala.h"
 #include "allcommoditywindow.h"
 #include "categorywindow.h"
@@ -56,6 +57,13 @@ void MainAdminWindow::on_CategoriesBtn_clicked()
 void MainAdminWindow::on_SearchBtn_clicked()
 {
     SearchDialog *a = new SearchDialog(this);
+    a->show();
+}
+
+
+void MainAdminWindow::on_CartBtn_clicked()
+{
+    CartDialog *a = new CartDialog(this);
     a->show();
 }
 

@@ -1,4 +1,5 @@
 #include "CustomerWindow.h"
+#include "CartDialog.h"
 #include "allcommoditywindow.h"
 #include "categorywindow.h"
 #include "messagesdialog.h"
@@ -56,6 +57,13 @@ void CustomerWindow::on_OpenProfileAct_triggered()
 void CustomerWindow::on_MessagesAct_triggered()
 {
     MessagesDialog *a = new MessagesDialog(this);
+    a->show();
+}
+
+
+void CustomerWindow::on_CartBtn_clicked()
+{
+    CartDialog *a = new CartDialog(this);
     a->show();
 }
 

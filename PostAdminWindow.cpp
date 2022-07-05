@@ -1,4 +1,5 @@
 #include "PostAdminWindow.h"
+#include "CartDialog.h"
 #include "allcommoditywindow.h"
 #include "categorywindow.h"
 #include "messagesdialog.h"
@@ -56,5 +57,12 @@ void PostAdminWindow::on_AllCommoditiesBtn_clicked()
 void PostAdminWindow::on_ReturnAct_triggered()
 {
     parentWidget()->show();
+}
+
+
+void PostAdminWindow::on_CartBtn_clicked()
+{
+    CartDialog *a = new CartDialog(this);
+    a->show();
 }
 

@@ -10,7 +10,7 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    Cart.cpp \
+    CartDialog.cpp \
     Comment.cpp \
     Commodity.cpp \
     Complaint.cpp \
@@ -43,7 +43,7 @@ SOURCES += \
     signuprules.cpp
 
 HEADERS += \
-    Cart.h \
+    CartDialog.h \
     Comment.h \
     Commodity.h \
     Complaint.h \
@@ -75,7 +75,7 @@ HEADERS += \
     signuprules.h
 
 FORMS += \
-    Cart.ui \
+    CartDialog.ui \
     CustomerWindow.ui \
     MainAdminWindow.ui \
     PostAdminWindow.ui \

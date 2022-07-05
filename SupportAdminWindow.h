@@ -28,6 +28,8 @@ private slots:
 
     void on_ReturnAct_triggered();
 
+    void on_CartBtn_clicked();
+
 private:
     Ui::SupportAdminWindow *ui;
 };

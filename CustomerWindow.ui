@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>320</width>
-    <height>299</height>
+    <width>429</width>
+    <height>411</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,7 +18,20 @@
     <string notr="true">background-image: url(:/Pics/Pics/spectrum-gradient-color-wheel-background.jpg);</string>
    </property>
    <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="0">
+    <item row="8" column="0">
+     <spacer name="verticalSpacer_5">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="6" column="0">
      <spacer name="verticalSpacer_6">
       <property name="orientation">
        <enum>Qt::Vertical</enum>
@@ -31,7 +44,7 @@
       </property>
      </spacer>
     </item>
-    <item row="2" column="0">
+    <item row="7" column="0">
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
        <spacer name="verticalSpacer_4">
@@ -118,18 +131,50 @@ color: rgb(0, 0, 0);</string>
       </item>
      </layout>
     </item>
-    <item row="3" column="0">
-     <spacer name="verticalSpacer_5">
-      <property name="orientation">
-       <enum>Qt::Vertical</enum>
+    <item row="2" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <property name="sizeConstraint">
+       <enum>QLayout::SetDefaultConstraint</enum>
       </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>20</width>
-        <height>40</height>
-       </size>
+      <property name="leftMargin">
+       <number>0</number>
       </property>
-     </spacer>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="CartBtn">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 0);
+background-image: url(:/Pics/Pics/NoBack.png);
+background-color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="icons.qrc">
+          <normaloff>:/Icons/Icons/basket-cart-icon-27.png</normaloff>:/Icons/Icons/basket-cart-icon-27.png</iconset>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </item>
    </layout>
   </widget>
@@ -138,7 +183,7 @@ color: rgb(0, 0, 0);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>320</width>
+     <width>429</width>
      <height>25</height>
     </rect>
    </property>
@@ -306,6 +351,22 @@ color: rgb(0, 0, 0);</string>
     <hint type="destinationlabel">
      <x>159</x>
      <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CartBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>CustomerWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>400</x>
+     <y>51</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>214</x>
+     <y>205</y>
     </hint>
    </hints>
   </connection>
