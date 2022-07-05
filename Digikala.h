@@ -26,7 +26,7 @@ private:
     std::deque<User*> support_admins;
     std::deque<User*> customers;
     std::deque<User*> sellers;
-    std::deque<Commodity*> commodities;
+    std::deque<Commodity> commodities;
     std::deque<int> sold_commodities_id;
     int num_of_seller;
     int num_of_customer;
@@ -41,7 +41,7 @@ private:
 
 public:
     static DigiKala& make_object();
-    DigiKala(string name_commodity,int min_cost,int max_cost,bool elcectric,bool available,int id_commodity,string category_commodity);
+    //DigiKala(string name_commodity, bool elcectric, bool available, int id_commodity, string category_commodity, long long max_cost,int min_cost);
     ~DigiKala();
     void set_num_of_seller(int num_of_seller);
     int get_num_of_seller()const;

@@ -298,10 +298,14 @@ DigiKala& DigiKala::make_object()
     return digi_kala;
 }
 
-DigiKala::DigiKala(string name_commodity, int min_cost, int max_cost, bool elcectric, bool available, int id_commodity, string category_commodity)
+/*DigiKala::DigiKala(string name_commodity, bool elcectric, bool available, int id_commodity, string category_commodity,long long max_cost,int min_cost)
 {
-    /*deque<Commodity> commodity;
+    deque<Commodity> commodity;
     int end=0;
+    if(size(site->commodities)==0)
+    {
+        // ارور
+    }
     if(id_commodity!=0)
     {
         for(int i=0;i<size(site->commodities);i++)
@@ -315,23 +319,76 @@ DigiKala::DigiKala(string name_commodity, int min_cost, int max_cost, bool elcec
             //ارور
         }
     }
+    if(end!=1 && category_commodity=="all")
+    {
+        commodity=site->commodities;
+    }
+    else
+        if(end!=1)
+        {
+            for(int i=0;i<size(site->commodities);i++)
+            {
+                if(site->commodities.at(i).get_category()==category_commodity)
+                    commodity.push_front(site->commodities.at(i));
+            }
+            if(size(commodity)==0)
+            {
+                // ارور
+            }
+        }
     if(end!=1 && name_commodity!="")
     {
-        for(int i;i<size(site->commodities);i++)
+        for(int i=0;i<size(commodity);i++)
         {
-            size_t found =site->commodities.at(i).get_name().toStdString().find(name_commodity);
-            if (found != string::npos)
-                commodity.push_back(site->commodities.at(i));
+            size_t found =commodity.at(i).get_name().find(name_commodity);
+            if (found == string::npos)
+                commodity.erase(commodity.cbegin()+i);
         }
         if(size(commodity)==0)
         {
             // ارور
         }
     }
-    else*/
+
+    if(elcectric)
+    {
+        for(int i=0;i<size(commodity);i++)
+        {
+            if (!(commodity.at(i).get_is_electric()))
+                commodity.erase(commodity.cbegin()+i);
+        }
+        if(size(commodity)==0)
+        {
+            // ارور
+        }
+    }
+
+    if(available)
+    {
+        for(int i=0;i<size(commodity);i++)
+        {
+            if(commodity.at(i).get_number()<=0)
+                commodity.erase(commodity.cbegin()+i);
+        }
+        if(size(commodity)==0)
+        {
+            // ارور
+        }
+    }
+
+    for(int i=0;i<size(commodity);i++)
+    {
+        if(commodity.at(i).get_cost()<min_cost || commodity.at(i).get_cost()> max_cost )
+            commodity.erase(commodity.cbegin()+i);
+    }
+
+    if(size(commodity)==0)
+    {
+        // ارور
+    }
 
         return;
-}
+}*/
 
 DigiKala::~DigiKala()
 {
