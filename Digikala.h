@@ -2,6 +2,8 @@
 #define DIGIKALA_H
 
 #include<QObject>
+#include<QMessageBox>
+#include<QAbstractButton>
 #include"Commodity.h"
 #include <deque>
 #include <User.h>
@@ -41,7 +43,7 @@ private:
 
 public:
     static DigiKala& make_object();
-    //DigiKala(string name_commodity, bool elcectric, bool available, int id_commodity, string category_commodity, long long max_cost,int min_cost);
+    void show_commodity(string name_commodity, bool elcectric, bool available, int id_commodity, string category_commodity,long max_cost,int min_cost);
     ~DigiKala();
     void set_num_of_seller(int num_of_seller);
     int get_num_of_seller()const;

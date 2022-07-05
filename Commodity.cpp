@@ -29,7 +29,35 @@ Commodity::Commodity(Commodity &other)
     this->profit_percent=other.profit_percent;
     this->volume=other.volume;
     this->weight=other.weight;
+    //this comment
+    //this complaint
     return;
+}
+
+Commodity &Commodity::operator=(const Commodity &other)
+{
+    this->~Commodity();
+    this->address=other.address;
+    this->category=other.category;
+    this->city=other.city;
+    this->color=other.color;
+    this->company=other.company;
+    this->description=other.description;
+    this->name=other.name;
+    this->owner=other.owner;
+    this->type=other.type;
+    this->owner_phone_number=other.owner_phone_number;
+    this->number=other.number;
+    this->cost=other.cost;
+    this->discount_percent=other.discount_percent;
+    this->id=other.id;
+    this->num_of_sell=other.num_of_sell;
+    this->profit_percent=other.profit_percent;
+    this->volume=other.volume;
+    this->weight=other.weight;
+    //this comment
+    //this complaint
+    return *this;
 }
 
 Commodity::~Commodity()
