@@ -48,7 +48,7 @@ int User::get_income() const
 
 bool User::change_password()
 {
-    string current_password, new_password,renew_password;
+    /*string current_password, new_password,renew_password;
     int pos1=1,pos2=0;
     User changepass;
     while(true)
@@ -92,13 +92,13 @@ bool User::change_password()
         changepass.writeuser("user.data",(pos2-sizeof(User)));
         break;
         }
-    }
+    }*/
     return true;
 }
 
 bool User::change_username()
 {
-    int pos1=1 , pos2=0;
+    /*int pos1=1 , pos2=0;
     User changepass;
     string passwordtest,Usernametest;
     cout<< "enter the new username :"<<'\n';
@@ -129,7 +129,7 @@ bool User::change_username()
             }
           }
          }
-    //cout
+    //cout*/
     return true;
 
 }
@@ -209,21 +209,3 @@ Commodity User::get_commodity(int index)
     return this->favorites.at(index);
 }
 
-int User::readuser(const char * file , int seekbeg)
-{
-    ifstream input_file(file,ios::binary);
-    input_file.seekg(seekbeg , input_file.beg);
-    input_file.read((char*)this,sizeof(User));
-    int seekend=input_file.tellg();
-    input_file.close();
-    return seekend;
-}
-
-void User::writeuser(const char * file,int seekbeg)
-{
-    ofstream output_file(file,ios::binary |ios::out |ios::app );
-    output_file.seekp(seekbeg);
-    output_file.write((char*)this,sizeof(User));
-    output_file.close();
-    return;
-}

@@ -298,6 +298,41 @@ DigiKala& DigiKala::make_object()
     return digi_kala;
 }
 
+DigiKala::DigiKala(string name_commodity, int min_cost, int max_cost, bool elcectric, bool available, int id_commodity, string category_commodity)
+{
+    /*deque<Commodity> commodity;
+    int end=0;
+    if(id_commodity!=0)
+    {
+        for(int i=0;i<size(site->commodities);i++)
+        {
+            if(site->commodities.at(i).get_id()==id_commodity)
+                commodity.push_front(site->commodities.at(i));
+            end=1;
+        }
+        if(end!=1)
+        {
+            //ارور
+        }
+    }
+    if(end!=1 && name_commodity!="")
+    {
+        for(int i;i<size(site->commodities);i++)
+        {
+            size_t found =site->commodities.at(i).get_name().toStdString().find(name_commodity);
+            if (found != string::npos)
+                commodity.push_back(site->commodities.at(i));
+        }
+        if(size(commodity)==0)
+        {
+            // ارور
+        }
+    }
+    else*/
+
+        return;
+}
+
 DigiKala::~DigiKala()
 {
     this->income = this->num_of_commodities = this->num_of_admins = this->num_of_sell_sold_commonities = this->money = this->num_of_seller = this->num_of_customer = this->num_of_store_admin = this->num_of_support_admin =0;
@@ -479,5 +514,24 @@ void DigiKala::add_seller(string name, string family, string username, string pa
     this->sellers[this->num_of_seller]->set_email(email);
     this->sellers[this->num_of_seller]->set_sex(sex);
     this->set_num_of_seller(numbers+1);
+    return;
+}
+
+int DigiKala::readuser(const char * file , int seekbeg )
+{
+    ifstream input_file(file,ios::binary |ios::app);
+    input_file.seekg(seekbeg , input_file.beg);
+    input_file.read((char*)this,sizeof(User));
+    int seekend=input_file.tellg();
+    input_file.close();
+    return seekend;
+}
+
+void DigiKala::writeuser(const char * file,int seekbeg)
+{
+    ofstream output_file(file,ios::binary |ios::out |ios::app );
+    output_file.seekp(seekbeg);
+    output_file.write((char*)this,sizeof(User));
+    output_file.close();
     return;
 }

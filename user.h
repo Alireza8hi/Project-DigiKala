@@ -40,8 +40,6 @@ public:
     void push_front_favorites(const Commodity commodit);
     Comment get_comment(int index);
     Commodity get_commodity(int index);
-    int readuser(const char * file , int seekbeg);
-    void writeuser(const char * file ,int seekbeg);
     //حدف کالا فیوریت
     // حذف کامنت
 };

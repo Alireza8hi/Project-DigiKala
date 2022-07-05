@@ -41,6 +41,7 @@ private:
 
 public:
     static DigiKala& make_object();
+    DigiKala(string name_commodity,int min_cost,int max_cost,bool elcectric,bool available,int id_commodity,string category_commodity);
     ~DigiKala();
     void set_num_of_seller(int num_of_seller);
     int get_num_of_seller()const;
@@ -67,6 +68,8 @@ public:
     User* get_store_admin(int number);
     User* get_customer(int number);
     User* get_seller(int number);
+    int readuser(const char * file , int seekbeg);
+    void writeuser(const char * file ,int seekbeg);
     void add_customer(string name, string family, string username, string password, string address, string city, string province, string national_code, string phone_number, string email, int sex);
     void add_seller(string name, string family, string username, string password, string address, string city, string province, string national_code, string phone_number, string email, int sex);
 };
