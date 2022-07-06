@@ -1,8 +1,9 @@
 #include "Digikala.h"
+#include "User.h"
 
 DigiKala::DigiKala()
 {
-    this->income = this->num_of_commodities = this->num_of_sell_sold_commonities = this->num_of_customer = this->num_of_seller = 0;
+    this->income = this->num_of_commodities = this->num_of_sold_commodities = this->num_of_customer = this->num_of_seller = 0;
     this->num_of_admins = 38;
     this->money = 10000000;
     this->num_of_store_admin = 3;
@@ -11,7 +12,7 @@ DigiKala::DigiKala()
     main_admin->set_name("main_admin");
     main_admin->set_family("main_admin");
     main_admin->set_username("main_admin");
-    main_admin->set_adress("-");
+    main_admin->set_address("-");
     main_admin->set_email("-");
     main_admin->set_sex(0);
     main_admin->set_ncode("-");
@@ -25,7 +26,7 @@ DigiKala::DigiKala()
     review_admin->set_name("review_admin");
     review_admin->set_family("review_admin");
     review_admin->set_username("review_admin");
-    review_admin->set_adress("-");
+    review_admin->set_address("-");
     review_admin->set_email("-");
     review_admin->set_sex(0);
     review_admin->set_ncode("-");
@@ -38,7 +39,7 @@ DigiKala::DigiKala()
     post_admins = new PostAdmin[31];
     for(int counter = 0;counter<31;counter++)
     {
-        post_admins[counter].set_adress("-");
+        post_admins[counter].set_address("-");
         post_admins[counter].set_email("-");
         post_admins[counter].set_sex(0);
         post_admins[counter].set_ncode("-");
@@ -239,7 +240,7 @@ DigiKala::DigiKala()
     }
     for(size_t counter = 0;counter<store_admins.size();counter++)
     {
-        store_admins[counter]->set_adress("-");
+        store_admins[counter]->set_address("-");
         store_admins[counter]->set_email("-");
         store_admins[counter]->set_sex(0);
         store_admins[counter]->set_ncode("-");
@@ -270,7 +271,7 @@ DigiKala::DigiKala()
     }
     for(size_t counter = 0;counter<support_admins.size();counter++)
     {
-        support_admins[counter]->set_adress("-");
+        support_admins[counter]->set_address("-");
         support_admins[counter]->set_email("-");
         support_admins[counter]->set_sex(0);
         support_admins[counter]->set_ncode("-");
@@ -315,7 +316,7 @@ void DigiKala::show_commodity(string name_commodity, bool elcectric, bool availa
         {
             if(site->commodities.at(i).get_id()==id_commodity)
             {
-                commodity.push_front(site->commodities.at(i));
+//                commodity.push_front(site->commodities.at(i));
                 end=1;
             }
         }
@@ -329,7 +330,7 @@ void DigiKala::show_commodity(string name_commodity, bool elcectric, bool availa
     }
     if(end!=1 && category_commodity=="all")
     {
-        commodity=site->commodities;
+//        commodity=site->commodities;
     }
     else
         if(end!=1)
@@ -338,7 +339,7 @@ void DigiKala::show_commodity(string name_commodity, bool elcectric, bool availa
             {
                 if(site->commodities.at(i).get_category()==category_commodity)
                 {
-                    commodity.push_front(site->commodities.at(i));
+//                    commodity.push_front(site->commodities.at(i));
                 }
             }
             if(size(commodity)==0)
@@ -426,7 +427,7 @@ void DigiKala::show_commodity(string name_commodity, bool elcectric, bool availa
 
 DigiKala::~DigiKala()
 {
-    this->income = this->num_of_commodities = this->num_of_admins = this->num_of_sell_sold_commonities = this->money = this->num_of_seller = this->num_of_customer = this->num_of_store_admin = this->num_of_support_admin =0;
+    this->income = this->num_of_commodities = this->num_of_admins = this->num_of_sold_commodities = this->money = this->num_of_seller = this->num_of_customer = this->num_of_store_admin = this->num_of_support_admin =0;
     return;
 }
 
@@ -485,15 +486,15 @@ int DigiKala::get_num_of_commodities() const
     return this->num_of_commodities;
 }
 
-void DigiKala::set_num_of_sell_sold_commonities(int num_of_sell_sold_commonities)
+void DigiKala::set_num_of_sold_commodities(int num_of_sold_commodities)
 {
-    this->num_of_sell_sold_commonities = num_of_sell_sold_commonities;
+    this->num_of_sold_commodities = num_of_sold_commodities;
     return;
 }
 
-int DigiKala::get_num_of_sell_sold_commonities() const
+int DigiKala::get_num_of_sold_commodities() const
 {
-    return this->num_of_sell_sold_commonities;
+    return this->num_of_sold_commodities;
 }
 
 void DigiKala::set_num_of_admins(int num_of_admins)
@@ -564,6 +565,28 @@ User *DigiKala::get_seller(int number)
     return this->sellers[number];
 }
 
+void DigiKala::set_commodities(deque<Commodity> commodities)
+{
+//    this->commodities = commodities;
+    return;
+}
+
+//deque<Commodity> DigiKala::get_commodities() const
+//{
+//    return this->commodities;
+//}
+
+void DigiKala::set_sold_commodities_id(deque<int> sold_commodities_id)
+{
+    this->sold_commodities_id = sold_commodities_id;
+    return;
+}
+
+deque<int> DigiKala::get_sold_commodities_id() const
+{
+    return this->sold_commodities_id;
+}
+
 void DigiKala::add_customer(string name, string family, string username, string password, string address, string city, string province, string national_code, string phone_number, string email, int sex)
 {
     int numberc = this->num_of_customer;
@@ -575,7 +598,7 @@ void DigiKala::add_customer(string name, string family, string username, string 
     this->customers[this->num_of_customer]->set_family(family);
     this->customers[this->num_of_customer]->set_username(username);
     this->customers[this->num_of_customer]->set_password(password);
-    this->customers[this->num_of_customer]->set_adress(address);
+    this->customers[this->num_of_customer]->set_address(address);
     this->customers[this->num_of_customer]->set_city(city);
     this->customers[this->num_of_customer]->set_province(province);
     this->customers[this->num_of_customer]->set_ncode(national_code);
@@ -597,7 +620,7 @@ void DigiKala::add_seller(string name, string family, string username, string pa
     this->sellers[this->num_of_seller]->set_family(family);
     this->sellers[this->num_of_seller]->set_username(username);
     this->sellers[this->num_of_seller]->set_password(password);
-    this->sellers[this->num_of_seller]->set_adress(address);
+    this->sellers[this->num_of_seller]->set_address(address);
     this->sellers[this->num_of_seller]->set_city(city);
     this->sellers[this->num_of_seller]->set_province(province);
     this->sellers[this->num_of_seller]->set_ncode(national_code);
@@ -608,21 +631,3 @@ void DigiKala::add_seller(string name, string family, string username, string pa
     return;
 }
 
-int DigiKala::readuser(const char * file , int seekbeg )
-{
-    ifstream input_file(file,ios::binary |ios::app);
-    input_file.seekg(seekbeg , input_file.beg);
-    input_file.read((char*)this,sizeof(User));
-    int seekend=input_file.tellg();
-    input_file.close();
-    return seekend;
-}
-
-void DigiKala::writeuser(const char * file,int seekbeg)
-{
-    ofstream output_file(file,ios::binary |ios::out |ios::app );
-    output_file.seekp(seekbeg);
-    output_file.write((char*)this,sizeof(User));
-    output_file.close();
-    return;
-}

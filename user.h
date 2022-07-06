@@ -21,10 +21,11 @@ private:
     int income;
     deque<Comment> comments;
     deque<Commodity> favorites;
+    deque<Commodity> buy_list;
 public:
     User();
     User(User& other);
-    virtual ~User();
+    ~User();
     void set_income(int income);
     int get_income()const;
     bool change_password();

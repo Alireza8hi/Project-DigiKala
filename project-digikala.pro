@@ -16,6 +16,8 @@ SOURCES += \
     Complaint.cpp \
     Customer.cpp \
     CustomerWindow.cpp \
+    DataBaseOther.cpp \
+    DataBaseUser.cpp \
     Dgikala.cpp \
     MainAdmin.cpp \
     MainAdminWindow.cpp \
@@ -49,6 +51,8 @@ HEADERS += \
     Complaint.h \
     Customer.h \
     CustomerWindow.h \
+    DataBaseOther.h \
+    DataBaseUser.h \
     Digikala.h \
     MainAdmin.h \
     MainAdminWindow.h \

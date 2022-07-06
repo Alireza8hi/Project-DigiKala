@@ -17,7 +17,7 @@ User::User(User &other)
     this->set_name(other.get_name());
     this->set_family(other.get_family());
     this->set_email(other.get_email());
-    this->set_adress(other.get_adress());
+    this->set_address(other.get_address());
     this->set_ncode(other.get_ncode());
     this->set_phone_number(other.get_phone_number());
     this->set_city(other.get_city());
@@ -176,7 +176,7 @@ User& User::operator=(const User& s)
   this->set_name(s.get_name());
   this->set_family(s.get_family());
   this->set_email(s.get_email());
-  this->set_adress(s.get_adress());
+  this->set_address(s.get_address());
   this->set_ncode(s.get_ncode());
   this->set_phone_number(s.get_phone_number());
     this->set_city(s.get_city());

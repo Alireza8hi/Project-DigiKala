@@ -20,7 +20,6 @@
 
 using namespace std;
 
-User userglobal;
 User* this_user;
 
 AccountWindow::AccountWindow(QWidget *parent) :

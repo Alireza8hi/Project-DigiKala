@@ -7,7 +7,7 @@ Human::Human()
 {
     this->name=this->family = "Guest";
     this->email = "Guest@gmail.com";
-    this->adress = "iran";
+    this->address = "iran";
     this->national_code ="0";
     this->phone_number = "0";
     this->city = "city";
@@ -19,7 +19,7 @@ Human::Human()
 
 Human::~Human()
 {
-    this->name = this->email = this->adress = this->phone_number = this->national_code = this->province = this->city = nullptr;
+    this->name = this->email = this->address = this->phone_number = this->national_code = this->province = this->city = nullptr;
     this->sex=0;
     return;
 }
@@ -44,9 +44,9 @@ string Human::get_email()const
     return this->email;
 }
 
-string Human::get_adress()const
+string Human::get_address()const
 {
-    return this->adress;
+    return this->address;
 }
 
 string Human::get_phone_number()const
@@ -93,9 +93,9 @@ void Human::set_email(const string em)
     return;
 }
 
-void Human::set_adress(const string adr)
+void Human::set_address(const string adr)
 {
-    this->adress=adr;
+    this->address=adr;
     return;
 }
 

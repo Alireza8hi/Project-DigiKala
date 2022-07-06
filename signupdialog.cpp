@@ -15,7 +15,6 @@
 
 using namespace std;
 
-extern User userglobal;
 QString rule;
 int sex;
 

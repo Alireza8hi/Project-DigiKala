@@ -4,6 +4,7 @@
 #include <ctime>
 #include "Digikala.h"
 #include "profiledialog.h"
+#include "DataBaseUser.h"
 
 using namespace std;
 
@@ -12,14 +13,17 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
+    DataBaseUser data_base_user[1000];
+    data_base_user->readuser("DataBase.data",0);
+    pull_data();
+
+
     ltm->tm_year+=1900;
     ltm->tm_mon+=1;
 
     QApplication a(argc, argv);
     MainWindow w;
     w.show();
-
-
 
     return a.exec();
 }
