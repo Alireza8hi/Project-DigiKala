@@ -275,6 +275,21 @@ background-color: rgb(22, 31, 48);</string>
        </spacer>
       </item>
       <item>
+       <widget class="QPushButton" name="WishListBtn">
+        <property name="styleSheet">
+         <string notr="true">background-image: url(:/Pics/Pics/NoBack.png);
+background-color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="icons.qrc">
+          <normaloff>:/Icons/Icons/3551002-200.png</normaloff>:/Icons/Icons/3551002-200.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item>
        <widget class="QPushButton" name="CartBtn">
         <property name="styleSheet">
          <string notr="true">background-image: url(:/Pics/Pics/NoBack.png);
@@ -313,7 +328,6 @@ background-color: rgb(255, 255, 255);</string>
     <addaction name="BankruptcyAct"/>
     <addaction name="separator"/>
     <addaction name="SignOutBtn"/>
-    <addaction name="ReturnAct"/>
     <addaction name="ExitAct"/>
    </widget>
    <addaction name="menu"/>
@@ -355,15 +369,6 @@ background-color: rgb(255, 255, 255);</string>
     <string>پیغام ها</string>
    </property>
   </action>
-  <action name="ReturnAct">
-   <property name="icon">
-    <iconset resource="icons.qrc">
-     <normaloff>:/Icons/Icons/return_icon_154912.png</normaloff>:/Icons/Icons/return_icon_154912.png</iconset>
-   </property>
-   <property name="text">
-    <string>بازگشت</string>
-   </property>
-  </action>
   <action name="ExitAct">
    <property name="icon">
     <iconset resource="icons.qrc">
@@ -383,22 +388,6 @@ background-color: rgb(255, 255, 255);</string>
    <signal>triggered()</signal>
    <receiver>MainAdminWindow</receiver>
    <slot>close()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>277</x>
-     <y>272</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>ReturnAct</sender>
-   <signal>triggered()</signal>
-   <receiver>MainAdminWindow</receiver>
-   <slot>deleteLater()</slot>
    <hints>
     <hint type="sourcelabel">
      <x>-1</x>
@@ -466,6 +455,22 @@ background-color: rgb(255, 255, 255);</string>
    <hints>
     <hint type="sourcelabel">
      <x>526</x>
+     <y>51</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>277</x>
+     <y>272</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>WishListBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainAdminWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>486</x>
      <y>51</y>
     </hint>
     <hint type="destinationlabel">

@@ -65,6 +65,30 @@
     </item>
     <item row="2" column="2">
      <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="2">
+       <widget class="QPushButton" name="CartBtn">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="icons.qrc">
+          <normaloff>:/Icons/Icons/basket-cart-icon-27.png</normaloff>:/Icons/Icons/basket-cart-icon-27.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <spacer name="verticalSpacer_6">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
       <item row="0" column="0">
        <spacer name="horizontalSpacer_3">
         <property name="orientation">
@@ -79,28 +103,15 @@
        </spacer>
       </item>
       <item row="0" column="1">
-       <widget class="QPushButton" name="CartBtn">
+       <widget class="QPushButton" name="WishListBtn">
         <property name="text">
          <string/>
         </property>
         <property name="icon">
          <iconset resource="icons.qrc">
-          <normaloff>:/Icons/Icons/basket-cart-icon-27.png</normaloff>:/Icons/Icons/basket-cart-icon-27.png</iconset>
+          <normaloff>:/Icons/Icons/3551002-200.png</normaloff>:/Icons/Icons/3551002-200.png</iconset>
         </property>
        </widget>
-      </item>
-      <item row="1" column="1">
-       <spacer name="verticalSpacer_6">
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>20</width>
-          <height>40</height>
-         </size>
-        </property>
-       </spacer>
       </item>
      </layout>
     </item>
@@ -283,7 +294,6 @@
     <addaction name="separator"/>
     <addaction name="DeleteAccountAct"/>
     <addaction name="separator"/>
-    <addaction name="ReturnAct"/>
     <addaction name="separator"/>
     <addaction name="ExitAct"/>
    </widget>
@@ -332,15 +342,6 @@
    </property>
    <property name="text">
     <string>خروج</string>
-   </property>
-  </action>
-  <action name="ReturnAct">
-   <property name="icon">
-    <iconset resource="icons.qrc">
-     <normaloff>:/Icons/Icons/return_icon_154912.png</normaloff>:/Icons/Icons/return_icon_154912.png</iconset>
-   </property>
-   <property name="text">
-    <string>بازگشت</string>
    </property>
   </action>
  </widget>
@@ -397,22 +398,6 @@
    </hints>
   </connection>
   <connection>
-   <sender>ReturnAct</sender>
-   <signal>triggered()</signal>
-   <receiver>PostAdminWindow</receiver>
-   <slot>deleteLater()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>457</x>
-     <y>310</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
    <sender>SearchBtn</sender>
    <signal>clicked()</signal>
    <receiver>PostAdminWindow</receiver>
@@ -436,6 +421,22 @@
    <hints>
     <hint type="sourcelabel">
      <x>886</x>
+     <y>51</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>457</x>
+     <y>310</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>WishListBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>PostAdminWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>846</x>
      <y>51</y>
     </hint>
     <hint type="destinationlabel">

@@ -6,6 +6,7 @@
 #include "profiledialog.h"
 #include "searchdialog.h"
 #include "ui_ReviewAdminWindow.h"
+#include "wishlistdialog.h"
 
 ReviewAdminWindow::ReviewAdminWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -54,14 +55,16 @@ void ReviewAdminWindow::on_AllCommoditiesBtn_clicked()
 }
 
 
-void ReviewAdminWindow::on_ReturnAct_triggered()
-{
-    parentWidget()->show();
-}
-
 void ReviewAdminWindow::on_CartBtn_clicked()
 {
     CartDialog *a = new CartDialog(this);
+    a->show();
+}
+
+
+void ReviewAdminWindow::on_WishListBtn_clicked()
+{
+    WishListDialog *a = new WishListDialog(this);
     a->show();
 }
 

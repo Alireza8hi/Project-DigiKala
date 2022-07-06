@@ -26,7 +26,9 @@ private slots:
 
     void on_MessagesAct_triggered();
 
-    void on_ReturnAct_triggered();
+    void on_WishListBtn_clicked();
+
+    void on_CartBtn_clicked();
 
 private:
     Ui::SellerWindow *ui;

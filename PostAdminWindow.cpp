@@ -6,6 +6,7 @@
 #include "profiledialog.h"
 #include "searchdialog.h"
 #include "ui_PostAdminWindow.h"
+#include "wishlistdialog.h"
 
 PostAdminWindow::PostAdminWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -46,7 +47,6 @@ void PostAdminWindow::on_SearchBtn_clicked()
 }
 
 
-
 void PostAdminWindow::on_AllCommoditiesBtn_clicked()
 {
     AllCommodityWindow *a = new AllCommodityWindow(this);
@@ -54,15 +54,16 @@ void PostAdminWindow::on_AllCommoditiesBtn_clicked()
 }
 
 
-void PostAdminWindow::on_ReturnAct_triggered()
-{
-    parentWidget()->show();
-}
-
-
 void PostAdminWindow::on_CartBtn_clicked()
 {
     CartDialog *a = new CartDialog(this);
+    a->show();
+}
+
+
+void PostAdminWindow::on_WishListBtn_clicked()
+{
+    WishListDialog *a = new WishListDialog(this);
     a->show();
 }
 

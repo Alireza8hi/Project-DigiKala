@@ -365,20 +365,7 @@ background-color: qlineargradient(spread:reflect, x1:0.826291, y1:0.887, x2:1, y
     </item>
     <item row="0" column="2">
      <layout class="QGridLayout" name="gridLayout_3">
-      <item row="1" column="1">
-       <spacer name="verticalSpacer_4">
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>20</width>
-          <height>40</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item row="0" column="1">
+      <item row="0" column="2">
        <widget class="QPushButton" name="CartBtn">
         <property name="text">
          <string/>
@@ -401,6 +388,30 @@ background-color: qlineargradient(spread:reflect, x1:0.826291, y1:0.887, x2:1, y
          </size>
         </property>
        </spacer>
+      </item>
+      <item row="1" column="2">
+       <spacer name="verticalSpacer_4">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="0" column="1">
+       <widget class="QPushButton" name="WishListBtn">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="icons.qrc">
+          <normaloff>:/Icons/Icons/3551002-200.png</normaloff>:/Icons/Icons/3551002-200.png</iconset>
+        </property>
+       </widget>
       </item>
      </layout>
     </item>
@@ -426,7 +437,6 @@ background-color: qlineargradient(spread:reflect, x1:0.826291, y1:0.887, x2:1, y
     <addaction name="separator"/>
     <addaction name="DeleteAccountAct"/>
     <addaction name="separator"/>
-    <addaction name="ReturnAct"/>
     <addaction name="separator"/>
     <addaction name="ExitAct"/>
    </widget>
@@ -476,15 +486,6 @@ background-color: qlineargradient(spread:reflect, x1:0.826291, y1:0.887, x2:1, y
    </property>
    <property name="text">
     <string>خروج</string>
-   </property>
-  </action>
-  <action name="ReturnAct">
-   <property name="icon">
-    <iconset resource="icons.qrc">
-     <normaloff>:/Icons/Icons/return_icon_154912.png</normaloff>:/Icons/Icons/return_icon_154912.png</iconset>
-   </property>
-   <property name="text">
-    <string>بازگشت</string>
    </property>
   </action>
  </widget>
@@ -541,22 +542,6 @@ background-color: qlineargradient(spread:reflect, x1:0.826291, y1:0.887, x2:1, y
    </hints>
   </connection>
   <connection>
-   <sender>ReturnAct</sender>
-   <signal>triggered()</signal>
-   <receiver>SupportAdminWindow</receiver>
-   <slot>deleteLater()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>453</x>
-     <y>334</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
    <sender>Searchbtn</sender>
    <signal>clicked()</signal>
    <receiver>SupportAdminWindow</receiver>
@@ -580,6 +565,22 @@ background-color: qlineargradient(spread:reflect, x1:0.826291, y1:0.887, x2:1, y
    <hints>
     <hint type="sourcelabel">
      <x>879</x>
+     <y>51</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>453</x>
+     <y>334</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>WishListBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>SupportAdminWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>839</x>
      <y>51</y>
     </hint>
     <hint type="destinationlabel">

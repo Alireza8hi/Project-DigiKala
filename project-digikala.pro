@@ -42,7 +42,8 @@ SOURCES += \
     profiledialog.cpp \
     searchdialog.cpp \
     signupdialog.cpp \
-    signuprules.cpp
+    signuprules.cpp \
+    wishlistdialog.cpp
 
 HEADERS += \
     CartDialog.h \
@@ -76,7 +77,8 @@ HEADERS += \
     profiledialog.h \
     searchdialog.h \
     signupdialog.h \
-    signuprules.h
+    signuprules.h \
+    wishlistdialog.h
 
 FORMS += \
     CartDialog.ui \
@@ -95,7 +97,8 @@ FORMS += \
     profiledialog.ui \
     searchdialog.ui \
     signupdialog.ui \
-    signuprules.ui
+    signuprules.ui \
+    wishlistdialog.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

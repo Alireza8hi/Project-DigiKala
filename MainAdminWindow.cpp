@@ -7,6 +7,7 @@
 #include "profiledialog.h"
 #include "searchdialog.h"
 #include "ui_MainAdminWindow.h"
+#include "wishlistdialog.h"
 
 MainAdminWindow::MainAdminWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -40,13 +41,6 @@ void MainAdminWindow::on_AllCommoditysBtn_clicked()
     a->show();
 }
 
-
-void MainAdminWindow::on_ReturnAct_triggered()
-{
-    parentWidget()->show();
-}
-
-
 void MainAdminWindow::on_CategoriesBtn_clicked()
 {
     CategoryWindow *a = new CategoryWindow(this);
@@ -64,6 +58,13 @@ void MainAdminWindow::on_SearchBtn_clicked()
 void MainAdminWindow::on_CartBtn_clicked()
 {
     CartDialog *a = new CartDialog(this);
+    a->show();
+}
+
+
+void MainAdminWindow::on_WishListBtn_clicked()
+{
+    WishListDialog *a = new WishListDialog(this);
     a->show();
 }
 

@@ -18,78 +18,6 @@
     <string notr="true">background-image: url(:/Pics/Pics/modern-abstract-background_200180-165.jpg);</string>
    </property>
    <layout class="QGridLayout" name="gridLayout">
-    <item row="1" column="3">
-     <layout class="QVBoxLayout" name="verticalLayout_2">
-      <item>
-       <widget class="QLabel" name="label_2">
-        <property name="font">
-         <font>
-          <family>B Titr</family>
-          <pointsize>20</pointsize>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">color: rgb(0, 0, 0);
-background-image: url(:/Pics/Pics/hand-painted-background-violet-orange-colours_23-2148427578.webp);</string>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::StyledPanel</enum>
-        </property>
-        <property name="frameShadow">
-         <enum>QFrame::Raised</enum>
-        </property>
-        <property name="text">
-         <string>کالاها</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="SellCommodityBtn">
-        <property name="styleSheet">
-         <string notr="true">color: rgb(0, 0, 0);</string>
-        </property>
-        <property name="text">
-         <string>فروش کالا!!</string>
-        </property>
-        <property name="icon">
-         <iconset resource="icons.qrc">
-          <normaloff>:/Icons/Icons/sell-icon-png-5.jpg</normaloff>:/Icons/Icons/sell-icon-png-5.jpg</iconset>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="DeletedCommoditieBtn">
-        <property name="styleSheet">
-         <string notr="true">color: rgb(0, 0, 0);</string>
-        </property>
-        <property name="text">
-         <string>کالا های حذف شده من!!</string>
-        </property>
-        <property name="icon">
-         <iconset resource="icons.qrc">
-          <normaloff>:/Icons/Icons/deleted-icon-9.jpg</normaloff>:/Icons/Icons/deleted-icon-9.jpg</iconset>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="CommoditiesExpireBtn">
-        <property name="styleSheet">
-         <string notr="true">color: rgb(0, 0, 0);</string>
-        </property>
-        <property name="text">
-         <string>کالا های نزدیک به انقضا!!</string>
-        </property>
-        <property name="icon">
-         <iconset resource="icons.qrc">
-          <normaloff>:/Icons/Icons/expiration-icon-3.jpg</normaloff>:/Icons/Icons/expiration-icon-3.jpg</iconset>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
     <item row="1" column="1">
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
@@ -165,28 +93,90 @@ background-image: url(:/Pics/Pics/hand-painted-background-violet-orange-colours_
       </item>
      </layout>
     </item>
-    <item row="0" column="4">
-     <widget class="QPushButton" name="CartBtn">
-      <property name="minimumSize">
+    <item row="1" column="0">
+     <spacer name="horizontalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
        <size>
-        <width>30</width>
-        <height>30</height>
+        <width>40</width>
+        <height>20</height>
        </size>
       </property>
-      <property name="maximumSize">
-       <size>
-        <width>30</width>
-        <height>30</height>
-       </size>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-      <property name="icon">
-       <iconset resource="icons.qrc">
-        <normaloff>:/Icons/Icons/basket-cart-icon-27.png</normaloff>:/Icons/Icons/basket-cart-icon-27.png</iconset>
-      </property>
-     </widget>
+     </spacer>
+    </item>
+    <item row="1" column="3">
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="font">
+         <font>
+          <family>B Titr</family>
+          <pointsize>20</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 0);
+background-image: url(:/Pics/Pics/hand-painted-background-violet-orange-colours_23-2148427578.webp);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <property name="text">
+         <string>کالاها</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="SellCommodityBtn">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 0);</string>
+        </property>
+        <property name="text">
+         <string>فروش کالا!!</string>
+        </property>
+        <property name="icon">
+         <iconset resource="icons.qrc">
+          <normaloff>:/Icons/Icons/sell-icon-png-5.jpg</normaloff>:/Icons/Icons/sell-icon-png-5.jpg</iconset>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="DeletedCommoditieBtn">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 0);</string>
+        </property>
+        <property name="text">
+         <string>کالا های حذف شده من!!</string>
+        </property>
+        <property name="icon">
+         <iconset resource="icons.qrc">
+          <normaloff>:/Icons/Icons/deleted-icon-9.jpg</normaloff>:/Icons/Icons/deleted-icon-9.jpg</iconset>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="CommoditiesExpireBtn">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 0);</string>
+        </property>
+        <property name="text">
+         <string>کالا های نزدیک به انقضا!!</string>
+        </property>
+        <property name="icon">
+         <iconset resource="icons.qrc">
+          <normaloff>:/Icons/Icons/expiration-icon-3.jpg</normaloff>:/Icons/Icons/expiration-icon-3.jpg</iconset>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </item>
     <item row="0" column="1">
      <spacer name="verticalSpacer_2">
@@ -200,19 +190,6 @@ background-image: url(:/Pics/Pics/hand-painted-background-violet-orange-colours_
        <size>
         <width>20</width>
         <height>50</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
-    <item row="1" column="0">
-     <spacer name="horizontalSpacer_2">
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>40</width>
-        <height>20</height>
        </size>
       </property>
      </spacer>
@@ -259,6 +236,57 @@ background-image: url(:/Pics/Pics/hand-painted-background-violet-orange-colours_
       </property>
      </spacer>
     </item>
+    <item row="0" column="3" colspan="2">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <spacer name="horizontalSpacer_4">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="WishListBtn">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="icons.qrc">
+          <normaloff>:/Icons/Icons/3551002-200.png</normaloff>:/Icons/Icons/3551002-200.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="CartBtn">
+        <property name="minimumSize">
+         <size>
+          <width>30</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>30</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="icons.qrc">
+          <normaloff>:/Icons/Icons/basket-cart-icon-27.png</normaloff>:/Icons/Icons/basket-cart-icon-27.png</iconset>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
    </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -280,7 +308,6 @@ background-image: url(:/Pics/Pics/hand-painted-background-violet-orange-colours_
     <addaction name="separator"/>
     <addaction name="DeleteAccountAct"/>
     <addaction name="ExitAct"/>
-    <addaction name="ReturnAct"/>
    </widget>
    <addaction name="menu"/>
   </widget>
@@ -328,15 +355,6 @@ background-image: url(:/Pics/Pics/hand-painted-background-violet-orange-colours_
    </property>
    <property name="text">
     <string>خروج</string>
-   </property>
-  </action>
-  <action name="ReturnAct">
-   <property name="icon">
-    <iconset resource="icons.qrc">
-     <normaloff>:/Icons/Icons/return_icon_154912.png</normaloff>:/Icons/Icons/return_icon_154912.png</iconset>
-   </property>
-   <property name="text">
-    <string>بازگشت</string>
    </property>
   </action>
  </widget>
@@ -393,22 +411,6 @@ background-image: url(:/Pics/Pics/hand-painted-background-violet-orange-colours_
    </hints>
   </connection>
   <connection>
-   <sender>ReturnAct</sender>
-   <signal>triggered()</signal>
-   <receiver>SellerWindow</receiver>
-   <slot>deleteLater()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>313</x>
-     <y>232</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
    <sender>Searchbtn</sender>
    <signal>clicked()</signal>
    <receiver>SellerWindow</receiver>
@@ -417,6 +419,38 @@ background-image: url(:/Pics/Pics/hand-painted-background-violet-orange-colours_
     <hint type="sourcelabel">
      <x>177</x>
      <y>302</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>313</x>
+     <y>232</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>WishListBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>SellerWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>561</x>
+     <y>87</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>313</x>
+     <y>232</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CartBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>SellerWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>599</x>
+     <y>87</y>
     </hint>
     <hint type="destinationlabel">
      <x>313</x>
