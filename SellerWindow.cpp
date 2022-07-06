@@ -1,10 +1,12 @@
 #include "SellerWindow.h"
+#include "CartDialog.h"
 #include "allcommoditywindow.h"
 #include "categorywindow.h"
 #include "messagesdialog.h"
 #include "profiledialog.h"
 #include "searchdialog.h"
 #include "ui_SellerWindow.h"
+#include "wishlistdialog.h"
 
 SellerWindow::SellerWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -53,8 +55,16 @@ void SellerWindow::on_AllCommoditiesBtn_clicked()
     a->show();
 }
 
-
-void SellerWindow::on_ReturnAct_triggered()
+void SellerWindow::on_WishListBtn_clicked()
 {
-    parentWidget()->show();
+    WishListDialog *a = new WishListDialog(this);
+    a->show();
 }
+
+
+void SellerWindow::on_CartBtn_clicked()
+{
+    CartDialog *a = new CartDialog(this);
+    a->show();
+}
+

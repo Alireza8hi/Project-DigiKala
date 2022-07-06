@@ -19,7 +19,8 @@ int main(int argc, char *argv[])
     MainWindow w;
     w.show();
 
-
+    CategoryWindow s;
+    s.show();
 
     return a.exec();
 }

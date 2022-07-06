@@ -22,13 +22,13 @@ private slots:
 
     void on_AllCommoditysBtn_clicked();
 
-    void on_ReturnAct_triggered();
-
     void on_CategoriesBtn_clicked();
 
     void on_SearchBtn_clicked();
 
     void on_CartBtn_clicked();
+
+    void on_WishListBtn_clicked();
 
 private:
     Ui::MainAdminWindow *ui;

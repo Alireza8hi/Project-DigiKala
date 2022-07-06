@@ -267,6 +267,17 @@ background-color: rgb(0, 0, 127);</string>
        </spacer>
       </item>
       <item>
+       <widget class="QPushButton" name="WishListBtn">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="icons.qrc">
+          <normaloff>:/Icons/Icons/3551002-200.png</normaloff>:/Icons/Icons/3551002-200.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item>
        <widget class="QPushButton" name="CartBtn">
         <property name="text">
          <string/>
@@ -330,7 +341,6 @@ background-color: rgb(0, 0, 127);</string>
     <addaction name="separator"/>
     <addaction name="DeleteAccountAct"/>
     <addaction name="separator"/>
-    <addaction name="ReturnAct"/>
     <addaction name="separator"/>
     <addaction name="ExitAct"/>
    </widget>
@@ -380,15 +390,6 @@ background-color: rgb(0, 0, 127);</string>
    </property>
    <property name="text">
     <string>خروج</string>
-   </property>
-  </action>
-  <action name="ReturnAct">
-   <property name="icon">
-    <iconset resource="icons.qrc">
-     <normaloff>:/Icons/Icons/return_icon_154912.png</normaloff>:/Icons/Icons/return_icon_154912.png</iconset>
-   </property>
-   <property name="text">
-    <string>بازگشت</string>
    </property>
   </action>
  </widget>
@@ -461,14 +462,14 @@ background-color: rgb(0, 0, 127);</string>
    </hints>
   </connection>
   <connection>
-   <sender>ReturnAct</sender>
-   <signal>triggered()</signal>
+   <sender>CartBtn</sender>
+   <signal>clicked()</signal>
    <receiver>StoreAdminWindow</receiver>
-   <slot>deleteLater()</slot>
+   <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>-1</x>
-     <y>-1</y>
+     <x>611</x>
+     <y>51</y>
     </hint>
     <hint type="destinationlabel">
      <x>319</x>
@@ -477,13 +478,13 @@ background-color: rgb(0, 0, 127);</string>
    </hints>
   </connection>
   <connection>
-   <sender>CartBtn</sender>
+   <sender>WishListBtn</sender>
    <signal>clicked()</signal>
    <receiver>StoreAdminWindow</receiver>
    <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>611</x>
+     <x>578</x>
      <y>51</y>
     </hint>
     <hint type="destinationlabel">

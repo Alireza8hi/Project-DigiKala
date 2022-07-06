@@ -6,6 +6,7 @@
 #include "profiledialog.h"
 #include "searchdialog.h"
 #include "ui_CustomerWindow.h"
+#include "wishlistdialog.h"
 
 CustomerWindow::CustomerWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -40,13 +41,6 @@ void CustomerWindow::on_SearchBtn_clicked()
     a->show();
 }
 
-
-void CustomerWindow::on_ReturnAct_triggered()
-{
-    parentWidget()->show();
-}
-
-
 void CustomerWindow::on_OpenProfileAct_triggered()
 {
     ProfileDialog *a = new ProfileDialog(this);
@@ -64,6 +58,13 @@ void CustomerWindow::on_MessagesAct_triggered()
 void CustomerWindow::on_CartBtn_clicked()
 {
     CartDialog *a = new CartDialog(this);
+    a->show();
+}
+
+
+void CustomerWindow::on_WishListBtn_clicked()
+{
+    WishListDialog *a = new WishListDialog(this);
     a->show();
 }
 
