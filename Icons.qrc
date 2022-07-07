@@ -27,6 +27,7 @@
         <file>Icons/icon-gears-14.jpg</file>
         <file>Icons/basket-cart-icon-27.png</file>
         <file>Icons/3551002-200.png</file>
+        <file>Icons/11584-200.png</file>
     </qresource>
     <qresource prefix="/Pics">
         <file>Pics/empty-shopping-cart-pink-background-with-large-copy-space-online-shopping-concept_492182-38.jpg</file>
@@ -44,5 +45,7 @@
         <file>Pics/2374143.jpg</file>
         <file>Pics/Untitled-1.jpg</file>
         <file>Pics/KOH984.jpg</file>
+        <file>Pics/gg.jpg</file>
+        <file>Pics/gg2.jpg</file>
     </qresource>
 </RCC>

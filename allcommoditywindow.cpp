@@ -6,13 +6,6 @@ AllCommodityWindow::AllCommodityWindow(QWidget *parent) :
     ui(new Ui::AllCommodityWindow)
 {
     ui->setupUi(this);
-
-//    for (int i = 0 ; i < 10 ; i++)
-//    {
-//        ui->tableWidget->insertRow(i);
-//        ui->tableWidget->setItem(0 , 0 , new QTableWidgetItem("GGGGG"));
-//    }
-
 }
 
 AllCommodityWindow::~AllCommodityWindow()
