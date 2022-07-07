@@ -15,6 +15,9 @@ public:
     explicit MessagesDialog(QWidget *parent = nullptr);
     ~MessagesDialog();
 
+private slots:
+    void on_ReturnBtn_clicked();
+
 private:
     Ui::MessagesDialog *ui;
 };

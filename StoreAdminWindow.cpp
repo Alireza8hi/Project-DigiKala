@@ -2,6 +2,7 @@
 #include "CartDialog.h"
 #include "allcommoditywindow.h"
 #include "categorywindow.h"
+#include "listofcommoditiesdialog.h"
 #include "messagesdialog.h"
 #include "profiledialog.h"
 #include "searchdialog.h"
@@ -13,6 +14,12 @@ StoreAdminWindow::StoreAdminWindow(QWidget *parent) :
     ui(new Ui::StoreAdminWindow)
 {
     ui->setupUi(this);
+
+    ui->DeletetingCommodityConfirmBtn->hide();
+    ui->DeletetingCommodityLe->hide();
+
+    ui->SellCommodityConfirmBtn->hide();
+    ui->SellCommodityLe->hide();
 }
 
 StoreAdminWindow::~StoreAdminWindow()
@@ -66,5 +73,59 @@ void StoreAdminWindow::on_WishListBtn_clicked()
 {
     WishListDialog *a = new WishListDialog(this);
     a->show();
+}
+
+
+void StoreAdminWindow::on_DeleteCommoditiesBtn_clicked()
+{
+    this->close();
+    ListOFCommoditiesDialog *a = new ListOFCommoditiesDialog(this);
+    a->show();
+}
+
+
+void StoreAdminWindow::on_DeletedCommoditiesBtn_clicked()
+{
+    this->close();
+    ListOFCommoditiesDialog *a = new ListOFCommoditiesDialog(this);
+    a->show();
+}
+
+
+void StoreAdminWindow::on_CommoditiesExpireBtn_clicked()
+{
+    this->close();
+    ListOFCommoditiesDialog *a = new ListOFCommoditiesDialog(this);
+    a->show();
+}
+
+
+void StoreAdminWindow::on_DeletetingCommodityBtn_clicked()
+{
+    if (ui->DeletetingCommodityConfirmBtn->isHidden() == true)
+    {
+        ui->DeletetingCommodityConfirmBtn->show();
+        ui->DeletetingCommodityLe->show();
+    }
+    else
+    {
+        ui->DeletetingCommodityConfirmBtn->hide();
+        ui->DeletetingCommodityLe->hide();
+    }
+}
+
+
+void StoreAdminWindow::on_SellCommodityBtn_clicked()
+{
+    if (ui->SellCommodityConfirmBtn->isHidden() == true)
+    {
+        ui->SellCommodityConfirmBtn->show();
+        ui->SellCommodityLe->show();
+    }
+    else
+    {
+        ui->SellCommodityConfirmBtn->hide();
+        ui->SellCommodityLe->hide();
+    }
 }
 

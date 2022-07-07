@@ -30,6 +30,12 @@ private slots:
 
     void on_WishListBtn_clicked();
 
+    void on_DeletedCommoditieBtn_clicked();
+
+    void on_ComplaintListBtn_clicked();
+
+    void on_CheckCommentBtn_clicked();
+
 private:
     Ui::SupportAdminWindow *ui;
 };

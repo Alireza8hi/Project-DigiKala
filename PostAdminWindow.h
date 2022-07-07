@@ -30,6 +30,8 @@ private slots:
 
     void on_WishListBtn_clicked();
 
+    void on_CommoditiesAwaitingPostBtn_clicked();
+
 private:
     Ui::PostAdminWindow *ui;
 };

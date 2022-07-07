@@ -12,3 +12,9 @@ MessagesDialog::~MessagesDialog()
 {
     delete ui;
 }
+
+void MessagesDialog::on_ReturnBtn_clicked()
+{
+    parentWidget()->show();
+}
+

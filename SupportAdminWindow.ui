@@ -83,7 +83,7 @@
          <string notr="true">color: rgb(0, 0, 0);</string>
         </property>
         <property name="text">
-         <string>کالا های حذف شده!!!</string>
+         <string>کالا های حذف شده</string>
         </property>
         <property name="icon">
          <iconset resource="icons.qrc">
@@ -207,7 +207,7 @@ background-color: qlineargradient(spread:reflect, x1:0.826291, y1:0.887, x2:1, y
          <string notr="true">color: rgb(0, 0, 0);</string>
         </property>
         <property name="text">
-         <string>لیست شکایت ها!!</string>
+         <string>لیست شکایت ها</string>
         </property>
         <property name="icon">
          <iconset resource="icons.qrc">
@@ -272,7 +272,7 @@ background-color: qlineargradient(spread:reflect, x1:0.826291, y1:0.887, x2:1, y
          <string notr="true">color: rgb(0, 0, 0);</string>
         </property>
         <property name="text">
-         <string>بررسی نظر ها!!</string>
+         <string>بررسی نظر ها</string>
         </property>
         <property name="icon">
          <iconset resource="icons.qrc">
@@ -582,6 +582,54 @@ background-color: qlineargradient(spread:reflect, x1:0.826291, y1:0.887, x2:1, y
     <hint type="sourcelabel">
      <x>839</x>
      <y>51</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>453</x>
+     <y>334</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>DeletedCommoditieBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>SupportAdminWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>453</x>
+     <y>334</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>453</x>
+     <y>334</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ComplaintListBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>SupportAdminWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>629</x>
+     <y>334</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>453</x>
+     <y>334</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CheckCommentBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>SupportAdminWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>629</x>
+     <y>371</y>
     </hint>
     <hint type="destinationlabel">
      <x>453</x>

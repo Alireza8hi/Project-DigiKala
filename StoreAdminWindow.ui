@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>640</width>
-    <height>480</height>
+    <width>723</width>
+    <height>543</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,62 +20,6 @@
    <layout class="QGridLayout" name="gridLayout_2">
     <item row="2" column="1">
      <layout class="QGridLayout" name="gridLayout">
-      <item row="5" column="2">
-       <widget class="QPushButton" name="DeleteCommoditiesBtn">
-        <property name="styleSheet">
-         <string notr="true">color: rgb(0, 0, 0);</string>
-        </property>
-        <property name="text">
-         <string>کالا هایی که حذف کردم !!</string>
-        </property>
-        <property name="icon">
-         <iconset resource="icons.qrc">
-          <normaloff>:/Icons/Icons/deleted-icon-9.jpg</normaloff>:/Icons/Icons/deleted-icon-9.jpg</iconset>
-        </property>
-       </widget>
-      </item>
-      <item row="7" column="2">
-       <widget class="QPushButton" name="CommoditiesExpireBtn">
-        <property name="styleSheet">
-         <string notr="true">color: rgb(0, 0, 0);</string>
-        </property>
-        <property name="text">
-         <string>کالا های نزدیک به انقضا!!</string>
-        </property>
-        <property name="icon">
-         <iconset resource="icons.qrc">
-          <normaloff>:/Icons/Icons/expiration-icon-3.jpg</normaloff>:/Icons/Icons/expiration-icon-3.jpg</iconset>
-        </property>
-       </widget>
-      </item>
-      <item row="5" column="0">
-       <widget class="QPushButton" name="Searchbtn">
-        <property name="styleSheet">
-         <string notr="true">color: rgb(0, 0, 0);</string>
-        </property>
-        <property name="text">
-         <string>جست و جوی کالای خاص</string>
-        </property>
-        <property name="icon">
-         <iconset resource="icons.qrc">
-          <normaloff>:/Icons/Icons/search-icon-png-5.png</normaloff>:/Icons/Icons/search-icon-png-5.png</iconset>
-        </property>
-       </widget>
-      </item>
-      <item row="14" column="2">
-       <widget class="QPushButton" name="SellCommodityBtn">
-        <property name="styleSheet">
-         <string notr="true">color: rgb(0, 0, 0);</string>
-        </property>
-        <property name="text">
-         <string>گذاشتن کالا روی سایت!!</string>
-        </property>
-        <property name="icon">
-         <iconset resource="icons.qrc">
-          <normaloff>:/Icons/Icons/Icon-push-object-3194184.svg.png</normaloff>:/Icons/Icons/Icon-push-object-3194184.svg.png</iconset>
-        </property>
-       </widget>
-      </item>
       <item row="1" column="2">
        <widget class="QLabel" name="label_2">
         <property name="minimumSize">
@@ -112,64 +56,6 @@ background-color: rgb(0, 0, 127);</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="6" column="2">
-       <widget class="QPushButton" name="DeletedCommoditiesBtn">
-        <property name="styleSheet">
-         <string notr="true">color: rgb(0, 0, 0);</string>
-        </property>
-        <property name="text">
-         <string>کالا های حذف شده من!!</string>
-        </property>
-        <property name="icon">
-         <iconset resource="icons.qrc">
-          <normaloff>:/Icons/Icons/deleted-icon-9.jpg</normaloff>:/Icons/Icons/deleted-icon-9.jpg</iconset>
-        </property>
-       </widget>
-      </item>
-      <item row="5" column="1">
-       <spacer name="horizontalSpacer">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeType">
-         <enum>QSizePolicy::Fixed</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>100</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item row="4" column="0">
-       <widget class="QPushButton" name="CategoriesBtn">
-        <property name="styleSheet">
-         <string notr="true">color: rgb(0, 0, 0);</string>
-        </property>
-        <property name="text">
-         <string>دسته بندی کالا ها</string>
-        </property>
-        <property name="icon">
-         <iconset resource="icons.qrc">
-          <normaloff>:/Icons/Icons/categories-icon-1.jpg</normaloff>:/Icons/Icons/categories-icon-1.jpg</iconset>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="0">
-       <widget class="QPushButton" name="AllCommoditiesBtn">
-        <property name="styleSheet">
-         <string notr="true">color: rgb(0, 0, 0);</string>
-        </property>
-        <property name="text">
-         <string>کل کالا ها</string>
-        </property>
-        <property name="icon">
-         <iconset resource="icons.qrc">
-          <normaloff>:/Icons/Icons/5110770.png</normaloff>:/Icons/Icons/5110770.png</iconset>
         </property>
        </widget>
       </item>
@@ -212,7 +98,98 @@ background-color: rgb(0, 0, 127);</string>
         </property>
        </widget>
       </item>
-      <item row="4" column="2">
+      <item row="3" column="2">
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QPushButton" name="DeletetingCommodityBtn">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(0, 0, 0);</string>
+          </property>
+          <property name="text">
+           <string>حذف کالا</string>
+          </property>
+          <property name="icon">
+           <iconset resource="icons.qrc">
+            <normaloff>:/Icons/Icons/75519.png</normaloff>:/Icons/Icons/75519.png</iconset>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="DeletetingCommodityLe">
+          <property name="inputMask">
+           <string>کد کالا را وارد کنید</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="DeletetingCommodityConfirmBtn">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(0, 0, 0);</string>
+          </property>
+          <property name="text">
+           <string>تایید</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="7" column="0">
+       <widget class="QPushButton" name="Searchbtn">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 0);</string>
+        </property>
+        <property name="text">
+         <string>جست و جوی کالای خاص</string>
+        </property>
+        <property name="icon">
+         <iconset resource="icons.qrc">
+          <normaloff>:/Icons/Icons/search-icon-png-5.png</normaloff>:/Icons/Icons/search-icon-png-5.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QPushButton" name="AllCommoditiesBtn">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 0);</string>
+        </property>
+        <property name="text">
+         <string>کل کالا ها</string>
+        </property>
+        <property name="icon">
+         <iconset resource="icons.qrc">
+          <normaloff>:/Icons/Icons/5110770.png</normaloff>:/Icons/Icons/5110770.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="2">
+       <widget class="QPushButton" name="CommoditiesExpireBtn">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 0);</string>
+        </property>
+        <property name="text">
+         <string>کالا های نزدیک به انقضا</string>
+        </property>
+        <property name="icon">
+         <iconset resource="icons.qrc">
+          <normaloff>:/Icons/Icons/expiration-icon-3.jpg</normaloff>:/Icons/Icons/expiration-icon-3.jpg</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="2">
+       <widget class="QPushButton" name="DeletedCommoditiesBtn">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 0);</string>
+        </property>
+        <property name="text">
+         <string>کالا های حذف شده من</string>
+        </property>
+        <property name="icon">
+         <iconset resource="icons.qrc">
+          <normaloff>:/Icons/Icons/deleted-icon-9.jpg</normaloff>:/Icons/Icons/deleted-icon-9.jpg</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="2">
        <widget class="QPushButton" name="EditCommodityBtn">
         <property name="styleSheet">
          <string notr="true">color: rgb(0, 0, 0);</string>
@@ -226,19 +203,81 @@ background-color: rgb(0, 0, 127);</string>
         </property>
        </widget>
       </item>
-      <item row="3" column="2">
-       <widget class="QPushButton" name="DeletetingCommodityBtn">
+      <item row="7" column="1">
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>100</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="6" column="0">
+       <widget class="QPushButton" name="CategoriesBtn">
         <property name="styleSheet">
          <string notr="true">color: rgb(0, 0, 0);</string>
         </property>
         <property name="text">
-         <string>حذف کالا!!</string>
+         <string>دسته بندی کالا ها</string>
         </property>
         <property name="icon">
          <iconset resource="icons.qrc">
-          <normaloff>:/Icons/Icons/75519.png</normaloff>:/Icons/Icons/75519.png</iconset>
+          <normaloff>:/Icons/Icons/categories-icon-1.jpg</normaloff>:/Icons/Icons/categories-icon-1.jpg</iconset>
         </property>
        </widget>
+      </item>
+      <item row="7" column="2">
+       <widget class="QPushButton" name="DeleteCommoditiesBtn">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 0);</string>
+        </property>
+        <property name="text">
+         <string>کالا هایی که حذف کردم </string>
+        </property>
+        <property name="icon">
+         <iconset resource="icons.qrc">
+          <normaloff>:/Icons/Icons/deleted-icon-9.jpg</normaloff>:/Icons/Icons/deleted-icon-9.jpg</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="10" column="2">
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QPushButton" name="SellCommodityBtn">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(0, 0, 0);</string>
+          </property>
+          <property name="text">
+           <string>گذاشتن کالا روی سایت</string>
+          </property>
+          <property name="icon">
+           <iconset resource="icons.qrc">
+            <normaloff>:/Icons/Icons/Icon-push-object-3194184.svg.png</normaloff>:/Icons/Icons/Icon-push-object-3194184.svg.png</iconset>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="SellCommodityLe">
+          <property name="inputMask">
+           <string>کد کالا را وارد کنید</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="SellCommodityConfirmBtn">
+          <property name="text">
+           <string>تایید</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </item>
      </layout>
     </item>
@@ -326,7 +365,7 @@ background-color: rgb(0, 0, 127);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>640</width>
+     <width>723</width>
      <height>25</height>
     </rect>
    </property>

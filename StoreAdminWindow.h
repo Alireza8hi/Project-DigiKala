@@ -30,6 +30,16 @@ private slots:
 
     void on_WishListBtn_clicked();
 
+    void on_DeleteCommoditiesBtn_clicked();
+
+    void on_DeletedCommoditiesBtn_clicked();
+
+    void on_CommoditiesExpireBtn_clicked();
+
+    void on_DeletetingCommodityBtn_clicked();
+
+    void on_SellCommodityBtn_clicked();
+
 private:
     Ui::StoreAdminWindow *ui;
 };

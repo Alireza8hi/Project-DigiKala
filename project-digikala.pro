@@ -36,7 +36,9 @@ SOURCES += \
     allcommoditywindow.cpp \
     categorywindow.cpp \
     commoditiesawaitingapprovaldialog.cpp \
+    commoditiesawaitingpostdialog.cpp \
     human.cpp \
+    listofcommoditiesdialog.cpp \
     listofpeopledialog.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -74,7 +76,9 @@ HEADERS += \
     allcommoditywindow.h \
     categorywindow.h \
     commoditiesawaitingapprovaldialog.h \
+    commoditiesawaitingpostdialog.h \
     human.h \
+    listofcommoditiesdialog.h \
     listofpeopledialog.h \
     mainwindow.h \
     messagesdialog.h \
@@ -97,6 +101,8 @@ FORMS += \
     allcommoditywindow.ui \
     categorywindow.ui \
     commoditiesawaitingapprovaldialog.ui \
+    commoditiesawaitingpostdialog.ui \
+    listofcommoditiesdialog.ui \
     listofpeopledialog.ui \
     mainwindow.ui \
     messagesdialog.ui \

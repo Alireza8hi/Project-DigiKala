@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>CommoditiesAwaitingApprovalDialog</class>
- <widget class="QDialog" name="CommoditiesAwaitingApprovalDialog">
+ <class>CommoditiesAwaitingPostDialog</class>
+ <widget class="QDialog" name="CommoditiesAwaitingPostDialog">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>635</width>
-    <height>482</height>
+    <width>1113</width>
+    <height>634</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,26 +18,6 @@
     <widget class="QPushButton" name="ReturnBtn">
      <property name="text">
       <string>بازگشت</string>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="0">
-    <spacer name="horizontalSpacer">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>40</width>
-       <height>20</height>
-      </size>
-     </property>
-    </spacer>
-   </item>
-   <item row="1" column="2">
-    <widget class="QPushButton" name="ExitBtn">
-     <property name="text">
-      <string>خروج</string>
      </property>
     </widget>
    </item>
@@ -54,14 +34,31 @@
      </property>
     </spacer>
    </item>
+   <item row="1" column="2">
+    <widget class="QPushButton" name="ExitBtn">
+     <property name="text">
+      <string>خروج</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
    <item row="0" column="0" colspan="2">
     <widget class="QTableWidget" name="tableWidget">
      <property name="alternatingRowColors">
       <bool>true</bool>
      </property>
-     <attribute name="horizontalHeaderDefaultSectionSize">
-      <number>104</number>
-     </attribute>
      <column>
       <property name="text">
        <string>نام کالا</string>
@@ -74,12 +71,27 @@
      </column>
      <column>
       <property name="text">
-       <string>دسته بندی</string>
+       <string>خریدار</string>
       </property>
      </column>
      <column>
       <property name="text">
-       <string>قبول</string>
+       <string>استان</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>شهر</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>آدرس پستی</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>تایید</string>
       </property>
      </column>
      <column>
@@ -96,32 +108,32 @@
   <connection>
    <sender>ExitBtn</sender>
    <signal>clicked()</signal>
-   <receiver>CommoditiesAwaitingApprovalDialog</receiver>
+   <receiver>CommoditiesAwaitingPostDialog</receiver>
    <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>583</x>
-     <y>456</y>
+     <x>1061</x>
+     <y>608</y>
     </hint>
     <hint type="destinationlabel">
-     <x>317</x>
-     <y>240</y>
+     <x>556</x>
+     <y>316</y>
     </hint>
    </hints>
   </connection>
   <connection>
    <sender>ReturnBtn</sender>
    <signal>clicked()</signal>
-   <receiver>CommoditiesAwaitingApprovalDialog</receiver>
+   <receiver>CommoditiesAwaitingPostDialog</receiver>
    <slot>deleteLater()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>496</x>
-     <y>456</y>
+     <x>974</x>
+     <y>608</y>
     </hint>
     <hint type="destinationlabel">
-     <x>317</x>
-     <y>240</y>
+     <x>556</x>
+     <y>316</y>
     </hint>
    </hints>
   </connection>

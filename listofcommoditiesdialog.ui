@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MessagesDialog</class>
- <widget class="QDialog" name="MessagesDialog">
+ <class>ListOFCommoditiesDialog</class>
+ <widget class="QDialog" name="ListOFCommoditiesDialog">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>732</width>
-    <height>566</height>
+    <width>626</width>
+    <height>491</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="1" column="2">
-    <widget class="QPushButton" name="ExitBtn">
-     <property name="text">
-      <string>خروچ</string>
-     </property>
-    </widget>
-   </item>
    <item row="1" column="1">
     <widget class="QPushButton" name="ReturnBtn">
      <property name="text">
       <string>بازگشت</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="2">
+    <widget class="QPushButton" name="ExitBtn">
+     <property name="text">
+      <string>خروج</string>
      </property>
     </widget>
    </item>
@@ -41,6 +41,33 @@
      </property>
     </spacer>
    </item>
+   <item row="0" column="0" colspan="2">
+    <widget class="QTableWidget" name="tableWidget">
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
+     <column>
+      <property name="text">
+       <string>نام کالا</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>قیمت</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>دسته بندی</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>کد کالا</string>
+      </property>
+     </column>
+    </widget>
+   </item>
    <item row="0" column="2">
     <spacer name="verticalSpacer">
      <property name="orientation">
@@ -54,26 +81,6 @@
      </property>
     </spacer>
    </item>
-   <item row="0" column="0">
-    <widget class="QTableWidget" name="tableWidget">
-     <property name="alternatingRowColors">
-      <bool>true</bool>
-     </property>
-     <attribute name="horizontalHeaderDefaultSectionSize">
-      <number>266</number>
-     </attribute>
-     <column>
-      <property name="text">
-       <string>نام کاربری فرستنده پیام</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>متن پیام</string>
-      </property>
-     </column>
-    </widget>
-   </item>
   </layout>
  </widget>
  <resources/>
@@ -81,32 +88,32 @@
   <connection>
    <sender>ExitBtn</sender>
    <signal>clicked()</signal>
-   <receiver>MessagesDialog</receiver>
+   <receiver>ListOFCommoditiesDialog</receiver>
    <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>680</x>
-     <y>540</y>
+     <x>574</x>
+     <y>465</y>
     </hint>
     <hint type="destinationlabel">
-     <x>365</x>
-     <y>282</y>
+     <x>312</x>
+     <y>245</y>
     </hint>
    </hints>
   </connection>
   <connection>
    <sender>ReturnBtn</sender>
    <signal>clicked()</signal>
-   <receiver>MessagesDialog</receiver>
+   <receiver>ListOFCommoditiesDialog</receiver>
    <slot>deleteLater()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>593</x>
-     <y>540</y>
+     <x>487</x>
+     <y>465</y>
     </hint>
     <hint type="destinationlabel">
-     <x>365</x>
-     <y>282</y>
+     <x>312</x>
+     <y>245</y>
     </hint>
    </hints>
   </connection>

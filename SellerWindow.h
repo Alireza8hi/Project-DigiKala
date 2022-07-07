@@ -30,6 +30,10 @@ private slots:
 
     void on_CartBtn_clicked();
 
+    void on_DeletedCommoditieBtn_clicked();
+
+    void on_CommoditiesExpireBtn_clicked();
+
 private:
     Ui::SellerWindow *ui;
 };

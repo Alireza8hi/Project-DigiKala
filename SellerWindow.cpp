@@ -2,6 +2,7 @@
 #include "CartDialog.h"
 #include "allcommoditywindow.h"
 #include "categorywindow.h"
+#include "listofcommoditiesdialog.h"
 #include "messagesdialog.h"
 #include "profiledialog.h"
 #include "searchdialog.h"
@@ -65,6 +66,20 @@ void SellerWindow::on_WishListBtn_clicked()
 void SellerWindow::on_CartBtn_clicked()
 {
     CartDialog *a = new CartDialog(this);
+    a->show();
+}
+
+
+void SellerWindow::on_DeletedCommoditieBtn_clicked()
+{
+    ListOFCommoditiesDialog *a = new ListOFCommoditiesDialog(this);
+    a->show();
+}
+
+
+void SellerWindow::on_CommoditiesExpireBtn_clicked()
+{
+    ListOFCommoditiesDialog *a = new ListOFCommoditiesDialog(this);
     a->show();
 }
 

@@ -2,6 +2,7 @@
 #include "CartDialog.h"
 #include "allcommoditywindow.h"
 #include "categorywindow.h"
+#include "commoditiesawaitingpostdialog.h"
 #include "messagesdialog.h"
 #include "profiledialog.h"
 #include "searchdialog.h"
@@ -64,6 +65,13 @@ void PostAdminWindow::on_CartBtn_clicked()
 void PostAdminWindow::on_WishListBtn_clicked()
 {
     WishListDialog *a = new WishListDialog(this);
+    a->show();
+}
+
+
+void PostAdminWindow::on_CommoditiesAwaitingPostBtn_clicked()
+{
+    CommoditiesAwaitingPostDialog *a = new CommoditiesAwaitingPostDialog(this);
     a->show();
 }
 

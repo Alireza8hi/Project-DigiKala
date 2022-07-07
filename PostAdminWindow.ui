@@ -55,7 +55,7 @@
        <string notr="true">color: rgb(0, 0, 0);</string>
       </property>
       <property name="text">
-       <string>کالا های در انتظار پست!!</string>
+       <string>کالا های در انتظار پست</string>
       </property>
       <property name="icon">
        <iconset resource="icons.qrc">
@@ -438,6 +438,22 @@
     <hint type="sourcelabel">
      <x>846</x>
      <y>51</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>457</x>
+     <y>310</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CommoditiesAwaitingPostBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>PostAdminWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>183</x>
+     <y>127</y>
     </hint>
     <hint type="destinationlabel">
      <x>457</x>
