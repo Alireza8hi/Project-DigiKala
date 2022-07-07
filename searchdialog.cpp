@@ -15,6 +15,7 @@ SearchDialog::SearchDialog(QWidget *parent) :
     ui->InStockCB->hide();
     ui->CategoryLbl->hide();
 
+    ui->tableWidget->hide();
 }
 
 SearchDialog::~SearchDialog()
@@ -58,5 +59,11 @@ void SearchDialog::on_ShowOptionsBtn_clicked()
 void SearchDialog::on_ExitBtn_clicked()
 {
     this->close();
+}
+
+
+void SearchDialog::on_SearchBtn_clicked()
+{
+    ui->tableWidget->show();
 }
 

@@ -35,7 +35,9 @@ SOURCES += \
     accountwindow.cpp \
     allcommoditywindow.cpp \
     categorywindow.cpp \
+    commoditiesawaitingapprovaldialog.cpp \
     human.cpp \
+    listofpeopledialog.cpp \
     main.cpp \
     mainwindow.cpp \
     messagesdialog.cpp \
@@ -71,7 +73,9 @@ HEADERS += \
     accountwindow.h \
     allcommoditywindow.h \
     categorywindow.h \
+    commoditiesawaitingapprovaldialog.h \
     human.h \
+    listofpeopledialog.h \
     mainwindow.h \
     messagesdialog.h \
     profiledialog.h \
@@ -92,6 +96,8 @@ FORMS += \
     accountwindow.ui \
     allcommoditywindow.ui \
     categorywindow.ui \
+    commoditiesawaitingapprovaldialog.ui \
+    listofpeopledialog.ui \
     mainwindow.ui \
     messagesdialog.ui \
     profiledialog.ui \

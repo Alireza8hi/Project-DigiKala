@@ -23,6 +23,8 @@ private slots:
 
     void on_ExitBtn_clicked();
 
+    void on_SearchBtn_clicked();
+
 private:
     Ui::SearchDialog *ui;
 };

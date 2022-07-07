@@ -30,6 +30,24 @@ private slots:
 
     void on_WishListBtn_clicked();
 
+    void on_OpenOtherAdminsBtn_clicked();
+
+    void on_ChangeAdminIncomeBtn_clicked();
+
+    void on_RemoveAdminBtn_clicked();
+
+    void on_AddAdminBtn_clicked();
+
+    void on_SuccessfulSellersBtn_clicked();
+
+    void on_BestCustomersBtn_clicked();
+
+    void on_ReadUserInfoBtn_clicked();
+
+    void on_CommodityProfitBtn_clicked();
+
+    void on_SoldCommoditiesBtn_clicked();
+
 private:
     Ui::MainAdminWindow *ui;
 };

@@ -29,6 +29,8 @@ private slots:
 
     void on_WishListBtn_clicked();
 
+    void on_CommoditiesAwaitingApprovalBtn_clicked();
+
 private:
     Ui::ReviewAdminWindow *ui;
 };

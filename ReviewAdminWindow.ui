@@ -198,7 +198,7 @@ border-image: url(:/Pics/Pics/NoBack.png);
 background-color: rgb(255, 240, 214);</string>
       </property>
       <property name="text">
-       <string>کالا های در انتظار تایید!!</string>
+       <string>کالا های در انتظار تایید</string>
       </property>
       <property name="icon">
        <iconset resource="icons.qrc">
@@ -434,6 +434,22 @@ border-image: url(:/Pics/Pics/NoBack.png);</string>
     <hint type="sourcelabel">
      <x>584</x>
      <y>46</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CommoditiesAwaitingApprovalBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>ReviewAdminWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>117</x>
+     <y>87</y>
     </hint>
     <hint type="destinationlabel">
      <x>319</x>

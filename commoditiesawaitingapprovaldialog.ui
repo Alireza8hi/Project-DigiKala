@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CommoditiesAwaitingApprovalDialog</class>
+ <widget class="QDialog" name="CommoditiesAwaitingApprovalDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>635</width>
+    <height>482</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="1" column="1">
+    <widget class="QPushButton" name="ReturnBtn">
+     <property name="text">
+      <string>بازگشت</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="1" column="2">
+    <widget class="QPushButton" name="ExitBtn">
+     <property name="text">
+      <string>خروج</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="2">
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="0" column="0" colspan="2">
+    <widget class="QTableWidget" name="tableWidget">
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
+     <attribute name="horizontalHeaderDefaultSectionSize">
+      <number>104</number>
+     </attribute>
+     <column>
+      <property name="text">
+       <string>نام کالا</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>قیمت</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>دسته بندی</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>قبول</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>رد</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>ExitBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>CommoditiesAwaitingApprovalDialog</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>583</x>
+     <y>456</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>317</x>
+     <y>240</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ReturnBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>CommoditiesAwaitingApprovalDialog</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>496</x>
+     <y>456</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>317</x>
+     <y>240</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

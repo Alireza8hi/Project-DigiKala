@@ -2,6 +2,7 @@
 #include "CartDialog.h"
 #include "allcommoditywindow.h"
 #include "categorywindow.h"
+#include "commoditiesawaitingapprovaldialog.h"
 #include "messagesdialog.h"
 #include "profiledialog.h"
 #include "searchdialog.h"
@@ -65,6 +66,13 @@ void ReviewAdminWindow::on_CartBtn_clicked()
 void ReviewAdminWindow::on_WishListBtn_clicked()
 {
     WishListDialog *a = new WishListDialog(this);
+    a->show();
+}
+
+
+void ReviewAdminWindow::on_CommoditiesAwaitingApprovalBtn_clicked()
+{
+    CommoditiesAwaitingApprovalDialog *a = new CommoditiesAwaitingApprovalDialog(this);
     a->show();
 }
 

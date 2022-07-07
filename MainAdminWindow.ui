@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>555</width>
-    <height>545</height>
+    <width>797</width>
+    <height>816</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -23,48 +23,28 @@
    <layout class="QGridLayout" name="gridLayout_2">
     <item row="2" column="0">
      <layout class="QGridLayout" name="gridLayout_3">
-      <item row="3" column="1">
-       <widget class="QPushButton" name="ChangeAdminBtn">
+      <item row="16" column="1">
+       <widget class="QPushButton" name="BestCustomersBtn">
         <property name="styleSheet">
          <string notr="true">color: rgb(255, 255, 255);</string>
         </property>
         <property name="text">
-         <string>اخراج و تغییر مدیر!!</string>
+         <string>بهترین مشتری ها</string>
         </property>
        </widget>
       </item>
-      <item row="3" column="0">
-       <widget class="QPushButton" name="CategoriesBtn">
+      <item row="7" column="0">
+       <widget class="QPushButton" name="SearchBtn">
         <property name="styleSheet">
          <string notr="true">color: rgb(255, 255, 255);</string>
         </property>
         <property name="text">
-         <string>دسته بندی کالا ها</string>
+         <string>جست و جوی کالای خاص</string>
         </property>
        </widget>
       </item>
-      <item row="4" column="1">
-       <widget class="QPushButton" name="ChangeAdminIncomeBtn">
-        <property name="styleSheet">
-         <string notr="true">color: rgb(255, 255, 255);</string>
-        </property>
-        <property name="text">
-         <string>تغییر حقوق مدیر ها!!</string>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="0">
-       <widget class="QPushButton" name="AllCommoditysBtn">
-        <property name="styleSheet">
-         <string notr="true">color: rgb(255, 255, 255);</string>
-        </property>
-        <property name="text">
-         <string>کل کالا ها</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="0">
-       <widget class="QLabel" name="label">
+      <item row="14" column="0" colspan="2">
+       <widget class="QLabel" name="label_3">
         <property name="minimumSize">
          <size>
           <width>0</width>
@@ -88,29 +68,97 @@
 background-image: url(:/Pics/Pics/NoBack.png);
 background-color: rgb(22, 31, 48);</string>
         </property>
-        <property name="frameShape">
-         <enum>QFrame::StyledPanel</enum>
-        </property>
-        <property name="frameShadow">
-         <enum>QFrame::Raised</enum>
-        </property>
         <property name="text">
-         <string>گزینه های کلی</string>
+         <string>سایر</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
       </item>
-      <item row="8" column="0">
-       <widget class="QPushButton" name="CommodityProfitBtn">
+      <item row="18" column="0">
+       <widget class="QPushButton" name="SoldCommoditiesBtn">
         <property name="styleSheet">
          <string notr="true">color: rgb(255, 255, 255);</string>
         </property>
         <property name="text">
-         <string>میزان سود از فروش کالا!!</string>
+         <string>کالاهای فروخته شده</string>
         </property>
        </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QPushButton" name="AllCommoditysBtn">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>کل کالا ها</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <widget class="QPushButton" name="AddAdminBtn">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>افزودن مدیر</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="AddAdminCombo">
+          <item>
+           <property name="text">
+            <string>انتخاب</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>مدیر بررسی</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>مدیر انبار</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>مدیر پست</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>مدیر پشتیبانی</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="AddAdminUserLe">
+          <property name="inputMask">
+           <string>نام کاربری را وارد کنید</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="AddAdminPassLe">
+          <property name="inputMask">
+           <string>رمز عبور را وارد کنید</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="AddAdminConfirmBtn">
+          <property name="text">
+           <string>تایید</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </item>
       <item row="1" column="1">
        <widget class="QLabel" name="label_2">
@@ -151,58 +199,124 @@ background-color: rgb(22, 31, 48);</string>
         </property>
        </widget>
       </item>
-      <item row="8" column="1">
-       <widget class="QPushButton" name="BestCustomersBtn">
-        <property name="styleSheet">
-         <string notr="true">color: rgb(255, 255, 255);</string>
-        </property>
-        <property name="text">
-         <string>بهترین مشتری ها!!</string>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="1">
-       <widget class="QPushButton" name="AddAdminBtn">
-        <property name="styleSheet">
-         <string notr="true">color: rgb(255, 255, 255);</string>
-        </property>
-        <property name="text">
-         <string>افزودن مدیر!!</string>
-        </property>
-       </widget>
-      </item>
-      <item row="10" column="1">
+      <item row="18" column="1">
        <widget class="QPushButton" name="ReadUserInfoBtn">
         <property name="styleSheet">
          <string notr="true">color: rgb(255, 255, 255);</string>
         </property>
         <property name="text">
-         <string>اطلاعات اعضای سایت!!</string>
+         <string>اطلاعات اعضای سایت</string>
         </property>
        </widget>
       </item>
-      <item row="5" column="1">
-       <widget class="QPushButton" name="OpenOtherAdminsBtn">
-        <property name="styleSheet">
-         <string notr="true">color: rgb(255, 255, 255);</string>
-        </property>
-        <property name="text">
-         <string>ورود به عنوان سایر مدیر ها!!</string>
-        </property>
-       </widget>
+      <item row="8" column="1">
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QPushButton" name="OpenOtherAdminsBtn">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>ورود به عنوان سایر مدیر ها</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="OpenOtherAdminsCombo">
+          <item>
+           <property name="text">
+            <string>انتخاب</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>مدیر بررسی</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>مدیر انبار</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>مدیر پست</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>مدیر پشتیبانی</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="OpenOtherAdminsConfirmBtn">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>تایید</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </item>
-      <item row="4" column="0">
-       <widget class="QPushButton" name="SearchBtn">
-        <property name="styleSheet">
-         <string notr="true">color: rgb(255, 255, 255);</string>
-        </property>
-        <property name="text">
-         <string>جست و جوی کالای خاص</string>
-        </property>
-       </widget>
+      <item row="6" column="1">
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QPushButton" name="RemoveAdminBtn">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>اخراج مدیر</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="RemoveAdminCombo">
+          <item>
+           <property name="text">
+            <string>انتخاب</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>مدیر بررسی</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>مدیر انبار</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>مدیر پست</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>مدیر پشتیبانی</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="RemoveAdminConfirmBtn">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>تاببد</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </item>
-      <item row="6" column="0" colspan="2">
-       <widget class="QLabel" name="label_3">
+      <item row="1" column="0">
+       <widget class="QLabel" name="label">
         <property name="minimumSize">
          <size>
           <width>0</width>
@@ -226,33 +340,132 @@ background-color: rgb(22, 31, 48);</string>
 background-image: url(:/Pics/Pics/NoBack.png);
 background-color: rgb(22, 31, 48);</string>
         </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
         <property name="text">
-         <string>سایر</string>
+         <string>گزینه های کلی</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
       </item>
-      <item row="5" column="0">
+      <item row="6" column="0">
+       <widget class="QPushButton" name="CategoriesBtn">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>دسته بندی کالا ها</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="1">
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QPushButton" name="ChangeAdminIncomeBtn">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>تغییر حقوق مدیر ها</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="ChangeAdminIncomeCombo">
+          <item>
+           <property name="text">
+            <string>انتخاب</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>مدیر بررسی</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>مدیر انبار</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>مدیر پست </string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>مدیر پشتیبانی</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="ChangeAdminIncomeLe">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>26</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="inputMask">
+           <string>حقوق جدید را وارد کنید</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="ChangeAdminIncomeConfirmBtn">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>تایید</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="8" column="0">
        <widget class="QPushButton" name="SuccessfulSellersBtn">
         <property name="styleSheet">
          <string notr="true">color: rgb(255, 255, 255);</string>
         </property>
         <property name="text">
-         <string>موفق ترین فروشنده ها!!</string>
+         <string>موفق ترین فروشنده ها</string>
         </property>
        </widget>
       </item>
-      <item row="10" column="0">
-       <widget class="QPushButton" name="SoldCommoditiesBtn">
-        <property name="styleSheet">
-         <string notr="true">color: rgb(255, 255, 255);</string>
-        </property>
-        <property name="text">
-         <string>کالاهای فروخته شده!!</string>
-        </property>
-       </widget>
+      <item row="16" column="0">
+       <layout class="QVBoxLayout" name="verticalLayout_8">
+        <item>
+         <widget class="QPushButton" name="CommodityProfitBtn">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>میزان سود از فروش کالا</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="CommodityProfitLbl">
+          <property name="text">
+           <string>مقدار پیشفرض</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </item>
      </layout>
     </item>
@@ -313,7 +526,7 @@ background-color: rgb(255, 255, 255);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>555</width>
+     <width>797</width>
      <height>25</height>
     </rect>
    </property>
