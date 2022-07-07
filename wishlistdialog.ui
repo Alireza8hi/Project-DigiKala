@@ -54,6 +54,28 @@
      </property>
     </spacer>
    </item>
+   <item row="0" column="0" colspan="2">
+    <widget class="QTableWidget" name="tableWidget">
+     <attribute name="horizontalHeaderDefaultSectionSize">
+      <number>179</number>
+     </attribute>
+     <column>
+      <property name="text">
+       <string>نام کالا</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>قیمت</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>اضافه کردن به سبد خرید</string>
+      </property>
+     </column>
+    </widget>
+   </item>
   </layout>
  </widget>
  <resources/>

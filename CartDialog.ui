@@ -14,6 +14,51 @@
    <string>Dialog</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
+   <item row="7" column="1">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="7" column="0">
+    <widget class="QPushButton" name="CheckoutBtn">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>200</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>200</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>نهایی کردن خرید</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="3">
+    <widget class="QPushButton" name="ReturnBtn">
+     <property name="text">
+      <string>بازگشت</string>
+     </property>
+    </widget>
+   </item>
    <item row="4" column="2">
     <spacer name="verticalSpacer_2">
      <property name="orientation">
@@ -122,38 +167,6 @@
      </property>
     </spacer>
    </item>
-   <item row="7" column="0">
-    <widget class="QPushButton" name="CheckoutBtn">
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="minimumSize">
-      <size>
-       <width>200</width>
-       <height>0</height>
-      </size>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>200</width>
-       <height>16777215</height>
-      </size>
-     </property>
-     <property name="text">
-      <string>نهایی کردن خرید</string>
-     </property>
-    </widget>
-   </item>
-   <item row="7" column="3">
-    <widget class="QPushButton" name="ReturnBtn">
-     <property name="text">
-      <string>بازگشت</string>
-     </property>
-    </widget>
-   </item>
    <item row="7" column="2">
     <widget class="QPushButton" name="ExitBtn">
      <property name="text">
@@ -161,18 +174,37 @@
      </property>
     </widget>
    </item>
-   <item row="7" column="1">
-    <spacer name="horizontalSpacer">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>40</width>
-       <height>20</height>
-      </size>
-     </property>
-    </spacer>
+   <item row="0" column="0" colspan="3">
+    <widget class="QTableWidget" name="tableWidget">
+     <attribute name="horizontalHeaderDefaultSectionSize">
+      <number>116</number>
+     </attribute>
+     <column>
+      <property name="text">
+       <string>نام کالا</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>تعداد</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>قیمت تک</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>قیمت کل</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>حذف کالا</string>
+      </property>
+     </column>
+    </widget>
    </item>
   </layout>
  </widget>
