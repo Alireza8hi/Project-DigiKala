@@ -3,6 +3,7 @@
 #include "ui_profiledialog.h"
 #include "signupdialog.h"
 #include "accountwindow.h"
+#include "DataBaseUser.h"
 
 ProfileDialog::ProfileDialog(QWidget *parent) :
     QDialog(parent),
@@ -206,6 +207,7 @@ void ProfileDialog::on_NewPassConLe_textChanged(const QString &arg1)
 void ProfileDialog::on_ReturnBtn_clicked()
 {
     parentWidget()->show();
+    site.write_digi_kala("DataBase.txt",0);
 }
 
 

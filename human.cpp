@@ -24,42 +24,42 @@ Human::~Human()
     return;
 }
 
-string Human::get_name()const
+const string &Human::get_name()const
 {
     return this->name;
 }
 
-string Human::get_family() const
+const string &Human::get_family() const
 {
     return this->family;
 }
 
-string Human::get_ncode()const
+const string &Human::get_ncode()const
 {
     return this->national_code;
 }
 
-string Human::get_email()const
+const string &Human::get_email()const
 {
     return this->email;
 }
 
-string Human::get_address()const
+const string &Human::get_address()const
 {
     return this->address;
 }
 
-string Human::get_phone_number()const
+const string & Human::get_phone_number()const
 {
     return this->phone_number;
 }
 
-string Human::get_city() const
+const string & Human::get_city() const
 {
     return this->city;
 }
 
-string Human::get_province() const
+const string & Human::get_province() const
 {
     return this->province;
 }
@@ -69,49 +69,49 @@ int Human::get_sex() const
     return this->sex;
 }
 
-void Human::set_name(const string namef)
+void Human::set_name(const string& namef)
 {
     this->name=namef;
     return;
 }
 
-void Human::set_family(const string familyf)
+void Human::set_family(const string& familyf)
 {
     this->family=familyf;
     return;
 }
 
-void Human::set_ncode(const string ncode)
+void Human::set_ncode(const string& ncode)
 {
     this->national_code=ncode;
     return;
 }
 
-void Human::set_email(const string em)
+void Human::set_email(const string& em)
 {
     this->email=em;
     return;
 }
 
-void Human::set_address(const string adr)
+void Human::set_address(const string& adr)
 {
     this->address=adr;
     return;
 }
 
-void Human::set_phone_number(const string pho)
+void Human::set_phone_number(const string& pho)
 {
     this->phone_number=pho;
     return;
 }
 
-void Human::set_city(const string city)
+void Human::set_city(const string& city)
 {
     this->city = city;
     return;
 }
 
-void Human::set_province(const string province)
+void Human::set_province(const string& province)
 {
     this->province=province;
     return;

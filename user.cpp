@@ -24,7 +24,29 @@ User::User(User &other)
     this->set_province(other.get_province());
     this->set_sex(other.get_sex());
     //this->comments=other.comments;
-    //this->favorites=other.favorites;
+    //this->favorites_id=other.favorites_id;
+    //this->buy_list_id=other.buy_list_id;
+    return;
+}
+
+User::User(User &&other)
+{
+    this->username=other.username;
+    this->password=other.password;
+    this->role=other.role;
+    this->income=other.income;
+    this->set_name(other.get_name());
+    this->set_family(other.get_family());
+    this->set_email(other.get_email());
+    this->set_address(other.get_address());
+    this->set_ncode(other.get_ncode());
+    this->set_phone_number(other.get_phone_number());
+    this->set_city(other.get_city());
+    this->set_province(other.get_province());
+    this->set_sex(other.get_sex());
+    //this->comments=other.comments;
+    //this->favorites_id=other.favorites_id;
+    //this->buy_list_id=other.buy_list_id;
     return;
 }
 
@@ -46,122 +68,34 @@ int User::get_income() const
     return this->income;
 }
 
-bool User::change_password()
-{
-    /*string current_password, new_password,renew_password;
-    int pos1=1,pos2=0;
-    User changepass;
-    while(true)
-    {
-    cout<< "enter the current password :"<<'\n';
-    //cin>>current_password;
-    cout<<'\n';
-    cout<< "enter the new password :"<<'\n';
-    //cin>>new_password;
-    cout<<'\n';
-    cout<< "re-enter the new password :"<<'\n';
-    //cin>>renew_password;
-    cout<<'\n';
-    if(current_password != this->password)
-        {
-            cout<< "your current password is incorrect "<<'\n';
-            return false;
-        }
-        else
-            if(new_password != renew_password)
-                {
-                    cout<< "you entered the password incorrectly "<<'\n';
-                    return false;
-                }
-                else
-                    {
-                        cout<< "your password has been successfully changed "<<'\n';
-                        break;
-                    }
-    }
-    this->password=new_password;
-    ifstream input_file ("user.data",ios::binary);
-    pos1=input_file.tellg();
-    input_file.close();
-    while(pos2<pos1)
-    {
-    pos2=changepass.readuser("user.data" , pos2);
-    if(changepass.username==this->username)
-        {
-        changepass=*this;
-        changepass.writeuser("user.data",(pos2-sizeof(User)));
-        break;
-        }
-    }*/
-    return true;
-}
-
-bool User::change_username()
-{
-    /*int pos1=1 , pos2=0;
-    User changepass;
-    string passwordtest,Usernametest;
-    cout<< "enter the new username :"<<'\n';
-    //cin>>usernametest;
-    cout<<'\n';
-    cout<< "Enter the password :"<<'\n';
-    //cin>>passwordtest;
-    cout<<'\n';
-    if(this->password!=passwordtest)
-    {
-       cout<< "your password is incorrect "<<'\n';
-       return false;
-    }
-        else
-        {
-         ifstream input_file ("user.data",ios::binary);
-         pos1=input_file.tellg();
-         input_file.close();
-         while(pos2<pos1)
-         {
-             pos2=changepass.readuser("user.data",pos2);
-            if(changepass.username==this->username)
-            {
-            this->username=Usernametest;
-            changepass=*this;
-            changepass.writeuser("user.data",(pos2-sizeof(User)));
-            break;
-            }
-          }
-         }
-    //cout*/
-    return true;
-
-}
-
-string User::get_username() const
+const string& User::get_username() const
 {
     return this->username;
 }
 
-string User::get_password() const
+const string & User::get_password() const
 {
     return this->password;
 }
 
-string User::get_role() const
+const string & User::get_role() const
 {
     return this->role;
 }
 
-void User::set_username(const string uname)
+void User::set_username(const string& uname)
 {
     this->username=uname;
     return;
 }
 
-void User::set_password(const string upassword)
+void User::set_password(const string& upassword)
 {
     this->password=upassword;
     return;
 }
 
-void User::set_role(const string urole)
+void User::set_role(const string& urole)
 {
     this->role=urole;
     return;
@@ -193,9 +127,9 @@ void User::push_front_comments(const Comment& comment)
     return;
 }
 
-void User::push_front_favorites(const Commodity commodity)
+void User::push_front_favorites_id(const int commodity)
 {
-    //this->favorites.push_front(commodity);
+    //this->favorites_id.push_front(commodity);
     return;
 }
 
@@ -204,8 +138,8 @@ Comment User::get_comment(int index)
     return this->comments.at(index);
 }
 
-Commodity User::get_commodity(int index)
+int User::get_commodity(int index)
 {
-    return this->favorites.at(index);
+    return this->favorites_id.at(index);
 }
 

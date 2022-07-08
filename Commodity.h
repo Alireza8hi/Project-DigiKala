@@ -2,7 +2,7 @@
 #define COMMODITY_H
 
 #include <QObject>
-#include <deque>
+#include <vector>
 #include "Comment.h"
 #include "Complaint.h"
 #include <ctime>
@@ -11,8 +11,8 @@ class Commodity : public QObject
 {
     Q_OBJECT
 private:
-//    std::deque<Comment> comments;
-//    std::deque<Complaint> complaints;
+//    std::vector<Comment> comments;
+//    std::vector<Complaint> complaints;
     string owner;
     string owner_phone_number;
     int number;

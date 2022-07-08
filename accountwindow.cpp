@@ -21,6 +21,7 @@
 using namespace std;
 
 User* this_user;
+DigiKala site;
 
 AccountWindow::AccountWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -31,7 +32,6 @@ AccountWindow::AccountWindow(QWidget *parent) :
     QString d = QDate::currentDate().toString();
     QLabel *label= new QLabel(d);
     ui->statusbar->addWidget(label);
-
 }
 
 AccountWindow::~AccountWindow()
@@ -54,9 +54,9 @@ void AccountWindow::on_ReturnBtn_triggered()
 void AccountWindow::on_UserSignInBtn_clicked()
 {
     bool isTrue = false;
-    if(ui->UserNameLe->text().toStdString()==site->get_main_admin()->get_username() && ui->PassLe->text().toStdString()==site->get_main_admin()->get_password())
+    if(ui->UserNameLe->text().toStdString()==site.get_main_admin().get_username() && ui->PassLe->text().toStdString()==site.get_main_admin().get_password())
     {
-        this_user = site->get_main_admin();
+        this_user = &site.get_main_admin();
         isTrue = true;
         MainAdminWindow* main_admin_window = new class MainAdminWindow(this);
         QThread* th1 = new QThread();
@@ -68,9 +68,9 @@ void AccountWindow::on_UserSignInBtn_clicked()
         connect(th1,&QThread::started,this,&AccountWindow::hide);
         th1->start();
     }
-    if(ui->UserNameLe->text().toStdString()==site->get_review_admin()->get_username() && ui->PassLe->text().toStdString()==site->get_review_admin()->get_password())
+    if(ui->UserNameLe->text().toStdString()==site.get_review_admin().get_username() && ui->PassLe->text().toStdString()==site.get_review_admin().get_password())
     {
-        this_user = site->get_review_admin();
+        this_user = &site.get_review_admin();
         isTrue = true;
         ReviewAdminWindow* review_admin_window = new class ReviewAdminWindow(this);
         QThread* th1 = new QThread();
@@ -84,9 +84,9 @@ void AccountWindow::on_UserSignInBtn_clicked()
     }
     for(int counter=0;counter<31;counter++)
     {
-        if(ui->UserNameLe->text().toStdString()==site->get_post_admin(counter)->get_username() && ui->PassLe->text().toStdString()==site->get_post_admin(counter)->get_password())
+        if(ui->UserNameLe->text().toStdString()==site.get_post_admin(counter).get_username() && ui->PassLe->text().toStdString()==site.get_post_admin(counter).get_password())
         {
-            this_user = site->get_post_admin(counter);
+            this_user = &site.get_post_admin(counter);
             isTrue = true;
             PostAdminWindow* post_admin_window = new class PostAdminWindow(this);
             QThread* th1 = new QThread();
@@ -99,11 +99,11 @@ void AccountWindow::on_UserSignInBtn_clicked()
             th1->start();
         }
     }
-    for(int counter=0;counter<site->get_num_of_support_admin();counter++)
+    for(int counter=0;counter<site.get_num_of_support_admin();counter++)
     {
-        if(ui->UserNameLe->text().toStdString()==site->get_support_admin(counter)->get_username() && ui->PassLe->text().toStdString()==site->get_support_admin(counter)->get_password())
+        if(ui->UserNameLe->text().toStdString()==site.get_support_admin(counter).get_username() && ui->PassLe->text().toStdString()==site.get_support_admin(counter).get_password())
         {
-            this_user = site->get_support_admin(counter);
+            this_user = &site.get_support_admin(counter);
             isTrue = true;
             SupportAdminWindow* support_admin_window = new class SupportAdminWindow(this);
             QThread* th1 = new QThread();
@@ -116,11 +116,11 @@ void AccountWindow::on_UserSignInBtn_clicked()
             th1->start();
         }
     }
-    for(int counter=0;counter<site->get_num_of_store_admin();counter++)
+    for(int counter=0;counter<site.get_num_of_store_admin();counter++)
     {
-        if(ui->UserNameLe->text().toStdString()==site->get_store_admin(counter)->get_username() && ui->PassLe->text().toStdString()==site->get_store_admin(counter)->get_password())
+        if(ui->UserNameLe->text().toStdString()==site.get_store_admin(counter).get_username() && ui->PassLe->text().toStdString()==site.get_store_admin(counter).get_password())
         {
-            this_user = site->get_store_admin(counter);
+            this_user = &site.get_store_admin(counter);
             isTrue = true;
             StoreAdminWindow* store_admin_window = new class StoreAdminWindow(this);
             QThread* th1 = new QThread();
@@ -133,11 +133,11 @@ void AccountWindow::on_UserSignInBtn_clicked()
             th1->start();
         }
     }
-    for(int counter=0;counter<site->get_num_of_seller();counter++)
+    for(int counter=0;counter<site.get_num_of_seller();counter++)
     {
-        if(ui->UserNameLe->text().toStdString()==site->get_seller(counter)->get_username() && ui->PassLe->text().toStdString()==site->get_seller(counter)->get_password())
+        if(ui->UserNameLe->text().toStdString()==site.get_seller(counter).get_username() && ui->PassLe->text().toStdString()==site.get_seller(counter).get_password())
         {
-            this_user = site->get_seller(counter);
+            this_user = &site.get_seller(counter);
             isTrue = true;
             SellerWindow* seller_window = new class SellerWindow(this);
             QThread* th1 = new QThread();
@@ -150,11 +150,11 @@ void AccountWindow::on_UserSignInBtn_clicked()
             th1->start();
         }
     }
-    for(int counter=0;counter<site->get_num_of_customer();counter++)
+    for(int counter=0;counter<site.get_num_of_customer();counter++)
     {
-        if(ui->UserNameLe->text().toStdString()==site->get_customer(counter)->get_username() && ui->PassLe->text().toStdString()==site->get_customer(counter)->get_password())
+        if(ui->UserNameLe->text().toStdString()==site.get_customer(counter).get_username() && ui->PassLe->text().toStdString()==site.get_customer(counter).get_password())
         {
-            this_user = site->get_customer(counter);
+            this_user = &site.get_customer(counter);
             isTrue = true;
             CustomerWindow* customer_window = new class CustomerWindow(this);
             QThread* th1 = new QThread();

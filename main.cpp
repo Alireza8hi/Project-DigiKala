@@ -1,25 +1,20 @@
 #include "mainwindow.h"
 #include <iostream>
 #include <QApplication>
-#include <ctime>
 #include "Digikala.h"
 #include "profiledialog.h"
 #include "DataBaseUser.h"
 
 using namespace std;
 
-   time_t now = time(0);
-   tm *ltm = localtime(&now);
+extern DigiKala site;
+//extern DataBaseUser data_base_user[1000];
 
 int main(int argc, char *argv[])
 {
-    DataBaseUser data_base_user[1000];
-    data_base_user->readuser("DataBase.data",0);
-    pull_data();
 
+    site.read_digi_kala("DataBase.txt",0);
 
-    ltm->tm_year+=1900;
-    ltm->tm_mon+=1;
 
     QApplication a(argc, argv);
     MainWindow w;

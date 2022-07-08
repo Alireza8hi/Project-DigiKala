@@ -1,4 +1,4 @@
-#ifndef DATABASEUSER_H
+/*#ifndef DATABASEUSER_H
 #define DATABASEUSER_H
 
 #include "Commodity.h"
@@ -10,9 +10,9 @@ public:
     string password;
     string role;
     int income;
-    deque<Comment> comments;
-    deque<Commodity> favorites;
-    deque<Commodity> buy_list;
+    vector<Comment> comments;
+    vector<Commodity> favorites;
+    vector<Commodity> buy_list;
     string name;
     string family;
     string national_code;
@@ -23,16 +23,19 @@ public:
     string province;
     int sex;
 
+    bool is_null;
+
     DataBaseUser();
     ~DataBaseUser();
     int readuser(const char * file , int seekbeg);
     void writeuser(const char * file ,int seekbeg);
 
 public slots:
-       void save_data();
+       static void save_data();
 
 };
 void pull_data();
 void push_data();
 
 #endif // DATABASEUSER_H
+*/

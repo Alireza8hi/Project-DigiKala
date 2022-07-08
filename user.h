@@ -2,7 +2,7 @@
 #define User_H
 
 #include <QObject>
-#include <deque>
+#include <vector>
 #include <fstream>
 #include <iostream>
 #include "human.h"
@@ -19,28 +19,27 @@ private:
     string password;
     string role;
     int income;
-    deque<Comment> comments;
-    deque<Commodity> favorites;
-    deque<Commodity> buy_list;
+    vector<Comment> comments;
+    vector<int> favorites_id;
+    vector<int> buy_list_id;
 public:
     User();
     User(User& other);
+    User(User&& other);
     ~User();
     void set_income(int income);
     int get_income()const;
-    bool change_password();
-    bool change_username();
-    string get_username() const;
-    string get_password() const;
-    string get_role() const;
-    void set_username(const string uname);
-    void set_password(const string upassword);
-    void set_role(const string urole);
+    const string & get_username() const;
+    const string& get_password() const;
+    const string& get_role() const;
+    void set_username(const string& uname);
+    void set_password(const string& upassword);
+    void set_role(const string& urole);
     User& operator=(const User& s);
     void push_front_comments(const Comment& comment);
-    void push_front_favorites(const Commodity commodit);
+    void push_front_favorites_id(const int commodit);
     Comment get_comment(int index);
-    Commodity get_commodity(int index);
+    int get_commodity(int index);
     //حدف کالا فیوریت
     // حذف کامنت
 };

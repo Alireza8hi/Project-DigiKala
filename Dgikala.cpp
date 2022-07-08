@@ -8,35 +8,32 @@ DigiKala::DigiKala()
     this->money = 10000000;
     this->num_of_store_admin = 3;
     this->num_of_support_admin =2;
-    main_admin = new MainAdmin;
-    main_admin->set_name("main_admin");
-    main_admin->set_family("main_admin");
-    main_admin->set_username("main_admin");
-    main_admin->set_address("-");
-    main_admin->set_email("-");
-    main_admin->set_sex(0);
-    main_admin->set_ncode("-");
-    main_admin->set_income(2000);
-    main_admin->set_city("-");
-    main_admin->set_province("-");
-    main_admin->set_role("main_admin");
-    main_admin->set_phone_number("-");
-    main_admin->set_password("main_admin");
-    review_admin = new ReviewAdmin;
-    review_admin->set_name("review_admin");
-    review_admin->set_family("review_admin");
-    review_admin->set_username("review_admin");
-    review_admin->set_address("-");
-    review_admin->set_email("-");
-    review_admin->set_sex(0);
-    review_admin->set_ncode("-");
-    review_admin->set_role("review_admin");
-    review_admin->set_phone_number("-");
-    review_admin->set_password("review_admin");
-    review_admin->set_income(1000);
-    review_admin->set_city("-");
-    review_admin->set_province("-");
-    post_admins = new PostAdmin[31];
+    main_admin.set_name("main_admin");
+    main_admin.set_family("main_admin");
+    main_admin.set_username("main_admin");
+    main_admin.set_address("-");
+    main_admin.set_email("-");
+    main_admin.set_sex(0);
+    main_admin.set_ncode("-");
+    main_admin.set_income(2000);
+    main_admin.set_city("-");
+    main_admin.set_province("-");
+    main_admin.set_role("main_admin");
+    main_admin.set_phone_number("-");
+    main_admin.set_password("main_admin");
+    review_admin.set_name("review_admin");
+    review_admin.set_family("review_admin");
+    review_admin.set_username("review_admin");
+    review_admin.set_address("-");
+    review_admin.set_email("-");
+    review_admin.set_sex(0);
+    review_admin.set_ncode("-");
+    review_admin.set_role("review_admin");
+    review_admin.set_phone_number("-");
+    review_admin.set_password("review_admin");
+    review_admin.set_income(1000);
+    review_admin.set_city("-");
+    review_admin.set_province("-");
     for(int counter = 0;counter<31;counter++)
     {
         post_admins[counter].set_address("-");
@@ -236,77 +233,63 @@ DigiKala::DigiKala()
     store_admins.resize(3);
     for(size_t counter = 0;counter<store_admins.size();counter++)
     {
-        store_admins[counter] = new StoreAdmin;
+        store_admins[counter].set_address("-");
+        store_admins[counter].set_email("-");
+        store_admins[counter].set_sex(0);
+        store_admins[counter].set_ncode("-");
+        store_admins[counter].set_phone_number("-");
+        store_admins[counter].set_income(1500);
+        store_admins[counter].set_city("-");
+        store_admins[counter].set_province("-");
     }
-    for(size_t counter = 0;counter<store_admins.size();counter++)
-    {
-        store_admins[counter]->set_address("-");
-        store_admins[counter]->set_email("-");
-        store_admins[counter]->set_sex(0);
-        store_admins[counter]->set_ncode("-");
-        store_admins[counter]->set_phone_number("-");
-        store_admins[counter]->set_income(1500);
-        store_admins[counter]->set_city("-");
-        store_admins[counter]->set_province("-");
-    }
-    store_admins[0]->set_name("store_admin1");
-    store_admins[0]->set_family("store_admin1");
-    store_admins[0]->set_username("store_admin1");
-    store_admins[0]->set_role("store_admin1");
-    store_admins[0]->set_password("store_admin1");
-    store_admins[1]->set_name("store_admin2");
-    store_admins[1]->set_family("store_admin2");
-    store_admins[1]->set_username("store_admin2");
-    store_admins[1]->set_role("store_admin2");
-    store_admins[1]->set_password("store_admin2");
-    store_admins[2]->set_name("store_admin3");
-    store_admins[2]->set_family("store_admin3");
-    store_admins[2]->set_username("store_admin3");
-    store_admins[2]->set_role("store_admin3");
-    store_admins[2]->set_password("store_admin3");
+    store_admins[0].set_name("store_admin1");
+    store_admins[0].set_family("store_admin1");
+    store_admins[0].set_username("store_admin1");
+    store_admins[0].set_role("store_admin1");
+    store_admins[0].set_password("store_admin1");
+    store_admins[1].set_name("store_admin2");
+    store_admins[1].set_family("store_admin2");
+    store_admins[1].set_username("store_admin2");
+    store_admins[1].set_role("store_admin2");
+    store_admins[1].set_password("store_admin2");
+    store_admins[2].set_name("store_admin3");
+    store_admins[2].set_family("store_admin3");
+    store_admins[2].set_username("store_admin3");
+    store_admins[2].set_role("store_admin3");
+    store_admins[2].set_password("store_admin3");
     support_admins.resize(2);
     for(size_t counter = 0;counter<support_admins.size();counter++)
     {
-        support_admins[counter] = new SupportAdmin;
+        support_admins[counter].set_address("-");
+        support_admins[counter].set_email("-");
+        support_admins[counter].set_sex(0);
+        support_admins[counter].set_ncode("-");
+        support_admins[counter].set_phone_number("-");
+        support_admins[counter].set_income(1200);
+        support_admins[counter].set_city("-");
+        support_admins[counter].set_province("-");
     }
-    for(size_t counter = 0;counter<support_admins.size();counter++)
-    {
-        support_admins[counter]->set_address("-");
-        support_admins[counter]->set_email("-");
-        support_admins[counter]->set_sex(0);
-        support_admins[counter]->set_ncode("-");
-        support_admins[counter]->set_phone_number("-");
-        support_admins[counter]->set_income(1200);
-        support_admins[counter]->set_city("-");
-        support_admins[counter]->set_province("-");
-    }
-    support_admins[0]->set_name("support_admin1");
-    support_admins[0]->set_family("support_admin1");
-    support_admins[0]->set_username("support_admin1");
-    support_admins[0]->set_role("support_admin1");
-    support_admins[0]->set_password("support_admin1");
-    support_admins[1]->set_name("support_admin2");
-    support_admins[1]->set_family("support_admin2");
-    support_admins[1]->set_username("support_admin2");
-    support_admins[1]->set_role("support_admin2");
-    support_admins[1]->set_password("support_admin2");
+    support_admins[0].set_name("support_admin1");
+    support_admins[0].set_family("support_admin1");
+    support_admins[0].set_username("support_admin1");
+    support_admins[0].set_role("support_admin1");
+    support_admins[0].set_password("support_admin1");
+    support_admins[1].set_name("support_admin2");
+    support_admins[1].set_family("support_admin2");
+    support_admins[1].set_username("support_admin2");
+    support_admins[1].set_role("support_admin2");
+    support_admins[1].set_password("support_admin2");
     return;
-}
-
-DigiKala& DigiKala::make_object()
-{
-    static DigiKala digi_kala;
-    return digi_kala;
 }
 
 //void DigiKala::show_commodity(string name_commodity, bool elcectric, bool available, int id_commodity, string category_commodity, long max_cost,int min_cost)
 //{
-//    deque<Commodity> commodity;
+//    vector<Commodity> commodity;
 //    int end=0;
-//    if(size(site->commodities)==0)
+//    if(size(site.commodities)==0)
 //    {
 //        QMessageBox * msg_error = new QMessageBox(QMessageBox::Critical,"Error","There is no product in the program",QMessageBox::Ok|QMessageBox::Cancel);
-//        msg_error->show();
+//        msg_error.show();
 //        connect(msg_error,&QMessageBox::buttonClicked,msg_error,&QMessageBox::deleteLater,Qt::QueuedConnection);
 //        end=1;
 //    }
@@ -530,59 +513,59 @@ int DigiKala::get_money() const
     return this->money;
 }
 
-User* DigiKala::get_main_admin()
+User& DigiKala::get_main_admin()
 {
     return this->main_admin;
 }
 
-User* DigiKala::get_review_admin()
+User& DigiKala::get_review_admin()
 {
     return this->review_admin;
 }
 
-User *DigiKala::get_post_admin(int number)
+User& DigiKala::get_post_admin(int number)
 {
-    return &this->post_admins[number];
+    return this->post_admins[number];
 }
 
-User* DigiKala::get_support_admin(int number)
+User& DigiKala::get_support_admin(int number)
 {
     return this->support_admins[number];
 }
 
-User *DigiKala::get_store_admin(int number)
+User& DigiKala::get_store_admin(int number)
 {
     return this->store_admins[number];
 }
 
-User *DigiKala::get_customer(int number)
+User& DigiKala::get_customer(int number)
 {
     return this->customers[number];
 }
 
-User *DigiKala::get_seller(int number)
+User& DigiKala::get_seller(int number)
 {
     return this->sellers[number];
 }
 
-void DigiKala::set_commodities(deque<Commodity> commodities)
+void DigiKala::set_commodities(vector<Commodity> commodities)
 {
 //    this->commodities = commodities;
     return;
 }
 
-//deque<Commodity> DigiKala::get_commodities() const
+//vector<Commodity> DigiKala::get_commodities() const
 //{
 //    return this->commodities;
 //}
 
-void DigiKala::set_sold_commodities_id(deque<int> sold_commodities_id)
+void DigiKala::set_sold_commodities_id(vector<int> sold_commodities_id)
 {
     this->sold_commodities_id = sold_commodities_id;
     return;
 }
 
-deque<int> DigiKala::get_sold_commodities_id() const
+vector<int> DigiKala::get_sold_commodities_id() const
 {
     return this->sold_commodities_id;
 }
@@ -591,20 +574,19 @@ void DigiKala::add_customer(string name, string family, string username, string 
 {
     int numberc = this->num_of_customer;
     this->customers.resize(numberc+1);
-    this->customers[this->num_of_customer] = new Customer;
-    this->customers[this->num_of_customer]->set_role("customer");
-    this->customers[this->num_of_customer]->set_income(0);
-    this->customers[this->num_of_customer]->set_name(name);
-    this->customers[this->num_of_customer]->set_family(family);
-    this->customers[this->num_of_customer]->set_username(username);
-    this->customers[this->num_of_customer]->set_password(password);
-    this->customers[this->num_of_customer]->set_address(address);
-    this->customers[this->num_of_customer]->set_city(city);
-    this->customers[this->num_of_customer]->set_province(province);
-    this->customers[this->num_of_customer]->set_ncode(national_code);
-    this->customers[this->num_of_customer]->set_phone_number(phone_number);
-    this->customers[this->num_of_customer]->set_email(email);
-    this->customers[this->num_of_customer]->set_sex(sex);
+    this->customers[this->num_of_customer].set_role("customer");
+    this->customers[this->num_of_customer].set_income(0);
+    this->customers[this->num_of_customer].set_name(name);
+    this->customers[this->num_of_customer].set_family(family);
+    this->customers[this->num_of_customer].set_username(username);
+    this->customers[this->num_of_customer].set_password(password);
+    this->customers[this->num_of_customer].set_address(address);
+    this->customers[this->num_of_customer].set_city(city);
+    this->customers[this->num_of_customer].set_province(province);
+    this->customers[this->num_of_customer].set_ncode(national_code);
+    this->customers[this->num_of_customer].set_phone_number(phone_number);
+    this->customers[this->num_of_customer].set_email(email);
+    this->customers[this->num_of_customer].set_sex(sex);
     this->set_num_of_customer(numberc+1);
     return;
 }
@@ -613,21 +595,38 @@ void DigiKala::add_seller(string name, string family, string username, string pa
 {
     int numbers = this->num_of_seller;
     this->sellers.resize(numbers+1);
-    this->sellers[this->num_of_seller] = new Seller;
-    this->sellers[this->num_of_seller]->set_role("seller");
-    this->sellers[this->num_of_seller]->set_income(0);
-    this->sellers[this->num_of_seller]->set_name(name);
-    this->sellers[this->num_of_seller]->set_family(family);
-    this->sellers[this->num_of_seller]->set_username(username);
-    this->sellers[this->num_of_seller]->set_password(password);
-    this->sellers[this->num_of_seller]->set_address(address);
-    this->sellers[this->num_of_seller]->set_city(city);
-    this->sellers[this->num_of_seller]->set_province(province);
-    this->sellers[this->num_of_seller]->set_ncode(national_code);
-    this->sellers[this->num_of_seller]->set_phone_number(phone_number);
-    this->sellers[this->num_of_seller]->set_email(email);
-    this->sellers[this->num_of_seller]->set_sex(sex);
+    this->sellers[this->num_of_seller].set_role("seller");
+    this->sellers[this->num_of_seller].set_income(0);
+    this->sellers[this->num_of_seller].set_name(name);
+    this->sellers[this->num_of_seller].set_family(family);
+    this->sellers[this->num_of_seller].set_username(username);
+    this->sellers[this->num_of_seller].set_password(password);
+    this->sellers[this->num_of_seller].set_address(address);
+    this->sellers[this->num_of_seller].set_city(city);
+    this->sellers[this->num_of_seller].set_province(province);
+    this->sellers[this->num_of_seller].set_ncode(national_code);
+    this->sellers[this->num_of_seller].set_phone_number(phone_number);
+    this->sellers[this->num_of_seller].set_email(email);
+    this->sellers[this->num_of_seller].set_sex(sex);
     this->set_num_of_seller(numbers+1);
     return;
 }
 
+int DigiKala::read_digi_kala(const char * file , int seekbeg )
+{
+    ifstream input_file(file,ios::binary |ios::app);
+    input_file.seekg(seekbeg , input_file.beg);
+    input_file.read((char*)this,sizeof(DigiKala));
+    int seekend=input_file.tellg();
+    input_file.close();
+    return seekend;
+}
+
+void DigiKala::write_digi_kala(const char * file,int seekbeg)
+{
+    ofstream output_file(file,ios::binary |ios::out |ios::app );
+    output_file.seekp(seekbeg);
+    output_file.write((char*)this,sizeof(DigiKala));
+    output_file.close();
+    return;
+}

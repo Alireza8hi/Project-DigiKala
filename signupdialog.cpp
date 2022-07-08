@@ -170,41 +170,41 @@ void SignUpDialog::on_SeeRulesBtn_clicked()
 void SignUpDialog::on_OkBtn_clicked()
 {
     bool repeat;
-    if(ui->UsernameLe->text().toStdString()==site->get_main_admin()->get_username() || ui->UsernameLe->text().toStdString()==site->get_review_admin()->get_username())
+    if(ui->UsernameLe->text().toStdString()==site.get_main_admin().get_username() || ui->UsernameLe->text().toStdString()==site.get_review_admin().get_username())
     {
         repeat = true;
     }
     for(int counter = 0;counter<31;counter++)
     {
-        if(ui->UsernameLe->text().toStdString()==site->get_post_admin(counter)->get_username())
+        if(ui->UsernameLe->text().toStdString()==site.get_post_admin(counter).get_username())
         {
             repeat = true;
         }
     }
-    for(int counter = 0;counter<site->get_num_of_store_admin();counter++)
+    for(int counter = 0;counter<site.get_num_of_store_admin();counter++)
     {
-        if(ui->UsernameLe->text().toStdString()==site->get_store_admin(counter)->get_username())
+        if(ui->UsernameLe->text().toStdString()==site.get_store_admin(counter).get_username())
         {
             repeat = true;
         }
     }
-    for(int counter = 0;counter<site->get_num_of_support_admin();counter++)
+    for(int counter = 0;counter<site.get_num_of_support_admin();counter++)
     {
-        if(ui->UsernameLe->text().toStdString()==site->get_support_admin(counter)->get_username())
+        if(ui->UsernameLe->text().toStdString()==site.get_support_admin(counter).get_username())
         {
             repeat = true;
         }
     }
-    for(int counter = 0;counter<site->get_num_of_seller();counter++)
+    for(int counter = 0;counter<site.get_num_of_seller();counter++)
     {
-        if(ui->UsernameLe->text().toStdString()==site->get_seller(counter)->get_username())
+        if(ui->UsernameLe->text().toStdString()==site.get_seller(counter).get_username())
         {
             repeat = true;
         }
     }
-    for(int counter = 0;counter<site->get_num_of_customer();counter++)
+    for(int counter = 0;counter<site.get_num_of_customer();counter++)
     {
-        if(ui->UsernameLe->text().toStdString()==site->get_customer(counter)->get_username())
+        if(ui->UsernameLe->text().toStdString()==site.get_customer(counter).get_username())
         {
             repeat = true;
         }
@@ -219,12 +219,13 @@ void SignUpDialog::on_OkBtn_clicked()
     {
     if(rule=="customer")
     {
-        site->add_customer(ui->NameLe->text().toStdString(),ui->FNameLe->text().toStdString(),ui->UsernameLe->text().toStdString(),ui->PassLe->text().toStdString(),ui->AddressLe->text().toStdString(),ui->CityLe->text().toStdString(),ui->StateLe->text().toStdString(),ui->NationalCodeLe->text().toStdString(),ui->PhoneLe->text().toStdString(),ui->EmailLe->text().toStdString(), sex);
+        site.add_customer(ui->NameLe->text().toStdString(),ui->FNameLe->text().toStdString(),ui->UsernameLe->text().toStdString(),ui->PassLe->text().toStdString(),ui->AddressLe->text().toStdString(),ui->CityLe->text().toStdString(),ui->StateLe->text().toStdString(),ui->NationalCodeLe->text().toStdString(),ui->PhoneLe->text().toStdString(),ui->EmailLe->text().toStdString(), sex);
     }
     else
     {
-        site->add_seller(ui->NameLe->text().toStdString(),ui->FNameLe->text().toStdString(),ui->UsernameLe->text().toStdString(),ui->PassLe->text().toStdString(),ui->AddressLe->text().toStdString(),ui->CityLe->text().toStdString(),ui->StateLe->text().toStdString(),ui->NationalCodeLe->text().toStdString(),ui->PhoneLe->text().toStdString(),ui->EmailLe->text().toStdString(), sex);
+        site.add_seller(ui->NameLe->text().toStdString(),ui->FNameLe->text().toStdString(),ui->UsernameLe->text().toStdString(),ui->PassLe->text().toStdString(),ui->AddressLe->text().toStdString(),ui->CityLe->text().toStdString(),ui->StateLe->text().toStdString(),ui->NationalCodeLe->text().toStdString(),ui->PhoneLe->text().toStdString(),ui->EmailLe->text().toStdString(), sex);
     }
+    site.write_digi_kala("DataBase.txt",0);
     QMessageBox * msg_error = new QMessageBox(QMessageBox::Information,"Success"," Your registration was successful ",QMessageBox::Ok,this);
     msg_error->show();
     connect(msg_error,&QMessageBox::buttonClicked,msg_error,&QMessageBox::deleteLater,Qt::QueuedConnection);

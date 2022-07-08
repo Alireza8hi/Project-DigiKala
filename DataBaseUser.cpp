@@ -1,11 +1,11 @@
-#include "DataBaseUser.h"
+/*#include "DataBaseUser.h"
 #include "Digikala.h"
 
 DataBaseUser data_base_user[1000];
-DataBaseOther data_base_other;
 
 DataBaseUser::DataBaseUser()
 {
+    is_null = true;
     return;
 }
 
@@ -16,16 +16,17 @@ DataBaseUser::~DataBaseUser()
 
 int DataBaseUser::readuser(const char * file , int seekbeg )
 {
-    if(file!=NULL)
-    {
     ifstream input_file(file,ios::binary |ios::app);
     input_file.seekg(seekbeg , input_file.beg);
     input_file.read((char*)this,sizeof(DataBaseUser[1000]));
     int seekend=input_file.tellg();
     input_file.close();
-    return seekend;
+    if(is_null==false)
+    {
+    site->read_digi_kala("DataBase2.data",0);
+    //pull_data();
     }
-    return 0;
+    return seekend;
 }
 
 void DataBaseUser::writeuser(const char * file,int seekbeg)
@@ -35,21 +36,11 @@ void DataBaseUser::writeuser(const char * file,int seekbeg)
     output_file.write((char*)this,sizeof(DataBaseUser[1000]));
     output_file.close();
     return;
-}
-
+}*/
+/*
 void push_data()
 {
-    //data_base_other.commodities = site.get
-    data_base_other.sold_commodities_id = site->get_sold_commodities_id();
-    data_base_other.num_of_seller = site->get_num_of_seller();
-    data_base_other.num_of_customer = site->get_num_of_customer();
-    data_base_other.num_of_support_admin = site->get_num_of_support_admin();
-    data_base_other.num_of_store_admin = site->get_num_of_store_admin();
-    data_base_other.num_of_commodities = site->get_num_of_commodities();
-    data_base_other.num_of_sold_commodities = site->get_num_of_sold_commodities();
-    data_base_other.num_of_admins = site->get_num_of_admins();
-    data_base_other.site_income = site->get_income();
-    data_base_other.money = site->get_money();
+    data_base_user[0].is_null = false;
     int num_user = 0;
     data_base_user[num_user].username = site->get_main_admin()->get_username();
     data_base_user[num_user].password  = site->get_main_admin()->get_password();
@@ -189,17 +180,6 @@ void push_data()
 }
 void pull_data()
 {
-    //site->set_commodities(data_base_other.commodities);
-    site->set_sold_commodities_id(data_base_other.sold_commodities_id);
-    site->set_num_of_seller(data_base_other.num_of_seller);
-    site->set_num_of_customer(data_base_other.num_of_customer);
-    site->set_num_of_support_admin(data_base_other.num_of_support_admin);
-    site->set_num_of_store_admin(data_base_other.num_of_store_admin);
-    site->set_num_of_commodities(data_base_other.num_of_commodities);
-    site->set_num_of_sold_commodities(data_base_other.num_of_sold_commodities);
-    site->set_num_of_admins(data_base_other.num_of_admins);
-    site->set_income(data_base_other.site_income);
-    site->set_money(data_base_other.money);
     int num_user = 0;
     site->get_main_admin()->set_username(data_base_user[num_user].username);
     site->get_main_admin()->set_password(data_base_user[num_user].password);
@@ -340,7 +320,6 @@ void pull_data()
 
 void DataBaseUser::save_data()
 {
-    push_data();
-    data_base_user->writeuser("DataBase.data",0);
+    site->write_digi_kala("DataBase2.data",0);
     return;
-}
+}*/
