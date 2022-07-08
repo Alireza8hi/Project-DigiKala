@@ -2,6 +2,7 @@
 #include "CartDialog.h"
 #include "allcommoditywindow.h"
 #include "categorywindow.h"
+#include "editcommoditydialog.h"
 #include "listofcommoditiesdialog.h"
 #include "messagesdialog.h"
 #include "profiledialog.h"
@@ -80,6 +81,13 @@ void SellerWindow::on_DeletedCommoditieBtn_clicked()
 void SellerWindow::on_CommoditiesExpireBtn_clicked()
 {
     ListOFCommoditiesDialog *a = new ListOFCommoditiesDialog(this);
+    a->show();
+}
+
+
+void SellerWindow::on_SellCommodityBtn_clicked()
+{
+    EditCommodityDialog *a = new EditCommodityDialog(this);
     a->show();
 }
 

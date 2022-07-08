@@ -140,7 +140,7 @@ background-image: url(:/Pics/Pics/hand-painted-background-violet-orange-colours_
          <string notr="true">color: rgb(0, 0, 0);</string>
         </property>
         <property name="text">
-         <string>فروش کالا!!</string>
+         <string>فروش کالا</string>
         </property>
         <property name="icon">
          <iconset resource="icons.qrc">

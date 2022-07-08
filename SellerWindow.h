@@ -34,6 +34,8 @@ private slots:
 
     void on_CommoditiesExpireBtn_clicked();
 
+    void on_SellCommodityBtn_clicked();
+
 private:
     Ui::SellerWindow *ui;
 };

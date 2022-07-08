@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>723</width>
-    <height>543</height>
+    <width>752</width>
+    <height>616</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -189,20 +189,6 @@ background-color: rgb(0, 0, 127);</string>
         </property>
        </widget>
       </item>
-      <item row="6" column="2">
-       <widget class="QPushButton" name="EditCommodityBtn">
-        <property name="styleSheet">
-         <string notr="true">color: rgb(0, 0, 0);</string>
-        </property>
-        <property name="text">
-         <string>تغییر در کالا!!</string>
-        </property>
-        <property name="icon">
-         <iconset resource="icons.qrc">
-          <normaloff>:/Icons/Icons/edit-icon-png-24.png</normaloff>:/Icons/Icons/edit-icon-png-24.png</iconset>
-        </property>
-       </widget>
-      </item>
       <item row="7" column="1">
        <spacer name="horizontalSpacer">
         <property name="orientation">
@@ -272,6 +258,41 @@ background-color: rgb(0, 0, 127);</string>
         </item>
         <item>
          <widget class="QPushButton" name="SellCommodityConfirmBtn">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(0, 0, 0);</string>
+          </property>
+          <property name="text">
+           <string>تایید</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="6" column="2">
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QPushButton" name="EditCommodityBtn">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(0, 0, 0);</string>
+          </property>
+          <property name="text">
+           <string>تغییر در کالا</string>
+          </property>
+          <property name="icon">
+           <iconset resource="icons.qrc">
+            <normaloff>:/Icons/Icons/edit-icon-png-24.png</normaloff>:/Icons/Icons/edit-icon-png-24.png</iconset>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="EditCommodityLe">
+          <property name="inputMask">
+           <string>کد کالا را وارد کنید</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="EditCommodityConfirmBtn">
           <property name="styleSheet">
            <string notr="true">color: rgb(0, 0, 0);</string>
           </property>
@@ -368,7 +389,7 @@ background-color: rgb(0, 0, 127);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>723</width>
+     <width>752</width>
      <height>25</height>
     </rect>
    </property>
@@ -532,6 +553,22 @@ background-color: rgb(0, 0, 127);</string>
     <hint type="destinationlabel">
      <x>319</x>
      <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>EditCommodityConfirmBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>StoreAdminWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>525</x>
+     <y>339</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>361</x>
+     <y>271</y>
     </hint>
    </hints>
   </connection>
