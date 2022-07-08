@@ -41,6 +41,7 @@ ProfileDialog::~ProfileDialog()
 
 void ProfileDialog::on_EditPhoneBtn_clicked()
 {
+    this_user->set_phone_number(ui->PhoneLe->text().toStdString());
     if(ui->PhoneLe->isReadOnly() == false)
     {
         ui->PhoneLe->setReadOnly(true);
@@ -54,6 +55,7 @@ void ProfileDialog::on_EditPhoneBtn_clicked()
 
 void ProfileDialog::on_EditStateBtn_clicked()
 {
+    this_user->set_province(ui->StateLe->text().toStdString());
     if(ui->StateLe->isReadOnly() == false)
     {
         ui->StateLe->setReadOnly(true);
@@ -67,6 +69,7 @@ void ProfileDialog::on_EditStateBtn_clicked()
 
 void ProfileDialog::on_EditCityBtn_clicked()
 {
+    this_user->set_city(ui->CityLe->text().toStdString());
     if(ui->CityLe->isReadOnly() == false)
     {
         ui->CityLe->setReadOnly(true);
@@ -80,6 +83,7 @@ void ProfileDialog::on_EditCityBtn_clicked()
 
 void ProfileDialog::on_EditAddressBtn_clicked()
 {
+    this_user->set_address(ui->AddressLe->text().toStdString());
     if(ui->AddressLe->isReadOnly() == false)
     {
         ui->AddressLe->setReadOnly(true);
@@ -93,6 +97,7 @@ void ProfileDialog::on_EditAddressBtn_clicked()
 
 void ProfileDialog::on_EditEmailBtn_clicked()
 {
+    this_user->set_email(ui->EmailLe->text().toStdString());
     if(ui->EmailLe->isReadOnly() == false)
     {
         ui->EmailLe->setReadOnly(true);
@@ -111,7 +116,7 @@ void ProfileDialog::on_EditPassBtn_clicked()
         ui->PassLe->setReadOnly(true);
         ui->NewPassLe->setEnabled(false);
         ui->NewPassConLe->setEnabled(false);
-        //inja code bara taghir ramz
+        this_user->set_password(ui->NewPassLe->text().toStdString());
         ui->NewPassLe->clear();
         ui->NewPassConLe->clear();
     }
@@ -125,6 +130,7 @@ void ProfileDialog::on_EditPassBtn_clicked()
 
 void ProfileDialog::on_EditNameBtn_clicked()
 {
+    this_user->set_name(ui->NameLe->text().toStdString());
     if(ui->NameLe->isReadOnly() == false)
     {
         ui->NameLe->setReadOnly(true);
@@ -138,6 +144,7 @@ void ProfileDialog::on_EditNameBtn_clicked()
 
 void ProfileDialog::on_EditFNameBtn_clicked()
 {
+    this_user->set_family(ui->FNameLe->text().toStdString());
     if(ui->FNameLe->isReadOnly() == false)
     {
         ui->FNameLe->setReadOnly(true);
@@ -151,6 +158,18 @@ void ProfileDialog::on_EditFNameBtn_clicked()
 
 void ProfileDialog::on_EditSexBtn_clicked()
 {
+    if(ui->SexCombo->currentText()=="مایل به گفتن نیستم")
+    {
+        this_user->set_sex(0);
+    }
+    else if(ui->SexCombo->currentText()=="مرد")
+    {
+        this_user->set_sex(1);
+    }
+    else
+    {
+        this_user->set_sex(2);
+    }
     if(ui->SexCombo->isEnabled() == false)
     {
         ui->SexCombo->setEnabled(true);
@@ -164,6 +183,7 @@ void ProfileDialog::on_EditSexBtn_clicked()
 
 void ProfileDialog::on_EditNationalCodeBtn_clicked()
 {
+    this_user->set_ncode(ui->NationalCodeLe->text().toStdString());
     if(ui->NationalCodeLe->isReadOnly() == false)
     {
         ui->NationalCodeLe->setReadOnly(true);
@@ -212,40 +232,35 @@ void ProfileDialog::on_ReturnBtn_clicked()
 
 void ProfileDialog::on_PhoneLe_textChanged(const QString &arg1)
 {
-    if (ui->PhoneLe->text().size() != 11)
-    {
-        ui->EditPhoneBtn->setDisabled(true);
-    }
-    else
-    {
-        ui->EditPhoneBtn->setDisabled(false);
-    }
+//    if (ui->PhoneLe->text().size() != 11)
+//    {
+//        ui->EditPhoneBtn->setDisabled(true);
+//    }
+//    else
+//    {
+//        ui->EditPhoneBtn->setDisabled(false);
+//    }
+    return;
 }
 
 
 void ProfileDialog::on_NationalCodeLe_textChanged(const QString &arg1)
 {
-    if (ui->NationalCodeLe->text().size() != 11)
-    {
-        ui->EditNationalCodeBtn->setDisabled(true);
-    }
-    else
-    {
-        ui->EditNationalCodeBtn->setDisabled(false);
-    }
+    return;
 }
 
 
 void ProfileDialog::on_EmailLe_textChanged(const QString &arg1)
 {
-    if (IsEmailValid(ui->EmailLe->text().toStdString()) == true)
-    {
-        ui->EditEmailBtn->setDisabled(false);
-    }
-    else
-    {
-        ui->EditEmailBtn->setDisabled(true);
-    }
+//    if (IsEmailValid(ui->EmailLe->text().toStdString()) == true)
+//    {
+//        ui->EditEmailBtn->setDisabled(false);
+//    }
+//    else
+//    {
+//        ui->EditEmailBtn->setDisabled(true);
+//    }
+    return;
 }
 
 
@@ -303,7 +318,7 @@ void ProfileDialog::on_CityLe_textChanged(const QString &arg1)
 
 void ProfileDialog::on_AddressLe_textChanged()
 {
-    if(ui->AddressLe->toPlainText().size() > 0)
+    if(ui->AddressLe->text().size() > 0)
     {
         ui->EditAddressBtn->setEnabled(true);
     }
