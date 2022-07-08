@@ -1,7 +1,7 @@
 #include <QMessageBox>
 #include <QValidator>
 #include "signupdialog.h"
-#include "signuprules.h"
+#include "tobeknowndialog.h"
 #include "ui_signupdialog.h"
 #include "Digikala.h"
 #include "User.h"
@@ -163,7 +163,7 @@ void SignUpDialog::on_CityLe_textChanged(const QString &arg1)
 
 void SignUpDialog::on_SeeRulesBtn_clicked()
 {
-    SignUpRules *SUR = new SignUpRules(this);
+    ToBeKnownDialog *SUR = new ToBeKnownDialog(this , 1);
     SUR->show();
 }
 

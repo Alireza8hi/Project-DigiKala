@@ -293,7 +293,7 @@ border-image: url(:/Pics/Pics/modern-white-background-free-vector.webp);</string
     </property>
     <widget class="QMenu" name="menu_2">
      <property name="title">
-      <string>پرسش های متداول!!</string>
+      <string>پرسش های متداول</string>
      </property>
      <property name="icon">
       <iconset resource="icons.qrc">
@@ -307,7 +307,7 @@ border-image: url(:/Pics/Pics/modern-white-background-free-vector.webp);</string
     </widget>
     <widget class="QMenu" name="menu_3">
      <property name="title">
-      <string>تماس با ما!!</string>
+      <string>تماس با ما</string>
      </property>
      <property name="icon">
       <iconset resource="icons.qrc">
@@ -343,7 +343,7 @@ border-image: url(:/Pics/Pics/modern-white-background-free-vector.webp);</string
      <normaloff>:/Icons/Icons/clipboard-files-and-folders.png</normaloff>:/Icons/Icons/clipboard-files-and-folders.png</iconset>
    </property>
    <property name="text">
-    <string>حریم خصوصی!!</string>
+    <string>حریم خصوصی</string>
    </property>
   </action>
   <action name="TermOfUseAct">
@@ -352,7 +352,7 @@ border-image: url(:/Pics/Pics/modern-white-background-free-vector.webp);</string
      <normaloff>:/Icons/Icons/clipboard.png</normaloff>:/Icons/Icons/clipboard.png</iconset>
    </property>
    <property name="text">
-    <string>شرایط استفاده!!</string>
+    <string>شرایط استفاده</string>
    </property>
   </action>
   <action name="ExitAct">

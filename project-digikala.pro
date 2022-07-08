@@ -46,7 +46,7 @@ SOURCES += \
     profiledialog.cpp \
     searchdialog.cpp \
     signupdialog.cpp \
-    signuprules.cpp \
+    tobeknowndialog.cpp \
     wishlistdialog.cpp
 
 HEADERS += \
@@ -85,7 +85,7 @@ HEADERS += \
     profiledialog.h \
     searchdialog.h \
     signupdialog.h \
-    signuprules.h \
+    tobeknowndialog.h \
     wishlistdialog.h
 
 FORMS += \
@@ -109,7 +109,7 @@ FORMS += \
     profiledialog.ui \
     searchdialog.ui \
     signupdialog.ui \
-    signuprules.ui \
+    tobeknowndialog.ui \
     wishlistdialog.ui
 
 # Default rules for deployment.

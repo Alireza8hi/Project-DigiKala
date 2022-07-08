@@ -272,6 +272,9 @@ background-color: rgb(0, 0, 127);</string>
         </item>
         <item>
          <widget class="QPushButton" name="SellCommodityConfirmBtn">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(0, 0, 0);</string>
+          </property>
           <property name="text">
            <string>تایید</string>
           </property>
