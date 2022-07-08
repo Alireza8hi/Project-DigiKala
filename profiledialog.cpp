@@ -3,7 +3,6 @@
 #include "ui_profiledialog.h"
 #include "signupdialog.h"
 #include "accountwindow.h"
-#include "DataBaseUser.h"
 
 ProfileDialog::ProfileDialog(QWidget *parent) :
     QDialog(parent),

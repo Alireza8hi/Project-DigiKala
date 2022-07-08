@@ -1,9 +1,9 @@
 #include <QMessageBox>
 #include <QValidator>
+#include "Digikala.h"
 #include "signupdialog.h"
 #include "tobeknowndialog.h"
 #include "ui_signupdialog.h"
-#include "Digikala.h"
 #include "User.h"
 #include <iostream>
 #include <QThread>

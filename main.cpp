@@ -3,7 +3,6 @@
 #include <QApplication>
 #include "Digikala.h"
 #include "profiledialog.h"
-#include "DataBaseUser.h"
 
 using namespace std;
 

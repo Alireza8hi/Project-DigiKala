@@ -230,8 +230,7 @@ DigiKala::DigiKala()
     post_admins[30].set_role("post_admin31");
     post_admins[30].set_password("post_admin31");
     post_admins[30].set_province("Sistan and Baluchestan");
-    store_admins.resize(3);
-    for(size_t counter = 0;counter<store_admins.size();counter++)
+    for(size_t counter = 0;counter<site.get_num_of_store_admin();counter++)
     {
         store_admins[counter].set_address("-");
         store_admins[counter].set_email("-");
@@ -257,8 +256,7 @@ DigiKala::DigiKala()
     store_admins[2].set_username("store_admin3");
     store_admins[2].set_role("store_admin3");
     store_admins[2].set_password("store_admin3");
-    support_admins.resize(2);
-    for(size_t counter = 0;counter<support_admins.size();counter++)
+    for(size_t counter = 0;counter<site.get_num_of_support_admin();counter++)
     {
         support_admins[counter].set_address("-");
         support_admins[counter].set_email("-");
@@ -548,32 +546,31 @@ User& DigiKala::get_seller(int number)
     return this->sellers[number];
 }
 
-void DigiKala::set_commodities(deque<Commodity> commodities)
-{
+//void DigiKala::set_commodities(Commodity commodities)
+//{
 //    this->commodities = commodities;
-    return;
-}
+//    return;
+//}
 
 //vector<Commodity> DigiKala::get_commodities() const
 //{
 //    return this->commodities;
 //}
 
-void DigiKala::set_sold_commodities_id(deque<int> sold_commodities_id)
+void DigiKala::set_sold_commodities_id(int sold_commodities_id[100000])
 {
-    this->sold_commodities_id = sold_commodities_id;
+    this->sold_commodities_id[100000] = sold_commodities_id[100000];
     return;
 }
 
-deque<int> DigiKala::get_sold_commodities_id() const
+int DigiKala::get_sold_commodities_id(int number) const
 {
-    return this->sold_commodities_id;
+    return this->sold_commodities_id[number];
 }
 
 void DigiKala::add_customer(string name, string family, string username, string password, string address, string city, string province, string national_code, string phone_number, string email, int sex)
 {
     int numberc = this->num_of_customer;
-    this->customers.resize(numberc+1);
     this->customers[this->num_of_customer].set_role("customer");
     this->customers[this->num_of_customer].set_income(0);
     this->customers[this->num_of_customer].set_name(name);
@@ -594,7 +591,6 @@ void DigiKala::add_customer(string name, string family, string username, string 
 void DigiKala::add_seller(string name, string family, string username, string password, string address, string city, string province, string national_code, string phone_number, string email, int sex)
 {
     int numbers = this->num_of_seller;
-    this->sellers.resize(numbers+1);
     this->sellers[this->num_of_seller].set_role("seller");
     this->sellers[this->num_of_seller].set_income(0);
     this->sellers[this->num_of_seller].set_name(name);
@@ -625,7 +621,7 @@ int DigiKala::read_digi_kala(const char * file , int seekbeg )
 void DigiKala::write_digi_kala(const char * file,int seekbeg)
 {
     ofstream output_file(file,ios::binary );
-    //output_file.seekp(seekbeg);
+    output_file.seekp(seekbeg);
     output_file.write((char*)this,sizeof(DigiKala));
     output_file.close();
     return;
