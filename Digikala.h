@@ -5,7 +5,7 @@
 #include<QMessageBox>
 #include<QAbstractButton>
 #include"Commodity.h"
-#include <vector>
+#include <deque>
 #include <User.h>
 #include "DataBaseUser.h"
 #include "ReviewAdmin.h"
@@ -25,12 +25,12 @@ private:
     User main_admin;
     User review_admin;
     User post_admins[31];
-    vector<User> store_admins;
-    vector<User> support_admins;
-    vector<User> customers;
-    vector<User> sellers;
-    vector<Commodity> commodities;
-    vector<int> sold_commodities_id;
+    deque<User> store_admins;
+    deque<User> support_admins;
+    deque<User> customers;
+    deque<User> sellers;
+    deque<Commodity> commodities;
+    deque<int> sold_commodities_id;
     int num_of_seller;
     int num_of_customer;
     int num_of_support_admin;
@@ -70,10 +70,10 @@ public:
     User& get_store_admin(int number);
     User& get_customer(int number);
     User& get_seller(int number);
-    void set_commodities(vector<Commodity> commodities);
+    void set_commodities(deque<Commodity> commodities);
     //vector<Commodity> get_commodities()const;
-    void set_sold_commodities_id(vector<int> sold_commodities_id);
-    vector<int> get_sold_commodities_id()const;
+    void set_sold_commodities_id(deque<int> sold_commodities_id);
+    deque<int> get_sold_commodities_id()const;
     void add_customer(string name, string family, string username, string password, string address, string city, string province, string national_code, string phone_number, string email, int sex);
     void add_seller(string name, string family, string username, string password, string address, string city, string province, string national_code, string phone_number, string email, int sex);
     int read_digi_kala(const char * file , int seekbeg);

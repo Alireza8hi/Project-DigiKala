@@ -207,7 +207,7 @@ void ProfileDialog::on_NewPassConLe_textChanged(const QString &arg1)
 void ProfileDialog::on_ReturnBtn_clicked()
 {
     parentWidget()->show();
-    site.write_digi_kala("DataBase.txt",0);
+    site.write_digi_kala("DataBase.data",0);
 }
 
 

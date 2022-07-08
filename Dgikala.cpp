@@ -548,7 +548,7 @@ User& DigiKala::get_seller(int number)
     return this->sellers[number];
 }
 
-void DigiKala::set_commodities(vector<Commodity> commodities)
+void DigiKala::set_commodities(deque<Commodity> commodities)
 {
 //    this->commodities = commodities;
     return;
@@ -559,13 +559,13 @@ void DigiKala::set_commodities(vector<Commodity> commodities)
 //    return this->commodities;
 //}
 
-void DigiKala::set_sold_commodities_id(vector<int> sold_commodities_id)
+void DigiKala::set_sold_commodities_id(deque<int> sold_commodities_id)
 {
     this->sold_commodities_id = sold_commodities_id;
     return;
 }
 
-vector<int> DigiKala::get_sold_commodities_id() const
+deque<int> DigiKala::get_sold_commodities_id() const
 {
     return this->sold_commodities_id;
 }
@@ -624,8 +624,8 @@ int DigiKala::read_digi_kala(const char * file , int seekbeg )
 
 void DigiKala::write_digi_kala(const char * file,int seekbeg)
 {
-    ofstream output_file(file,ios::binary |ios::out |ios::app );
-    output_file.seekp(seekbeg);
+    ofstream output_file(file,ios::binary );
+    //output_file.seekp(seekbeg);
     output_file.write((char*)this,sizeof(DigiKala));
     output_file.close();
     return;
