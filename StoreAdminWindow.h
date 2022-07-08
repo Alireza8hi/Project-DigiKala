@@ -40,6 +40,10 @@ private slots:
 
     void on_SellCommodityBtn_clicked();
 
+    void on_EditCommodityBtn_clicked();
+
+    void on_EditCommodityConfirmBtn_clicked();
+
 private:
     Ui::StoreAdminWindow *ui;
 };

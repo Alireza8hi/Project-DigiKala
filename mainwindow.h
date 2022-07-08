@@ -28,6 +28,20 @@ private slots:
 
     void on_SearchBtn_clicked();
 
+    void on_VoroodVaSabteNam_triggered();
+
+    void on_BazgardandanKalaAct_triggered();
+
+    void on_RavanSabtSefareshAct_triggered();
+
+    void on_PrivacyAct_triggered();
+
+    void on_TermOfUseAct_triggered();
+
+    void on_EmailAct_triggered();
+
+    void on_FaxAct_triggered();
+
 private:
     Ui::MainWindow *ui;
     AccountWindow *AccountWindow;

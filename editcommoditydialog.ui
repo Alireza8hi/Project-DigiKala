@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>EditCommodityDialog</class>
+ <widget class="QDialog" name="EditCommodityDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>912</width>
+    <height>838</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="14" column="0">
+    <widget class="QLabel" name="label_13">
+     <property name="text">
+      <string>وزن</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QLabel" name="label_16">
+     <property name="text">
+      <string>فروشنده کالا</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="1">
+    <widget class="QLabel" name="label_21">
+     <property name="text">
+      <string>نام کالا</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="label_7">
+     <property name="text">
+      <string>تعداد فروش</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="1">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>کد</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QLabel" name="label_6">
+     <property name="text">
+      <string>قیمت</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="1">
+    <widget class="QLineEdit" name="IDLe"/>
+   </item>
+   <item row="10" column="1">
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>دسته بندی</string>
+     </property>
+    </widget>
+   </item>
+   <item row="15" column="1">
+    <widget class="QLineEdit" name="CompanyLe"/>
+   </item>
+   <item row="14" column="1">
+    <widget class="QLabel" name="label_18">
+     <property name="text">
+      <string>شرکت</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="1">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>شماره</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QLineEdit" name="OwnerLe"/>
+   </item>
+   <item row="15" column="0">
+    <widget class="QLineEdit" name="WeightLe"/>
+   </item>
+   <item row="11" column="1">
+    <widget class="QComboBox" name="CategoryCombo">
+     <item>
+      <property name="text">
+       <string>انتخاب</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>سرگرمی:برقی</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>سرگرمی:غیر برقی</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>لوازم دیجیتالی:اصلی</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>لوازم دیجیتالی:جانبی</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>خانه:مبلمان</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>خانه:لوازم آشپزخانه</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>خانه:لوازم برقی</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>پوشاک</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>لوازم التحریر</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>کتاب</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>خوراکی</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>لوازم زیبایی و بهداشتی</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>لوازم موسیقی</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>وسایل پزشکی</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="13" column="0">
+    <widget class="QTextEdit" name="DescriptionLe"/>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLineEdit" name="NumOfSellLe"/>
+   </item>
+   <item row="7" column="0">
+    <widget class="QLineEdit" name="ColorLe"/>
+   </item>
+   <item row="3" column="1">
+    <widget class="QLineEdit" name="OwnerPhoneNumber"/>
+   </item>
+   <item row="5" column="1">
+    <widget class="QLineEdit" name="NumberLe"/>
+   </item>
+   <item row="13" column="1">
+    <widget class="QLineEdit" name="TypeLe"/>
+   </item>
+   <item row="21" column="1">
+    <widget class="QTextEdit" name="AddressLe"/>
+   </item>
+   <item row="12" column="0">
+    <widget class="QLabel" name="label_12">
+     <property name="text">
+      <string>توضیحات</string>
+     </property>
+    </widget>
+   </item>
+   <item row="19" column="0">
+    <widget class="QLineEdit" name="ProfitPercentLe"/>
+   </item>
+   <item row="18" column="0">
+    <widget class="QLabel" name="label_15">
+     <property name="text">
+      <string>درصد سود</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLineEdit" name="CostLe"/>
+   </item>
+   <item row="16" column="0">
+    <widget class="QLabel" name="label_14">
+     <property name="text">
+      <string>حجم</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QLabel" name="label_17">
+     <property name="text">
+      <string>شماره فروشنده</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="label_8">
+     <property name="text">
+      <string>درصد تخفیف</string>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="0">
+    <widget class="QLabel" name="label_11">
+     <property name="text">
+      <string>تاریخ انقضا</string>
+     </property>
+    </widget>
+   </item>
+   <item row="22" column="1">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="ConfirmAndReturnBtn">
+       <property name="text">
+        <string>تایید و بازگشت</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="ReturnBtn">
+       <property name="text">
+        <string>بازگشت</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="ExitBtn">
+       <property name="text">
+        <string>خروج</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="17" column="0">
+    <widget class="QLineEdit" name="VolumeLe"/>
+   </item>
+   <item row="6" column="0">
+    <widget class="QLabel" name="label_9">
+     <property name="text">
+      <string>رنگ</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <widget class="QLineEdit" name="DiscountPercentLe"/>
+   </item>
+   <item row="8" column="0">
+    <widget class="QLabel" name="label_10">
+     <property name="text">
+      <string>تاریخ تولید</string>
+     </property>
+    </widget>
+   </item>
+   <item row="12" column="1">
+    <widget class="QLabel" name="label_4">
+     <property name="text">
+      <string>نوع</string>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="1">
+    <widget class="QLineEdit" name="NameLe"/>
+   </item>
+   <item row="16" column="1">
+    <widget class="QCheckBox" name="IsElectricCB">
+     <property name="layoutDirection">
+      <enum>Qt::RightToLeft</enum>
+     </property>
+     <property name="text">
+      <string>برقی؟</string>
+     </property>
+     <property name="tristate">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="17" column="1">
+    <widget class="QLabel" name="label_19">
+     <property name="text">
+      <string>شهر</string>
+     </property>
+    </widget>
+   </item>
+   <item row="18" column="1">
+    <widget class="QLineEdit" name="CityLe"/>
+   </item>
+   <item row="19" column="1">
+    <widget class="QLabel" name="label_20">
+     <property name="text">
+      <string>آدرس</string>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="0">
+    <widget class="QDateEdit" name="ProductionDateDe"/>
+   </item>
+   <item row="11" column="0">
+    <widget class="QDateEdit" name="ExpirationDateDe"/>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>ExitBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>EditCommodityDialog</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>668</x>
+     <y>765</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>368</x>
+     <y>395</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ConfirmAndReturnBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>EditCommodityDialog</receiver>
+   <slot>deleteLater()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>429</x>
+     <y>765</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>368</x>
+     <y>395</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ReturnBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>EditCommodityDialog</receiver>
+   <slot>deleteLater()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>548</x>
+     <y>765</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>368</x>
+     <y>395</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

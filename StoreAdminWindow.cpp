@@ -2,6 +2,7 @@
 #include "CartDialog.h"
 #include "allcommoditywindow.h"
 #include "categorywindow.h"
+#include "editcommoditydialog.h"
 #include "listofcommoditiesdialog.h"
 #include "messagesdialog.h"
 #include "profiledialog.h"
@@ -20,6 +21,11 @@ StoreAdminWindow::StoreAdminWindow(QWidget *parent) :
 
     ui->SellCommodityConfirmBtn->hide();
     ui->SellCommodityLe->hide();
+
+    ui->EditCommodityConfirmBtn->hide();
+    ui->EditCommodityLe->hide();
+
+    ui->EditCommodityLe->setInputMask("00000000000");
 }
 
 StoreAdminWindow::~StoreAdminWindow()
@@ -127,5 +133,27 @@ void StoreAdminWindow::on_SellCommodityBtn_clicked()
         ui->SellCommodityConfirmBtn->hide();
         ui->SellCommodityLe->hide();
     }
+}
+
+
+void StoreAdminWindow::on_EditCommodityBtn_clicked()
+{
+    if (ui->EditCommodityConfirmBtn->isHidden() == true)
+    {
+        ui->EditCommodityConfirmBtn->show();
+        ui->EditCommodityLe->show();
+    }
+    else
+    {
+        ui->EditCommodityConfirmBtn->hide();
+        ui->EditCommodityLe->hide();
+    }
+}
+
+
+void StoreAdminWindow::on_EditCommodityConfirmBtn_clicked()
+{
+    EditCommodityDialog *a = new EditCommodityDialog(this , ui->EditCommodityLe->text().toInt());
+    a->show();
 }
 

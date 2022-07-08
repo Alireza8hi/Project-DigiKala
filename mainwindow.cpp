@@ -4,6 +4,7 @@
 #include "categorywindow.h"
 #include "accountwindow.h"
 #include "searchdialog.h"
+#include "tobeknowndialog.h"
 #include "ui_mainwindow.h"
 #include <QWidget>
 #include <QPushButton>
@@ -52,6 +53,55 @@ void MainWindow::on_AccountAct_triggered()
 void MainWindow::on_SearchBtn_clicked()
 {
     SearchDialog *a = new SearchDialog(this);
+    a->show();
+}
+
+
+void MainWindow::on_VoroodVaSabteNam_triggered()
+{
+    ToBeKnownDialog *a = new ToBeKnownDialog(this,2);
+    a->show();
+}
+
+
+void MainWindow::on_BazgardandanKalaAct_triggered()
+{
+    ToBeKnownDialog *a = new ToBeKnownDialog(this,3);
+    a->show();
+}
+
+
+void MainWindow::on_RavanSabtSefareshAct_triggered()
+{
+    ToBeKnownDialog *a = new ToBeKnownDialog(this,4);
+    a->show();
+}
+
+
+void MainWindow::on_PrivacyAct_triggered()
+{
+    ToBeKnownDialog *a = new ToBeKnownDialog(this,5);
+    a->show();
+}
+
+
+void MainWindow::on_TermOfUseAct_triggered()
+{
+    ToBeKnownDialog *a = new ToBeKnownDialog(this,6);
+    a->show();
+}
+
+
+void MainWindow::on_EmailAct_triggered()
+{
+    ToBeKnownDialog *a = new ToBeKnownDialog(this,7);
+    a->show();
+}
+
+
+void MainWindow::on_FaxAct_triggered()
+{
+    ToBeKnownDialog *a = new ToBeKnownDialog(this,8);
     a->show();
 }
 

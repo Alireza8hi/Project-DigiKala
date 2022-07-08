@@ -36,6 +36,7 @@ SOURCES += \
     categorywindow.cpp \
     commoditiesawaitingapprovaldialog.cpp \
     commoditiesawaitingpostdialog.cpp \
+    editcommoditydialog.cpp \
     human.cpp \
     listofcommoditiesdialog.cpp \
     listofpeopledialog.cpp \
@@ -45,7 +46,7 @@ SOURCES += \
     profiledialog.cpp \
     searchdialog.cpp \
     signupdialog.cpp \
-    signuprules.cpp \
+    tobeknowndialog.cpp \
     wishlistdialog.cpp
 
 HEADERS += \
@@ -75,6 +76,7 @@ HEADERS += \
     categorywindow.h \
     commoditiesawaitingapprovaldialog.h \
     commoditiesawaitingpostdialog.h \
+    editcommoditydialog.h \
     human.h \
     listofcommoditiesdialog.h \
     listofpeopledialog.h \
@@ -83,7 +85,7 @@ HEADERS += \
     profiledialog.h \
     searchdialog.h \
     signupdialog.h \
-    signuprules.h \
+    tobeknowndialog.h \
     wishlistdialog.h
 
 FORMS += \
@@ -100,6 +102,7 @@ FORMS += \
     categorywindow.ui \
     commoditiesawaitingapprovaldialog.ui \
     commoditiesawaitingpostdialog.ui \
+    editcommoditydialog.ui \
     listofcommoditiesdialog.ui \
     listofpeopledialog.ui \
     mainwindow.ui \
@@ -107,7 +110,7 @@ FORMS += \
     profiledialog.ui \
     searchdialog.ui \
     signupdialog.ui \
-    signuprules.ui \
+    tobeknowndialog.ui \
     wishlistdialog.ui
 
 # Default rules for deployment.
