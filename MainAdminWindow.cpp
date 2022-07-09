@@ -16,22 +16,28 @@ MainAdminWindow::MainAdminWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    ui->OpenOtherAdminsCombo->hide();
+    ui->ChangeAdminIncomeUserLe->setInputMask("000000000000");
+
+    ui->OpenOtherAdminsLe->hide();
     ui->OpenOtherAdminsConfirmBtn->hide();
 
     ui->ChangeAdminIncomeConfirmBtn->hide();
     ui->ChangeAdminIncomeLe->hide();
-    ui->ChangeAdminIncomeCombo->hide();
+    ui->ChangeAdminIncomeUserLe->hide();
 
-    ui->RemoveAdminCombo->hide();
+    ui->RemoveAdminLe->hide();
     ui->RemoveAdminConfirmBtn->hide();
 
     ui->AddAdminConfirmBtn->hide();
     ui->AddAdminUserLe->hide();
-    ui->AddAdminPassLe->hide();
     ui->AddAdminCombo->hide();
 
     ui->CommodityProfitLbl->hide();
+
+    ui->ChangeAdminCombo->hide();
+    ui->ChangeAdminConfirmBtn->hide();
+    ui->CurrentAdminLe->hide();
+    ui->NewAdminLe->hide();
 }
 
 MainAdminWindow::~MainAdminWindow()
@@ -89,14 +95,14 @@ void MainAdminWindow::on_WishListBtn_clicked()
 
 void MainAdminWindow::on_OpenOtherAdminsBtn_clicked()
 {
-    if(ui->OpenOtherAdminsCombo->isHidden() == true)
+    if(ui->OpenOtherAdminsLe->isHidden() == true)
     {
-        ui->OpenOtherAdminsCombo->show();
+        ui->OpenOtherAdminsLe->show();
         ui->OpenOtherAdminsConfirmBtn->show();
     }
     else
     {
-        ui->OpenOtherAdminsCombo->hide();
+        ui->OpenOtherAdminsLe->hide();
         ui->OpenOtherAdminsConfirmBtn->hide();
     }
 
@@ -105,31 +111,31 @@ void MainAdminWindow::on_OpenOtherAdminsBtn_clicked()
 
 void MainAdminWindow::on_ChangeAdminIncomeBtn_clicked()
 {
-    if(ui->OpenOtherAdminsCombo->isHidden() == true)
+    if(ui->ChangeAdminIncomeLe->isHidden() == true)
     {
         ui->ChangeAdminIncomeConfirmBtn->show();
         ui->ChangeAdminIncomeLe->show();
-        ui->ChangeAdminIncomeCombo->show();
+        ui->ChangeAdminIncomeUserLe->show();
     }
     else
     {
         ui->ChangeAdminIncomeConfirmBtn->hide();
         ui->ChangeAdminIncomeLe->hide();
-        ui->ChangeAdminIncomeCombo->hide();
+        ui->ChangeAdminIncomeUserLe->hide();
     }
 }
 
 
 void MainAdminWindow::on_RemoveAdminBtn_clicked()
 {
-    if(ui->OpenOtherAdminsCombo->isHidden() == true)
+    if(ui->RemoveAdminLe->isHidden() == true)
     {
-        ui->RemoveAdminCombo->show();
+        ui->RemoveAdminLe->show();
         ui->RemoveAdminConfirmBtn->show();
     }
     else
     {
-        ui->RemoveAdminCombo->hide();
+        ui->RemoveAdminLe->hide();
         ui->RemoveAdminConfirmBtn->hide();
     }
 }
@@ -141,14 +147,12 @@ void MainAdminWindow::on_AddAdminBtn_clicked()
     {
         ui->AddAdminConfirmBtn->show();
         ui->AddAdminUserLe->show();
-        ui->AddAdminPassLe->show();
         ui->AddAdminCombo->show();
     }
     else
     {
         ui->AddAdminConfirmBtn->hide();
         ui->AddAdminUserLe->hide();
-        ui->AddAdminPassLe->hide();
         ui->AddAdminCombo->hide();
     }
 }
@@ -196,5 +200,24 @@ void MainAdminWindow::on_SoldCommoditiesBtn_clicked()
     this->close();
     AllCommodityWindow *a = new AllCommodityWindow(this);
     a->show();
+}
+
+
+void MainAdminWindow::on_ChangeAdminBtn_clicked()
+{
+    if(ui->ChangeAdminCombo->isHidden() == true)
+    {
+        ui->ChangeAdminConfirmBtn->show();
+        ui->CurrentAdminLe->show();
+        ui->NewAdminLe->show();
+        ui->ChangeAdminCombo->show();
+    }
+    else
+    {
+        ui->ChangeAdminConfirmBtn->hide();
+        ui->CurrentAdminLe->hide();
+        ui->NewAdminLe->hide();
+        ui->ChangeAdminCombo->hide();
+    }
 }
 

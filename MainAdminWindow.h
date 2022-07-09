@@ -48,6 +48,8 @@ private slots:
 
     void on_SoldCommoditiesBtn_clicked();
 
+    void on_ChangeAdminBtn_clicked();
+
 private:
     Ui::MainAdminWindow *ui;
 };

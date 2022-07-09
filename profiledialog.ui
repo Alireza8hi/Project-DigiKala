@@ -17,10 +17,10 @@
    <string notr="true">border-image: url(:/Pics/Pics/modern-white-background-free-vector.webp);</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="13" column="3">
-    <layout class="QHBoxLayout" name="horizontalLayout_7">
+   <item row="9" column="3">
+    <layout class="QHBoxLayout" name="horizontalLayout_6">
      <item>
-      <spacer name="horizontalSpacer_9">
+      <spacer name="horizontalSpacer_8">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
@@ -36,7 +36,7 @@
       </spacer>
      </item>
      <item>
-      <widget class="QPushButton" name="EditNationalCodeBtn">
+      <widget class="QPushButton" name="EditSexBtn">
        <property name="minimumSize">
         <size>
          <width>30</width>
@@ -60,6 +60,74 @@
      </item>
     </layout>
    </item>
+   <item row="0" column="1">
+    <spacer name="horizontalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="4" column="3">
+    <layout class="QHBoxLayout" name="horizontalLayout_5">
+     <item>
+      <spacer name="horizontalSpacer_6">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Preferred</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="EditNameBtn">
+       <property name="minimumSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="icons.qrc">
+         <normaloff>:/Icons/Icons/edit-icon-png-24.png</normaloff>:/Icons/Icons/edit-icon-png-24.png</iconset>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="7" column="1">
+    <widget class="QLabel" name="EmailLbl">
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0);
+border-image: url(:/Pics/Pics/NoBack.png);
+background-color: rgb(250,255,255);</string>
+     </property>
+     <property name="text">
+      <string>ایمیل</string>
+     </property>
+    </widget>
+   </item>
    <item row="12" column="4">
     <widget class="QLabel" name="NationalCodeLbl">
      <property name="styleSheet">
@@ -72,36 +140,27 @@ background-color: rgb(250,255,255);</string>
      </property>
     </widget>
    </item>
-   <item row="5" column="4">
-    <widget class="QLabel" name="FNameLbl">
-     <property name="styleSheet">
-      <string notr="true">color: rgb(0, 0, 0);
-border-image: url(:/Pics/Pics/NoBack.png);
-background-color: rgb(250,255,255);</string>
-     </property>
-     <property name="text">
-      <string>نام خانوادگی</string>
-     </property>
-    </widget>
-   </item>
-   <item row="11" column="1">
-    <widget class="QLineEdit" name="NewPassLe">
-     <property name="enabled">
-      <bool>false</bool>
-     </property>
+   <item row="15" column="4">
+    <widget class="QLineEdit" name="StateLe">
      <property name="styleSheet">
       <string notr="true">color: rgb(0, 0, 0);
 border-image: url(:/Pics/Pics/NoBack.png);
 background-color: rgb(211,211,211);</string>
      </property>
-     <property name="text">
-      <string/>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="11" column="4">
+    <widget class="QLineEdit" name="PhoneLe">
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0);
+border-image: url(:/Pics/Pics/NoBack.png);
+background-color: rgb(211,211,211);</string>
      </property>
      <property name="readOnly">
-      <bool>false</bool>
-     </property>
-     <property name="placeholderText">
-      <string>رمز عبور جدید</string>
+      <bool>true</bool>
      </property>
     </widget>
    </item>
@@ -128,161 +187,60 @@ background-color: rgb(211,211,211);</string>
      </property>
     </widget>
    </item>
-   <item row="9" column="4">
-    <widget class="QComboBox" name="SexCombo">
-     <property name="enabled">
-      <bool>false</bool>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(0, 0, 0);
-border-image: url(:/Pics/Pics/NoBack.png);
-background-color: rgb(211,211,211);</string>
-     </property>
-     <property name="editable">
-      <bool>false</bool>
-     </property>
-     <item>
-      <property name="text">
-       <string>مرد</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>زن</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>مایل به گفتن نیستم</string>
-      </property>
-     </item>
-    </widget>
-   </item>
-   <item row="0" column="4">
-    <spacer name="horizontalSpacer">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>40</width>
-       <height>20</height>
-      </size>
-     </property>
-    </spacer>
-   </item>
-   <item row="16" column="4">
-    <widget class="QLabel" name="CityLbl">
+   <item row="8" column="4">
+    <widget class="QLabel" name="SexLbl">
      <property name="styleSheet">
       <string notr="true">color: rgb(0, 0, 0);
 border-image: url(:/Pics/Pics/NoBack.png);
 background-color: rgb(250,255,255);</string>
      </property>
      <property name="text">
-      <string>شهر</string>
+      <string>جنسیت</string>
      </property>
     </widget>
    </item>
-   <item row="15" column="4">
-    <widget class="QLineEdit" name="StateLe">
-     <property name="styleSheet">
-      <string notr="true">color: rgb(0, 0, 0);
-border-image: url(:/Pics/Pics/NoBack.png);
-background-color: rgb(211,211,211);</string>
-     </property>
-     <property name="readOnly">
-      <bool>true</bool>
-     </property>
-    </widget>
-   </item>
-   <item row="0" column="3">
-    <widget class="QLabel" name="WelcomeNameLbl">
-     <property name="font">
-      <font>
-       <pointsize>15</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(0, 0, 0);
-border-image: url(:/Pics/Pics/NoBack.png);</string>
-     </property>
-     <property name="text">
-      <string>نام پیشفرض</string>
-     </property>
-    </widget>
-   </item>
-   <item row="14" column="4">
-    <widget class="QLabel" name="StateLbl">
-     <property name="styleSheet">
-      <string notr="true">color: rgb(0, 0, 0);
-border-image: url(:/Pics/Pics/NoBack.png);
-background-color: rgb(250,255,255);</string>
-     </property>
-     <property name="text">
-      <string>استان</string>
-     </property>
-    </widget>
-   </item>
-   <item row="11" column="4">
-    <widget class="QLineEdit" name="PhoneLe">
-     <property name="styleSheet">
-      <string notr="true">color: rgb(0, 0, 0);
-border-image: url(:/Pics/Pics/NoBack.png);
-background-color: rgb(211,211,211);</string>
-     </property>
-     <property name="readOnly">
-      <bool>true</bool>
-     </property>
-    </widget>
-   </item>
-   <item row="8" column="1">
-    <widget class="QLineEdit" name="EmailLe">
-     <property name="styleSheet">
-      <string notr="true">color: rgb(0, 0, 0);
-border-image: url(:/Pics/Pics/NoBack.png);
-background-color: rgb(211,211,211);</string>
-     </property>
-     <property name="readOnly">
-      <bool>true</bool>
-     </property>
-    </widget>
-   </item>
-   <item row="10" column="0">
-    <widget class="QPushButton" name="EditPassBtn">
-     <property name="minimumSize">
-      <size>
-       <width>30</width>
-       <height>30</height>
-      </size>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>30</width>
-       <height>30</height>
-      </size>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="icon">
-      <iconset resource="icons.qrc">
-       <normaloff>:/Icons/Icons/edit-icon-png-24.png</normaloff>:/Icons/Icons/edit-icon-png-24.png</iconset>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="3">
-    <widget class="QLabel" name="PhoneLbl">
-     <property name="styleSheet">
-      <string notr="true">color: rgb(0, 0, 0);
-border-image: url(:/Pics/Pics/NoBack.png);</string>
-     </property>
-     <property name="text">
-      <string>09000000000</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
+   <item row="7" column="3">
+    <layout class="QHBoxLayout" name="horizontalLayout_4">
+     <item>
+      <spacer name="horizontalSpacer_7">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Preferred</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="EditFNameBtn">
+       <property name="minimumSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="icons.qrc">
+         <normaloff>:/Icons/Icons/edit-icon-png-24.png</normaloff>:/Icons/Icons/edit-icon-png-24.png</iconset>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </item>
    <item row="18" column="4">
     <layout class="QHBoxLayout" name="horizontalLayout_9">
@@ -340,26 +298,70 @@ background-color: rgb(0, 0, 0);</string>
      </item>
     </layout>
    </item>
-   <item row="12" column="1">
-    <widget class="QLineEdit" name="NewPassConLe">
-     <property name="enabled">
-      <bool>false</bool>
+   <item row="15" column="3">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <property name="spacing">
+      <number>0</number>
      </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(0, 0, 0);
-border-image: url(:/Pics/Pics/NoBack.png);
-background-color: rgb(211,211,211);</string>
+     <property name="sizeConstraint">
+      <enum>QLayout::SetNoConstraint</enum>
      </property>
-     <property name="text">
-      <string/>
+     <item>
+      <spacer name="horizontalSpacer_3">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Preferred</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="EditStateBtn">
+       <property name="minimumSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="icons.qrc">
+         <normaloff>:/Icons/Icons/edit-icon-png-24.png</normaloff>:/Icons/Icons/edit-icon-png-24.png</iconset>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="18" column="3">
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
      </property>
-     <property name="readOnly">
-      <bool>false</bool>
+     <property name="sizeType">
+      <enum>QSizePolicy::Minimum</enum>
      </property>
-     <property name="placeholderText">
-      <string>تکرار رمز عبور جدید</string>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>100</height>
+      </size>
      </property>
-    </widget>
+    </spacer>
    </item>
    <item row="3" column="4">
     <widget class="QLabel" name="NameLbl">
@@ -391,6 +393,71 @@ background-color: rgb(250,255,255);</string>
      </property>
     </widget>
    </item>
+   <item row="8" column="1">
+    <widget class="QLineEdit" name="EmailLe">
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0);
+border-image: url(:/Pics/Pics/NoBack.png);
+background-color: rgb(211,211,211);</string>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="14" column="4">
+    <widget class="QLabel" name="StateLbl">
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0);
+border-image: url(:/Pics/Pics/NoBack.png);
+background-color: rgb(250,255,255);</string>
+     </property>
+     <property name="text">
+      <string>استان</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QPushButton" name="EditAddressBtn">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="icons.qrc">
+       <normaloff>:/Icons/Icons/edit-icon-png-24.png</normaloff>:/Icons/Icons/edit-icon-png-24.png</iconset>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <widget class="QLabel" name="AddressLbl">
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0);
+border-image: url(:/Pics/Pics/NoBack.png);
+background-color: rgb(250,255,255);</string>
+     </property>
+     <property name="text">
+      <string>آدرس</string>
+     </property>
+    </widget>
+   </item>
    <item row="17" column="4">
     <widget class="QLineEdit" name="CityLe">
      <property name="styleSheet">
@@ -402,86 +469,6 @@ background-color: rgb(211,211,211);</string>
       <bool>true</bool>
      </property>
     </widget>
-   </item>
-   <item row="0" column="1">
-    <spacer name="horizontalSpacer_2">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>40</width>
-       <height>20</height>
-      </size>
-     </property>
-    </spacer>
-   </item>
-   <item row="8" column="4">
-    <widget class="QLabel" name="SexLbl">
-     <property name="styleSheet">
-      <string notr="true">color: rgb(0, 0, 0);
-border-image: url(:/Pics/Pics/NoBack.png);
-background-color: rgb(250,255,255);</string>
-     </property>
-     <property name="text">
-      <string>جنسیت</string>
-     </property>
-    </widget>
-   </item>
-   <item row="7" column="1">
-    <widget class="QLabel" name="EmailLbl">
-     <property name="styleSheet">
-      <string notr="true">color: rgb(0, 0, 0);
-border-image: url(:/Pics/Pics/NoBack.png);
-background-color: rgb(250,255,255);</string>
-     </property>
-     <property name="text">
-      <string>ایمیل</string>
-     </property>
-    </widget>
-   </item>
-   <item row="10" column="4">
-    <widget class="QLabel" name="PhoneLbl_2">
-     <property name="styleSheet">
-      <string notr="true">color: rgb(0, 0, 0);
-border-image: url(:/Pics/Pics/NoBack.png);
-background-color: rgb(250,255,255);</string>
-     </property>
-     <property name="text">
-      <string>شماره تلفن</string>
-     </property>
-    </widget>
-   </item>
-   <item row="4" column="4">
-    <widget class="QLineEdit" name="NameLe">
-     <property name="enabled">
-      <bool>true</bool>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(0, 0, 0);
-border-image: url(:/Pics/Pics/NoBack.png);
-background-color: rgb(211,211,211);</string>
-     </property>
-     <property name="readOnly">
-      <bool>true</bool>
-     </property>
-    </widget>
-   </item>
-   <item row="18" column="3">
-    <spacer name="verticalSpacer">
-     <property name="orientation">
-      <enum>Qt::Vertical</enum>
-     </property>
-     <property name="sizeType">
-      <enum>QSizePolicy::Minimum</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>20</width>
-       <height>100</height>
-      </size>
-     </property>
-    </spacer>
    </item>
    <item row="11" column="3">
     <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -557,15 +544,19 @@ p, li { white-space: pre-wrap; }
      </property>
     </widget>
    </item>
-   <item row="3" column="1">
-    <widget class="QLabel" name="AddressLbl">
+   <item row="0" column="3">
+    <widget class="QLabel" name="WelcomeNameLbl">
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+      </font>
+     </property>
      <property name="styleSheet">
       <string notr="true">color: rgb(0, 0, 0);
-border-image: url(:/Pics/Pics/NoBack.png);
-background-color: rgb(250,255,255);</string>
+border-image: url(:/Pics/Pics/NoBack.png);</string>
      </property>
      <property name="text">
-      <string>آدرس</string>
+      <string>نام پیشفرض</string>
      </property>
     </widget>
    </item>
@@ -580,55 +571,6 @@ background-color: rgb(211,211,211);</string>
       <bool>true</bool>
      </property>
     </widget>
-   </item>
-   <item row="15" column="3">
-    <layout class="QHBoxLayout" name="horizontalLayout">
-     <property name="spacing">
-      <number>0</number>
-     </property>
-     <property name="sizeConstraint">
-      <enum>QLayout::SetNoConstraint</enum>
-     </property>
-     <item>
-      <spacer name="horizontalSpacer_3">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeType">
-        <enum>QSizePolicy::Preferred</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>40</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-     <item>
-      <widget class="QPushButton" name="EditStateBtn">
-       <property name="minimumSize">
-        <size>
-         <width>30</width>
-         <height>30</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>30</width>
-         <height>30</height>
-        </size>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="icon">
-        <iconset resource="icons.qrc">
-         <normaloff>:/Icons/Icons/edit-icon-png-24.png</normaloff>:/Icons/Icons/edit-icon-png-24.png</iconset>
-       </property>
-      </widget>
-     </item>
-    </layout>
    </item>
    <item row="13" column="4">
     <widget class="QLineEdit" name="NationalCodeLe">
@@ -645,75 +587,27 @@ background-color: rgb(211,211,211);</string>
      </property>
     </widget>
    </item>
-   <item row="9" column="3">
-    <layout class="QHBoxLayout" name="horizontalLayout_6">
-     <item>
-      <spacer name="horizontalSpacer_8">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeType">
-        <enum>QSizePolicy::Preferred</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>40</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-     <item>
-      <widget class="QPushButton" name="EditSexBtn">
-       <property name="minimumSize">
-        <size>
-         <width>30</width>
-         <height>30</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>30</width>
-         <height>30</height>
-        </size>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="icon">
-        <iconset resource="icons.qrc">
-         <normaloff>:/Icons/Icons/edit-icon-png-24.png</normaloff>:/Icons/Icons/edit-icon-png-24.png</iconset>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </item>
-   <item row="4" column="0">
-    <widget class="QPushButton" name="EditAddressBtn">
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="minimumSize">
-      <size>
-       <width>30</width>
-       <height>30</height>
-      </size>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>30</width>
-       <height>30</height>
-      </size>
+   <item row="9" column="1">
+    <widget class="QLabel" name="PassLbl">
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0);
+border-image: url(:/Pics/Pics/NoBack.png);
+background-color: rgb(250,255,255);</string>
      </property>
      <property name="text">
-      <string/>
+      <string>رمز عبور</string>
      </property>
-     <property name="icon">
-      <iconset resource="icons.qrc">
-       <normaloff>:/Icons/Icons/edit-icon-png-24.png</normaloff>:/Icons/Icons/edit-icon-png-24.png</iconset>
+    </widget>
+   </item>
+   <item row="5" column="4">
+    <widget class="QLabel" name="FNameLbl">
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0);
+border-image: url(:/Pics/Pics/NoBack.png);
+background-color: rgb(250,255,255);</string>
+     </property>
+     <property name="text">
+      <string>نام خانوادگی</string>
      </property>
     </widget>
    </item>
@@ -760,103 +654,182 @@ background-color: rgb(211,211,211);</string>
      </item>
     </layout>
    </item>
-   <item row="7" column="3">
-    <layout class="QHBoxLayout" name="horizontalLayout_4">
-     <item>
-      <spacer name="horizontalSpacer_7">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeType">
-        <enum>QSizePolicy::Preferred</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>40</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-     <item>
-      <widget class="QPushButton" name="EditFNameBtn">
-       <property name="minimumSize">
-        <size>
-         <width>30</width>
-         <height>30</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>30</width>
-         <height>30</height>
-        </size>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="icon">
-        <iconset resource="icons.qrc">
-         <normaloff>:/Icons/Icons/edit-icon-png-24.png</normaloff>:/Icons/Icons/edit-icon-png-24.png</iconset>
-       </property>
-      </widget>
-     </item>
-    </layout>
+   <item row="4" column="4">
+    <widget class="QLineEdit" name="NameLe">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0);
+border-image: url(:/Pics/Pics/NoBack.png);
+background-color: rgb(211,211,211);</string>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
    </item>
-   <item row="4" column="3">
-    <layout class="QHBoxLayout" name="horizontalLayout_5">
-     <item>
-      <spacer name="horizontalSpacer_6">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeType">
-        <enum>QSizePolicy::Preferred</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>40</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-     <item>
-      <widget class="QPushButton" name="EditNameBtn">
-       <property name="minimumSize">
-        <size>
-         <width>30</width>
-         <height>30</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>30</width>
-         <height>30</height>
-        </size>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="icon">
-        <iconset resource="icons.qrc">
-         <normaloff>:/Icons/Icons/edit-icon-png-24.png</normaloff>:/Icons/Icons/edit-icon-png-24.png</iconset>
-       </property>
-      </widget>
-     </item>
-    </layout>
+   <item row="11" column="1">
+    <widget class="QLineEdit" name="NewPassLe">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0);
+border-image: url(:/Pics/Pics/NoBack.png);
+background-color: rgb(211,211,211);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="readOnly">
+      <bool>false</bool>
+     </property>
+     <property name="placeholderText">
+      <string>رمز عبور جدید</string>
+     </property>
+    </widget>
    </item>
-   <item row="9" column="1">
-    <widget class="QLabel" name="PassLbl">
+   <item row="4" column="1">
+    <widget class="QLineEdit" name="AddressLe">
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0);
+border-image: url(:/Pics/Pics/NoBack.png);
+background-color: rgb(211,211,211);</string>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="0">
+    <widget class="QPushButton" name="EditPassBtn">
+     <property name="minimumSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="icons.qrc">
+       <normaloff>:/Icons/Icons/edit-icon-png-24.png</normaloff>:/Icons/Icons/edit-icon-png-24.png</iconset>
+     </property>
+    </widget>
+   </item>
+   <item row="13" column="1">
+    <widget class="QLabel" name="WrongPassLbl">
+     <property name="styleSheet">
+      <string notr="true">border-image: url(:/Pics/Pics/NoBack.png);
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="4">
+    <widget class="QComboBox" name="SexCombo">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0);
+border-image: url(:/Pics/Pics/NoBack.png);
+background-color: rgb(211,211,211);</string>
+     </property>
+     <property name="editable">
+      <bool>false</bool>
+     </property>
+     <item>
+      <property name="text">
+       <string>مرد</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>زن</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>مایل به گفتن نیستم</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="10" column="4">
+    <widget class="QLabel" name="PhoneLbl_2">
      <property name="styleSheet">
       <string notr="true">color: rgb(0, 0, 0);
 border-image: url(:/Pics/Pics/NoBack.png);
 background-color: rgb(250,255,255);</string>
      </property>
      <property name="text">
-      <string>رمز عبور</string>
+      <string>شماره تلفن</string>
      </property>
     </widget>
+   </item>
+   <item row="0" column="4">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="13" column="3">
+    <layout class="QHBoxLayout" name="horizontalLayout_7">
+     <item>
+      <spacer name="horizontalSpacer_9">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Preferred</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="EditNationalCodeBtn">
+       <property name="minimumSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="icons.qrc">
+         <normaloff>:/Icons/Icons/edit-icon-png-24.png</normaloff>:/Icons/Icons/edit-icon-png-24.png</iconset>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </item>
    <item row="10" column="1">
     <widget class="QLineEdit" name="PassLe">
@@ -879,23 +852,50 @@ background-color: rgb(211,211,211);</string>
      </property>
     </widget>
    </item>
-   <item row="13" column="1">
-    <widget class="QLabel" name="WrongPassLbl">
+   <item row="16" column="4">
+    <widget class="QLabel" name="CityLbl">
      <property name="styleSheet">
-      <string notr="true">border-image: url(:/Pics/Pics/NoBack.png);
-</string>
+      <string notr="true">color: rgb(0, 0, 0);
+border-image: url(:/Pics/Pics/NoBack.png);
+background-color: rgb(250,255,255);</string>
      </property>
      <property name="text">
-      <string/>
+      <string>شهر</string>
      </property>
     </widget>
    </item>
-   <item row="4" column="1">
-    <widget class="QLineEdit" name="AddressLe">
+   <item row="1" column="3">
+    <widget class="QLabel" name="PhoneLbl">
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0);
+border-image: url(:/Pics/Pics/NoBack.png);</string>
+     </property>
+     <property name="text">
+      <string>09000000000</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="12" column="1">
+    <widget class="QLineEdit" name="NewPassConLe">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="styleSheet">
       <string notr="true">color: rgb(0, 0, 0);
 border-image: url(:/Pics/Pics/NoBack.png);
 background-color: rgb(211,211,211);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="readOnly">
+      <bool>false</bool>
+     </property>
+     <property name="placeholderText">
+      <string>تکرار رمز عبور جدید</string>
      </property>
     </widget>
    </item>

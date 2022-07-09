@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>797</width>
-    <height>816</height>
+    <width>903</width>
+    <height>993</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -117,17 +117,7 @@ background-color: rgb(22, 31, 48);</string>
           </item>
           <item>
            <property name="text">
-            <string>مدیر بررسی</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
             <string>مدیر انبار</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>مدیر پست</string>
            </property>
           </item>
           <item>
@@ -145,14 +135,10 @@ background-color: rgb(22, 31, 48);</string>
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="AddAdminPassLe">
-          <property name="inputMask">
-           <string>رمز عبور را وارد کنید</string>
-          </property>
-         </widget>
-        </item>
-        <item>
          <widget class="QPushButton" name="AddAdminConfirmBtn">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
           <property name="text">
            <string>تایید</string>
           </property>
@@ -217,37 +203,15 @@ background-color: rgb(22, 31, 48);</string>
            <string notr="true">color: rgb(255, 255, 255);</string>
           </property>
           <property name="text">
-           <string>ورود به عنوان سایر مدیر ها</string>
+           <string>ورود به عنوان سایر مدیرها و اعضا</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QComboBox" name="OpenOtherAdminsCombo">
-          <item>
-           <property name="text">
-            <string>انتخاب</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>مدیر بررسی</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>مدیر انبار</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>مدیر پست</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>مدیر پشتیبانی</string>
-           </property>
-          </item>
+         <widget class="QLineEdit" name="OpenOtherAdminsLe">
+          <property name="inputMask">
+           <string>نام کاربری ادمین را وارد کنید</string>
+          </property>
          </widget>
         </item>
         <item>
@@ -265,6 +229,73 @@ background-color: rgb(22, 31, 48);</string>
       <item row="6" column="1">
        <layout class="QVBoxLayout" name="verticalLayout_3">
         <item>
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <item>
+           <widget class="QPushButton" name="ChangeAdminBtn">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 255, 255);</string>
+            </property>
+            <property name="text">
+             <string>تغییر مدیر</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="ChangeAdminCombo">
+            <item>
+             <property name="text">
+              <string>انتخاب</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>مدیر انبار</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>مدیر پست</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>مدیر پشتیبانی</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>مدیر بررسی</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="CurrentAdminLe">
+            <property name="inputMask">
+             <string>نام کاربری مدیر فعلی را وارد کنید</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="NewAdminLe">
+            <property name="inputMask">
+             <string>نام کاربری مدیر جدید را وارد کنید</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="ChangeAdminConfirmBtn">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 255, 255);</string>
+            </property>
+            <property name="text">
+             <string>تایید</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
          <widget class="QPushButton" name="RemoveAdminBtn">
           <property name="styleSheet">
            <string notr="true">color: rgb(255, 255, 255);</string>
@@ -275,32 +306,10 @@ background-color: rgb(22, 31, 48);</string>
          </widget>
         </item>
         <item>
-         <widget class="QComboBox" name="RemoveAdminCombo">
-          <item>
-           <property name="text">
-            <string>انتخاب</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>مدیر بررسی</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>مدیر انبار</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>مدیر پست</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>مدیر پشتیبانی</string>
-           </property>
-          </item>
+         <widget class="QLineEdit" name="RemoveAdminLe">
+          <property name="inputMask">
+           <string>نام کاربری را وارد کنید</string>
+          </property>
          </widget>
         </item>
         <item>
@@ -309,7 +318,7 @@ background-color: rgb(22, 31, 48);</string>
            <string notr="true">color: rgb(255, 255, 255);</string>
           </property>
           <property name="text">
-           <string>تاببد</string>
+           <string>تایید</string>
           </property>
          </widget>
         </item>
@@ -377,32 +386,10 @@ background-color: rgb(22, 31, 48);</string>
          </widget>
         </item>
         <item>
-         <widget class="QComboBox" name="ChangeAdminIncomeCombo">
-          <item>
-           <property name="text">
-            <string>انتخاب</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>مدیر بررسی</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>مدیر انبار</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>مدیر پست </string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>مدیر پشتیبانی</string>
-           </property>
-          </item>
+         <widget class="QLineEdit" name="ChangeAdminIncomeUserLe">
+          <property name="inputMask">
+           <string>نام کاربری ادمین را وارد کنید</string>
+          </property>
          </widget>
         </item>
         <item>
@@ -526,7 +513,7 @@ background-color: rgb(255, 255, 255);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>797</width>
+     <width>903</width>
      <height>25</height>
     </rect>
    </property>

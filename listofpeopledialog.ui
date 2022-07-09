@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>626</width>
-    <height>565</height>
+    <width>872</width>
+    <height>611</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -59,6 +59,29 @@
      <property name="alternatingRowColors">
       <bool>true</bool>
      </property>
+     <attribute name="horizontalHeaderDefaultSectionSize">
+      <number>190</number>
+     </attribute>
+     <column>
+      <property name="text">
+       <string>نام خانوادگی</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>نام کاربری</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>تعداد کالاهای خریداری شده</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>مجموع کالاهای خریداری شده</string>
+      </property>
+     </column>
     </widget>
    </item>
   </layout>
