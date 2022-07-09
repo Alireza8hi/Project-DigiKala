@@ -191,7 +191,7 @@ DigiKala::DigiKala()
     users[32].set_username("post_admin31");
     users[32].set_password("post_admin31");
     users[32].set_province("Sistan and Baluchestan");
-    for(size_t counter = 33;counter<site.get_num_of_store_admin();counter++)
+    for(size_t counter = 33;counter<36;counter++)
     {
         users[counter].set_income(1500);
         users[counter].set_province("-");
@@ -209,7 +209,7 @@ DigiKala::DigiKala()
     users[35].set_family("store_admin3");
     users[35].set_username("store_admin3");
     users[35].set_password("store_admin3");
-    for(size_t counter = 36;counter<site.get_num_of_support_admin();counter++)
+    for(size_t counter = 36;counter<38;counter++)
     {
         users[counter].set_income(1200);
         users[counter].set_province("-");

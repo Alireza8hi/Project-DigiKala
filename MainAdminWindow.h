@@ -50,6 +50,24 @@ private slots:
 
     void on_ChangeAdminBtn_clicked();
 
+    void on_AddAdminConfirmBtn_clicked();
+
+    void on_AddAdminUserLe_textChanged(const QString &arg1);
+
+    void CheckForAdd();
+
+    void on_AddAdminCombo_currentIndexChanged(int index);
+
+    void CheckForChange();
+
+    void on_ChangeAdminCombo_currentIndexChanged(int index);
+
+    void on_CurrentAdminLe_textChanged(const QString &arg1);
+
+    void on_NewAdminLe_textChanged(const QString &arg1);
+
+    void on_ChangeAdminConfirmBtn_clicked();
+
 private:
     Ui::MainAdminWindow *ui;
 };

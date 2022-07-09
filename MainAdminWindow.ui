@@ -129,7 +129,16 @@ background-color: rgb(22, 31, 48);</string>
         </item>
         <item>
          <widget class="QLineEdit" name="AddAdminUserLe">
+          <property name="cursor">
+           <cursorShape>IBeamCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
           <property name="inputMask">
+           <string/>
+          </property>
+          <property name="placeholderText">
            <string>نام کاربری را وارد کنید</string>
           </property>
          </widget>
@@ -209,6 +218,9 @@ background-color: rgb(22, 31, 48);</string>
         </item>
         <item>
          <widget class="QLineEdit" name="OpenOtherAdminsLe">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
           <property name="inputMask">
            <string>نام کاربری ادمین را وارد کنید</string>
           </property>
@@ -241,44 +253,27 @@ background-color: rgb(22, 31, 48);</string>
            </widget>
           </item>
           <item>
-           <widget class="QComboBox" name="ChangeAdminCombo">
-            <item>
-             <property name="text">
-              <string>انتخاب</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>مدیر انبار</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>مدیر پست</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>مدیر پشتیبانی</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>مدیر بررسی</string>
-             </property>
-            </item>
-           </widget>
-          </item>
-          <item>
            <widget class="QLineEdit" name="CurrentAdminLe">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 255, 255);</string>
+            </property>
             <property name="inputMask">
+             <string/>
+            </property>
+            <property name="placeholderText">
              <string>نام کاربری مدیر فعلی را وارد کنید</string>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QLineEdit" name="NewAdminLe">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 255, 255);</string>
+            </property>
             <property name="inputMask">
+             <string/>
+            </property>
+            <property name="placeholderText">
              <string>نام کاربری مدیر جدید را وارد کنید</string>
             </property>
            </widget>
@@ -307,7 +302,13 @@ background-color: rgb(22, 31, 48);</string>
         </item>
         <item>
          <widget class="QLineEdit" name="RemoveAdminLe">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
           <property name="inputMask">
+           <string/>
+          </property>
+          <property name="placeholderText">
            <string>نام کاربری را وارد کنید</string>
           </property>
          </widget>
@@ -387,7 +388,13 @@ background-color: rgb(22, 31, 48);</string>
         </item>
         <item>
          <widget class="QLineEdit" name="ChangeAdminIncomeUserLe">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
           <property name="inputMask">
+           <string/>
+          </property>
+          <property name="placeholderText">
            <string>نام کاربری ادمین را وارد کنید</string>
           </property>
          </widget>
@@ -406,7 +413,13 @@ background-color: rgb(22, 31, 48);</string>
             <height>0</height>
            </size>
           </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
           <property name="inputMask">
+           <string/>
+          </property>
+          <property name="placeholderText">
            <string>حقوق جدید را وارد کنید</string>
           </property>
          </widget>
@@ -447,6 +460,9 @@ background-color: rgb(22, 31, 48);</string>
         </item>
         <item>
          <widget class="QLabel" name="CommodityProfitLbl">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
           <property name="text">
            <string>مقدار پیشفرض</string>
           </property>
@@ -514,7 +530,7 @@ background-color: rgb(255, 255, 255);</string>
      <x>0</x>
      <y>0</y>
      <width>903</width>
-     <height>25</height>
+     <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">
