@@ -123,16 +123,8 @@ void StoreAdminWindow::on_DeletetingCommodityBtn_clicked()
 
 void StoreAdminWindow::on_SellCommodityBtn_clicked()
 {
-    if (ui->SellCommodityConfirmBtn->isHidden() == true)
-    {
-        ui->SellCommodityConfirmBtn->show();
-        ui->SellCommodityLe->show();
-    }
-    else
-    {
-        ui->SellCommodityConfirmBtn->hide();
-        ui->SellCommodityLe->hide();
-    }
+    EditCommodityDialog *a = new EditCommodityDialog(this);
+    a->show();
 }
 
 
