@@ -169,42 +169,10 @@ void SignUpDialog::on_SeeRulesBtn_clicked()
 
 void SignUpDialog::on_OkBtn_clicked()
 {
-    bool repeat;
-    if(ui->UsernameLe->text().toStdString()==site.get_main_admin().get_username() || ui->UsernameLe->text().toStdString()==site.get_review_admin().get_username())
+    bool repeat=false;
+    for(int counter = 0;counter<site.get_num_of_users();counter++)
     {
-        repeat = true;
-    }
-    for(int counter = 0;counter<31;counter++)
-    {
-        if(ui->UsernameLe->text().toStdString()==site.get_post_admin(counter).get_username())
-        {
-            repeat = true;
-        }
-    }
-    for(int counter = 0;counter<site.get_num_of_store_admin();counter++)
-    {
-        if(ui->UsernameLe->text().toStdString()==site.get_store_admin(counter).get_username())
-        {
-            repeat = true;
-        }
-    }
-    for(int counter = 0;counter<site.get_num_of_support_admin();counter++)
-    {
-        if(ui->UsernameLe->text().toStdString()==site.get_support_admin(counter).get_username())
-        {
-            repeat = true;
-        }
-    }
-    for(int counter = 0;counter<site.get_num_of_seller();counter++)
-    {
-        if(ui->UsernameLe->text().toStdString()==site.get_seller(counter).get_username())
-        {
-            repeat = true;
-        }
-    }
-    for(int counter = 0;counter<site.get_num_of_customer();counter++)
-    {
-        if(ui->UsernameLe->text().toStdString()==site.get_customer(counter).get_username())
+        if(ui->UsernameLe->text().toStdString()==site.get_user(counter).get_username())
         {
             repeat = true;
         }

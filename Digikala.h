@@ -13,13 +13,7 @@ class DigiKala : public QObject
 {
     Q_OBJECT
 private:
-    User main_admin;
-    User review_admin;
-    User post_admins[31];
-    User store_admins[50];
-    User support_admins[50];
-    User customers[400];
-    User sellers[300];
+    User users[500];
     Commodity commodities[1500];
     int sold_commodities_id[1500];
     int num_of_seller;
@@ -28,7 +22,7 @@ private:
     int num_of_store_admin;
     int num_of_commodities;
     int num_of_sold_commodities;
-    int num_of_admins;
+    int num_of_users;
     int income;
     int money;
 
@@ -48,19 +42,13 @@ public:
     int get_num_of_commodities()const;
     void set_num_of_sold_commodities(int num_of_sold_commodities);
     int get_num_of_sold_commodities()const;
-    void set_num_of_admins(int num_of_admins);
-    int get_num_of_admins()const;
+    void set_num_of_users(int num_of_users);
+    int get_num_of_users()const;
     void set_income(int income);
     int get_income()const;
     void set_money(int money);
     int get_money()const;
-    User& get_main_admin();
-    User& get_review_admin();
-    User& get_post_admin(int number);
-    User& get_support_admin(int number);
-    User& get_store_admin(int number);
-    User& get_customer(int number);
-    User& get_seller(int number);
+    User& get_user(int number);
     Commodity& get_commodity(int number);
     void set_sold_commodities_id(int sold_commodities_id);
     int get_sold_commodities_id(int number)const;
