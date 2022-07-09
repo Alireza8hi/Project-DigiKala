@@ -579,6 +579,32 @@ color: rgb(255, 255, 255);</string>
      </property>
     </spacer>
    </item>
+   <item row="9" column="0">
+    <widget class="QPushButton" name="AddToWishListBtn">
+     <property name="minimumSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="icons.qrc">
+       <normaloff>:/Icons/Icons/3551002-200.png</normaloff>:/Icons/Icons/3551002-200.png</iconset>
+     </property>
+    </widget>
+   </item>
   </layout>
  </widget>
  <resources>
