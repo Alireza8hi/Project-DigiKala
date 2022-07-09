@@ -336,13 +336,6 @@ void MainAdminWindow::CheckForChange()
     }
 }
 
-
-void MainAdminWindow::on_ChangeAdminCombo_currentIndexChanged(int index)
-{
-    CheckForChange();
-}
-
-
 void MainAdminWindow::on_CurrentAdminLe_textChanged(const QString &arg1)
 {
     CheckForChange();
@@ -393,6 +386,68 @@ void MainAdminWindow::on_ChangeAdminConfirmBtn_clicked()
         string last_role3 = this_user3->get_role();
         this_user2->set_role(last_role3);
         this_user3->set_role(last_role2);
+        site.write_digi_kala("DataBase.data",0);
+        QMessageBox * msg_error = new QMessageBox(QMessageBox::Information,"success","Done",QMessageBox::Ok, this);
+        msg_error->show();
+        connect(msg_error,&QMessageBox::buttonClicked,msg_error,&QMessageBox::deleteLater,Qt::QueuedConnection);
+    }
+}
+
+void MainAdminWindow::on_RemoveAdminConfirmBtn_clicked()
+{
+    User* this_user2 = nullptr;
+    for(int counter =0;counter<site.get_num_of_users();counter++)
+    {
+        if(site.get_user(counter).get_username()==ui->RemoveAdminLe->text().toStdString())
+        {
+            this_user2 = & site.get_user(counter);
+            break;
+        }
+    }
+    if(this_user2==nullptr)
+    {
+        QMessageBox * msg_error = new QMessageBox(QMessageBox::Critical,"Error","username does not exit",QMessageBox::Ok, this);
+        msg_error->show();
+        connect(msg_error,&QMessageBox::buttonClicked,msg_error,&QMessageBox::deleteLater,Qt::QueuedConnection);
+    }
+    else if(this_user2->get_role()=="main_admin")
+    {
+        QMessageBox * msg_error = new QMessageBox(QMessageBox::Critical,"Error","you cannot remove main admin",QMessageBox::Ok, this);
+        msg_error->show();
+        connect(msg_error,&QMessageBox::buttonClicked,msg_error,&QMessageBox::deleteLater,Qt::QueuedConnection);
+    }
+    else if(this_user2->get_role()=="review_admin")
+    {
+        QMessageBox * msg_error = new QMessageBox(QMessageBox::Critical,"Error","you cannot remove review admin",QMessageBox::Ok, this);
+        msg_error->show();
+        connect(msg_error,&QMessageBox::buttonClicked,msg_error,&QMessageBox::deleteLater,Qt::QueuedConnection);
+    }
+    else if(this_user2->get_role()=="post_admin")
+    {
+        QMessageBox * msg_error = new QMessageBox(QMessageBox::Critical,"Error","you cannot remove post admin",QMessageBox::Ok, this);
+        msg_error->show();
+        connect(msg_error,&QMessageBox::buttonClicked,msg_error,&QMessageBox::deleteLater,Qt::QueuedConnection);
+    }
+    else if(this_user2->get_role()=="seller" || this_user2->get_role()=="customer")
+    {
+        QMessageBox * msg_error = new QMessageBox(QMessageBox::Critical,"Error","this user is not an admin",QMessageBox::Ok, this);
+        msg_error->show();
+        connect(msg_error,&QMessageBox::buttonClicked,msg_error,&QMessageBox::deleteLater,Qt::QueuedConnection);
+    }
+    else
+    {
+        if(this_user2->get_role()=="store_admin")
+        {
+            site.set_num_of_store_admin(site.get_num_of_store_admin()-1);
+            site.set_num_of_customer(site.get_num_of_customer()+1);
+            this_user2->set_role("customer");
+        }
+        else
+        {
+            site.set_num_of_support_admin(site.get_num_of_support_admin()-1);
+            site.set_num_of_customer(site.get_num_of_customer()+1);
+            this_user2->set_role("customer");
+        }
         site.write_digi_kala("DataBase.data",0);
         QMessageBox * msg_error = new QMessageBox(QMessageBox::Information,"success","Done",QMessageBox::Ok, this);
         msg_error->show();

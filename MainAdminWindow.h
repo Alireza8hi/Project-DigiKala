@@ -60,13 +60,13 @@ private slots:
 
     void CheckForChange();
 
-    void on_ChangeAdminCombo_currentIndexChanged(int index);
-
     void on_CurrentAdminLe_textChanged(const QString &arg1);
 
     void on_NewAdminLe_textChanged(const QString &arg1);
 
     void on_ChangeAdminConfirmBtn_clicked();
+
+    void on_RemoveAdminConfirmBtn_clicked();
 
 private:
     Ui::MainAdminWindow *ui;
