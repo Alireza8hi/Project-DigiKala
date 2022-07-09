@@ -64,7 +64,7 @@
      </attribute>
      <column>
       <property name="text">
-       <string>نام کاربری فرستنده پیام</string>
+       <string>نام کاربری فرستنده</string>
       </property>
      </column>
      <column>
