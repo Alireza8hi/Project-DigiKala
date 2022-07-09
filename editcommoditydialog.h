@@ -55,6 +55,8 @@ private slots:
 
     void on_ProfitPercentLe_textChanged(const QString &arg1);
 
+    void on_IsElectricCB_clicked(bool checked);
+
 private:
     Ui::EditCommodityDialog *ui;
 };

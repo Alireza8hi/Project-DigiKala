@@ -5,7 +5,7 @@
 User::User()
 {
     this->password=this->username=this->role="";
-    this->income=0;
+    this->income=this->money_paid=this->num_of_commodity_purchased=0;
 }
 
 User::User(User &other)
@@ -52,8 +52,8 @@ User::User(User &&other)
 
 User::~User()
 {
-    this->password=this->username=this->role=nullptr;
-    this->income=0;
+    this->password=this->username=this->role="";
+    this->income=this->money_paid=this->num_of_commodity_purchased=0;
     return;
 }
 
@@ -121,25 +121,25 @@ User& User::operator=(const User& s)
     return *this;
 }
 
-void User::push_front_comments(const Comment& comment)
+void User::set_money_paid(int money_paid)
 {
-    //this->comments.push_front(comment);
+    this->money_paid = money_paid;
     return;
 }
 
-void User::push_front_favorites_id(const int commodity)
+int User::get_money_paid() const
 {
-    //this->favorites_id.push_front(commodity);
+    return this->money_paid;
+}
+
+void User::set_num_of_commodity_purchased(int num_of_commodity_purchased)
+{
+    this->num_of_commodity_purchased = num_of_commodity_purchased;
     return;
 }
 
-Comment User::get_comment(int index)
+int User::get_num_of_commodity_purchased() const
 {
-    return this->comments.at(index);
-}
-
-int User::get_commodity(int index)
-{
-    return this->favorites_id.at(index);
+    return this->num_of_commodity_purchased;
 }
 

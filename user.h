@@ -19,9 +19,10 @@ private:
     string password;
     string role;
     int income;
-    vector<Comment> comments;
-    vector<int> favorites_id;
-    vector<int> buy_list_id;
+    int favorites_id[100];
+    int buy_list_id[100];
+    int money_paid;
+    int num_of_commodity_purchased;
 public:
     User();
     User(User& other);
@@ -36,12 +37,10 @@ public:
     void set_password(const string& upassword);
     void set_role(const string& urole);
     User& operator=(const User& s);
-    void push_front_comments(const Comment& comment);
-    void push_front_favorites_id(const int commodit);
-    Comment get_comment(int index);
-    int get_commodity(int index);
-    //حدف کالا فیوریت
-    // حذف کامنت
+    void set_money_paid(int money_paid);
+    int get_money_paid()const;
+    void set_num_of_commodity_purchased(int num_of_commodity_purchased);
+    int get_num_of_commodity_purchased()const;
 };
 
 #endif // User_H

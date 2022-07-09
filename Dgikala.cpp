@@ -43,191 +43,161 @@ DigiKala::DigiKala()
         post_admins[counter].set_phone_number("-");
         post_admins[counter].set_income(800);
         post_admins[counter].set_city("-");
+        post_admins[counter].set_role("post_admin");
     }
     post_admins[0].set_name("post_admin1");
     post_admins[0].set_family("post_admin1");
     post_admins[0].set_username("post_admin1");
-    post_admins[0].set_role("post_admin1");
     post_admins[0].set_password("post_admin1");
     post_admins[0].set_province("Tehran");
     post_admins[1].set_name("post_admin2");
     post_admins[1].set_family("post_admin2");
     post_admins[1].set_username("post_admin2");
-    post_admins[1].set_role("post_admin2");
     post_admins[1].set_password("post_admin2");
     post_admins[1].set_province("Esfahan");
     post_admins[2].set_name("post_admin3");
     post_admins[2].set_family("post_admin3");
     post_admins[2].set_username("post_admin3");
-    post_admins[2].set_role("post_admin3");
     post_admins[2].set_password("post_admin3");
     post_admins[2].set_province("Qom");
     post_admins[3].set_name("post_admin4");
     post_admins[3].set_family("post_admin4");
     post_admins[3].set_username("post_admin4");
-    post_admins[3].set_role("post_admin4");
     post_admins[3].set_password("post_admin4");
     post_admins[3].set_province("West Azarbaijan");
     post_admins[4].set_name("post_admin5");
     post_admins[4].set_family("post_admin5");
     post_admins[4].set_username("post_admin5");
-    post_admins[4].set_role("post_admin5");
     post_admins[4].set_password("post_admin5");
     post_admins[4].set_province("East Azarbaijan");
     post_admins[5].set_name("post_admin6");
     post_admins[5].set_family("post_admin6");
     post_admins[5].set_username("post_admin6");
-    post_admins[5].set_role("post_admin6");
     post_admins[5].set_password("post_admin6");
     post_admins[5].set_province("Ardabil");
     post_admins[6].set_name("post_admin7");
     post_admins[6].set_family("post_admin7");
     post_admins[6].set_username("post_admin7");
-    post_admins[6].set_role("post_admin7");
     post_admins[6].set_password("post_admin7");
     post_admins[6].set_province("Gilan");
     post_admins[7].set_name("post_admin8");
     post_admins[7].set_family("post_admin8");
     post_admins[7].set_username("post_admin8");
-    post_admins[7].set_role("post_admin8");
     post_admins[7].set_password("post_admin8");
     post_admins[7].set_province("Zanjan");
     post_admins[8].set_name("post_admin9");
     post_admins[8].set_family("post_admin9");
     post_admins[8].set_username("post_admin9");
-    post_admins[8].set_role("post_admin9");
     post_admins[8].set_password("post_admin9");
     post_admins[8].set_province("Kurdistan");
     post_admins[9].set_name("post_admin10");
     post_admins[9].set_family("post_admin10");
     post_admins[9].set_username("post_admin10");
-    post_admins[9].set_role("post_admin10");
     post_admins[9].set_password("post_admin10");
     post_admins[9].set_province("Kermanshah");
     post_admins[10].set_name("post_admin11");
     post_admins[10].set_family("post_admin11");
     post_admins[10].set_username("post_admin11");
-    post_admins[10].set_role("post_admin11");
     post_admins[10].set_password("post_admin11");
     post_admins[10].set_province("Hamadan");
     post_admins[11].set_name("post_admin12");
     post_admins[11].set_family("post_admin12");
     post_admins[11].set_username("post_admin12");
-    post_admins[11].set_role("post_admin12");
     post_admins[11].set_password("post_admin12");
     post_admins[11].set_province("Qazvin");
     post_admins[12].set_name("post_admin13");
     post_admins[12].set_family("post_admin13");
     post_admins[12].set_username("post_admin13");
-    post_admins[12].set_role("post_admin13");
     post_admins[12].set_password("post_admin13");
     post_admins[12].set_province("Alborz");
     post_admins[13].set_name("post_admin14");
     post_admins[13].set_family("post_admin14");
     post_admins[13].set_username("post_admin14");
-    post_admins[13].set_role("post_admin14");
     post_admins[13].set_password("post_admin14");
     post_admins[13].set_province("Mazandaran");
     post_admins[14].set_name("post_admin15");
     post_admins[14].set_family("post_admin15");
     post_admins[14].set_username("post_admin15");
-    post_admins[14].set_role("post_admin15");
     post_admins[14].set_password("post_admin15");
     post_admins[14].set_province("Markazi");
     post_admins[15].set_name("post_admin16");
     post_admins[15].set_family("post_admin16");
     post_admins[15].set_username("post_admin16");
-    post_admins[15].set_role("post_admin16");
     post_admins[15].set_password("post_admin16");
     post_admins[15].set_province("Ilam");
     post_admins[16].set_name("post_admin17");
     post_admins[16].set_family("post_admin17");
     post_admins[16].set_username("post_admin17");
-    post_admins[16].set_role("post_admin17");
     post_admins[16].set_password("post_admin17");
     post_admins[16].set_province("Lorestan");
     post_admins[17].set_name("post_admin18");
     post_admins[17].set_family("post_admin18");
     post_admins[17].set_username("post_admin18");
-    post_admins[17].set_role("post_admin18");
     post_admins[17].set_password("post_admin18");
     post_admins[17].set_province("Golestan");
     post_admins[18].set_name("post_admin19");
     post_admins[18].set_family("post_admin19");
     post_admins[18].set_username("post_admin19");
-    post_admins[18].set_role("post_admin19");
     post_admins[18].set_password("post_admin19");
     post_admins[18].set_province("Khuzestan");
     post_admins[19].set_name("post_admin20");
     post_admins[19].set_family("post_admin20");
     post_admins[19].set_username("post_admin20");
-    post_admins[19].set_role("post_admin20");
     post_admins[19].set_password("post_admin20");
     post_admins[19].set_province("Chaharmahal and Bakhtiari");
     post_admins[20].set_name("post_admin21");
     post_admins[20].set_family("post_admin21");
     post_admins[20].set_username("post_admin21");
-    post_admins[20].set_role("post_admin21");
     post_admins[20].set_password("post_admin21");
     post_admins[20].set_province("Semnan");
     post_admins[21].set_name("post_admin22");
     post_admins[21].set_family("post_admin22");
     post_admins[21].set_username("post_admin22");
-    post_admins[21].set_role("post_admin22");
     post_admins[21].set_password("post_admin22");
     post_admins[21].set_province("North Khorasan");
     post_admins[22].set_name("post_admin23");
     post_admins[22].set_family("post_admin23");
     post_admins[22].set_username("post_admin23");
-    post_admins[22].set_role("post_admin23");
     post_admins[22].set_password("post_admin23");
     post_admins[22].set_province("Razavi Khorasan");
     post_admins[23].set_name("post_admin24");
     post_admins[23].set_family("post_admin24");
     post_admins[23].set_username("post_admin24");
-    post_admins[23].set_role("post_admin24");
     post_admins[23].set_password("post_admin24");
     post_admins[23].set_province("South Khorasan");
     post_admins[24].set_name("post_admin25");
     post_admins[24].set_family("post_admin25");
     post_admins[24].set_username("post_admin25");
-    post_admins[24].set_role("post_admin25");
     post_admins[24].set_password("post_admin25");
     post_admins[24].set_province("Yazd");
     post_admins[25].set_name("post_admin26");
     post_admins[25].set_family("post_admin26");
     post_admins[25].set_username("post_admin26");
-    post_admins[25].set_role("post_admin26");
     post_admins[25].set_password("post_admin26");
     post_admins[25].set_province("Kohgiluyeh and Boyer-ahmad");
     post_admins[26].set_name("post_admin27");
     post_admins[26].set_family("post_admin27");
     post_admins[26].set_username("post_admin27");
-    post_admins[26].set_role("post_admin27");
     post_admins[26].set_password("post_admin27");
     post_admins[26].set_province("Fars");
     post_admins[27].set_name("post_admin28");
     post_admins[27].set_family("post_admin28");
     post_admins[27].set_username("post_admin28");
-    post_admins[27].set_role("post_admin28");
     post_admins[27].set_password("post_admin28");
     post_admins[27].set_province("Kerman");
     post_admins[28].set_name("post_admin29");
     post_admins[28].set_family("post_admin29");
     post_admins[28].set_username("post_admin29");
-    post_admins[28].set_role("post_admin29");
     post_admins[28].set_password("post_admin29");
     post_admins[28].set_province("Bushehr");
     post_admins[29].set_name("post_admin30");
     post_admins[29].set_family("post_admin30");
     post_admins[29].set_username("post_admin30");
-    post_admins[29].set_role("post_admin30");
     post_admins[29].set_password("post_admin30");
     post_admins[29].set_province("Hormozgan");
     post_admins[30].set_name("post_admin31");
     post_admins[30].set_family("post_admin31");
     post_admins[30].set_username("post_admin31");
-    post_admins[30].set_role("post_admin31");
     post_admins[30].set_password("post_admin31");
     post_admins[30].set_province("Sistan and Baluchestan");
     for(size_t counter = 0;counter<site.get_num_of_store_admin();counter++)
@@ -240,21 +210,19 @@ DigiKala::DigiKala()
         store_admins[counter].set_income(1500);
         store_admins[counter].set_city("-");
         store_admins[counter].set_province("-");
+        store_admins[counter].set_role("store_admin");
     }
     store_admins[0].set_name("store_admin1");
     store_admins[0].set_family("store_admin1");
     store_admins[0].set_username("store_admin1");
-    store_admins[0].set_role("store_admin1");
     store_admins[0].set_password("store_admin1");
     store_admins[1].set_name("store_admin2");
     store_admins[1].set_family("store_admin2");
     store_admins[1].set_username("store_admin2");
-    store_admins[1].set_role("store_admin2");
     store_admins[1].set_password("store_admin2");
     store_admins[2].set_name("store_admin3");
     store_admins[2].set_family("store_admin3");
     store_admins[2].set_username("store_admin3");
-    store_admins[2].set_role("store_admin3");
     store_admins[2].set_password("store_admin3");
     for(size_t counter = 0;counter<site.get_num_of_support_admin();counter++)
     {
@@ -266,16 +234,15 @@ DigiKala::DigiKala()
         support_admins[counter].set_income(1200);
         support_admins[counter].set_city("-");
         support_admins[counter].set_province("-");
+        support_admins[counter].set_role("support_admin");
     }
     support_admins[0].set_name("support_admin1");
     support_admins[0].set_family("support_admin1");
     support_admins[0].set_username("support_admin1");
-    support_admins[0].set_role("support_admin1");
     support_admins[0].set_password("support_admin1");
     support_admins[1].set_name("support_admin2");
     support_admins[1].set_family("support_admin2");
     support_admins[1].set_username("support_admin2");
-    support_admins[1].set_role("support_admin2");
     support_admins[1].set_password("support_admin2");
     return;
 }
@@ -546,6 +513,11 @@ User& DigiKala::get_seller(int number)
     return this->sellers[number];
 }
 
+Commodity &DigiKala::get_commodity(int number)
+{
+    return this->commodities[number];
+}
+
 //void DigiKala::set_commodities(Commodity commodities)
 //{
 //    this->commodities = commodities;
@@ -557,9 +529,9 @@ User& DigiKala::get_seller(int number)
 //    return this->commodities;
 //}
 
-void DigiKala::set_sold_commodities_id(int sold_commodities_id[100000])
+void DigiKala::set_sold_commodities_id(int sold_commodities_id)
 {
-    this->sold_commodities_id[100000] = sold_commodities_id[100000];
+    this->sold_commodities_id[site.get_num_of_sold_commodities()] = sold_commodities_id;
     return;
 }
 

@@ -14,20 +14,13 @@ SOURCES += \
     Comment.cpp \
     Commodity.cpp \
     Complaint.cpp \
-    Customer.cpp \
     CustomerWindow.cpp \
     Dgikala.cpp \
-    MainAdmin.cpp \
     MainAdminWindow.cpp \
-    PostAdmin.cpp \
     PostAdminWindow.cpp \
-    ReviewAdmin.cpp \
     ReviewAdminWindow.cpp \
-    Seller.cpp \
     SellerWindow.cpp \
-    StoreAdmin.cpp \
     StoreAdminWindow.cpp \
-    SupportAdmin.cpp \
     SupportAdminWindow.cpp \
     User.cpp \
     accountwindow.cpp \
@@ -53,20 +46,13 @@ HEADERS += \
     Comment.h \
     Commodity.h \
     Complaint.h \
-    Customer.h \
     CustomerWindow.h \
     Digikala.h \
-    MainAdmin.h \
     MainAdminWindow.h \
-    PostAdmin.h \
     PostAdminWindow.h \
-    ReviewAdmin.h \
     ReviewAdminWindow.h \
-    Seller.h \
     SellerWindow.h \
-    StoreAdmin.h \
     StoreAdminWindow.h \
-    SupportAdmin.h \
     SupportAdminWindow.h \
     User.h \
     accountwindow.h \

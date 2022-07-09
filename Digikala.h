@@ -6,13 +6,6 @@
 #include<QAbstractButton>
 #include"Commodity.h"
 #include <User.h>
-#include "ReviewAdmin.h"
-#include "SupportAdmin.h"
-#include "StoreAdmin.h"
-#include "Seller.h"
-#include "PostAdmin.h"
-#include "MainAdmin.h"
-#include "Customer.h"
 #include "Commodity.h"
 #include "accountwindow.h"
 
@@ -25,10 +18,10 @@ private:
     User post_admins[31];
     User store_admins[50];
     User support_admins[50];
-    User customers[500];
-    User sellers[500];
-    Commodity commodities[2000];
-    int sold_commodities_id[2000];
+    User customers[400];
+    User sellers[300];
+    Commodity commodities[1500];
+    int sold_commodities_id[1500];
     int num_of_seller;
     int num_of_customer;
     int num_of_support_admin;
@@ -68,9 +61,8 @@ public:
     User& get_store_admin(int number);
     User& get_customer(int number);
     User& get_seller(int number);
-    void set_commodities(Commodity commodities);
-    Commodity get_commodities()const;
-    void set_sold_commodities_id(int sold_commodities_id[5000]);
+    Commodity& get_commodity(int number);
+    void set_sold_commodities_id(int sold_commodities_id);
     int get_sold_commodities_id(int number)const;
     void add_customer(string name, string family, string username, string password, string address, string city, string province, string national_code, string phone_number, string email, int sex);
     void add_seller(string name, string family, string username, string password, string address, string city, string province, string national_code, string phone_number, string email, int sex);

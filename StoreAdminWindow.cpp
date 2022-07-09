@@ -19,8 +19,8 @@ StoreAdminWindow::StoreAdminWindow(QWidget *parent) :
     ui->DeletetingCommodityConfirmBtn->hide();
     ui->DeletetingCommodityLe->hide();
 
-    ui->SellCommodityConfirmBtn->hide();
-    ui->SellCommodityLe->hide();
+    ui->EditCommodityConfirmBtn->hide();
+    ui->SellCommodityBtn->hide();
 
     ui->EditCommodityConfirmBtn->hide();
     ui->EditCommodityLe->hide();
