@@ -4,6 +4,7 @@
 #include<QObject>
 #include<QMessageBox>
 #include<QAbstractButton>
+#include <deque>
 #include"Commodity.h"
 #include <User.h>
 #include "Commodity.h"
