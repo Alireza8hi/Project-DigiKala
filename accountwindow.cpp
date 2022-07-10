@@ -24,6 +24,7 @@ User* this_user;
 DigiKala site;
 DigiKala newsite;
 deque<Commodity> commodity;
+Commodity* this_commodity;
 
 AccountWindow::AccountWindow(QWidget *parent) :
     QMainWindow(parent),

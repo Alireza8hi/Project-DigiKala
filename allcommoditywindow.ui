@@ -38,8 +38,16 @@
      <layout class="QGridLayout" name="gridLayout_2">
       <item row="0" column="0">
        <widget class="QTableWidget" name="tableWidget">
-        <property name="alternatingRowColors">
-         <bool>true</bool>
+        <property name="font">
+         <font>
+          <family>Sitka Small Semibold</family>
+          <pointsize>11</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 100, 100);
+background:rgb(255,255,255);</string>
         </property>
         <property name="showGrid">
          <bool>true</bool>
@@ -133,7 +141,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>25</height>
+     <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">

@@ -67,5 +67,6 @@ extern DigiKala site;
 extern deque<Commodity> commodity;
 extern User* this_user;
 extern DigiKala newsite;
+extern Commodity* this_commodity;
 
 #endif // DIGIKALA_H

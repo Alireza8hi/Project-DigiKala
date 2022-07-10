@@ -20,6 +20,8 @@ public:
 private slots:
     void on_ReturnAct_triggered();
 
+    void on_tableWidget_cellDoubleClicked(int row, int column);
+
 private:
     Ui::AllCommodityWindow *ui;
 };

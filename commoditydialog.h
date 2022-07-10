@@ -12,7 +12,7 @@ class CommodityDialog : public QDialog
     Q_OBJECT
 
 public:
-    explicit CommodityDialog(QWidget *parent = nullptr);
+    explicit CommodityDialog(int number, QWidget *parent = nullptr);
     ~CommodityDialog();
 
 private slots:

@@ -1,4 +1,5 @@
 #include "allcommoditywindow.h"
+#include "commoditydialog.h"
 #include "ui_allcommoditywindow.h"
 
 AllCommodityWindow::AllCommodityWindow(QWidget *parent) :
@@ -25,5 +26,12 @@ AllCommodityWindow::~AllCommodityWindow()
 void AllCommodityWindow::on_ReturnAct_triggered()
 {
     parentWidget()->show();
+}
+
+
+void AllCommodityWindow::on_tableWidget_cellDoubleClicked(int row, int column)
+{
+    CommodityDialog *a = new CommodityDialog(row);
+    a->show();
 }
 
