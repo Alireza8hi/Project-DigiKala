@@ -93,7 +93,7 @@ void SearchDialog::on_SearchBtn_clicked()
     }
 
     this->close();
-    AllCommodityWindow *a = new AllCommodityWindow(this ,"" , false,false,0,"all",100000000 , 0);
+    AllCommodityWindow *a = new AllCommodityWindow(this);
     a->show();
 }
 

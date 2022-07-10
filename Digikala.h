@@ -29,7 +29,7 @@ private:
 
 public:
     DigiKala();
-    deque<Commodity> show_commodity(string name_commodity, bool elcectric, bool available, int id_commodity, string category_commodity,long max_cost,long min_cost);
+    void show_commodity(string name_commodity, bool elcectric, bool available, int id_commodity, string category_commodity,long max_cost,long min_cost);
     ~DigiKala();
     void set_num_of_seller(int num_of_seller);
     int get_num_of_seller()const;
@@ -64,6 +64,7 @@ public slots:
 };
 
 extern DigiKala site;
+extern deque<Commodity> commodity;
 extern User* this_user;
 extern DigiKala newsite;
 

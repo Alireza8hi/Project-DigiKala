@@ -226,9 +226,8 @@ DigiKala::DigiKala()
     return;
 }
 
-deque<Commodity> DigiKala::show_commodity(string name_commodity, bool elcectric , bool available, int id_commodity, string category_commodity, long max_cost,long min_cost)
+void DigiKala::show_commodity(string name_commodity, bool elcectric , bool available, int id_commodity, string category_commodity, long max_cost,long min_cost)
 {
-        deque<Commodity> commodity;
         int end=0;
         if(true)
         {
@@ -410,7 +409,7 @@ deque<Commodity> DigiKala::show_commodity(string name_commodity, bool elcectric 
                 end=1;
             }
         }
-            return commodity;
+            return ;
     }
 
 DigiKala::~DigiKala()

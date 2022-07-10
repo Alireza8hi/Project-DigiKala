@@ -23,6 +23,7 @@ using namespace std;
 User* this_user;
 DigiKala site;
 DigiKala newsite;
+deque<Commodity> commodity;
 
 AccountWindow::AccountWindow(QWidget *parent) :
     QMainWindow(parent),
