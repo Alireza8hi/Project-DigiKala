@@ -23,6 +23,8 @@ private:
     int buy_list_id[100];
     int money_paid;
     int num_of_commodity_purchased;
+    int num_of_favorite;
+    int num_of_buy_list;
 public:
     User();
     User(User& other);
@@ -46,6 +48,10 @@ public:
     int get_money_paid()const;
     void set_num_of_commodity_purchased(int num_of_commodity_purchased);
     int get_num_of_commodity_purchased()const;
+    void set_num_of_favorite(int num_of_favorite);
+    int get_num_of_favorite()const;
+    void set_num_of_buy_list(int num_of_buy_list);
+    int get_num_of_buy_list()const;
 
 };
 

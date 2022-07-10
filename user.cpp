@@ -227,3 +227,25 @@ int User::get_num_of_commodity_purchased() const
     return this->num_of_commodity_purchased;
 }
 
+void User::set_num_of_favorite(int num_of_favorite)
+{
+    this->num_of_favorite = num_of_favorite;
+    return;
+}
+
+int User::get_num_of_favorite() const
+{
+    return this->num_of_favorite;
+}
+
+void User::set_num_of_buy_list(int num_of_buy_list)
+{
+    this->num_of_buy_list = num_of_buy_list;
+    return;
+}
+
+int User::get_num_of_buy_list() const
+{
+    return this->num_of_buy_list;
+}
+
