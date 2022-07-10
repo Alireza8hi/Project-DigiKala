@@ -148,20 +148,6 @@ background-image: url(:/Pics/Pics/hand-painted-background-violet-orange-colours_
         </property>
        </widget>
       </item>
-      <item>
-       <widget class="QPushButton" name="DeletedCommoditieBtn">
-        <property name="styleSheet">
-         <string notr="true">color: rgb(0, 0, 0);</string>
-        </property>
-        <property name="text">
-         <string>کالا های حذف شده من</string>
-        </property>
-        <property name="icon">
-         <iconset resource="icons.qrc">
-          <normaloff>:/Icons/Icons/deleted-icon-9.jpg</normaloff>:/Icons/Icons/deleted-icon-9.jpg</iconset>
-        </property>
-       </widget>
-      </item>
      </layout>
     </item>
     <item row="0" column="1">
@@ -443,22 +429,6 @@ background-image: url(:/Pics/Pics/hand-painted-background-violet-orange-colours_
     <hint type="sourcelabel">
      <x>599</x>
      <y>87</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>313</x>
-     <y>232</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>DeletedCommoditieBtn</sender>
-   <signal>clicked()</signal>
-   <receiver>SellerWindow</receiver>
-   <slot>close()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>447</x>
-     <y>266</y>
     </hint>
     <hint type="destinationlabel">
      <x>313</x>
