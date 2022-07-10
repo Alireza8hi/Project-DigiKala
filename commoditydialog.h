@@ -22,6 +22,8 @@ private slots:
 
     void on_CommentsBtn_clicked();
 
+    void on_AddToWishListBtn_clicked();
+
 private:
     Ui::CommodityDialog *ui;
 };

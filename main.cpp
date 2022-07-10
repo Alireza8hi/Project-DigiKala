@@ -9,7 +9,6 @@
 using namespace std;
 
 extern DigiKala site;
-//extern DataBaseUser data_base_user[1000];
 
 int main(int argc, char *argv[])
 {

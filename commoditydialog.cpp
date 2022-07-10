@@ -107,3 +107,24 @@ void CommodityDialog::on_CommentsBtn_clicked()
     a->show();
 }
 
+
+void CommodityDialog::on_AddToWishListBtn_clicked()
+{
+    if(this_user==nullptr)
+    {
+        QMessageBox * msg_error = new QMessageBox(QMessageBox::Critical,"Error","اول باید وارد اکانت خود شوید.",QMessageBox::Ok,this);
+        msg_error->show();
+        connect(msg_error,&QMessageBox::buttonClicked,msg_error,&QMessageBox::deleteLater,Qt::QueuedConnection);
+    }
+    else
+    {
+        this_user->set_favorites_id(this_user->get_num_of_favorite(),this_commodity->get_id());
+        this_user->set_num_of_favorite(this_user->get_num_of_favorite()+1);
+        site.write_digi_kala("DataBase.data",0);
+        QMessageBox * msg_error = new QMessageBox(QMessageBox::Information,"success","انجام شد.",QMessageBox::Ok,this);
+        msg_error->show();
+        connect(msg_error,&QMessageBox::buttonClicked,msg_error,&QMessageBox::deleteLater,Qt::QueuedConnection);
+    }
+
+}
+

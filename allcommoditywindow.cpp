@@ -31,7 +31,7 @@ void AllCommodityWindow::on_ReturnAct_triggered()
 
 void AllCommodityWindow::on_tableWidget_cellDoubleClicked(int row, int column)
 {
-    CommodityDialog *a = new CommodityDialog(row);
+    CommodityDialog *a = new CommodityDialog(row,this);
     a->show();
 }
 
