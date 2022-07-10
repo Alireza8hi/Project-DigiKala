@@ -22,6 +22,7 @@ using namespace std;
 
 User* this_user;
 DigiKala site;
+DigiKala newsite;
 
 AccountWindow::AccountWindow(QWidget *parent) :
     QMainWindow(parent),

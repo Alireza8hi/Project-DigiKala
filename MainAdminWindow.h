@@ -80,6 +80,8 @@ private slots:
 
     void on_SignOutBtn_triggered();
 
+    void on_BankruptcyAct_triggered();
+
 private:
     Ui::MainAdminWindow *ui;
 };

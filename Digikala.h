@@ -58,9 +58,13 @@ public:
     void add_seller(string name, string family, string username, string password, string address, string city, string province, string national_code, string phone_number, string email, int sex);
     int read_digi_kala(const char * file , int seekbeg);
     void write_digi_kala(const char * file ,int seekbeg);
+
+public slots:
+    static void delete_site();
 };
 
 extern DigiKala site;
 extern User* this_user;
+extern DigiKala newsite;
 
 #endif // DIGIKALA_H
