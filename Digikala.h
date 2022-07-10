@@ -8,7 +8,6 @@
 #include"Commodity.h"
 #include <User.h>
 #include "Commodity.h"
-#include "accountwindow.h"
 
 class DigiKala : public QObject
 {

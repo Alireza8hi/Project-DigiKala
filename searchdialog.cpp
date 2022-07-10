@@ -74,6 +74,7 @@ void SearchDialog::on_ExitBtn_clicked()
 void SearchDialog::on_SearchBtn_clicked()
 {
     bool elcectric=false , available=false;
+    string name , category;
     long max_cast=100000000;
     long min_cast=0;
     int id=0;
@@ -91,8 +92,72 @@ void SearchDialog::on_SearchBtn_clicked()
     {
         id=this->ui->IDSB->value();
     }
-
+    if(this->ui->SearcLe->text().size()>0)
+    {
+        name=this->ui->SearcLe->text().toStdString();
+    }
+    if(this->ui->CategoryCombo->currentIndex()==9)
+    {
+        category="e_amusement";
+    }
+    else if(this->ui->CategoryCombo->currentIndex()==10)
+    {
+        category="non_e_amusement";
+    }
+    else if(this->ui->CategoryCombo->currentIndex()==3)
+    {
+        category="dig_applinace";
+    }
+    else if(this->ui->CategoryCombo->currentIndex()==4)
+    {
+        category="dig_accessory";
+    }
+    else if(this->ui->CategoryCombo->currentIndex()==5)
+    {
+        category="furniture";
+    }
+    else if(this->ui->CategoryCombo->currentIndex()==6)
+    {
+        category="kit_applinace";
+    }
+    else if(this->ui->CategoryCombo->currentIndex()==7)
+    {
+        category="e_applinace";
+    }
+    else if(this->ui->CategoryCombo->currentIndex()==8)
+    {
+        category="clothing";
+    }
+    else if(this->ui->CategoryCombo->currentIndex()==12)
+    {
+        category="stationery";
+    }
+    else if(this->ui->CategoryCombo->currentIndex()==13)
+    {
+        category="book";
+    }
+    else if(this->ui->CategoryCombo->currentIndex()==15)
+    {
+        category="food";
+    }
+    else if(this->ui->CategoryCombo->currentIndex()==1)
+    {
+        category="b_h_supply";
+    }
+    else if(this->ui->CategoryCombo->currentIndex()==14)
+    {
+        category="mu_instrument";
+    }
+    else if(this->ui->CategoryCombo->currentIndex()==11)
+    {
+        category="me_equipment";
+    }
+    else if(this->ui->CategoryCombo->currentIndex()==0)
+    {
+        category="all";
+    }
     this->close();
+    site.show_commodity(name,elcectric,available,id,category,max_cast ,min_cast);
     AllCommodityWindow *a = new AllCommodityWindow(this);
     a->show();
 }

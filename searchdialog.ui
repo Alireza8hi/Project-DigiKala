@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>802</width>
+    <width>869</width>
     <height>603</height>
    </rect>
   </property>
@@ -105,12 +105,27 @@
            </item>
            <item>
             <property name="text">
-             <string>دیجیتالی</string>
+             <string>دیجیتالی : اصلی</string>
             </property>
            </item>
            <item>
             <property name="text">
-             <string>وسایل خانه</string>
+             <string>دیجیتالی : جانبی</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>مبلمان</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>لوازم آشپزخانه</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>وسایل خانه : لوازم برقی</string>
             </property>
            </item>
            <item>
@@ -120,7 +135,12 @@
            </item>
            <item>
             <property name="text">
-             <string>سرگرمی</string>
+             <string>سرگرمی برقی</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>سرگرمی غیر برقی</string>
             </property>
            </item>
            <item>

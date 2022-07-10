@@ -53,6 +53,7 @@ void SupportAdminWindow::on_SearchBtn_clicked()
 
 void SupportAdminWindow::on_AllCommoditiesBtn_clicked()
 {
+    site.show_commodity("" , false,false,0,"all",100000000 , 0);
     AllCommodityWindow *a = new AllCommodityWindow(this);
     a->show();
 }

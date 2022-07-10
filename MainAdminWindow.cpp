@@ -69,6 +69,7 @@ void MainAdminWindow::on_MessagesAct_triggered()
 
 void MainAdminWindow::on_AllCommoditysBtn_clicked()
 {
+    site.show_commodity("" , false,false,0,"all",100000000 , 0);
     AllCommodityWindow *a = new AllCommodityWindow(this);
     a->show();
 }

@@ -17,9 +17,12 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
     MainWindow w;
     w.show();
+<<<<<<< HEAD
+=======
 
     //
     //
 
+>>>>>>> 9925a52efd4a9ec3faf71b267a336e126b2fd3c0
     return a.exec();
 }
