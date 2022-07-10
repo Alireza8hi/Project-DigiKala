@@ -68,6 +68,16 @@ private slots:
 
     void on_RemoveAdminConfirmBtn_clicked();
 
+    void CheckForChangeI();
+
+    void on_ChangeAdminIncomeUserLe_textChanged(const QString &arg1);
+
+    void on_ChangeAdminIncomeLe_textChanged(const QString &arg1);
+
+    void on_ChangeAdminIncomeConfirmBtn_clicked();
+
+    void on_OpenOtherAdminsConfirmBtn_clicked();
+
 private:
     Ui::MainAdminWindow *ui;
 };

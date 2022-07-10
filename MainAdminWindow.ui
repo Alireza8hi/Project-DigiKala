@@ -222,6 +222,9 @@ background-color: rgb(22, 31, 48);</string>
            <string notr="true">color: rgb(255, 255, 255);</string>
           </property>
           <property name="inputMask">
+           <string/>
+          </property>
+          <property name="placeholderText">
            <string>نام کاربری ادمین را وارد کنید</string>
           </property>
          </widget>
@@ -297,6 +300,13 @@ background-color: rgb(22, 31, 48);</string>
           </property>
           <property name="text">
            <string>اخراج مدیر</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="radioButton">
+          <property name="text">
+           <string>RadioButton</string>
           </property>
          </widget>
         </item>

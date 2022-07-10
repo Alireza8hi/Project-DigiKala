@@ -1,11 +1,18 @@
 #include "MainAdminWindow.h"
 #include "CartDialog.h"
+#include "CustomerWindow.h"
 #include "Digikala.h"
+#include "PostAdminWindow.h"
+#include "ReviewAdminWindow.h"
+#include "SellerWindow.h"
+#include "StoreAdminWindow.h"
+#include "SupportAdminWindow.h"
 #include "allcommoditywindow.h"
 #include "categorywindow.h"
 #include "listofpeopledialog.h"
 #include "messagesdialog.h"
 #include "profiledialog.h"
+#include "qthread.h"
 #include "searchdialog.h"
 #include "ui_MainAdminWindow.h"
 #include "wishlistdialog.h"
@@ -17,7 +24,7 @@ MainAdminWindow::MainAdminWindow(QWidget *parent) :
     ui->setupUi(this);
     ui->CommodityProfitLbl->setText(QString::number(site.get_income()));
 
-    ui->ChangeAdminIncomeUserLe->setInputMask("000000000000");
+    ui->ChangeAdminIncomeLe->setInputMask("000000000000");
 
     ui->OpenOtherAdminsLe->hide();
     ui->OpenOtherAdminsConfirmBtn->hide();
@@ -406,7 +413,7 @@ void MainAdminWindow::on_RemoveAdminConfirmBtn_clicked()
     }
     if(this_user2==nullptr)
     {
-        QMessageBox * msg_error = new QMessageBox(QMessageBox::Critical,"Error","username does not exit",QMessageBox::Ok, this);
+        QMessageBox * msg_error = new QMessageBox(QMessageBox::Critical,"Error","username does not find",QMessageBox::Ok, this);
         msg_error->show();
         connect(msg_error,&QMessageBox::buttonClicked,msg_error,&QMessageBox::deleteLater,Qt::QueuedConnection);
     }
@@ -452,6 +459,179 @@ void MainAdminWindow::on_RemoveAdminConfirmBtn_clicked()
         QMessageBox * msg_error = new QMessageBox(QMessageBox::Information,"success","Done",QMessageBox::Ok, this);
         msg_error->show();
         connect(msg_error,&QMessageBox::buttonClicked,msg_error,&QMessageBox::deleteLater,Qt::QueuedConnection);
+    }
+}
+
+void MainAdminWindow::CheckForChangeI()
+{
+    if (ui->ChangeAdminIncomeLe->text().size()>0 && ui->ChangeAdminIncomeUserLe->text().size()>0)
+    {
+        ui->ChangeAdminIncomeConfirmBtn->setEnabled(true);
+    }
+    else
+    {
+        ui->ChangeAdminIncomeConfirmBtn->setEnabled(false);
+    }
+}
+
+
+void MainAdminWindow::on_ChangeAdminIncomeUserLe_textChanged(const QString &arg1)
+{
+    CheckForChangeI();
+}
+
+
+void MainAdminWindow::on_ChangeAdminIncomeLe_textChanged(const QString &arg1)
+{
+    CheckForChangeI();
+}
+
+
+void MainAdminWindow::on_ChangeAdminIncomeConfirmBtn_clicked()
+{
+    User* this_user2 = nullptr;
+    for(int counter =0;counter<site.get_num_of_users();counter++)
+    {
+        if(site.get_user(counter).get_username()==ui->ChangeAdminIncomeUserLe->text().toStdString())
+        {
+            this_user2 = & site.get_user(counter);
+            break;
+        }
+    }
+    if(this_user2==nullptr)
+    {
+        QMessageBox * msg_error = new QMessageBox(QMessageBox::Critical,"Error","username does not find",QMessageBox::Ok, this);
+        msg_error->show();
+        connect(msg_error,&QMessageBox::buttonClicked,msg_error,&QMessageBox::deleteLater,Qt::QueuedConnection);
+    }
+    else if(this_user2->get_role()=="seller" || this_user2->get_role()=="customer")
+    {
+        QMessageBox * msg_error = new QMessageBox(QMessageBox::Critical,"Error","this user is not an admin",QMessageBox::Ok, this);
+        msg_error->show();
+        connect(msg_error,&QMessageBox::buttonClicked,msg_error,&QMessageBox::deleteLater,Qt::QueuedConnection);
+    }
+    else
+    {
+        this_user2->set_income(ui->ChangeAdminIncomeLe->text().toInt());
+        site.write_digi_kala("DataBase.data",0);
+        QMessageBox * msg_error = new QMessageBox(QMessageBox::Information,"success","Done",QMessageBox::Ok, this);
+        msg_error->show();
+        connect(msg_error,&QMessageBox::buttonClicked,msg_error,&QMessageBox::deleteLater,Qt::QueuedConnection);
+    }
+}
+
+
+
+void MainAdminWindow::on_OpenOtherAdminsConfirmBtn_clicked()
+{
+    User* this_user2 = nullptr;
+    for(int counter =0;counter<site.get_num_of_users();counter++)
+    {
+        if(site.get_user(counter).get_username()==ui->OpenOtherAdminsLe->text().toStdString())
+        {
+            this_user2 = & site.get_user(counter);
+            break;
+        }
+    }
+    if(this_user2==nullptr)
+    {
+        QMessageBox * msg_error = new QMessageBox(QMessageBox::Critical,"Error","username does not find",QMessageBox::Ok, this);
+        msg_error->show();
+        connect(msg_error,&QMessageBox::buttonClicked,msg_error,&QMessageBox::deleteLater,Qt::QueuedConnection);
+    }
+    else
+    {
+        for(int counter=0;counter<site.get_num_of_users();counter++)
+        {
+            if(ui->OpenOtherAdminsLe->text().toStdString()==site.get_user(counter).get_username())
+            {
+                this_user = &site.get_user(counter);
+                if(this_user->get_role()=="main_admin")
+                {
+                    MainAdminWindow* main_admin_window = new class MainAdminWindow(this);
+                    QThread* th1 = new QThread();
+                    main_admin_window->moveToThread(th1);
+                    connect(th1,&QThread::started,main_admin_window,&MainAdminWindow::show);
+                    connect(main_admin_window,&MainAdminWindow::destroyed,th1,&QThread::quit);
+                    connect(main_admin_window,&MainAdminWindow::destroyed,main_admin_window,&MainAdminWindow::deleteLater);
+                    connect(th1,&QThread::finished,th1,&QThread::deleteLater);
+                    connect(th1,&QThread::started,this,&AccountWindow::hide);
+                    th1->start();
+                }
+                else if(this_user->get_role()=="review_admin")
+                {
+                    ReviewAdminWindow* review_admin_window = new class ReviewAdminWindow(this);
+                    QThread* th1 = new QThread();
+                    review_admin_window->moveToThread(th1);
+                    connect(th1,&QThread::started,review_admin_window,&ReviewAdminWindow::show);
+                    connect(review_admin_window,&ReviewAdminWindow::destroyed,th1,&QThread::quit);
+                    connect(review_admin_window,&ReviewAdminWindow::destroyed,review_admin_window,&ReviewAdminWindow::deleteLater);
+                    connect(th1,&QThread::finished,th1,&QThread::deleteLater);
+                    connect(th1,&QThread::started,this,&AccountWindow::hide);
+                    th1->start();
+                }
+                else if(this_user->get_role()=="post_admin")
+                {
+                PostAdminWindow* post_admin_window = new class PostAdminWindow(this);
+                QThread* th1 = new QThread();
+                post_admin_window->moveToThread(th1);
+                connect(th1,&QThread::started,post_admin_window,&PostAdminWindow::show);
+                connect(post_admin_window,&PostAdminWindow::destroyed,th1,&QThread::quit);
+                connect(post_admin_window,&PostAdminWindow::destroyed,post_admin_window,&PostAdminWindow::deleteLater);
+                connect(th1,&QThread::finished,th1,&QThread::deleteLater);
+                connect(th1,&QThread::started,this,&AccountWindow::hide);
+                th1->start();
+                }
+                else if(this_user->get_role()=="support_admin")
+                {
+                    SupportAdminWindow* support_admin_window = new class SupportAdminWindow(this);
+                    QThread* th1 = new QThread();
+                    support_admin_window->moveToThread(th1);
+                    connect(th1,&QThread::started,support_admin_window,&SupportAdminWindow::show);
+                    connect(support_admin_window,&SupportAdminWindow::destroyed,th1,&QThread::quit);
+                    connect(support_admin_window,&SupportAdminWindow::destroyed,support_admin_window,&SupportAdminWindow::deleteLater);
+                    connect(th1,&QThread::finished,th1,&QThread::deleteLater);
+                    connect(th1,&QThread::started,this,&AccountWindow::hide);
+                    th1->start();
+                }
+                else if(this_user->get_role()=="store_admin")
+                {
+                    StoreAdminWindow* store_admin_window = new class StoreAdminWindow(this);
+                    QThread* th1 = new QThread();
+                    store_admin_window->moveToThread(th1);
+                    connect(th1,&QThread::started,store_admin_window,&StoreAdminWindow::show);
+                    connect(store_admin_window,&StoreAdminWindow::destroyed,th1,&QThread::quit);
+                    connect(store_admin_window,&StoreAdminWindow::destroyed,store_admin_window,&StoreAdminWindow::deleteLater);
+                    connect(th1,&QThread::finished,th1,&QThread::deleteLater);
+                    connect(th1,&QThread::started,this,&AccountWindow::hide);
+                    th1->start();
+                }
+                else if(this_user->get_role()=="seller")
+                {
+                    SellerWindow* seller_window = new class SellerWindow(this);
+                    QThread* th1 = new QThread();
+                    seller_window->moveToThread(th1);
+                    connect(th1,&QThread::started,seller_window,&SellerWindow::show);
+                    connect(seller_window,&SellerWindow::destroyed,th1,&QThread::quit);
+                    connect(seller_window,&SellerWindow::destroyed,seller_window,&SellerWindow::deleteLater);
+                    connect(th1,&QThread::finished,th1,&QThread::deleteLater);
+                    connect(th1,&QThread::started,this,&AccountWindow::hide);
+                    th1->start();
+                }
+                else
+                {
+                    CustomerWindow* customer_window = new class CustomerWindow(this);
+                    QThread* th1 = new QThread();
+                    customer_window->moveToThread(th1);
+                    connect(th1,&QThread::started,customer_window,&CustomerWindow::show);
+                    connect(customer_window,&CustomerWindow::destroyed,th1,&QThread::quit);
+                    connect(customer_window,&CustomerWindow::destroyed,customer_window,&CustomerWindow::deleteLater);
+                    connect(th1,&QThread::finished,th1,&QThread::deleteLater);
+                    connect(th1,&QThread::started,this,&AccountWindow::hide);
+                    th1->start();
+                }
+            }
+        }
     }
 }
 
