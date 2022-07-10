@@ -14,10 +14,15 @@ extern DigiKala site;
 int main(int argc, char *argv[])
 {
     site.read_digi_kala("DataBase.data",0);
-    site.get_commodity(0).set_is_confirm(true);
-
     QApplication a(argc, argv);
     MainWindow w;
     w.show();
+<<<<<<< HEAD
+=======
+
+    //
+    //
+
+>>>>>>> 9925a52efd4a9ec3faf71b267a336e126b2fd3c0
     return a.exec();
 }
