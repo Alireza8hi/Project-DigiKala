@@ -109,12 +109,12 @@ void EditCommodityDialog::on_ConfirmAndReturnBtn_clicked()
         site.get_commodity(site.get_num_of_commodities()).set_is_confirm(true);
     }
     srand(time(0));
-    site.get_commodity(site.get_num_of_commodities()).set_id(rand() % 9999 + 1000);
+    site.get_commodity(site.get_num_of_commodities()).set_id(rand() % 99999 + 10000);
     for(int counter =0;counter<site.get_num_of_commodities();counter++)
     {
         if(site.get_commodity(site.get_num_of_commodities()).get_id()==site.get_commodity(counter).get_id())
         {
-            site.get_commodity(site.get_num_of_commodities()).set_id(rand() % 9999 + 1000);
+            site.get_commodity(site.get_num_of_commodities()).set_id(rand() % 99999 + 10000);
             counter=0;
         }
     }

@@ -17,6 +17,7 @@ SearchDialog::SearchDialog(QWidget *parent) :
     ui->CategoryLbl->hide();
     ui->IDSB->hide();
     ui->ElectricCB->hide();
+    ui->label->hide();
 }
 
 SearchDialog::~SearchDialog()
@@ -44,6 +45,7 @@ void SearchDialog::on_ShowOptionsBtn_clicked()
         ui->CategoryLbl->show();
         ui->IDSB->show();
         ui->ElectricCB->show();
+        ui->label->show();
     }
     else
     {
@@ -56,6 +58,7 @@ void SearchDialog::on_ShowOptionsBtn_clicked()
         ui->CategoryLbl->hide();
         ui->IDSB->hide();
         ui->ElectricCB->hide();
+        ui->label->hide();
     }
 
 }
