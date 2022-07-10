@@ -228,10 +228,7 @@ DigiKala::DigiKala()
 
 void DigiKala::show_commodity(string name_commodity, bool elcectric , bool available, int id_commodity, string category_commodity, long max_cost,long min_cost)
 {
-    /*for(int i=0 ; i<commodity.size() ; i++)
-    {
-        commodity.erase(commodity.cbegin()+i);
-    }*/
+        commodity.clear();
         int end=0;
         if(true)
         {
