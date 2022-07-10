@@ -31,6 +31,8 @@ private slots:
 
     void on_CommoditiesAwaitingApprovalBtn_clicked();
 
+    void on_SignOutBtn_triggered();
+
 private:
     Ui::ReviewAdminWindow *ui;
 };

@@ -31,6 +31,8 @@ private slots:
 
     void on_WishListBtn_clicked();
 
+    void on_SignOutAct_triggered();
+
 private:
     Ui::CustomerWindow *ui;
 };

@@ -1,7 +1,9 @@
 #include "CustomerWindow.h"
 #include "CartDialog.h"
+#include "Digikala.h"
 #include "allcommoditywindow.h"
 #include "categorywindow.h"
+#include "mainwindow.h"
 #include "messagesdialog.h"
 #include "profiledialog.h"
 #include "searchdialog.h"
@@ -65,6 +67,14 @@ void CustomerWindow::on_CartBtn_clicked()
 void CustomerWindow::on_WishListBtn_clicked()
 {
     WishListDialog *a = new WishListDialog(this);
+    a->show();
+}
+
+
+void CustomerWindow::on_SignOutAct_triggered()
+{
+    MainWindow *a = new MainWindow(this);
+    this_user = nullptr;
     a->show();
 }
 

@@ -574,7 +574,10 @@ background-color: rgb(255, 255, 255);</string>
      <normaloff>:/Icons/Icons/logout-icon-png-transparent-login-logout-icon-11562923416nzkie6fbka.png</normaloff>:/Icons/Icons/logout-icon-png-transparent-login-logout-icon-11562923416nzkie6fbka.png</iconset>
    </property>
    <property name="text">
-    <string>خروج از حساب کاربری!!</string>
+    <string>خروج از حساب کاربری</string>
+   </property>
+   <property name="toolTip">
+    <string>خروج از حساب کاربری</string>
    </property>
   </action>
   <action name="BankruptcyAct">
@@ -702,6 +705,22 @@ background-color: rgb(255, 255, 255);</string>
     <hint type="destinationlabel">
      <x>277</x>
      <y>272</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>SignOutBtn</sender>
+   <signal>triggered()</signal>
+   <receiver>MainAdminWindow</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>451</x>
+     <y>496</y>
     </hint>
    </hints>
   </connection>

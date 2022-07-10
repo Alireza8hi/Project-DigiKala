@@ -32,6 +32,8 @@ private slots:
 
     void on_CommoditiesAwaitingPostBtn_clicked();
 
+    void on_SignOutBtn_triggered();
+
 private:
     Ui::PostAdminWindow *ui;
 };

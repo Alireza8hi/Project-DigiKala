@@ -1,8 +1,10 @@
 #include "SupportAdminWindow.h"
 #include "CartDialog.h"
+#include "Digikala.h"
 #include "allcommoditywindow.h"
 #include "categorywindow.h"
 #include "listofcommoditiesdialog.h"
+#include "mainwindow.h"
 #include "messagesdialog.h"
 #include "profiledialog.h"
 #include "searchdialog.h"
@@ -85,6 +87,14 @@ void SupportAdminWindow::on_ComplaintListBtn_clicked()
 void SupportAdminWindow::on_CheckCommentBtn_clicked()
 {
     MessagesDialog *a = new MessagesDialog(this);
+    a->show();
+}
+
+
+void SupportAdminWindow::on_SignOutBtn_triggered()
+{
+    MainWindow *a = new MainWindow(this);
+    this_user = nullptr;
     a->show();
 }
 

@@ -44,6 +44,8 @@ private slots:
 
     void on_EditCommodityConfirmBtn_clicked();
 
+    void on_SignOutAct_triggered();
+
 private:
     Ui::StoreAdminWindow *ui;
 };

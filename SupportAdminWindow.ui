@@ -254,32 +254,6 @@ background-color: qlineargradient(spread:reflect, x1:0.826291, y1:0.887, x2:1, y
         </property>
        </widget>
       </item>
-      <item row="3" column="2">
-       <widget class="QPushButton" name="CheckCommentBtn">
-        <property name="minimumSize">
-         <size>
-          <width>0</width>
-          <height>30</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>16777215</width>
-          <height>30</height>
-         </size>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">color: rgb(0, 0, 0);</string>
-        </property>
-        <property name="text">
-         <string>بررسی نظر ها</string>
-        </property>
-        <property name="icon">
-         <iconset resource="icons.qrc">
-          <normaloff>:/Icons/Icons/icon-comments-19.jpg</normaloff>:/Icons/Icons/icon-comments-19.jpg</iconset>
-        </property>
-       </widget>
-      </item>
       <item row="1" column="2">
        <spacer name="verticalSpacer_3">
         <property name="orientation">
@@ -423,7 +397,7 @@ background-color: qlineargradient(spread:reflect, x1:0.826291, y1:0.887, x2:1, y
      <x>0</x>
      <y>0</y>
      <width>908</width>
-     <height>25</height>
+     <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">
@@ -622,14 +596,14 @@ background-color: qlineargradient(spread:reflect, x1:0.826291, y1:0.887, x2:1, y
    </hints>
   </connection>
   <connection>
-   <sender>CheckCommentBtn</sender>
-   <signal>clicked()</signal>
+   <sender>SignOutBtn</sender>
+   <signal>triggered()</signal>
    <receiver>SupportAdminWindow</receiver>
-   <slot>close()</slot>
+   <slot>hide()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>629</x>
-     <y>371</y>
+     <x>-1</x>
+     <y>-1</y>
     </hint>
     <hint type="destinationlabel">
      <x>453</x>

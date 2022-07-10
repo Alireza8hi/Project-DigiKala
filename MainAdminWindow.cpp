@@ -10,6 +10,7 @@
 #include "allcommoditywindow.h"
 #include "categorywindow.h"
 #include "listofpeopledialog.h"
+#include "mainwindow.h"
 #include "messagesdialog.h"
 #include "profiledialog.h"
 #include "qthread.h"
@@ -633,5 +634,13 @@ void MainAdminWindow::on_OpenOtherAdminsConfirmBtn_clicked()
             }
         }
     }
+}
+
+
+void MainAdminWindow::on_SignOutBtn_triggered()
+{
+    MainWindow *a = new MainWindow(this);
+    this_user = nullptr;
+    a->show();
 }
 

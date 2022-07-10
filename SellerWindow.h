@@ -36,6 +36,8 @@ private slots:
 
     void on_SellCommodityBtn_clicked();
 
+    void on_SignOutBtn_triggered();
+
 private:
     Ui::SellerWindow *ui;
 };

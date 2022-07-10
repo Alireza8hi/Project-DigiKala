@@ -162,20 +162,6 @@ background-image: url(:/Pics/Pics/hand-painted-background-violet-orange-colours_
         </property>
        </widget>
       </item>
-      <item>
-       <widget class="QPushButton" name="CommoditiesExpireBtn">
-        <property name="styleSheet">
-         <string notr="true">color: rgb(0, 0, 0);</string>
-        </property>
-        <property name="text">
-         <string>کالا های نزدیک به انقضا</string>
-        </property>
-        <property name="icon">
-         <iconset resource="icons.qrc">
-          <normaloff>:/Icons/Icons/expiration-icon-3.jpg</normaloff>:/Icons/Icons/expiration-icon-3.jpg</iconset>
-        </property>
-       </widget>
-      </item>
      </layout>
     </item>
     <item row="0" column="1">
@@ -295,7 +281,7 @@ background-image: url(:/Pics/Pics/hand-painted-background-violet-orange-colours_
      <x>0</x>
      <y>0</y>
      <width>627</width>
-     <height>25</height>
+     <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">
@@ -327,7 +313,10 @@ background-image: url(:/Pics/Pics/hand-painted-background-violet-orange-colours_
      <normaloff>:/Icons/Icons/logout-icon-png-transparent-login-logout-icon-11562923416nzkie6fbka.png</normaloff>:/Icons/Icons/logout-icon-png-transparent-login-logout-icon-11562923416nzkie6fbka.png</iconset>
    </property>
    <property name="text">
-    <string>خروج از حساب کاربری!!</string>
+    <string>خروج از حساب کاربری</string>
+   </property>
+   <property name="toolTip">
+    <string>خروج از حساب کاربری</string>
    </property>
   </action>
   <action name="DeleteAccountAct">
@@ -475,14 +464,14 @@ background-image: url(:/Pics/Pics/hand-painted-background-violet-orange-colours_
    </hints>
   </connection>
   <connection>
-   <sender>CommoditiesExpireBtn</sender>
-   <signal>clicked()</signal>
+   <sender>SignOutBtn</sender>
+   <signal>triggered()</signal>
    <receiver>SellerWindow</receiver>
-   <slot>close()</slot>
+   <slot>hide()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>447</x>
-     <y>302</y>
+     <x>-1</x>
+     <y>-1</y>
     </hint>
     <hint type="destinationlabel">
      <x>313</x>

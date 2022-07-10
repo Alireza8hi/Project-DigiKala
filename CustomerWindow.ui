@@ -206,7 +206,7 @@ background-color: rgb(255, 255, 255);</string>
      <x>0</x>
      <y>0</y>
      <width>429</width>
-     <height>25</height>
+     <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">
@@ -233,7 +233,7 @@ background-color: rgb(255, 255, 255);</string>
      <normaloff>:/Icons/Icons/logout-icon-png-transparent-login-logout-icon-11562923416nzkie6fbka.png</normaloff>:/Icons/Icons/logout-icon-png-transparent-login-logout-icon-11562923416nzkie6fbka.png</iconset>
    </property>
    <property name="text">
-    <string>خروج از حساب کاربری!!</string>
+    <string>خروج از حساب کاربری</string>
    </property>
   </action>
   <action name="DeleteAccountAct">
@@ -366,6 +366,22 @@ background-color: rgb(255, 255, 255);</string>
     <hint type="sourcelabel">
      <x>360</x>
      <y>51</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>214</x>
+     <y>205</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>SignOutAct</sender>
+   <signal>triggered()</signal>
+   <receiver>CustomerWindow</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
     </hint>
     <hint type="destinationlabel">
      <x>214</x>

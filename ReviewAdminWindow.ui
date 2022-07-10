@@ -274,7 +274,7 @@ border-image: url(:/Pics/Pics/NoBack.png);</string>
      <x>0</x>
      <y>0</y>
      <width>640</width>
-     <height>25</height>
+     <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">
@@ -310,7 +310,10 @@ border-image: url(:/Pics/Pics/NoBack.png);</string>
      <normaloff>:/Icons/Icons/logout-icon-png-transparent-login-logout-icon-11562923416nzkie6fbka.png</normaloff>:/Icons/Icons/logout-icon-png-transparent-login-logout-icon-11562923416nzkie6fbka.png</iconset>
    </property>
    <property name="text">
-    <string>خروج از حساب کاربری!!</string>
+    <string>خروج از حساب کاربری</string>
+   </property>
+   <property name="toolTip">
+    <string>خروج از حساب کاربری</string>
    </property>
   </action>
   <action name="DeleteAccountAct">
@@ -450,6 +453,22 @@ border-image: url(:/Pics/Pics/NoBack.png);</string>
     <hint type="sourcelabel">
      <x>117</x>
      <y>87</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>SignOutBtn</sender>
+   <signal>triggered()</signal>
+   <receiver>ReviewAdminWindow</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
     </hint>
     <hint type="destinationlabel">
      <x>319</x>

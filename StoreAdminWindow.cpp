@@ -1,9 +1,11 @@
 #include "StoreAdminWindow.h"
 #include "CartDialog.h"
+#include "Digikala.h"
 #include "allcommoditywindow.h"
 #include "categorywindow.h"
 #include "editcommoditydialog.h"
 #include "listofcommoditiesdialog.h"
+#include "mainwindow.h"
 #include "messagesdialog.h"
 #include "profiledialog.h"
 #include "searchdialog.h"
@@ -20,7 +22,6 @@ StoreAdminWindow::StoreAdminWindow(QWidget *parent) :
     ui->DeletetingCommodityLe->hide();
 
     ui->EditCommodityConfirmBtn->hide();
-    ui->SellCommodityBtn->hide();
 
     ui->EditCommodityConfirmBtn->hide();
     ui->EditCommodityLe->hide();
@@ -146,6 +147,14 @@ void StoreAdminWindow::on_EditCommodityBtn_clicked()
 void StoreAdminWindow::on_EditCommodityConfirmBtn_clicked()
 {
     EditCommodityDialog *a = new EditCommodityDialog(this , ui->EditCommodityLe->text().toInt());
+    a->show();
+}
+
+
+void StoreAdminWindow::on_SignOutAct_triggered()
+{
+    MainWindow *a = new MainWindow(this);
+    this_user = nullptr;
     a->show();
 }
 

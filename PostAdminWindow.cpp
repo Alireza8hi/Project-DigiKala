@@ -1,8 +1,10 @@
 #include "PostAdminWindow.h"
 #include "CartDialog.h"
+#include "Digikala.h"
 #include "allcommoditywindow.h"
 #include "categorywindow.h"
 #include "commoditiesawaitingpostdialog.h"
+#include "mainwindow.h"
 #include "messagesdialog.h"
 #include "profiledialog.h"
 #include "searchdialog.h"
@@ -72,6 +74,14 @@ void PostAdminWindow::on_WishListBtn_clicked()
 void PostAdminWindow::on_CommoditiesAwaitingPostBtn_clicked()
 {
     CommoditiesAwaitingPostDialog *a = new CommoditiesAwaitingPostDialog(this);
+    a->show();
+}
+
+
+void PostAdminWindow::on_SignOutBtn_triggered()
+{
+    MainWindow *a = new MainWindow(this);
+    this_user = nullptr;
     a->show();
 }
 

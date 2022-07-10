@@ -34,6 +34,7 @@ private:
     double volume;
     bool is_deleted;
     bool is_confirm;
+    bool is_posted;
     int profit_percent;
 public:
     Commodity();
@@ -88,6 +89,8 @@ public:
     bool get_is_deleted()const;
     void set_is_confirm(bool is_confirm);
     bool get_is_confirm()const;
+    void set_is_posted(bool is_posted);
+    bool get_is_posted()const;
     void set_profit_percent(int profit_percent);
     int get_profit_percent()const;
 };

@@ -78,6 +78,8 @@ private slots:
 
     void on_OpenOtherAdminsConfirmBtn_clicked();
 
+    void on_SignOutBtn_triggered();
+
 private:
     Ui::MainAdminWindow *ui;
 };

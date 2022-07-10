@@ -279,7 +279,7 @@
      <x>0</x>
      <y>0</y>
      <width>915</width>
-     <height>25</height>
+     <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">
@@ -323,7 +323,10 @@
      <normaloff>:/Icons/Icons/logout-icon-png-transparent-login-logout-icon-11562923416nzkie6fbka.png</normaloff>:/Icons/Icons/logout-icon-png-transparent-login-logout-icon-11562923416nzkie6fbka.png</iconset>
    </property>
    <property name="text">
-    <string>خروج از حساب کاربری!!</string>
+    <string>خروج از حساب کاربری</string>
+   </property>
+   <property name="toolTip">
+    <string>خروج از حساب کاربری</string>
    </property>
   </action>
   <action name="DeleteAccountAct">
@@ -454,6 +457,22 @@
     <hint type="sourcelabel">
      <x>183</x>
      <y>127</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>457</x>
+     <y>310</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>SignOutBtn</sender>
+   <signal>triggered()</signal>
+   <receiver>PostAdminWindow</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
     </hint>
     <hint type="destinationlabel">
      <x>457</x>

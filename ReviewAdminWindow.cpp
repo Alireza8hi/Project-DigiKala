@@ -1,8 +1,10 @@
 #include "ReviewAdminWindow.h"
 #include "CartDialog.h"
+#include "Digikala.h"
 #include "allcommoditywindow.h"
 #include "categorywindow.h"
 #include "commoditiesawaitingapprovaldialog.h"
+#include "mainwindow.h"
 #include "messagesdialog.h"
 #include "profiledialog.h"
 #include "searchdialog.h"
@@ -73,6 +75,14 @@ void ReviewAdminWindow::on_WishListBtn_clicked()
 void ReviewAdminWindow::on_CommoditiesAwaitingApprovalBtn_clicked()
 {
     CommoditiesAwaitingApprovalDialog *a = new CommoditiesAwaitingApprovalDialog(this);
+    a->show();
+}
+
+
+void ReviewAdminWindow::on_SignOutBtn_triggered()
+{
+    MainWindow *a = new MainWindow(this);
+    this_user = nullptr;
     a->show();
 }
 

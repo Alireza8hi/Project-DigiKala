@@ -6,7 +6,7 @@ Commodity::Commodity()
 {
     this->address=this->category=this->city=this->color=this->company=this->description=this->name=this->owner=this->type=this->owner_phone_number=this->expiration_date=this->production_date="Unknown";
     this->number=this->cost=this->discount_percent=this->id=this->num_of_sell=this->profit_percent=this->volume=this->weight=0;
-    this->is_confirm=this->is_deleted=this->is_electric=false;
+    this->is_confirm=this->is_deleted=this->is_electric=this->is_posted=false;
     return;
 }
 
@@ -65,7 +65,7 @@ Commodity::~Commodity()
 {
     this->address=this->category=this->city=this->color=this->company=this->description=this->name=this->owner=this->type=this->owner_phone_number=this->expiration_date=this->production_date="Unknown";
     this->number=this->cost=this->discount_percent=this->id=this->num_of_sell=this->profit_percent=this->volume=this->weight=0;
-    this->is_confirm=this->is_deleted=this->is_electric=false;
+    this->is_confirm=this->is_deleted=this->is_electric=this->is_posted=false;
     return;
 }
 
@@ -309,6 +309,17 @@ void Commodity::set_is_confirm(bool is_confirm)
 bool Commodity::get_is_confirm() const
 {
     return this->is_confirm;
+}
+
+void Commodity::set_is_posted(bool is_posted)
+{
+    this->is_posted = is_posted;
+    return;
+}
+
+bool Commodity::get_is_posted() const
+{
+    return this->is_posted;
 }
 
 void Commodity::set_profit_percent(int profit_percent)

@@ -36,6 +36,8 @@ private slots:
 
     void on_CheckCommentBtn_clicked();
 
+    void on_SignOutBtn_triggered();
+
 private:
     Ui::SupportAdminWindow *ui;
 };

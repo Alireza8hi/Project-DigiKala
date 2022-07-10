@@ -1,9 +1,11 @@
 #include "SellerWindow.h"
 #include "CartDialog.h"
+#include "Digikala.h"
 #include "allcommoditywindow.h"
 #include "categorywindow.h"
 #include "editcommoditydialog.h"
 #include "listofcommoditiesdialog.h"
+#include "mainwindow.h"
 #include "messagesdialog.h"
 #include "profiledialog.h"
 #include "searchdialog.h"
@@ -88,6 +90,14 @@ void SellerWindow::on_CommoditiesExpireBtn_clicked()
 void SellerWindow::on_SellCommodityBtn_clicked()
 {
     EditCommodityDialog *a = new EditCommodityDialog(this);
+    a->show();
+}
+
+
+void SellerWindow::on_SignOutBtn_triggered()
+{
+    MainWindow *a = new MainWindow(this);
+    this_user = nullptr;
     a->show();
 }
 
