@@ -51,7 +51,7 @@ void AccountWindow::on_ReturnBtn_triggered()
     parentWidget()->show();
 }
 
-void AccountWindow::on_UserSignInBtn_clicked()
+ void AccountWindow::on_UserSignInBtn_clicked()
 {
     bool isTrue = false;
     for(int counter=0;counter<site.get_num_of_users();counter++)
