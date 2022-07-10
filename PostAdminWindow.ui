@@ -292,8 +292,6 @@
     <addaction name="separator"/>
     <addaction name="SignOutBtn"/>
     <addaction name="separator"/>
-    <addaction name="separator"/>
-    <addaction name="separator"/>
     <addaction name="ExitAct"/>
    </widget>
    <addaction name="menu"/>

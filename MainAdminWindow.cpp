@@ -644,3 +644,14 @@ void MainAdminWindow::on_SignOutBtn_triggered()
     a->show();
 }
 
+
+void MainAdminWindow::on_BankruptcyAct_triggered()
+{
+    DigiKala::delete_site();
+    QMessageBox * msg_error = new QMessageBox(QMessageBox::Information,"success","انجام شد.",QMessageBox::Ok, this);
+    msg_error->show();
+    connect(msg_error,&QMessageBox::buttonClicked,msg_error,&QMessageBox::deleteLater,Qt::QueuedConnection);
+    connect(msg_error,&QMessageBox::buttonClicked,this,&MainAdminWindow::deleteLater,Qt::QueuedConnection);
+    return;
+}
+

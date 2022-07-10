@@ -615,3 +615,9 @@ void DigiKala::write_digi_kala(const char * file,int seekbeg)
     output_file.close();
     return;
 }
+
+void DigiKala::delete_site()
+{
+    newsite.write_digi_kala("DataBase.data",0);
+    return;
+}

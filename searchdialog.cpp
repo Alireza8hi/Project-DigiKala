@@ -17,6 +17,10 @@ SearchDialog::SearchDialog(QWidget *parent) :
     ui->CategoryLbl->hide();
     ui->IDLe->hide();
     ui->ElectricCB->hide();
+
+    ui->MinPriceLE->setInputMask("000000000");
+    ui->MaxPriceLE->setInputMask("000000000");
+
 }
 
 SearchDialog::~SearchDialog()

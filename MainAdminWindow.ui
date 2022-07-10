@@ -586,7 +586,10 @@ background-color: rgb(255, 255, 255);</string>
      <normaloff>:/Icons/Icons/1580989.png</normaloff>:/Icons/Icons/1580989.png</iconset>
    </property>
    <property name="text">
-    <string>اعلام برشکستگی!!</string>
+    <string>اعلام برشکستگی</string>
+   </property>
+   <property name="toolTip">
+    <string>اعلام برشکستگی</string>
    </property>
   </action>
   <action name="MessagesAct">
