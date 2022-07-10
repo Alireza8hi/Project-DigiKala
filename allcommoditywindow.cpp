@@ -9,14 +9,13 @@ AllCommodityWindow::AllCommodityWindow(QWidget *parent , string name_commodity, 
 
 
 //    ui->tableWidget->setColumnCount(4);
-//    ui->tableWidget->setItem(1,1,new QTableWidgetItem("ss"));
 //    for(int i=0 ; i<10 ; i++)
 //    {
 //        ui->tableWidget->insertRow(i);
-//        for(int j=0 ; j<4 ; j++)
-//        {
-//            ui->tableWidget->setItem(i,j,new QTableWidgetItem("GG"));
-//        }
+//        ui->tableWidget->setItem(i,0,new QTableWidgetItem("نام کالا"));
+//        ui->tableWidget->setItem(i,1,new QTableWidgetItem("قیمت"));
+//        ui->tableWidget->setItem(i,2,new QTableWidgetItem("تعداد"));
+//        ui->tableWidget->setItem(i,3,new QTableWidgetItem("کد"));
 //    }
 }
 AllCommodityWindow::~AllCommodityWindow()
