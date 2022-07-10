@@ -36,11 +36,17 @@ public:
     void set_username(const string& uname);
     void set_password(const string& upassword);
     void set_role(const string& urole);
-    User& operator=(const User& s);
+    User& operator=(User &other);
+    User& operator=(User &&other);
+    void set_favorites_id(int number,int fv);
+    int get_favorites_id(int number);
+    void set_buy_list_id(int number,int bl);
+    int get_buy_list_id(int number);
     void set_money_paid(int money_paid);
     int get_money_paid()const;
     void set_num_of_commodity_purchased(int num_of_commodity_purchased);
     int get_num_of_commodity_purchased()const;
+
 };
 
 #endif // User_H

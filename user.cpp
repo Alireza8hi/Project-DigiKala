@@ -23,9 +23,13 @@ User::User(User &other)
     this->set_city(other.get_city());
     this->set_province(other.get_province());
     this->set_sex(other.get_sex());
-    //this->comments=other.comments;
-    //this->favorites_id=other.favorites_id;
-    //this->buy_list_id=other.buy_list_id;
+    this->money_paid=other.money_paid;
+    this->num_of_commodity_purchased=other.num_of_commodity_purchased;
+    for(int counter=0;counter<100;counter++)
+    {
+        this->set_favorites_id(counter,other.get_favorites_id(counter));
+        this->set_buy_list_id(counter,other.get_buy_list_id(counter));
+    }
     return;
 }
 
@@ -44,11 +48,28 @@ User::User(User &&other)
     this->set_city(other.get_city());
     this->set_province(other.get_province());
     this->set_sex(other.get_sex());
-    //this->comments=other.comments;
-    //this->favorites_id=other.favorites_id;
-    //this->buy_list_id=other.buy_list_id;
+    this->money_paid=other.money_paid;
+    this->num_of_commodity_purchased=other.num_of_commodity_purchased;
+    for(int counter=0;counter<100;counter++)
+    {
+        this->set_favorites_id(counter,other.get_favorites_id(counter));
+        this->set_buy_list_id(counter,other.get_buy_list_id(counter));
+    }
+
+    other.password=other.username=other.role="";
+    other.income=other.money_paid=other.num_of_commodity_purchased=0;
+    other.set_name(nullptr);
+    other.set_family(nullptr);
+    other.set_email(nullptr);
+    other.set_address(nullptr);
+    other.set_phone_number(nullptr);
+    other.set_ncode(nullptr);
+    other.set_city(nullptr);
+    other.set_province(nullptr);
+    other.set_sex(0);
     return;
 }
+
 
 User::~User()
 {
@@ -101,24 +122,87 @@ void User::set_role(const string& urole)
     return;
 }
 
-User& User::operator=(const User& s)
+User& User::operator=(User &other)
 {
-  this->~User();
-  this->password=s.password;
-  this->username=s.username;
-  this->role=s.role;
-  this->set_name(s.get_name());
-  this->set_family(s.get_family());
-  this->set_email(s.get_email());
-  this->set_address(s.get_address());
-  this->set_ncode(s.get_ncode());
-  this->set_phone_number(s.get_phone_number());
-    this->set_city(s.get_city());
-    this->set_province(s.get_province());
-    this->set_sex(s.get_sex());
-  //this->comments=s.comments;
-  //this->favorites=s.favorites;
+    this->username=other.username;
+    this->password=other.password;
+    this->role=other.role;
+    this->income=other.income;
+    this->set_name(other.get_name());
+    this->set_family(other.get_family());
+    this->set_email(other.get_email());
+    this->set_address(other.get_address());
+    this->set_ncode(other.get_ncode());
+    this->set_phone_number(other.get_phone_number());
+    this->set_city(other.get_city());
+    this->set_province(other.get_province());
+    this->set_sex(other.get_sex());
+    this->money_paid=other.money_paid;
+    this->num_of_commodity_purchased=other.num_of_commodity_purchased;
+    for(int counter=0;counter<100;counter++)
+    {
+        this->set_favorites_id(counter,other.get_favorites_id(counter));
+        this->set_buy_list_id(counter,other.get_buy_list_id(counter));
+    }
     return *this;
+}
+
+User& User::operator=(User &&other)
+{
+    this->username=other.username;
+    this->password=other.password;
+    this->role=other.role;
+    this->income=other.income;
+    this->set_name(other.get_name());
+    this->set_family(other.get_family());
+    this->set_email(other.get_email());
+    this->set_address(other.get_address());
+    this->set_ncode(other.get_ncode());
+    this->set_phone_number(other.get_phone_number());
+    this->set_city(other.get_city());
+    this->set_province(other.get_province());
+    this->set_sex(other.get_sex());
+    this->money_paid=other.money_paid;
+    this->num_of_commodity_purchased=other.num_of_commodity_purchased;
+    for(int counter=0;counter<100;counter++)
+    {
+        this->set_favorites_id(counter,other.get_favorites_id(counter));
+        this->set_buy_list_id(counter,other.get_buy_list_id(counter));
+    }
+    other.password=other.username=other.role="";
+    other.income=other.money_paid=other.num_of_commodity_purchased=0;
+    other.set_name(nullptr);
+    other.set_family(nullptr);
+    other.set_email(nullptr);
+    other.set_address(nullptr);
+    other.set_phone_number(nullptr);
+    other.set_ncode(nullptr);
+    other.set_city(nullptr);
+    other.set_province(nullptr);
+    other.set_sex(0);
+    return *this;
+}
+
+void User::set_favorites_id(int number,int fv)
+{
+    this->favorites_id[number] = fv;
+    return;
+}
+
+int User::get_favorites_id(int number)
+{
+    return this->favorites_id[number];
+}
+
+void User::set_buy_list_id(int number, int bl)
+{
+    this->buy_list_id[number] = bl;
+    return;
+}
+
+int User::get_buy_list_id(int number)
+{
+    return this->buy_list_id[number];
 }
 
 void User::set_money_paid(int money_paid)
