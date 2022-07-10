@@ -30,6 +30,10 @@ Commodity::Commodity(const Commodity &other)
     this->profit_percent=other.profit_percent;
     this->volume=other.volume;
     this->weight=other.weight;
+    this->is_confirm=other.is_confirm;
+    this->is_deleted=other.is_deleted;
+    this->is_electric=other.is_electric;
+    this->is_posted=other.is_posted;
     //this comment
     //this complaint
     return;
