@@ -37,6 +37,7 @@ SOURCES += \
     mainwindow.cpp \
     messagesdialog.cpp \
     profiledialog.cpp \
+    reportpage.cpp \
     searchdialog.cpp \
     signupdialog.cpp \
     tobeknowndialog.cpp \
@@ -69,6 +70,7 @@ HEADERS += \
     mainwindow.h \
     messagesdialog.h \
     profiledialog.h \
+    reportpage.h \
     searchdialog.h \
     signupdialog.h \
     tobeknowndialog.h \
@@ -95,6 +97,7 @@ FORMS += \
     mainwindow.ui \
     messagesdialog.ui \
     profiledialog.ui \
+    reportpage.ui \
     searchdialog.ui \
     signupdialog.ui \
     tobeknowndialog.ui \
