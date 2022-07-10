@@ -69,7 +69,20 @@ void SearchDialog::on_ExitBtn_clicked()
 
 void SearchDialog::on_SearchBtn_clicked()
 {
-    AllCommodityWindow *a = new AllCommodityWindow(this);
+    bool elcectric=false , available=false;
+    long max_cast=100000000;
+    long min_cast=0;
+    if(this->ui->InStockCB->isChecked())
+    {
+        available=true;
+    }
+    if(this->ui->ElectricCB->isChecked())
+    {
+        elcectric=true;
+    }
+
+    this->close();
+    AllCommodityWindow *a = new AllCommodityWindow(this ,"" , false,false,0,"all",100000000 , 0);
     a->show();
 }
 
