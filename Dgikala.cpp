@@ -226,56 +226,41 @@ DigiKala::DigiKala()
     return;
 }
 
-void DigiKala::show_commodity(string name_commodity, bool elcectric, bool available, int id_commodity, string category_commodity, long max_cost,int min_cost)
+deque<Commodity> DigiKala::show_commodity(string name_commodity, bool elcectric, bool available, int id_commodity, string category_commodity, long max_cost,int min_cost)
 {
-    vector<Commodity> commodity;
-    int end=0;
-    if(size(site.commodities)==0)
-    {
-        QMessageBox * msg_error = new QMessageBox(QMessageBox::Critical,"Error","There is no product in the program",QMessageBox::Ok|QMessageBox::Cancel);
-        msg_error->show();
-        connect(msg_error,&QMessageBox::buttonClicked,msg_error,&QMessageBox::deleteLater,Qt::QueuedConnection);
-        end=1;
-    }
-    if(end!=1 && id_commodity!=0)
-    //{
-        for(int i=0;i<1500;i++)
-        //{
-            if(site.commodities[i].get_id()==id_commodity)/*
-            {
-                commodity.push_back(site.commodities[i]);
-                end=1;
-                break;
-            }
-            if(site.commodities[i].get_id()==0)
-            {
-                break;
-            }
-        //}
-        if(end!=1)
+        deque<Commodity> commodity;
+        int end=0;
+        if(size(site.commodities)==0)
         {
-            QMessageBox * msg_error = new QMessageBox(QMessageBox::Critical,"Error","There is no product with this product code",QMessageBox::Ok|QMessageBox::Cancel);
+            QMessageBox * msg_error = new QMessageBox(QMessageBox::Critical,"Error","There is no product in the program",QMessageBox::Ok|QMessageBox::Cancel);
             msg_error->show();
             connect(msg_error,&QMessageBox::buttonClicked,msg_error,&QMessageBox::deleteLater,Qt::QueuedConnection);
             end=1;
         }
-    //}
-    if(end!=1 && category_commodity=="all")
-    {
-        for(int i=0;i<1500;i++)
+        if(end!=1 && id_commodity!=0)
         {
-            if(site.commodities[i].get_id()==0)
+            for(int i=0;i<1500;i++)
             {
-                break;
+                if(site.commodities[i].get_id()==id_commodity)
+                {
+                    commodity.push_back(site.commodities[i]);
+                    end=1;
+                    break;
+                }
+                if(site.commodities[i].get_id()==0)
+                {
+                    break;
+                }
             }
-            else
+            if(end!=1)
             {
-                commodity.push_back(commodities[i]);
+                QMessageBox * msg_error = new QMessageBox(QMessageBox::Critical,"Error","There is no product with this product code",QMessageBox::Ok|QMessageBox::Cancel);
+                msg_error->show();
+                connect(msg_error,&QMessageBox::buttonClicked,msg_error,&QMessageBox::deleteLater,Qt::QueuedConnection);
+                end=1;
             }
         }
-    }
-    else
-        if(end!=1)
+        if(end!=1 && category_commodity=="all")
         {
             for(int i=0;i<1500;i++)
             {
@@ -285,94 +270,130 @@ void DigiKala::show_commodity(string name_commodity, bool elcectric, bool availa
                 }
                 else
                 {
-                    if(site.commodities[i].get_category()==category_commodity)
+                    commodity.push_back(commodities[i]);
+                }
+            }
+        }
+        else
+            if(end!=1)
+            {
+                for(int i=0;i<1500;i++)
+                {
+                    if(site.commodities[i].get_id()==0)
                     {
-                        commodity.push_back(site.commodities[i]);
+                        break;
                     }
+                    else
+                    {
+                        if(site.commodities[i].get_category()==category_commodity)
+                        {
+                            commodity.push_back(site.commodities[i]);
+                        }
+                    }
+                }
+                if(size(commodity)==0)
+                {
+                    QMessageBox * msg_error = new QMessageBox(QMessageBox::Critical,"Error","There is no product in this category",QMessageBox::Ok|QMessageBox::Cancel);
+                    msg_error->show();
+                    connect(msg_error,&QMessageBox::buttonClicked,msg_error,&QMessageBox::deleteLater,Qt::QueuedConnection);
+                    end=1;
+                }
+            }
+
+        if(end!=1)
+        {
+            for(int i=0;i<size(commodity);i++)
+            {
+                if ((commodity.at(i).get_is_deleted()))
+                {
+                    commodity.erase(commodity.cbegin()+i);
+                }
+            }
+         }
+        if(end!=1)
+        {
+            for(int i=0;i<size(commodity);i++)
+            {
+                if (!(commodity.at(i).get_is_confirm()))
+                {
+                    commodity.erase(commodity.cbegin()+i);
+                }
+            }
+         }
+        if(end!=1 && name_commodity!="")
+        {
+            for(int i=0;i<size(commodity);i++)
+            {
+                size_t found =commodity.at(i).get_name().find(name_commodity);
+                if (found == string::npos)
+                {
+                    commodity.erase(commodity.cbegin()+i);
                 }
             }
             if(size(commodity)==0)
             {
-                QMessageBox * msg_error = new QMessageBox(QMessageBox::Critical,"Error","There is no product in this category",QMessageBox::Ok|QMessageBox::Cancel);
+                QMessageBox * msg_error = new QMessageBox(QMessageBox::Critical,"Error","There is no product with this specification",QMessageBox::Ok|QMessageBox::Cancel);
                 msg_error->show();
                 connect(msg_error,&QMessageBox::buttonClicked,msg_error,&QMessageBox::deleteLater,Qt::QueuedConnection);
                 end=1;
             }
         }
-    if(end!=1 && name_commodity!="")
-    {
-        for(int i=0;i<size(commodity);i++)
-        {
-            size_t found =commodity.at(i).get_name().find(name_commodity);
-            if (found == string::npos)
-            {
-                commodity.erase(commodity.cbegin()+i);
-            }
-        }
-        if(size(commodity)==0)
-        {
-            QMessageBox * msg_error = new QMessageBox(QMessageBox::Critical,"Error","There is no product with this specification",QMessageBox::Ok|QMessageBox::Cancel);
-            msg_error->show();
-            connect(msg_error,&QMessageBox::buttonClicked,msg_error,&QMessageBox::deleteLater,Qt::QueuedConnection);
-            end=1;
-        }
-    }
 
-    if(elcectric && end!=1)
-    {
-        for(int i=0;i<size(commodity);i++)
+        if(elcectric && end!=1)
         {
-            if (!(commodity.at(i).get_is_electric()))
+            for(int i=0;i<size(commodity);i++)
             {
-                commodity.erase(commodity.cbegin()+i);
+                if (!(commodity.at(i).get_is_electric()))
+                {
+                    commodity.erase(commodity.cbegin()+i);
+                }
             }
-        }
-        if(size(commodity)==0)
-        {
-            QMessageBox * msg_error = new QMessageBox(QMessageBox::Critical,"Error","There is no product with this specification",QMessageBox::Ok|QMessageBox::Cancel);
-            msg_error->show();
-            connect(msg_error,&QMessageBox::buttonClicked,msg_error,&QMessageBox::deleteLater,Qt::QueuedConnection);
-            end=1;
-        }
-    }
-
-    if(available && end!=1)
-    {
-        for(int i=0;i<size(commodity);i++)
-        {
-            if(commodity.at(i).get_number()<=0)
+            if(size(commodity)==0)
             {
-                commodity.erase(commodity.cbegin()+i);
-            }
-        }
-        if(size(commodity)==0)
-        {
-            QMessageBox * msg_error = new QMessageBox(QMessageBox::Critical,"Error","There is no product with this specification",QMessageBox::Ok|QMessageBox::Cancel);
-            msg_error->show();
-            connect(msg_error,&QMessageBox::buttonClicked,msg_error,&QMessageBox::deleteLater,Qt::QueuedConnection);
-            end=1;
-        }
-    }
-    if(end!=1)
-    {
-        for(int i=0;i<size(commodity);i++)
-        {
-            if(commodity.at(i).get_cost()<min_cost || commodity.at(i).get_cost()> max_cost )
-            {
-                commodity.erase(commodity.cbegin()+i);
+                QMessageBox * msg_error = new QMessageBox(QMessageBox::Critical,"Error","There is no product with this specification",QMessageBox::Ok|QMessageBox::Cancel);
+                msg_error->show();
+                connect(msg_error,&QMessageBox::buttonClicked,msg_error,&QMessageBox::deleteLater,Qt::QueuedConnection);
+                end=1;
             }
         }
 
-        if(size(commodity)==0)
+        if(available && end!=1)
         {
-            QMessageBox * msg_error = new QMessageBox(QMessageBox::Critical,"Error","There is no product with this specification",QMessageBox::Ok|QMessageBox::Cancel);
-            msg_error->show();
-            connect(msg_error,&QMessageBox::buttonClicked,msg_error,&QMessageBox::deleteLater,Qt::QueuedConnection);
-            end=1;
+            for(int i=0;i<size(commodity);i++)
+            {
+                if(commodity.at(i).get_number()<=0)
+                {
+                    commodity.erase(commodity.cbegin()+i);
+                }
+            }
+            if(size(commodity)==0)
+            {
+                QMessageBox * msg_error = new QMessageBox(QMessageBox::Critical,"Error","There is no product with this specification",QMessageBox::Ok|QMessageBox::Cancel);
+                msg_error->show();
+                connect(msg_error,&QMessageBox::buttonClicked,msg_error,&QMessageBox::deleteLater,Qt::QueuedConnection);
+                end=1;
+            }
         }
-    }*/
-        return;
-}
+        if(end!=1)
+        {
+            for(int i=0;i<size(commodity);i++)
+            {
+                if(commodity.at(i).get_cost()<min_cost || commodity.at(i).get_cost()> max_cost )
+                {
+                    commodity.erase(commodity.cbegin()+i);
+                }
+            }
+
+            if(size(commodity)==0)
+            {
+                QMessageBox * msg_error = new QMessageBox(QMessageBox::Critical,"Error","There is no product with this specification",QMessageBox::Ok|QMessageBox::Cancel);
+                msg_error->show();
+                connect(msg_error,&QMessageBox::buttonClicked,msg_error,&QMessageBox::deleteLater,Qt::QueuedConnection);
+                end=1;
+            }
+        }
+            return commodity;
+    }
 
 DigiKala::~DigiKala()
 {

@@ -10,7 +10,7 @@ Commodity::Commodity()
     return;
 }
 
-Commodity::Commodity(Commodity &other)
+Commodity::Commodity(const Commodity &other)
 {
     this->address=other.address;
     this->category=other.category;

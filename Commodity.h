@@ -37,7 +37,7 @@ private:
     int profit_percent;
 public:
     Commodity();
-    Commodity(Commodity& other);
+    Commodity(const Commodity& other);
     Commodity& operator=(const Commodity& other);
     ~Commodity();
 //    void add_comment(tm now_time,int sender_id,string description);
