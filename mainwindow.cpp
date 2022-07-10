@@ -31,7 +31,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_AllCommodityBtn_clicked()
 {
-    AllCommodityWindow = new class AllCommodityWindow(this);
+    AllCommodityWindow = new class AllCommodityWindow(this ,"" , false,false,0,"all",100000000 , 0);
     AllCommodityWindow->show();
 }
 
