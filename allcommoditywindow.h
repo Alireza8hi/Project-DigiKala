@@ -14,8 +14,7 @@ class AllCommodityWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit AllCommodityWindow(QWidget *parent = nullptr);
-    explicit AllCommodityWindow(QWidget *parent , string name_commodity, bool elcectric, bool available, int id_commodity, string category_commodity,long max_cost,int min_cost);
+    explicit AllCommodityWindow(QWidget *parent = nullptr , string name_commodity = "", bool elcectric =false, bool available = false, int id_commodity = 0, string category_commodity = "",long max_cost = 0,int min_cost = 0);
     ~AllCommodityWindow();
 
 private slots:
