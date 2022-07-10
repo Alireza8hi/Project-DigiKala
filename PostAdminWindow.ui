@@ -292,7 +292,6 @@
     <addaction name="separator"/>
     <addaction name="SignOutBtn"/>
     <addaction name="separator"/>
-    <addaction name="DeleteAccountAct"/>
     <addaction name="separator"/>
     <addaction name="separator"/>
     <addaction name="ExitAct"/>
@@ -327,15 +326,6 @@
    </property>
    <property name="toolTip">
     <string>خروج از حساب کاربری</string>
-   </property>
-  </action>
-  <action name="DeleteAccountAct">
-   <property name="icon">
-    <iconset resource="icons.qrc">
-     <normaloff>:/Icons/Icons/pngtree-delete-icon-image_1129289.jpg</normaloff>:/Icons/Icons/pngtree-delete-icon-image_1129289.jpg</iconset>
-   </property>
-   <property name="text">
-    <string>حذف حساب کاربری!!</string>
    </property>
   </action>
   <action name="ExitAct">

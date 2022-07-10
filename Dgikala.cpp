@@ -518,6 +518,12 @@ int DigiKala::get_money() const
     return this->money;
 }
 
+void DigiKala::set_user(int number, User *other)
+{
+    users[number] = move(*other);
+    return;
+}
+
 User& DigiKala::get_user(int number)
 {
     return this->users[number];

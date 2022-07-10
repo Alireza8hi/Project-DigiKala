@@ -38,6 +38,8 @@ private slots:
 
     void on_SignOutBtn_triggered();
 
+    void on_DeleteAccountAct_triggered();
+
 private:
     Ui::SupportAdminWindow *ui;
 };

@@ -7,11 +7,11 @@ Human::Human()
 {
     this->name=this->family = "Guest";
     this->email = "Guest@gmail.com";
-    this->address = "iran";
-    this->national_code ="0";
-    this->phone_number = "0";
-    this->city = "city";
-    this->province = "province";
+    this->address = "-";
+    this->national_code ="-";
+    this->phone_number = "-";
+    this->city = "-";
+    this->province = "-";
     this->sex=0;
 	return;
 }
@@ -19,7 +19,7 @@ Human::Human()
 
 Human::~Human()
 {
-    this->name = this->email = this->address = this->phone_number = this->national_code = this->province = this->city = nullptr;
+    this->name = this->family = this->email = this->address = this->phone_number = this->national_code = this->province = this->city = nullptr;
     this->sex=0;
     return;
 }

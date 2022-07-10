@@ -242,7 +242,10 @@ background-color: rgb(255, 255, 255);</string>
      <normaloff>:/Icons/Icons/pngtree-delete-icon-image_1129289.jpg</normaloff>:/Icons/Icons/pngtree-delete-icon-image_1129289.jpg</iconset>
    </property>
    <property name="text">
-    <string>حذف حساب کاربری!!</string>
+    <string>حذف حساب کاربری</string>
+   </property>
+   <property name="toolTip">
+    <string>حذف حساب کاربری</string>
    </property>
   </action>
   <action name="OpenProfileAct">
@@ -375,6 +378,22 @@ background-color: rgb(255, 255, 255);</string>
   </connection>
   <connection>
    <sender>SignOutAct</sender>
+   <signal>triggered()</signal>
+   <receiver>CustomerWindow</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>214</x>
+     <y>205</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>DeleteAccountAct</sender>
    <signal>triggered()</signal>
    <receiver>CustomerWindow</receiver>
    <slot>hide()</slot>

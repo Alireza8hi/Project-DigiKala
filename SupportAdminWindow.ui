@@ -611,5 +611,21 @@ background-color: qlineargradient(spread:reflect, x1:0.826291, y1:0.887, x2:1, y
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>DeleteAccountAct</sender>
+   <signal>triggered()</signal>
+   <receiver>SupportAdminWindow</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>453</x>
+     <y>334</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
 </ui>

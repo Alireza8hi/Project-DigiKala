@@ -49,6 +49,7 @@ public:
     int get_income()const;
     void set_money(int money);
     int get_money()const;
+    void set_user(int number,User* other);
     User& get_user(int number);
     Commodity& get_commodity(int number);
     void set_sold_commodities_id(int sold_commodities_id);

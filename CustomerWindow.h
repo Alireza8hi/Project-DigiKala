@@ -33,6 +33,8 @@ private slots:
 
     void on_SignOutAct_triggered();
 
+    void on_DeleteAccountAct_triggered();
+
 private:
     Ui::CustomerWindow *ui;
 };

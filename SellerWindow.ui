@@ -325,7 +325,10 @@ background-image: url(:/Pics/Pics/hand-painted-background-violet-orange-colours_
      <normaloff>:/Icons/Icons/pngtree-delete-icon-image_1129289.jpg</normaloff>:/Icons/Icons/pngtree-delete-icon-image_1129289.jpg</iconset>
    </property>
    <property name="text">
-    <string>حذف حساب کاربری!!</string>
+    <string>حذف حساب کاربری</string>
+   </property>
+   <property name="toolTip">
+    <string>حذف حساب کاربری</string>
    </property>
   </action>
   <action name="MessagesAct">
@@ -465,6 +468,22 @@ background-image: url(:/Pics/Pics/hand-painted-background-violet-orange-colours_
   </connection>
   <connection>
    <sender>SignOutBtn</sender>
+   <signal>triggered()</signal>
+   <receiver>SellerWindow</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>313</x>
+     <y>232</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>DeleteAccountAct</sender>
    <signal>triggered()</signal>
    <receiver>SellerWindow</receiver>
    <slot>hide()</slot>
