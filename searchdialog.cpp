@@ -10,17 +10,13 @@ SearchDialog::SearchDialog(QWidget *parent) :
 
     ui->PriceRangeLbl->hide();
     ui->PriceRangeLbl2->hide();
-    ui->MaxPriceLE->hide();
-    ui->MinPriceLE->hide();
+    ui->MaxPriceSB->hide();
+    ui->MinPriceSB->hide();
     ui->CategoryCombo->hide();
     ui->InStockCB->hide();
     ui->CategoryLbl->hide();
-    ui->IDLe->hide();
+    ui->IDSB->hide();
     ui->ElectricCB->hide();
-
-    ui->MinPriceLE->setInputMask("000000000");
-    ui->MaxPriceLE->setInputMask("000000000");
-
 }
 
 SearchDialog::~SearchDialog()
@@ -41,24 +37,24 @@ void SearchDialog::on_ShowOptionsBtn_clicked()
     {
         ui->PriceRangeLbl->show();
         ui->PriceRangeLbl2->show();
-        ui->MaxPriceLE->show();
-        ui->MinPriceLE->show();
+        ui->MaxPriceSB->show();
+        ui->MinPriceSB->show();
         ui->CategoryCombo->show();
         ui->InStockCB->show();
         ui->CategoryLbl->show();
-        ui->IDLe->show();
+        ui->IDSB->show();
         ui->ElectricCB->show();
     }
     else
     {
         ui->PriceRangeLbl->hide();
         ui->PriceRangeLbl2->hide();
-        ui->MaxPriceLE->hide();
-        ui->MinPriceLE->hide();
+        ui->MaxPriceSB->hide();
+        ui->MinPriceSB->hide();
         ui->CategoryCombo->hide();
         ui->InStockCB->hide();
         ui->CategoryLbl->hide();
-        ui->IDLe->hide();
+        ui->IDSB->hide();
         ui->ElectricCB->hide();
     }
 
@@ -69,6 +65,7 @@ void SearchDialog::on_ExitBtn_clicked()
 {
     this->close();
 }
+
 
 
 void SearchDialog::on_SearchBtn_clicked()

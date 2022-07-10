@@ -14,253 +14,21 @@
    <string>Dialog</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="0" column="1">
-    <widget class="QPushButton" name="ShowOptionsBtn">
+   <item row="0" column="0">
+    <widget class="QLineEdit" name="SearcLe">
      <property name="minimumSize">
       <size>
-       <width>30</width>
+       <width>580</width>
        <height>0</height>
       </size>
      </property>
      <property name="maximumSize">
       <size>
-       <width>30</width>
+       <width>580</width>
        <height>16777215</height>
       </size>
      </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="icon">
-      <iconset resource="icons.qrc">
-       <normaloff>:/Icons/Icons/icon-gears-14.jpg</normaloff>:/Icons/Icons/icon-gears-14.jpg</iconset>
-     </property>
     </widget>
-   </item>
-   <item row="1" column="0" rowspan="2" colspan="2">
-    <layout class="QGridLayout" name="gridLayout_2">
-     <item row="1" column="0">
-      <widget class="QCheckBox" name="InStockCB">
-       <property name="maximumSize">
-        <size>
-         <width>155</width>
-         <height>16777215</height>
-        </size>
-       </property>
-       <property name="text">
-        <string>فقط کالاهای موجود</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="2">
-      <layout class="QHBoxLayout" name="horizontalLayout">
-       <item>
-        <widget class="QLineEdit" name="MinPriceLE">
-         <property name="minimumSize">
-          <size>
-           <width>30</width>
-           <height>30</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>30</width>
-           <height>30</height>
-          </size>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="PriceRangeLbl2">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>30</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>58</width>
-           <height>30</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>≥قیمت≥</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="MaxPriceLE">
-         <property name="minimumSize">
-          <size>
-           <width>30</width>
-           <height>30</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>30</width>
-           <height>30</height>
-          </size>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="PriceRangeLbl">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>30</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>89</width>
-           <height>30</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>محدوده قیمت</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <spacer name="horizontalSpacer_2">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>40</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item>
-        <widget class="QComboBox" name="CategoryCombo">
-         <property name="minimumSize">
-          <size>
-           <width>177</width>
-           <height>0</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>500</width>
-           <height>16777215</height>
-          </size>
-         </property>
-         <item>
-          <property name="text">
-           <string>لوازم زیبایی و بهداشتی</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>انتخاب</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>دیجیتالی</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>وسایل خانه</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>پوشاک</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>سرگرمی</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>وسایل پزشکی</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>لوازم التحریر</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>کتاب</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>لوازم موسیقی</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>خوراکی</string>
-          </property>
-         </item>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="CategoryLbl">
-         <property name="text">
-          <string>دسته بندی</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <spacer name="horizontalSpacer">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>40</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-      </layout>
-     </item>
-     <item row="1" column="1">
-      <spacer name="horizontalSpacer_3">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>40</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-     <item row="2" column="0">
-      <widget class="QCheckBox" name="ElectricCB">
-       <property name="text">
-        <string>برقی</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="2">
-      <widget class="QLineEdit" name="IDLe">
-       <property name="inputMask">
-        <string/>
-       </property>
-       <property name="placeholderText">
-        <string>کد کالا را وارد کنید</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
    </item>
    <item row="0" column="2">
     <widget class="QPushButton" name="SearchBtn">
@@ -285,19 +53,189 @@
      </property>
     </widget>
    </item>
-   <item row="0" column="0">
-    <widget class="QLineEdit" name="SearcLe">
-     <property name="minimumSize">
-      <size>
-       <width>580</width>
-       <height>0</height>
-      </size>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>580</width>
-       <height>16777215</height>
-      </size>
+   <item row="1" column="0" rowspan="2" colspan="2">
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="1" column="0">
+      <widget class="QCheckBox" name="InStockCB">
+       <property name="maximumSize">
+        <size>
+         <width>155</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>فقط کالاهای موجود</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QCheckBox" name="ElectricCB">
+       <property name="text">
+        <string>برقی</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_5">
+         <item>
+          <widget class="QComboBox" name="CategoryCombo">
+           <property name="minimumSize">
+            <size>
+             <width>177</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>500</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <item>
+            <property name="text">
+             <string>انتخاب</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>لوازم زیبایی و بهداشتی</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>دیجیتالی</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>وسایل خانه</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>پوشاک</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>سرگرمی</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>وسایل پزشکی</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>لوازم التحریر</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>کتاب</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>لوازم موسیقی</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>خوراکی</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="CategoryLbl">
+           <property name="text">
+            <string>دسته بندی</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item row="2" column="1">
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QSpinBox" name="IDSB">
+         <property name="minimum">
+          <number>10000</number>
+         </property>
+         <property name="maximum">
+          <number>99999</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>کد کالا</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="1" column="1">
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QSpinBox" name="MinPriceSB"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="PriceRangeLbl2">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>58</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>≥قیمت≥</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="MaxPriceSB"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="PriceRangeLbl">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>89</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>محدوده قیمت</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item row="6" column="2">
+    <widget class="QPushButton" name="ReturnBtn">
+     <property name="text">
+      <string>بازگشت</string>
      </property>
     </widget>
    </item>
@@ -317,17 +255,33 @@
      </property>
     </spacer>
    </item>
-   <item row="6" column="2">
-    <widget class="QPushButton" name="ReturnBtn">
-     <property name="text">
-      <string>بازگشت</string>
-     </property>
-    </widget>
-   </item>
    <item row="6" column="1">
     <widget class="QPushButton" name="ExitBtn">
      <property name="text">
       <string>خروج</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QPushButton" name="ShowOptionsBtn">
+     <property name="minimumSize">
+      <size>
+       <width>30</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>30</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="icons.qrc">
+       <normaloff>:/Icons/Icons/icon-gears-14.jpg</normaloff>:/Icons/Icons/icon-gears-14.jpg</iconset>
      </property>
     </widget>
    </item>
