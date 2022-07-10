@@ -4,6 +4,7 @@
 #include <QApplication>
 #include "Digikala.h"
 #include "profiledialog.h"
+#include "searchdialog.h"
 
 using namespace std;
 
@@ -17,5 +18,7 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
     MainWindow w;
     w.show();
+    SearchDialog s;
+    s.show();
     return a.exec();
 }

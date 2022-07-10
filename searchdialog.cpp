@@ -1,4 +1,5 @@
 #include "searchdialog.h"
+#include "allcommoditywindow.h"
 #include "ui_searchdialog.h"
 
 SearchDialog::SearchDialog(QWidget *parent) :
@@ -14,8 +15,8 @@ SearchDialog::SearchDialog(QWidget *parent) :
     ui->CategoryCombo->hide();
     ui->InStockCB->hide();
     ui->CategoryLbl->hide();
-
-    ui->tableWidget->hide();
+    ui->IDLe->hide();
+    ui->ElectricCB->hide();
 }
 
 SearchDialog::~SearchDialog()
@@ -41,6 +42,8 @@ void SearchDialog::on_ShowOptionsBtn_clicked()
         ui->CategoryCombo->show();
         ui->InStockCB->show();
         ui->CategoryLbl->show();
+        ui->IDLe->show();
+        ui->ElectricCB->show();
     }
     else
     {
@@ -51,6 +54,8 @@ void SearchDialog::on_ShowOptionsBtn_clicked()
         ui->CategoryCombo->hide();
         ui->InStockCB->hide();
         ui->CategoryLbl->hide();
+        ui->IDLe->hide();
+        ui->ElectricCB->hide();
     }
 
 }
@@ -64,6 +69,7 @@ void SearchDialog::on_ExitBtn_clicked()
 
 void SearchDialog::on_SearchBtn_clicked()
 {
-    ui->tableWidget->show();
+    AllCommodityWindow *a = new AllCommodityWindow(this);
+    a->show();
 }
 
