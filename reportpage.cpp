@@ -1,6 +1,6 @@
 #include "reportpage.h"
 #include "Digikala.h"
-#include "ui_report_page.h"
+#include "ui_reportpage.h"
 #include <QMessageBox>
 
 report_page::report_page(QWidget *parent,int id) :
