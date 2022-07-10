@@ -7,16 +7,16 @@ AllCommodityWindow::AllCommodityWindow(QWidget *parent , string name_commodity, 
 {
     ui->setupUi(this);
 
-
-//    ui->tableWidget->setColumnCount(4);
-//    for(int i=0 ; i<10 ; i++)
-//    {
-//        ui->tableWidget->insertRow(i);
-//        ui->tableWidget->setItem(i,0,new QTableWidgetItem("نام کالا"));
-//        ui->tableWidget->setItem(i,1,new QTableWidgetItem("قیمت"));
-//        ui->tableWidget->setItem(i,2,new QTableWidgetItem("تعداد"));
-//        ui->tableWidget->setItem(i,3,new QTableWidgetItem("کد"));
-//    }
+    deque<Commodity> commodity=site.show_commodity(name_commodity,elcectric,available,id_commodity ,category_commodity,max_cost,min_cost);
+    ui->tableWidget->setColumnCount(commodity.size());
+    for(int i=0 ; i<commodity.size() ; i++)
+    {
+        ui->tableWidget->insertRow(i);
+        ui->tableWidget->setItem(i,0,new QTableWidgetItem(QString::fromStdString(commodity.at(i).get_name())));
+        ui->tableWidget->setItem(i,1,new QTableWidgetItem(commodity.at(i).get_cost()));
+        ui->tableWidget->setItem(i,2,new QTableWidgetItem(commodity.at(i).get_number()));
+        ui->tableWidget->setItem(i,3,new QTableWidgetItem(commodity.at(i).get_id()));
+    }
 }
 AllCommodityWindow::~AllCommodityWindow()
 {
