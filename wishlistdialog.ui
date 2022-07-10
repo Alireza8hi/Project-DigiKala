@@ -82,5 +82,38 @@
   </layout>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>ReturnBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>WishListDialog</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>490</x>
+     <y>533</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>323</x>
+     <y>279</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ExitBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>WishListDialog</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>590</x>
+     <y>533</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>323</x>
+     <y>279</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

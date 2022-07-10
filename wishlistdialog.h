@@ -15,6 +15,9 @@ public:
     explicit WishListDialog(QWidget *parent = nullptr);
     ~WishListDialog();
 
+private slots:
+    void on_ReturnBtn_clicked();
+
 private:
     Ui::WishListDialog *ui;
 };
