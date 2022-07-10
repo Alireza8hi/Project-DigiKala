@@ -226,16 +226,34 @@ DigiKala::DigiKala()
     return;
 }
 
-deque<Commodity> DigiKala::show_commodity(string name_commodity, bool elcectric, bool available, int id_commodity, string category_commodity, long max_cost,int min_cost)
+deque<Commodity> DigiKala::show_commodity(string name_commodity, bool elcectric , bool available, int id_commodity, string category_commodity, long max_cost,int min_cost)
 {
         deque<Commodity> commodity;
         int end=0;
-        if(size(site.commodities)==0)
+        if(true)
         {
-            QMessageBox * msg_error = new QMessageBox(QMessageBox::Critical,"Error","There is no product in the program",QMessageBox::Ok|QMessageBox::Cancel);
-            msg_error->show();
-            connect(msg_error,&QMessageBox::buttonClicked,msg_error,&QMessageBox::deleteLater,Qt::QueuedConnection);
-            end=1;
+            int check=0;
+            for(int i=0;i<1500;i++)
+            {
+                if(site.commodities[i].get_id()!=0 && site.commodities[i].get_is_confirm() && !(site.commodities->get_is_deleted()))
+                {
+                    check+=1;
+                    break;
+                }
+                else
+                {
+                    if(site.commodities[i].get_id()==0)
+                        if(check==0)
+                        {
+                            QMessageBox * msg_error = new QMessageBox(QMessageBox::Critical,"Error","There is no product in the program",QMessageBox::Ok|QMessageBox::Cancel);
+                            msg_error->show();
+                            connect(msg_error,&QMessageBox::buttonClicked,msg_error,&QMessageBox::deleteLater,Qt::QueuedConnection);
+                            end=1;
+                            break;
+                        }
+                }
+
+            }
         }
         if(end!=1 && id_commodity!=0)
         {
