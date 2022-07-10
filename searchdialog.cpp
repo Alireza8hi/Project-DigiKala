@@ -76,6 +76,7 @@ void SearchDialog::on_SearchBtn_clicked()
     bool elcectric=false , available=false;
     long max_cast=100000000;
     long min_cast=0;
+    int id=0;
     if(this->ui->InStockCB->isChecked())
     {
         available=true;
@@ -83,6 +84,12 @@ void SearchDialog::on_SearchBtn_clicked()
     if(this->ui->ElectricCB->isChecked())
     {
         elcectric=true;
+    }
+    max_cast=this->ui->MaxPriceSB->value();
+    min_cast=this->ui->MinPriceSB->value();
+    if(this->ui->IDSB->value()!=10000)
+    {
+        id=this->ui->IDSB->value();
     }
 
     this->close();

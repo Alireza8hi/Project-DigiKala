@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>779</width>
+    <width>802</width>
     <height>603</height>
    </rect>
   </property>
@@ -171,6 +171,9 @@
          <property name="maximum">
           <number>99999</number>
          </property>
+         <property name="value">
+          <number>10000</number>
+         </property>
         </widget>
        </item>
        <item>
@@ -185,7 +188,11 @@
      <item row="1" column="1">
       <layout class="QHBoxLayout" name="horizontalLayout_3">
        <item>
-        <widget class="QSpinBox" name="MinPriceSB"/>
+        <widget class="QSpinBox" name="MinPriceSB">
+         <property name="maximum">
+          <number>100000000</number>
+         </property>
+        </widget>
        </item>
        <item>
         <widget class="QLabel" name="PriceRangeLbl2">
@@ -207,7 +214,14 @@
         </widget>
        </item>
        <item>
-        <widget class="QSpinBox" name="MaxPriceSB"/>
+        <widget class="QSpinBox" name="MaxPriceSB">
+         <property name="maximum">
+          <number>100000000</number>
+         </property>
+         <property name="value">
+          <number>100000000</number>
+         </property>
+        </widget>
        </item>
        <item>
         <widget class="QLabel" name="PriceRangeLbl">
