@@ -67,5 +67,6 @@ extern deque<Commodity> commodity;
 extern User* this_user;
 extern DigiKala newsite;
 extern Commodity* this_commodity;
+extern int a , b;
 
 #endif // DIGIKALA_H
